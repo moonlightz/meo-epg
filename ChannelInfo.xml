@@ -592,11 +592,6 @@
     <virtualchannel>237</virtualchannel>
   </Channel>
   <Channel>
-    <name>Disney Channel Family Fun</name>
-    <channelID>X20D5</channelID>
-    <virtualchannel>49</virtualchannel>
-  </Channel>
-  <Channel>
     <name>Veja HD</name>
     <channelID>X20DE</channelID>
     <virtualchannel>17</virtualchannel>
