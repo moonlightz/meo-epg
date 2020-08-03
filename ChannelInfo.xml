@@ -452,11 +452,6 @@
     <virtualchannel>500</virtualchannel>
   </Channel>
   <Channel>
-    <name>SIM</name>
-    <channelID>X1149</channelID>
-    <virtualchannel>503</virtualchannel>
-  </Channel>
-  <Channel>
     <name>BBC World News</name>
     <channelID>X1195</channelID>
     <virtualchannel>213</virtualchannel>
