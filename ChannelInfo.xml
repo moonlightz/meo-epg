@@ -124,7 +124,7 @@
   <Channel>
     <name>Baby TV</name>
     <channelID>X0219</channelID>
-    <virtualchannel>47</virtualchannel>
+    <virtualchannel>48</virtualchannel>
   </Channel>
   <Channel>
     <name>CMTV</name>
@@ -164,7 +164,7 @@
   <Channel>
     <name>Disney Júnior</name>
     <channelID>X057D</channelID>
-    <virtualchannel>44</virtualchannel>
+    <virtualchannel>45</virtualchannel>
   </Channel>
   <Channel>
     <name>Travel Channel</name>
@@ -174,7 +174,7 @@
   <Channel>
     <name>Jim Jam</name>
     <channelID>X0641</channelID>
-    <virtualchannel>46</virtualchannel>
+    <virtualchannel>47</virtualchannel>
   </Channel>
   <Channel>
     <name>Cartoon Network</name>
@@ -209,7 +209,7 @@
   <Channel>
     <name>Canal Panda</name>
     <channelID>X07DD</channelID>
-    <virtualchannel>45</virtualchannel>
+    <virtualchannel>46</virtualchannel>
   </Channel>
   <Channel>
     <name>Biggs</name>
@@ -479,7 +479,7 @@
   <Channel>
     <name>Mezzo</name>
     <channelID>X1269</channelID>
-    <virtualchannel>138</virtualchannel>
+    <virtualchannel>140</virtualchannel>
   </Channel>
   <Channel>
     <name>TV Record</name>
