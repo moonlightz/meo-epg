@@ -1,4 +1,4 @@
-set datadoscript "29-Agosto-2020"
+set datadoscript "6-Outubro-2020"
 
 bind pub - "!antes" tvantes
 bind pub - "!agora" tvagora
@@ -219,6 +219,14 @@ proc guiatvtrig {nick host handle chan text} {
 
 proc tvpesq {nick host handle chan text} {
 	global programacao
+	set text [string trim $text]
+
+	if {$text==""} {
+        putnow "privmsg $chan :Introduza o nome do programa e/ou pesquise por data/hora (formato ddmeshhmm) e/ou pesquise por canal e/ou na descrição."
+        putnow "privmsg $chan :Exs:!tvpesq jornal !tvpesq c:rtp1 jornal !tvpesq t:31dez0759 !tvpesq -desc fernando mendes"
+        return
+    }
+
 
 	#Verificar a presença de c:canal1,canal2,canaln
 	set cindex [lsearch -nocase $text "c:*"]
@@ -236,23 +244,24 @@ proc tvpesq {nick host handle chan text} {
 		set ttempo [string map {"fev" "feb" "abr" "apr" "mai" "may" "ago" "aug" "set" "sep" "out" "oct" "dez" "dec"} [string tolower $ttempo]]
 		#putquick "privmsg $chan :$ttempo ddmeshhmm ->[timevalidate "%d%b%H%M" $ttempo]< >[clock format [clock scan $ttempo -format "%d%b%H%M"] -format "%D %T"]<"
 		if {[timevalidate "%d%b%H%M" $ttempo]==0} {
-			putquick "privmsg $chan :A data inserida não pôde ser processada. Use o formato ddmeshhmm. Exs: 31jan1730 28fev0550 08set0000"
+			putquick "privmsg $chan :A data inserida não é válida. Use o formato ddmeshhmm. Exs: 31jan1730 28fev0550 08set0000"
 			return
 		}
 #		putquick "privmsg $chan :Data: [clock format [clock scan $ttempo -format "%d%b%H%M"] -format "%d/%b %H:%M"]"
 		set ttempo [clock format [clock scan $ttempo -format "%d%b%H%M"] -format "%Y%m%d%H%M%S %z"]
+		putlog ">$ttempo<"
 	}
 
-	set text [string trim [lreplace $text $cindex $cindex]]
+	set actdesc ""
+	set dindex [lsearch -nocase $text "-desc"]
+	if {$dindex==-1} {set actdesc ""} {set actdesc "desc"}
+	
+	set text [string trim [lreplace $text $dindex $dindex]]
+    set text [string trim [lreplace $text $cindex $cindex]]
 	set text [string trim [lreplace $text $tindex $tindex]]
 #	putquick "privmsg $chan :>$text< >$cindex< >$tindex<"
 
 	set text [string map {" " "*"} $text]
-	if {$text=="" && $ttempo==""} {
-        putnow "privmsg $chan :Não há nada para procurar. Adicione algum texto ou pesquise por data."
-		putnow "privmsg $chan :Exs:!tvpesq jornal !tvpesq c:rtp1 jornal !tvpesq t:12ago1630"
-        return
-    }
 
 	set inicio [clock milliseconds]
 	set nres 0
@@ -284,7 +293,7 @@ proc tvpesq {nick host handle chan text} {
 				#lappend stempos $ttempo
 				#lappend stempos [lindex [split $itemx "|"] 1]
 
-				if {[lsort -indices [list [lindex [split $itemx "|"] 0] $ttempo [lindex [split $itemx "|"] 1]]]=={0 1 2}} {
+				if {[lsort -indices [list [clock scan [lindex [split $itemx "|"] 0] -format "%Y%m%d%H%M%S %z" -gmt 1] [clock scan $ttempo -format "%Y%m%d%H%M%S %z"] [clock scan [lindex [split $itemx "|"] 1] -format "%Y%m%d%H%M%S %z" -gmt 1]]]=={0 1 2}} {
 					lappend resultados $itemx
 					break
 				}
@@ -295,7 +304,9 @@ proc tvpesq {nick host handle chan text} {
 #			putlog ">>$resultados"
 			
 		} else {
-			set resultados [lsearch -all -inline -nocase [lrange $programacao($canal) 1 end] "*|*|*$text*|*"]
+			if {$actdesc=="desc"} {set ssquery "*|*|*$text*"} {set ssquery "*|*|*$text*|*"}
+				set resultados [lsearch -all -inline -nocase [lrange $programacao($canal) 1 end] $ssquery]
+			
         }
 		if {$resultados!=""} {
 			incr nres
@@ -338,7 +349,8 @@ proc tvpesq {nick host handle chan text} {
 		if {$nres<=$resmax} {
 			putnow "privmsg $chan :$sres ([expr (double([clock milliseconds])-$inicio)/1000] segundos)"	
 		} else {
-			putnow "privmsg $chan :A mostrar $resmax de $sres (mais em: [lrange $cres 0 19]...) ([expr (double([clock milliseconds])-$inicio)/1000] segundos)"
+			if {[llength $cres]>20} {set sreticencias "..."} {set sreticencias ""}
+			putnow "privmsg $chan :Mostrado $resmax de $sres (mais em: [lrange $cres 0 19]$sreticencias) ([expr (double([clock milliseconds])-$inicio)/1000] segundos)"
 		}
 	}
 }
@@ -512,12 +524,12 @@ proc tvengine {} {
 			if {$afim<$aagora} {
 				set msgdesactualizado "\; Link parece desactualizado"
 			}
+			set aintervalo [string trimright [string map {"d" "d " "h" "h " "m" "m "} [conv_segs_tempo [expr [clock scan $afim -format "%Y%m%d%H%M%S %z"]-[clock scan $ainicio -format "%Y%m%d%H%M%S %z"]]]]]
 		    set ainicio [string map {"Mon" "Seg" "Tue" "Ter" "Wed" "Qua" "Thu" "Qui" "Fri" "Sex" "Sat" "Sáb" "Sun" "Dom" "Feb" "Fev" "Apr" "Abr" "May" "Mai" "Aug" "Ago" "Sep" "Set" "Oct" "Out" "Dec" "Dez"} [clock format [clock scan $ainicio -format "%Y%m%d%H%M%S %z"] -format "%a,%d/%b/%Y %H:%M"]]
 		    set afim [string map {"Mon" "Seg" "Tue" "Ter" "Wed" "Qua" "Thu" "Qui" "Fri" "Sex" "Sat" "Sáb" "Sun" "Dom" "Feb" "Fev" "Apr" "Abr" "May" "Mai" "Aug" "Ago" "Sep" "Set" "Oct" "Out" "Dec" "Dez"} [clock format [clock scan $afim -format "%Y%m%d%H%M%S %z"] -format "%a,%d/%b/%Y %H:%M"]]
 
-
             if {$tamanho<500000} {set taviso "\00304\002"} {set taviso ""}
-            putnow "privmsg $ctext :Link \002$contador\002 => Canais: $numcanais\;$taviso Tamanho: [formatbytes $tamanho] ($tamanho bytes)\; Entradas: $nprog\; Início: $ainicio\; Fim: $afim$msgdesactualizado"
+            putnow "privmsg $ctext :Link \002$contador\002 => Canais: $numcanais\;$taviso Tamanho: [formatbytes $tamanho] ($tamanho bytes)\; Entradas: $nprog\; Início: $ainicio\; Fim: $afim\; Intervalo: $aintervalo$msgdesactualizado"
         }
 	}
 	if {$lcontador!=""} {set lcontador " IDs dos links que falharam: $lcontador" }
@@ -798,8 +810,8 @@ proc motortv {chan canal quando} {
 proc conv_segs_tempo {xnumber} {
 		global outputtext zw zd zh zm zs
 		set outputtext ""
-		set zw [expr $xnumber/604800]
-		set xnumber [expr $xnumber-$zw*604800]
+		#set zw [expr $xnumber/604800]
+		#set xnumber [expr $xnumber-$zw*604800]
 		set zd [expr $xnumber/86400]
 		set xnumber [expr $xnumber-$zd*86400]
 		set zh [expr $xnumber/3600]
@@ -807,8 +819,8 @@ proc conv_segs_tempo {xnumber} {
 		set zm [expr $xnumber/60]
 		set xnumber [expr $xnumber-$zm*60]
 		set zs $xnumber
-		if {$zw == 1} {append outputtext $zw "w"}
-		if {$zw > 1} {append outputtext $zw "w"}
+		#if {$zw == 1} {append outputtext $zw "w"}
+		#if {$zw > 1} {append outputtext $zw "w"}
 		if {$zd == 1} {append outputtext $zd "d"}
 		if {$zd > 1} {append outputtext $zd "d"}
 		if {$zh == 1} {append outputtext $zh "h"}
