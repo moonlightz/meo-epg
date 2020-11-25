@@ -587,9 +587,19 @@
     <virtualchannel>237</virtualchannel>
   </Channel>
   <Channel>
+    <name>Disney Channel Anima Fest</name>
+    <channelID>X20D5</channelID>
+    <virtualchannel>54</virtualchannel>
+  </Channel>
+  <Channel>
     <name>Veja HD</name>
     <channelID>X20DE</channelID>
     <virtualchannel>17</virtualchannel>
+  </Channel>
+  <Channel>
+    <name>Disney Junior Kids Party</name>
+    <channelID>X20E9</channelID>
+    <virtualchannel>49</virtualchannel>
   </Channel>
   <Channel>
     <name>BFM TV</name>
