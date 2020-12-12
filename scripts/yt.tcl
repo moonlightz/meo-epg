@@ -7,7 +7,7 @@ package require http
 package require tls
 
 #set youtube(api) "AIzaSyCxMgZ1FHsKunxzfZg_Fy2HqoM77e5a3g0"
-set youtube(api) "AIzaSyAzyur_d2hTp8L1rK_pQsRKKqAJ8TwQz-o"
+set youtube(api) ""
 
 proc youtube:pubm {nick uhost hand chan arg} {
    global temp
