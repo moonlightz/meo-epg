@@ -6,7 +6,7 @@ package require json
 package require http
 package require tls
 
-#set youtube(api) "AIzaSyCxMgZ1FHsKunxzfZg_Fy2HqoM77e5a3g0"
+
 set youtube(api) ""
 
 proc youtube:pubm {nick uhost hand chan arg} {
