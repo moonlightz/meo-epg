@@ -222,6 +222,11 @@
     <virtualchannel>128</virtualchannel>
   </Channel>
   <Channel>
+    <name>Nickelodeon</name>
+    <channelID>X07E9</channelID>
+    <virtualchannel>44</virtualchannel>
+  </Channel>
+  <Channel>
     <name>História</name>
     <channelID>X0835</channelID>
     <virtualchannel>91</virtualchannel>
@@ -482,6 +487,11 @@
     <virtualchannel>140</virtualchannel>
   </Channel>
   <Channel>
+    <name>Fuel TV HD</name>
+    <channelID>X12C2</channelID>
+    <virtualchannel>108</virtualchannel>
+  </Channel>
+  <Channel>
     <name>TV Record</name>
     <channelID>X1389</channelID>
     <virtualchannel>191</virtualchannel>
@@ -615,6 +625,11 @@
     <name>IU</name>
     <channelID>X24B9</channelID>
     <virtualchannel>278</virtualchannel>
+  </Channel>
+  <Channel>
+    <name>AlmaLusa HD</name>
+    <channelID>X2652</channelID>
+    <virtualchannel>139</virtualchannel>
   </Channel>
   <Channel>
     <name>MEO Destaques</name>
