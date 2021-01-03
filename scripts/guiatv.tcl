@@ -1,4 +1,4 @@
-set datadoscript "6-Outubro-2020"
+set datadoscript "28-Dezembro-2020"
 
 bind pub - "!antes" tvantes
 bind pub - "!agora" tvagora
@@ -33,17 +33,17 @@ set ctext ""
 set fichnicks "tvnicks.txt"
 
 proc tvlistas {nick host handle chan text} {
-	global tvfichcfg urlselec ctext
+	global tvfichcfg urlselec ctext cprogramacao
 #	putquick "privmsg $chan :$text"
 #	"d/a/b|mm hh|link"
 	set text [string trim $text]
 	if {$text==""} {
 		putnow "privmsg $chan :Gestão de listas de canais. As opções são:"
-		putnow "privmsg $chan : \002ADICIONAR\002 -> Adiciona um link à lista. | \002ACTIVAR\002 -> Activa um link desactivado."
-		putnow "privmsg $chan : \002LISTAR\002 -> Lista os links.              | \002DESACTIVAR\002 -> Desactiva um link activado."
-		putnow "privmsg $chan : \002REMOVER\002 -> Remove um link da lista.    | \002ACTUALIZAR\002 -> Força o refresh a partir dos links activados."
-		putnow "privmsg $chan : \002SELEC\002 -> Selecciona um item da lista.  | \002HORA\002 -> Altera a hora da actualização automática."
-#		putnow "privmsg $chan : \002MOVER\002 -> Move um link na lista."
+		putnow "privmsg $chan : \002ADICIONAR\002 -> Adiciona um link à lista.   | \002ACTIVAR\002 -> Activa um link desactivado."
+		putnow "privmsg $chan : \002LISTAR\002 -> Lista os links.                | \002DESACTIVAR\002 -> Desactiva um link activado."
+		putnow "privmsg $chan : \002REMOVER\002 -> Remove um link da lista.      | \002ACTUALIZAR\002 -> Força o refresh a partir dos links activados."
+		putnow "privmsg $chan : \002SELEC\002 -> Selecciona um item da lista.    | \002HORA\002 -> Altera a hora da actualização automática."
+		putnow "privmsg $chan : \002ESTADO\002 -> Estado da programação offline. | \002BACKUP\002 -> Prog. offline para arquivamento."
 		return
 	}
 
@@ -53,6 +53,7 @@ proc tvlistas {nick host handle chan text} {
     if {![file exists $tvfichcfg]} {
 		set f [open $tvfichcfg w+]
 		puts $f "actualizar=12:00"
+		puts -nonewline $f "backup=prog%Y%b%d-%H%M.tar.gz"
 		close $f
 		putlog "GuiaTV: $tvfichcfg vazio criado"
     }
@@ -62,9 +63,13 @@ proc tvlistas {nick host handle chan text} {
     set urlz ""
     foreach linha $linhas {
 		if {[string range $linha 0 10]=="actualizar="} {
-			set marcatempo [lindex [split [lindex $linha end]  "="] 1]			
+			set marcatempo [lindex [split [lindex $linha end] "="] 1]			
 			continue
 		}
+		if {[string range $linha 0 6]=="backup="} {
+            set fichbackup [lindex [split [lindex $linha end] "="] 1]
+            continue
+        }
         if {$linha==""} {continue}
         lappend urlz $linha
     }
@@ -73,7 +78,7 @@ proc tvlistas {nick host handle chan text} {
 	if {$opcao=="listar"} {
 		set i 0
 		if {[llength $urlz]==1} {set strlistar "1 link de guia xml disponível"} {set strlistar "[llength $urlz] links de guia xml disponíveis"}
-		putnow "privmsg $chan :$strlistar, com actualização às $marcatempo"
+		putnow "privmsg $chan :$strlistar, com actualização às [string map {"," ", "} $marcatempo]"
 		foreach url $urlz {
 			set url [split $url "|"]
 			incr i
@@ -102,19 +107,66 @@ proc tvlistas {nick host handle chan text} {
 				putnow "privmsg $chan :Não reconhecido."
 				return
 			}
-		}		
-	} elseif {$opcao=="hora"} {
+		}
+    } elseif {$opcao=="mover"} {
         if {$opcao2==""} {
-            putquick "privmsg $chan :Insira uma hora válida entre 00:00 e 23:59."
+            putnow "privmsg $chan :Não especificou um número."
             return
-        }
-        if {[timevalidate "%H:%M" $opcao2]} {
-			set marcatempo $opcao2
         } else {
-            putnow "privmsg $chan :Insira uma hora válida."
-            return
+            if {[isnumber $opcao2]} {
+                if {$opcao2<1 && $opcao2>[llength $urlz]} {
+                    putnow "privmsg $chan :Número $opcao2 não é válido."
+                    return
+                }
+				if {[isnumber $opcao3]} {
+					if {$opcao3<1 && $opcao3>[llength $urlz]} {
+						putnow "privmsg $chan :Número $opcao3 não é válido."
+						return
+					}
+				}
+				if {$opcao2==$opcao3} {
+					putnow "privmsg $chan :Os dois números não podem ser iguais."
+					return
+				}
+
+            } else {
+                putnow "privmsg $chan :Não reconhecido."
+                return
+            }
         }
-		putnow "privmsg $chan :A hora da actualização automática foi alterada."
+		set urlA [lindex $urlz $opcao2]
+		set urlb [lindex $urlz $opcao3]
+		set urlz [lreplace $urlz $opcao2 $opcao2 $urlb]
+		set urlz [lreplace $urlz $opcao3 $opcao3 $urla]
+	} elseif {$opcao=="estado"} {
+		putnow "privmsg $chan :A analisar..."
+		set progstatus [procprogstatus]
+		putnow "privmsg $chan :Canais \002[lindex $progstatus 0]\002  Início: \002[lindex $progstatus 1]\002  Fim: \002[lindex $progstatus 2]\002  Intervalo: \002[lindex $progstatus 3]\002  Entradas: \002[lindex $progstatus 4]\002 Actualizado a \002[lindex $cprogramacao 1]\002 por \002[lindex $cprogramacao 0]\002"
+	} elseif {$opcao=="hora"} {
+		if {$opcao2==""} {
+			putquick "privmsg $chan :Insira horas válidas entre 00:00 e 23:59, separadas por vírgulas. Ex: 11:00,12:34"
+	        return
+		}
+		set marcatempo ""
+		foreach hora [split $opcao2 ","] {
+			if {$hora==""} {
+				continue
+			}
+		    if {[timevalidate "%H:%M" $hora]} {
+				lappend marcatempo [clock format [clock scan $hora -format "%H:%M"] -format "%H:%M"]
+	        } else {
+		        putnow "privmsg $chan :'$hora' não parece ser válido."
+			    return
+			}        
+		}
+		if {$marcatempo==""} {
+			putnow "privmsg $chan :Sem horas inseridas."
+			return
+		}
+		set marcatempo [lsort -unique $marcatempo]
+		set marcatempo [join $marcatempo ","]
+		#set marcatempo [string trimright $marcatempo ","]
+		putnow "privmsg $chan :Actualização automática alterada para: $marcatempo"
 	} elseif {$opcao=="adicionar"} {
 		if {$opcao2==""} {
 			putquick "privmsg $chan :use \002url=link-aqui\002 para adicionar um link à lista de links."
@@ -161,9 +213,12 @@ proc tvlistas {nick host handle chan text} {
 			putnow "privmsg $chan :O link $urlselec foi desactivado."
 		}
     } elseif {$opcao=="actualizar"} {
-		putnow "privmsg $chan :A processar (isto poderá demorar algum tempo)..."
+		putnow "privmsg $chan :Aguarde alguns momentos enquanto a array é preenchida ..."
 		set ctext $chan
 		putnow "privmsg $chan :[tvengine]"
+		set cprogramacao $nick
+		lappend cprogramacao [string map {"Mon" "Seg" "Tue" "Ter" "Wed" "Qua" "Thu" "Qui" "Fri" "Sex" "Sat" "Sáb" "Sun" "Dom" "Feb" "Fev" "Apr" "Abr" "May" "Mai" "Aug" "Ago" "Sep" "Set" "Oct" "Out" "Dec" "Dez"} [clock format [clock seconds] -format "%a,%d/%b/%Y %H:%M:%S"]]
+#putlog $cprogramacao
 		set ctext ""
 		return
 	} else {
@@ -176,7 +231,9 @@ proc tvlistas {nick host handle chan text} {
 	        catch {unbind time - [lindex $bind 2] tvautosync}
         }
     }
-    bind time - "[clock format [clock scan $marcatempo -format "%H:%M"] -format "%M %H"] * * *" tvautosync
+	foreach hora [split $marcatempo ","] {
+		bind time - "[clock format [clock scan $hora -format "%H:%M"] -format "%M %H"] * * *" tvautosync
+	}
  
 	file delete $tvfichcfg
 
@@ -184,11 +241,47 @@ proc tvlistas {nick host handle chan text} {
 	foreach i $urlz {
 		puts $f $i
 	}
-    puts -nonewline $f "actualizar=$marcatempo"
+    puts $f "actualizar=$marcatempo"
+	puts $f "backup=$fichbackup"
     close $f	
 	putlog "GuiaTV: TVLISTAS usada por $nick no canal $chan: >$text<"
 }
 
+proc procprogstatus {} {
+	global programacao
+	if {![info exists programacao]} {
+		return "0 N/A N/A"
+	}
+	set ncanais [llength [array names programacao]]
+	set inicio "N/A"
+	set fim "N/A"
+	set intervalo "intervalo"
+	set entradas 0
+	foreach canal [array names programacao] {
+		foreach itemcanal [lrange $programacao($canal) 1 end] {
+			incr entradas
+			set aitem [split $itemcanal "|"]
+			set ainicio [lindex $aitem 0]
+			set afim [lindex $aitem 1]
+			if {$inicio=="N/A"} {
+				set inicio $ainicio
+                set fim $afim
+            }
+
+			if {$ainicio<$inicio} {set inicio $ainicio}
+            if {$afim>$fim} {set fim $afim}
+ 
+		}
+
+	}
+#atum
+    set intervalo [string trimright [string map {"d" "d " "h" "h " "m" "m "} [conv_segs_tempo [expr [clock scan $fim -format "%Y%m%d%H%M%S %z"]-[clock scan $inicio -format "%Y%m%d%H%M%S %z"]]]]]
+    set inicio [string map {"Mon" "Seg" "Tue" "Ter" "Wed" "Qua" "Thu" "Qui" "Fri" "Sex" "Sat" "Sáb" "Sun" "Dom" "Feb" "Fev" "Apr" "Abr" "May" "Mai" "Aug" "Ago" "Sep" "Set" "Oct" "Out" "Dec" "Dez"} [clock format [clock scan $inicio -format "%Y%m%d%H%M%S %z"] -format "%a,%d/%b/%Y %H:%M"]]
+    set fim [string map {"Mon" "Seg" "Tue" "Ter" "Wed" "Qua" "Thu" "Qui" "Fri" "Sex" "Sat" "Sáb" "Sun" "Dom" "Feb" "Fev" "Apr" "Abr" "May" "Mai" "Aug" "Ago" "Sep" "Set" "Oct" "Out" "Dec" "Dez"} [clock format [clock scan $fim -format "%Y%m%d%H%M%S %z"] -format "%a,%d/%b/%Y %H:%M"]]
+	set mensagem "$ncanais"
+	lappend mensagem $inicio $fim $intervalo $entradas
+	return $mensagem
+}
 
 proc tvcanais {nick host handle chan text} {
 	global programacao
@@ -215,6 +308,7 @@ proc guiatvtrig {nick host handle chan text} {
 	putnow "privmsg $chan :!meuscanais !definir <c1> <c2> ... » Gerir canais quando usa o !agora"
 	putnow "privmsg $chan :!tvcanais » Mostra uma lista de canais"
 	putnow "privmsg $chan :!tvpesq » Pesquisar por um nome de programa"
+	putnow "privmsg $chan :!tvlistas » Gerir listas"
 }
 
 proc tvpesq {nick host handle chan text} {
@@ -356,12 +450,13 @@ proc tvpesq {nick host handle chan text} {
 }
 
 proc tvengine {} {
-	global programacao tvfichcfg ctext
+	global programacao tvfichcfg ctext 
 	putlog "GuiaTV: A iniciar a tarefa..."
 	set tarefainiciada [clock milliseconds]
 	if {![file exists $tvfichcfg]} {
 		set f [open $tvfichcfg w+]
 		puts $f "actualizar=12:00"
+		puts -nonewline $f "backup=prog%Y%b%d-%H%M.tar.gz"
 		close $f
 		putlog "GuiaTV: Ficheiro vazio criado."
 		return "Erro: Ficheiro vazio. Adicione um link."
@@ -392,10 +487,13 @@ proc tvengine {} {
 		#	http::register https 443 [list ::tls::socket -tls1 true -ssl2 false -ssl3 false]
 	
 		#	http::config -useragent "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:76.0) Gecko/20100101 Firefox/76.0"
+		if {[string range $url 0 6]=="backup="} {continue}
 		if {[string range $url 0 10]=="actualizar="} {
 			set marcatempo [lindex [split $url "="] 1]
 	        #criar o bind -> 12:00 -> 00 12
-	        bind time - "[clock format [clock scan $marcatempo -format "%H:%M"] -format "%M %H"] * * *" tvautosync
+			foreach hora [split $marcatempo ","] {
+				bind time - "[clock format [clock scan $hora -format "%H:%M"] -format "%M %H"] * * *" tvautosync
+			}
 			continue
 		}
 		incr contador
@@ -453,7 +551,7 @@ proc tvengine {} {
 
 
 
-		putlog "GuiaTV: A preencher o array (isto pode demorar algum tempo)..."
+		putlog "GuiaTV: Aguarde alguns momentos enquanto a array é preenchida ..."
 		set nprog 0
 #		set ainicio [clock format [clock seconds] -format "%Y%m%d%H%M%S %z"]
 #		set afim [clock format [clock seconds] -format "%Y%m%d%H%M%S %z"]
@@ -863,12 +961,20 @@ proc tvmeuscanais {nick host handle chan text} {
 
 putlog "TV carregado - $datadoscript"
 if {![array exists programacao]} {
-
+	set cprogramacao {{bot ao iniciar}}
+	lappend cprogramacao [string map {"Mon" "Seg" "Tue" "Ter" "Wed" "Qua" "Thu" "Qui" "Fri" "Sex" "Sat" "Sáb" "Sun" "Dom" "Feb" "Fev" "Apr" "Abr" "May" "Mai" "Aug" "Ago" "Sep" "Set" "Oct" "Out" "Dec" "Dez"} [clock format [clock seconds] -format "%a,%d/%b/%Y %H:%M:%S"]]
+ 
 	tvengine
 }
 
 
-proc tvautosync {minuto hora dia mes ano} {tvengine}
+proc tvautosync {minuto hora dia mes ano} {
+	global cprogramacao
+    set cprogramacao {{tarefa automática}}
+    lappend cprogramacao [string map {"Mon" "Seg" "Tue" "Ter" "Wed" "Qua" "Thu" "Qui" "Fri" "Sex" "Sat" "Sáb" "Sun" "Dom" "Feb" "Fev" "Apr" "Abr" "May" "Mai" "Aug" "Ago" "Sep" "Set" "Oct" "Out" "Dec" "Dez"} [clock format [clock seconds] -format "%a,%d/%b/%Y %H:%M:%S"]]
+ 
+	tvengine
+}
 
 
 proc tvdefinir {nick host handle chan text} {
