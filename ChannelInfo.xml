@@ -167,11 +167,6 @@
     <virtualchannel>45</virtualchannel>
   </Channel>
   <Channel>
-    <name>Travel Channel</name>
-    <channelID>X05DD</channelID>
-    <virtualchannel>124</virtualchannel>
-  </Channel>
-  <Channel>
     <name>Jim Jam</name>
     <channelID>X0641</channelID>
     <virtualchannel>47</virtualchannel>
@@ -315,11 +310,6 @@
     <name>Deutsche Welle (A)</name>
     <channelID>X0C21</channelID>
     <virtualchannel>261</virtualchannel>
-  </Channel>
-  <Channel>
-    <name>Luxe TV HD</name>
-    <channelID>X0C82</channelID>
-    <virtualchannel>125</virtualchannel>
   </Channel>
   <Channel>
     <name>Localvisão TV HD</name>
@@ -597,19 +587,9 @@
     <virtualchannel>237</virtualchannel>
   </Channel>
   <Channel>
-    <name>Disney Channel Anima Fest</name>
-    <channelID>X20D5</channelID>
-    <virtualchannel>54</virtualchannel>
-  </Channel>
-  <Channel>
     <name>Veja HD</name>
     <channelID>X20DE</channelID>
     <virtualchannel>17</virtualchannel>
-  </Channel>
-  <Channel>
-    <name>Disney Junior Kids Party</name>
-    <channelID>X20E9</channelID>
-    <virtualchannel>50</virtualchannel>
   </Channel>
   <Channel>
     <name>Lolly Kids HD</name>
