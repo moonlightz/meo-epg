@@ -1,4 +1,4 @@
-bind PUBM - "* *https://www.youtube.com/watch?v=*" youtube
+bind pubm - "* *https://www.youtube.com/watch?v=*" youtube
 bind pubm - "* *https://youtu.be/*" youtube
 bind PUBM - * youtube:pubm
 
@@ -6,8 +6,8 @@ package require json
 package require http
 package require tls
 
-
-set youtube(api) ""
+#set youtube(api) "AIzaSyCxMgZ1FHsKunxzfZg_Fy2HqoM77e5a3g0"
+set youtube(api) "AIzaSyAzyur_d2hTp8L1rK_pQsRKKqAJ8TwQz-o"
 
 proc youtube:pubm {nick uhost hand chan arg} {
    global temp
@@ -45,7 +45,7 @@ proc ytpubm:youtube {nick uhost hand chan arg} {
 }
 proc youtube {nick uhost hand chan arg} {
    global ytignore youtube
-	set snippet ""
+
 #   if {![channel get $chan youtube]} { return 0 }
    if {![string match -nocase *yout* $arg]} { return 0 }
 
@@ -63,7 +63,7 @@ proc youtube {nick uhost hand chan arg} {
 
    set youtubecheck [regexp -all -nocase {(?:\/watch\?v=|youtu\.be\/)([\d\w-]{11})} $arg match youtubeid]
 if {![info exists youtubeid]} {
-	putserv "privmsg $chan :O link do vídeo é inválido."
+        putserv "privmsg $chan :O link do vídeo é inválido."
 return
 }
 #   ::http::register https 443 [list ::tls::socket -tls1 1]
@@ -78,6 +78,7 @@ return
       putlog "TCP error: $status"
       return 0
    }
+putlog [http::data $tok]
    if {[http::ncode $tok] != 200} {
       set code [http::code $tok]
       http::cleanup $tok
@@ -93,22 +94,23 @@ return
 #putlog "[string range $parse 398 900]"
 #putlog "[string range $parse 900 1400]"
 
-if {[lsearch [lindex [dict get $parse items] 0] snippet]<0} {
-   putquick "privmsg $chan :O vídeo não existe ou não está disponível."
-   return
-}
+
+#  if {![info exists snippet]} {
+#   putquick "privmsg $chan :O vídeo não existe ou não está disponível."
+#   return
+#}
    set playtime [lindex [dict get [lindex [dict get $parse items] 0] snippet] 1]
    set title [encoding convertfrom identity [lindex [dict get [lindex [dict get $parse items] 0] snippet] 5]]
    set viewCount [lindex [dict get [lindex [dict get $parse items] 0] statistics] 1]
    set likeCount [lindex [dict get [lindex [dict get $parse items] 0] statistics] 3]
    set dislikeCount [lindex [dict get [lindex [dict get $parse items] 0] statistics] 5]
    set commentCount [lindex [dict get [lindex [dict get $parse items] 0] statistics] 9]
-	foreach {itemA itemB} [dict get [lindex [dict get $parse items] 0] snippet] {
- 		if {$itemA=="channelTitle"} {
-			set channelTitle [encoding convertfrom identity $itemB]
-			break
-		}
-	}
+        foreach {itemA itemB} [dict get [lindex [dict get $parse items] 0] snippet] {
+                if {$itemA=="channelTitle"} {
+                        set channelTitle [encoding convertfrom identity $itemB]
+                        break
+                }
+        }
    set publishedAt [lindex [dict get [lindex [dict get $parse items] 0] snippet] 1]
    set publishedAt [string map {"T" " " ".000Z" "" "Z" ""} $publishedAt]
 #putlog $publishedAt
@@ -132,4 +134,19 @@ if {[lsearch [lindex [dict get $parse items] 0] snippet]<0} {
 proc youtube:convert {num} { while {[regsub {^([-+]?\d+)(\d\d\d)} $num "\\1 \\2" num]} {}; return $num }
 
 putlog "Succesfully loaded: \00303YouTUBE TCL Script"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
