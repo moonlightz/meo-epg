@@ -1,4 +1,4 @@
-set sfdatascript "16-Fevereiro-2021"
+set sfdatascript "19-Fevereiro-2021"
 bind pub - "!res" futebol
 
 proc futebol {nick host handle chan text} {
@@ -59,28 +59,34 @@ set equipavisitante [regexp -all -inline -- {match-team-away\" data-team-url=\"/
         set salta 0
 
 		if {$text!="todos"} {		
-			if {$text==""} {set sfdatacomp "today"}
-			if {$text=="ontem"} {set sfdatacomp "yesterday"}
-			if {$text=="amanhã"} {set sfdatacomp "tomorrow"}
+			if {$text==""} {
+				set sfdatacomp "today"
+			} elseif {$text=="ontem"} {
+				set sfdatacomp "yesterday"
+			} elseif {$text=="amanhã"} {
+				set sfdatacomp "tomorrow"
+			} else {
+				putquick "privmsg $chan :Não reconhecido, use ajuda."
+				return
+			}
 			set sfdatacomp [string map {"Feb" "Fev" "Apr" "Abr" "May" "Mai" "Aug" "Ago" "Sep" "Set" "Oct" "Out" "Dec" "Dez"} [clock format [clock scan $sfdatacomp] -format "%d/%b"]]
 		}
         foreach equipadacasa $lequipadacasa resultado $lresultado equipavisitante $lequipavisitante tv $ltv dmyh $lhoras estado $lestado parte $lparte {
-                if {$salta==4} {
-                        putquick "privmsg $chan :$output"
-                        set output ""
-                }
-                if {$estado!="(A decorrer)"} {
-                        set parte ""
-                } else {
-                        set parte "$parte "
-                }
+            if {$salta==4} {
+                putquick "privmsg $chan :$output"
+                set output ""
+            }
+            if {$estado!="(A decorrer)"} {
+                set parte ""
+            } else {
+                set parte "$parte "
+            }
 
-				if {$text=="todos" || [lindex $dmyh 0]==$sfdatacomp} {
-					
-					
-                set output "$output\002$dmyh\002 $equipadacasa $resultado $equipavisitante \0037$estado $parte\0034$tv\003; "
-				}
+			if {$text=="todos" || [lindex $dmyh 0]==$sfdatacomp} {
+				set output "$output\002$dmyh\002 $equipadacasa $resultado $equipavisitante \0037$estado $parte\0034$tv\003; "
+				
                 incr salta
+			}
         }
 		if {$output==""} {set output "Sem jogos."}
         putquick "privmsg $chan :[string trimright $output "; "]"
