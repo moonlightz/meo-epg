@@ -1,4 +1,4 @@
-set sfdatascript "1/Março/2021"
+set sfdatascript "21-Fevereiro-2021"
 bind pub - "!res" futebol
 
 proc futebol {nick host handle chan text} {
@@ -67,7 +67,7 @@ set equipavisitante [regexp -all -inline -- {match-team-away\" data-team-url=\"/
 				putquick "privmsg $chan :Não reconhecido, use ajuda."
 				return
 			}
-			set sfdatacomp [string trimleft [string map {"Feb" "Fev" "Apr" "Abr" "May" "Mai" "Aug" "Ago" "Sep" "Set" "Oct" "Out" "Dec" "Dez"} [clock format [clock scan $sfdatacomp] -format "%e/%b"]]]
+			set sfdatacomp [string map {"Feb" "Fev" "Apr" "Abr" "May" "Mai" "Aug" "Ago" "Sep" "Set" "Oct" "Out" "Dec" "Dez"} [clock format [clock scan $sfdatacomp] -format "%d/%b"]]
 		}
 
 	set output ""
