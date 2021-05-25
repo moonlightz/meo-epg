@@ -227,6 +227,11 @@
     <virtualchannel>44</virtualchannel>
   </Channel>
   <Channel>
+    <name>Panda Kids</name>
+    <channelID>X07F1</channelID>
+    <virtualchannel>50</virtualchannel>
+  </Channel>
+  <Channel>
     <name>História</name>
     <channelID>X0835</channelID>
     <virtualchannel>91</virtualchannel>
