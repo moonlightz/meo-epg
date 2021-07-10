@@ -1,0 +1,305 @@
+set ct(builddate) "10-Julho-2021"
+
+set ct(database) "scripts/chantriggers.db"
+set ct(triggerchar) "!"
+set ct(channels) "#code #guiatv"
+set ct(canalescolhido) ""
+
+bind pubm - "* $ct(triggerchar)*" pubmctchan
+bind dcc - "seleccanal" dcc:seleccanal
+bind dcc - "vertrigger" dcc:vertrigger
+bind dcc - "addtrigger" dcc:addtrigger
+bind dcc - "remtrigger" dcc:remtrigger
+bind dcc - "listtriggers" dcc:listtriggers
+bind pub - "!listtriggers" publisttriggers
+bind dcc - "trighelp" dcc:trighelp
+
+
+
+proc pubmctchan {nick uhost hand chan text} {
+	global ct
+	if {![file exists $ct(database)]} {
+		putlog "CHANTRIGGERS: $ct(database) não existe."
+		set fd [open $ct(database) w+]
+		close $fd
+		if {![file exists $ct(database)]} {
+			putlog "CHANTRIGGERS: Não foi possível criar um ficheiro vazio. Verifique se a string está bem definida ou se tem permissões suficientes."
+		} else {
+			putlog "CHANTRIGGERS: Um novo ficheiro vazio foi criado. Adicione um trigger pelo menos."
+		}
+		return
+	}
+
+	set cttemp [split $text " "]
+	set cttrigpedido [string range [lindex $cttemp 0] 1 end]
+
+	#identificadores###################################################################
+    set alvo [lindex $cttemp 1]
+	if {$alvo==""} {set alvo $nick}
+	set hora [clock format [clock seconds] -format "%T"]
+	set data [string trim [string map {
+		"Feb" "Feb" "Apr" "Abr" "May" "Mai" "Aug" "Ago" "Sep" "Set" "Oct" "Out" "Dec" "Dez"
+		} [clock format [clock seconds] -format "%e/%b/%Y"]]]
+	##########################################################
+
+
+
+	#ler o ficheiro para a memória
+	set linhas [ctlerdb $ct(database)]
+
+	#procurar pelo trigger pedido
+	foreach linha $linhas {
+		set dbtemp [split $linha " "]
+		set dbchan [lindex $dbtemp 0]
+		set dbtrig [lindex $dbtemp 1]
+		set dbtext [string range $linha [expr [string length $dbchan]+[string length $dbtrig]+2] end]
+		if {([string tolower $chan]==[string tolower $dbchan])&&($cttrigpedido==$dbtrig)} {
+			putquick "privmsg $chan :[subst $dbtext]"
+
+		}
+	}
+
+}
+
+proc dcc:trighelp {indx hand text} {
+	global ct
+	putdcc $hand "ChanTriggers $ct(builddate)"
+	putdcc $hand "  .listtriggers \[canal\]       -> Mostra os triggers. Sem canal, mostra tudo, se não mostra os desse canal."
+	putdcc $hand "  .seleccanal <canal>           -> Selecciona um canal para trabalhar com os trigger."
+	putdcc $hand "  .addtrigger trigger texto     -> Adiciona um trigger ao canal seleccionado."
+	putdcc $hand "  .remtrigger trigger           -> Remove um trigger ao canal seleccionado."
+	putdcc $hand "  !listtriggers                 -> Mostra a lista de triggers nesse canal."
+}
+
+proc dcc:addtrigger {indx hand text} {
+	global ct
+	if {$ct(canalescolhido)==""} {
+		putdcc $hand "Não há um canal seleccionado. Use .seleccanal #canal para seleccionar um."
+		return
+	}
+	set text [string trim $text]
+
+	set trig [regsub -all {[^a-zA-Z0-9_-]} [string range $text 0 [string first " " $text]-1] ""]
+	set text [string range $text [string first " " $text]+1 end]
+	
+	if {$trig=="" || $text==""} {
+		putdcc $hand ".addtrigger <trig> <text>"
+		putdcc $hand "Pode ser usado comandos e algumas vars para substituição"
+        putdcc $hand "\$alvo -> .trigger nick | $chan -> canal actual"
+        putdcc $hand "\$hora -> hora          | $data -> data"
+ 		return
+	}
+
+	#abrir o ficheiro para leitura e escrita com posição no final do ficheiro
+	set fd [open $ct(database) a+]
+	puts $fd "$ct(canalescolhido) $trig $text"
+	close $fd
+	putdcc $hand "\002$trig\002 adicionado a $ct(canalescolhido)."
+}
+
+proc dcc:vertrigger {indx hand text} {
+    global ct
+    if {$ct(canalescolhido)==""} {
+        putdcc $hand "Não há um canal seleccionado. Use .seleccanal #canal para seleccionar um."
+        return
+    }
+
+
+    if {![file exists $ct(database)]} {
+        putlog "CHANTRIGGERS: $ct(database) não existe."
+        set fd [open $ct(database) w+]
+        close $fd
+        if {![file exists $ct(database)]} {
+            putlog "CHANTRIGGERS: Não foi possível criar um ficheiro vazio. Verifique se a string está bem definida ou se tem permissões suficientes."
+        } else {
+            putlog "CHANTRIGGERS: Um novo ficheiro vazio foi criado. Adicione um trigger pelo menos."
+        }
+        return
+    }
+
+    set cttemp [split $text " "]
+    set cttrigpedido [lindex [split $cttemp " "] 0]
+
+    ##########################################################
+
+
+
+    #ler o ficheiro para a memória
+    set linhas [ctlerdb $ct(database)]
+
+    #procurar pelo trigger pedido
+	set contagem 0
+	set corfundo 2
+    foreach linha $linhas {
+        set dbtemp [split $linha " "]
+        set dbchan [lindex $dbtemp 0]
+        set dbtrig [lindex $dbtemp 1]
+        set dbtext [string range $linha [expr [string length $dbchan]+[string length $dbtrig]+2] end]
+        if {([string tolower $ct(canalescolhido)]==[string tolower $dbchan])&&($cttrigpedido==$dbtrig)} {
+			incr contagem
+			if {$corfundo==2} {set corfundo 6} {set corfundo 2}
+            putdcc $hand [format "\0038,$corfundo %+*s \003 $dbtext" 3 $contagem]
+
+        }
+    }
+}
+
+proc dcc:seleccanal {indx hand text} {
+	global ct
+	set text [string tolower [string trim $text]]
+	if {$ct(canalescolhido)!=""} {
+		putdcc $hand "O canal anteriormente escolhido é: \002$ct(canalescolhido)\002"
+	}
+
+	if {[lsearch -exact [string tolower $ct(channels)] $text]<0} {
+		putdcc $hand "Esse canal que digitou não está na lista. Tem de ser um destes: $ct(channels)"
+	} else {
+		putdcc $hand "O canal \002$text\002 está agora seleccionado."
+		set ct(canalescolhido) $text
+	}
+}
+
+proc dcc:remtrigger {indx hand text} {
+    global ct
+    if {$ct(canalescolhido)==""} {
+        putdcc $hand "Não há um canal seleccionado. Use .seleccanal #canal para seleccionar um."
+        return
+    }
+    set text [string trim $text]
+    set trig [string tolower [lindex [split $text " "] 0]]
+    set indice [lindex [split $text " "] 1]
+
+    if {$trig==""} {
+        putdcc $hand ".remtrigger <trig> \[indice\]"
+        return
+    }
+
+	set linhas [ctlerdb $ct(database)]
+	set ctbk ""
+	set count 0
+	set trem "nao"
+	foreach linha $linhas {
+        set dbtemp [split $linha " "]
+        set dbchan [lindex $dbtemp 0]
+        set dbtrig [lindex $dbtemp 1]
+        set dbtext [string range $linha [expr [string length $dbchan]+[string length $dbtrig]+2] end]
+		if {$dbchan==""} {continue}
+ 		if {$dbchan==$ct(canalescolhido)} {
+			if {$dbtrig==$trig} {
+				incr count
+				if {$indice=="" || $indice==$count} {
+					putdcc $hand ".addtrigger $trig $dbtext"
+					set trem "sim"
+					continue
+				}
+			}
+		}
+		lappend ctbk $linha
+	}
+
+	if {$trem=="nao"} {
+		putdcc $hand "Nada foi removido."
+		return
+	}
+	
+	set fd [open $ct(database) w] 
+	foreach linha $ctbk {
+		puts $fd $linha
+	}
+	close $fd
+	putdcc $hand "Actualização do ficheiro concluída."
+}
+
+proc dcc:listtriggers {indx hand text} {
+	#mostra os triggers dos canais numa lista, especificar um canal para só ver os desse canal
+    global ct
+	set linhas [ctlerdb $ct(database)]
+	set text [string trim $text]
+	if {[string index $text 0]=="#"} {set ctwchan [string tolower [lindex [split $text " "] 0]]} {set ctwchan ""}
+
+	array set ltriggers {}
+	foreach linha $linhas {
+		set dbtemp [split $linha " "]
+        set dbchan [string tolower [lindex $dbtemp 0]]
+        set dbtrig [string tolower [lindex $dbtemp 1]]
+		if {$dbchan!=""} {
+			if {$ctwchan=="" || $dbchan==$ctwchan} {
+				lappend ltriggers($dbchan) $dbtrig
+			}
+		}
+	}
+
+	set ltrigunique ""
+	foreach ctchan [array names ltriggers] {
+		set ltrigunique [lsort -unique -dictionary $ltriggers($ctchan)]	
+		set ltrigs ""
+		foreach litem $ltrigunique {
+			lappend ltrigs "${litem}([llength [lsearch -all $ltriggers($ctchan) $litem]])"
+		}
+
+		set ctchantitulo " $ctchan - Triggers: [llength $ltrigs] "
+		set cttl [expr 40-[string length $ctchantitulo]/2]
+		putdcc $hand [string replace [string repeat "=" 80] $cttl [expr $cttl+[string length $ctchantitulo]+1] $ctchantitulo]
+		
+		foreach {t1 t2 t3 t4 t5 t6 t7 t8} $ltrigs {
+			putdcc $hand "     $t1  $t2  $t3  $t4  $t5  $t6  $t7  $t8"
+		}
+	}
+	if {$ltrigunique==""} {putdcc $hand "Não há triggers para esse canal."}
+	
+
+}
+
+proc publisttriggers {nick uhost hand chan text} {
+    #mostra os triggers disponivel do canal em notice
+    global ct
+    set linhas [ctlerdb $ct(database)]
+    set text [string trim $text]
+
+    array set ltriggers {}
+    foreach linha $linhas {
+        set dbtemp [split $linha " "]
+        set dbchan [string tolower [lindex $dbtemp 0]]
+        set dbtrig [string tolower [lindex $dbtemp 1]]
+        if {$dbchan!=""} {
+            if {$dbchan==$chan} {
+                lappend ltriggers($dbchan) $dbtrig
+            }
+        }
+    }
+
+    set ltrigunique ""
+    foreach ctchan [array names ltriggers] {
+        set ltrigunique [lsort -unique -dictionary $ltriggers($ctchan)]
+        set ltrigs ""
+        foreach litem $ltrigunique {
+            lappend ltrigs "${litem}([llength [lsearch -all $ltriggers($ctchan) $litem]])"
+        }
+
+        set ctchant "Triggers: [llength $ltrigs] -->"
+
+        foreach {t1 t2 t3 t4 t5 t6 t7 t8} $ltrigs {
+            puthelp "NOTICE $nick :$ctchant $t1  $t2  $t3  $t4  $t5  $t6  $t7  $t8"
+			set ctchant ""
+        }
+    }
+    if {$ltrigunique==""} {
+		puthelp "NOTICE $nick :Não há triggers para este canal."
+	}
+
+
+
+}
+
+
+proc ctlerdb {ficheiro} {
+	#lê o ficheiro e devolve separado por linhas
+    set fd [open $ficheiro r]
+    set fdc [split [read $fd] "\n"]
+    close $fd
+	return $fdc
+}
+
+
+
+putlog "ChanTriggers $ct(builddate) por moonlight, use .trighelp para saber os comandos"
