@@ -1,8 +1,8 @@
-bind dcc - "yts" dcc:yts
+#bind dcc - "yts" dcc:yts
 
 set ytscanais "#torrents"
 set ytsdatadoscript "06-Fevereiro-2021"
-
+set ytslinhalimite 400
 
 #proc dcc:yts {indx handle text} {}
 bind time - "20 00 * * *" ytscheck
@@ -15,8 +15,8 @@ bind time - "10 22 * * *" ytscheck
 
 
 proc ytscheck {min hora dia mes ano} {
-	global ytscanais 
-
+	global ytscanais ytslinhalimite
+	
 set tempostring {
     "Feb" "Fev" "Apr" "Abr" "May" "Mai" "Aug" "Ago" "Sep" "Set" "Oct" "Out" "Dec" "Dez"
     "Mon" "Seg" "Tue" "Ter" "Wed" "Qua" "Thu" "Qui" "Fri" "Sex" "Sat" "Sáb" "Sun" "Dom"}
@@ -33,14 +33,14 @@ set tipoconteudo {
 
 
 
-    putlog "YTS: A obter o feed..."
+    #putlog "YTS: A obter o feed..."
 
 	catch {set ytsdata [exec wget -q -O - https://yts.lt/rss]}
         if {![info exists ytsdata]} {
             putlog "YTS: Não foi possivel descarregar dados."
             return
         }
-	putlog "YTS: [string length $ytsdata] bytes recebidos. A analisar..."
+	#putlog "YTS: [string length $ytsdata] bytes recebidos. A analisar..."
 	set latest ""
 
 	set fyts [open "yts.txt" r]
@@ -82,39 +82,40 @@ set tipoconteudo {
 		lappend listafeed2 $ifeed
 	}
 	set listafeed [lreverse $listafeed2]
-    putlog "YTS: Novos torrents: [llength $listafeed]"
+    #putlog "YTS: Novos torrents: [llength $listafeed]"
  
  	set fyts [open yts.txt a+]
 	foreach ilistafeed $listafeed {
 		set eitems [split $ilistafeed "|"]
 		foreach ytscanal $ytscanais {
 			set chanoutput "\0039,1[encoding convertfrom identity 🎬]\035YTS\003\035 \002[lindex $eitems 1]\002 \0037\037[lindex $eitems 2]\037\003 ([string map $tempostring [clock format [lindex $eitems 0] -format "%a, %d/%b/%Y %H:%M:%S"]]) \002IMDB:\002[lindex $eitems 3] \002Género:\002[string map $tipoconteudo [lindex $eitems 4]] \002Tamanho:\002[lindex $eitems 5] \002Duração:\002[lindex $eitems 6]"
-			if {[string length $chanoutput]+[string length [lindex $eitems 7]]>450} {
-				putquick "privmsg $ytscanal :$chanoutput"
-				set desc [lindex $eitems 7]
-				if {[string length [lindex $eitems 7]]<440} {
-					putquick "privmsg $ytscanal :\002(CONT.)\002 \035[lindex $eitems 7]\035"
-				} else {
-					set pdesc [split $desc " "]
-					set odesc ""
-					foreach idesc $pdesc {
-						set odesc "$odesc$idesc "
-						if {[string length $odesc]>440} {
-							putquick "privmsg $ytscanal :\002(CONT.)\002 \035$odesc\035"
-							set odesc ""
-						}
-					}
-					putquick "privmsg $ytscanal :\002(CONT.)\002 \035$odesc\035"
-				}
-			} else {
-				putquick "privmsg $ytscanal :$chanoutput \035[lindex $eitems 7]\035"
-			}
+			#if {[string length $chanoutput]+[string length [lindex $eitems 7]]>450} {
+			#	puthelp "privmsg $ytscanal :$chanoutput"
+			#	set desc [lindex $eitems 7]
+			#	if {[string length [lindex $eitems 7]]<$ytslinhalimite} {
+			#		puthelp "privmsg $ytscanal :\002(CONT.)\002 \035[lindex $eitems 7]\035"
+			#	} else {
+			#		set pdesc [split $desc " "]
+			#		set odesc ""
+			#		foreach idesc $pdesc {
+			#			set odesc "$odesc$idesc "
+			#			if {[string length $odesc]>$ytslinhalimite} {
+			#				puthelp "privmsg $ytscanal :\002(CONT.)\002 \035$odesc\035"
+			#				set odesc ""
+			#			}
+			#		}
+			#		puthelp "privmsg $ytscanal :\002(CONT.)\002 \035$odesc\035"
+			#	}
+			#} else {}
+				puthelp "privmsg $ytscanal :$chanoutput"
+				# \035[lindex $eitems 7]\035
+			
 		}
 		puts $fyts $ilistafeed
 	}
 	
 	close $fyts
-	putlog "YTS: Fim da actualização do ficheiro."
+	#putlog "YTS: Fim da actualização do ficheiro."
 }
 
 putlog "YTS.LT $ytsdatadoscript"
