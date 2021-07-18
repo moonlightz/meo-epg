@@ -1,0 +1,11 @@
+#vars do chantriggers.tcl
+
+#localização da db
+set ct(database) "scripts/chantriggers.db"
+
+#caracter usado nos canais
+set ct(triggerchar) "!"
+
+#lista de canais
+set ct(channels) "#code #guiatv"
+

@@ -1,9 +1,26 @@
 #Este script adiciona a funcionalidade de trigger aos canais.
-set ct(builddate) "11-Julho-2021"
+set ct(builddate) "18-Julho-2021"
 
-set ct(database) "scripts/chantriggers.db"
-set ct(triggerchar) "!"
-set ct(channels) "#code #guiatv"
+set ct(definicoes) "scripts/chantriggers.settings"
+#ficheiro com definições
+if {![file exists $ct(definicoes)]} {
+	putlog "CHANTRIGGERS: $ct(definicoes) está em falta! A tentar recriar o ficheiro ..."
+	set fd [open $ct(definicoes) w+]
+	puts $fd "\#vars do chantriggers.tcl"
+	puts -nonewline $fd "\n"
+	puts $fd "\#localização da db"
+	puts $fd "set ct(database) \"scripts/chantriggers.db\""
+	puts -nonewline $fd "\n"
+	puts $fd "\#caracter usado nos canais"
+	puts $fd "set ct(triggerchar) \"!\""
+	puts -nonewline $fd "\n"
+	puts $fd "\#lista de canais"
+	puts $fd "set ct(channels) \"\#code \#guiatv\""
+	close $fd
+	putlog "CHANTRIGGERS: Feito. A prosseguir ..."
+}
+source $ct(definicoes)
+
 if {![info exists ct(canalescolhido)]} {set ct(canalescolhido) ""}
 
 bind pubm - "* $ct(triggerchar)*" pubmctchan
@@ -15,7 +32,32 @@ bind dcc - "listtriggers" dcc:listtriggers
 bind dcc - "pesqtrig" dcc:pesqtrig
 bind pub - "${ct(triggerchar)}listtriggers" publisttriggers
 bind dcc - "trighelp" dcc:trighelp
+bind dcc - "estadodb" dcc:estadodb
+bind dcc - "moverind" dcc:moverindice
+bind dcc - "copiartrig" dcc:copiartriggers
 
+#######################################################################
+proc dcc:estadodb {indx hand text} {
+	global ct
+	if {![file exists $ct(database)]} {
+		putdcc $hand "$ct(database) não existe."
+	} else {
+		if {![file readable $ct(database)]} {set legivel "NÃO"} {set legivel "SIM"}
+		if {![file writable $ct(database)]} {set escrevivel "NÃO"} {set escrevivel "SIM"}
+		set atempo [string map {
+                   "Mon" "Seg" "Tue" "Ter" "Wed" "Qua" "Thu" "Qui" "Fri" "Sex" "Sat" "Sáb" "Sun" "Dom"
+                   "Feb" "Fev" "Apr" "Abr" "May" "Mai" "Aug" "Ago" "Oct" "Out" "Dec" "Dez"
+                   } [clock format [file atime $ct(database)] -format "%a, %d/%b/%Y %H:%M:%S"]]
+		set mtempo [string map {
+                   "Mon" "Seg" "Tue" "Ter" "Wed" "Qua" "Thu" "Qui" "Fri" "Sex" "Sat" "Sáb" "Sun" "Dom"
+                   "Feb" "Fev" "Apr" "Abr" "May" "Mai" "Aug" "Ago" "Oct" "Out" "Dec" "Dez"
+                   } [clock format [file mtime $ct(database)] -format "%a, %d/%b/%Y %H:%M:%S"]]
+
+
+		putdcc $hand "Nome da base de dados: $ct(database)  Tamanho: [file size $ct(database)] bytes  Legivel: $legivel  Escrevivel: $escrevivel"
+		putdcc $hand "Último acesso a: $atempo  Última modificação a: $mtempo"
+	}
+}
 
 ########################################################################
 proc pubmctchan {nick uhost hand chan text} {
@@ -66,14 +108,14 @@ proc pubmctchan {nick uhost hand chan text} {
 proc dcc:trighelp {indx hand text} {
 	global ct
 	putdcc $hand "ChanTriggers $ct(builddate)"
-	putdcc $hand "  .listtriggers \[canal\]         -> Mostra os triggers. Sem canal, mostra tudo, se não mostra os desse canal."
-	putdcc $hand "  .seleccanal <canal>           -> Selecciona um canal para trabalhar com os trigger."
-	putdcc $hand "  .adictrigger trigger texto    -> Adiciona um trigger ao canal seleccionado."
-	putdcc $hand "  .vertrigger trigger           -> Mostra o texto relacionado com esse trigger."
-	putdcc $hand "  .remtrigger trigger           -> Remove um trigger ao canal seleccionado."
-	putdcc $hand "  .pesqtrig <termo>             -> Pesquisa o termo especificado nos triggers."
-	putdcc $hand "  ${ct(triggerchar)}listtriggers                 -> Num canal, mostrará a lista de triggers desse canal."
-	putdcc $hand "  ${ct(triggerchar)}trigger                      -> Num canal, mostrar o texto associado a esse trigger."
+	putdcc $hand "  .listtriggers \[canal\]          -> Mostra os triggers. Sem canal, mostra tudo, se não mostra os desse canal."
+	putdcc $hand "  .seleccanal <canal>            -> Selecciona um canal para trabalhar com os trigger."
+	putdcc $hand "  .adictrigger <trigger> <texto> -> Adiciona um trigger ao canal seleccionado."
+	putdcc $hand "  .vertrigger <trigger>          -> Mostra o texto relacionado com esse trigger."
+	putdcc $hand "  .remtrigger <trigger> n n1 ... -> Remove um trigger ao canal seleccionado ou a(s) linha(s) que especificar."
+	putdcc $hand "  .pesqtrig <termo>              -> Pesquisa o termo especificado nos triggers."
+	putdcc $hand "  ${ct(triggerchar)}listtriggers                  -> Num canal, mostrará a lista de triggers desse canal."
+	putdcc $hand "  ${ct(triggerchar)}trigger                       -> Num canal, mostrar o texto associado a esse trigger."
 }
 
 
@@ -110,14 +152,14 @@ proc dcc:adictrigger {indx hand text} {
 	}
 	set text [string trim $text]
 
-	set trig [regsub -all {[^a-zA-Z0-9_-]} [string range $text 0 [string first " " $text]-1] ""]
+	set trig [regsub -all {[^a-zA-Z0-9ç_-]} [string range $text 0 [string first " " $text]-1] ""]
 	set text [string range $text [string first " " $text]+1 end]
 	
 	if {$trig=="" || $text==""} {
 		putdcc $hand ".adictrigger <trig> <text>"
 		putdcc $hand "Pode ser usado comandos e algumas vars para substituição"
-        putdcc $hand "\$alvo -> .trigger nick | $chan -> canal actual"
-        putdcc $hand "\$hora -> hora          | $data -> data"
+        putdcc $hand "\$alvo -> $ct(triggerchar)trigger nick | \$chan -> canal actual"
+        putdcc $hand "\$hora -> hora          | \$data -> data"
  		return
 	}
 
@@ -134,6 +176,11 @@ proc dcc:vertrigger {indx hand text} {
         putdcc $hand "Não há um canal seleccionado. Use .seleccanal #canal para seleccionar um."
         return
     }
+	set text [string trim $text]
+	if {$text==""} {
+		putdcc $hand "Use .vertrigger <trigger> para ver o conteúdo de um trigger."
+		return
+	}
 
 
     if {![file exists $ct(database)]} {
@@ -150,9 +197,6 @@ proc dcc:vertrigger {indx hand text} {
 
     set cttemp [split $text " "]
     set cttrigpedido [lindex [split $cttemp " "] 0]
-
-    ##########################################################
-
 
 
     #ler o ficheiro para a memória
@@ -212,43 +256,87 @@ proc dcc:remtrigger {indx hand text} {
         return
     }
     set text [string trim $text]
-    set trig [string tolower [lindex [split $text " "] 0]]
-    set indice [lindex [split $text " "] 1]
+    #set trig [string tolower [lindex [split $text " "] 0]]
+	set trig [lindex $text 0]
+    #set indice [lindex [split $text " "] 1]
+	
 
-    if {$trig==""} {
-        putdcc $hand ".remtrigger <trig> \[indice\]"
+	 if {$trig==""} {
+        putdcc $hand ".remtrigger <trig> \[indice1\] \[indice2\]..."
         return
     }
-
+	
 	set linhas [ctlerdb $ct(database)]
 	set ctbk ""
-	set count 0
-	set trem "nao"
-	foreach linha $linhas {
+ 	set ctbk2 ""   
+	set indices [lsort -unique -decreasing [lrange $text 1 end]]
+
+    set trem "nao"
+    foreach linha $linhas {
         set dbtemp [split $linha " "]
         set dbchan [lindex $dbtemp 0]
         set dbtrig [lindex $dbtemp 1]
-        set dbtext [string range $linha [expr [string length $dbchan]+[string length $dbtrig]+2] end]
-		if {$dbchan==""} {continue}
- 		if {$dbchan==$ct(canalescolhido)} {
-			if {$dbtrig==$trig} {
-				incr count
-				if {$indice=="" || $indice==$count} {
-					putdcc $hand ".adictrigger $trig $dbtext"
-					set trem "sim"
-					continue
-				}
-			}
+        #set dbtext [string range $linha [expr [string length $dbchan]+[string length $dbtrig]+2] end]
+        if {$dbchan==""} {continue}
+        if {$dbchan==$ct(canalescolhido) && $dbtrig==$trig} {
+			#todas as linhas com canal e trig encontrados vao para a segunda lista
+			lappend ctbk2 $linha
+			set trem "sim"
+		} else {
+			#caso contrario, adicionar à primeira lista
+			lappend ctbk $linha
 		}
-		lappend ctbk $linha
-	}
+    }
 
 	if {$trem=="nao"} {
-		putdcc $hand "Nada foi removido. O mais provavel é o trigger não existir. Certifique-se de que está bem escrito."
+		putdcc $hand "'$trig' não foi encontrado no canal $ct(canalescolhido). Certifique-se que o nome do trigger está bem escrito. Nada será alterado."
 		return
 	}
-	
-	set fd [open $ct(database) w] 
+
+
+	if {$indices!=""} {
+		set tctbk2 [llength $ctbk2]
+
+		foreach indice $indices {
+			if {![isnumber $indice]} {
+				putdcc $hand "'$indice' não é um número."
+				return
+			}
+			if {$indice>$tctbk2} {
+				putdcc $hand "'$indice' é maior que o número de elementos ($tctbk2) do trigger $trig do canal $ct(canalescolhido)."
+				return
+			}
+			if {$indice==0} {
+				putdcc $hand "'$indice' não é um indice válido."
+				return
+			}
+		}	
+		set ctbk3 ""
+		foreach indice $indices {
+			set linha [lindex $ctbk2 $indice-1]
+			lappend ctbk3 ".adictrigger [string range $linha [string first " " $linha]+1 end]"
+		}
+		foreach linha [lreverse $ctbk3] {
+			putdcc $hand $linha
+		}
+		foreach indice $indices {
+			set ctbk2 [lreplace $ctbk2 $indice-1 $indice-1]
+		}
+		foreach linha $ctbk2 {		
+			lappend ctbk $linha
+		}
+	} else {
+		foreach linha $ctbk2 {
+			putdcc $hand ".adictrigger [string range $linha [string first " " $linha]+1 end]"
+		}
+	}
+
+	#putdcc $hand "-----"
+	#foreach linha $ctbk {
+	#	putdcc $hand "*** $linha"
+	#}
+	#putdcc $hand "-----"
+	set fd [open $ct(database) w+] 
 	foreach linha $ctbk {
 		puts $fd $linha
 	}
