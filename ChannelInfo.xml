@@ -154,12 +154,12 @@
   <Channel>
     <name>Sporting TV HD</name>
     <channelID>X04B2</channelID>
-    <virtualchannel>36</virtualchannel>
+    <virtualchannel>37</virtualchannel>
   </Channel>
   <Channel>
     <name>Eurosport 1 HD</name>
     <channelID>X0516</channelID>
-    <virtualchannel>37</virtualchannel>
+    <virtualchannel>38</virtualchannel>
   </Channel>
   <Channel>
     <name>Disney Channel</name>
@@ -345,6 +345,11 @@
     <name>TRT World</name>
     <channelID>X0FA5</channelID>
     <virtualchannel>226</virtualchannel>
+  </Channel>
+  <Channel>
+    <name>Dizi Channel</name>
+    <channelID>X0FA9</channelID>
+    <virtualchannel>77</virtualchannel>
   </Channel>
   <Channel>
     <name>TPA</name>
