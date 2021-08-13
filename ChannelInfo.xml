@@ -37,11 +37,6 @@
     <virtualchannel>196</virtualchannel>
   </Channel>
   <Channel>
-    <name>EEC Secundário</name>
-    <channelID>X0085</channelID>
-    <virtualchannel>444</virtualchannel>
-  </Channel>
-  <Channel>
     <name>SIC</name>
     <channelID>X00CA</channelID>
     <virtualchannel>3</virtualchannel>
