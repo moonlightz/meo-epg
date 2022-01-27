@@ -124,7 +124,7 @@
   <Channel>
     <name>Baby TV</name>
     <channelID>X0219</channelID>
-    <virtualchannel>48</virtualchannel>
+    <virtualchannel>49</virtualchannel>
   </Channel>
   <Channel>
     <name>CMTV</name>
@@ -169,7 +169,7 @@
   <Channel>
     <name>Jim Jam</name>
     <channelID>X0641</channelID>
-    <virtualchannel>47</virtualchannel>
+    <virtualchannel>48</virtualchannel>
   </Channel>
   <Channel>
     <name>Cartoon Network</name>
@@ -224,7 +224,7 @@
   <Channel>
     <name>Panda Kids</name>
     <channelID>X07F1</channelID>
-    <virtualchannel>50</virtualchannel>
+    <virtualchannel>51</virtualchannel>
   </Channel>
   <Channel>
     <name>História</name>
@@ -599,7 +599,7 @@
   <Channel>
     <name>Lolly Kids HD</name>
     <channelID>X20EE</channelID>
-    <virtualchannel>49</virtualchannel>
+    <virtualchannel>50</virtualchannel>
   </Channel>
   <Channel>
     <name>BFM TV</name>
