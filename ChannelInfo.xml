@@ -227,6 +227,11 @@
     <virtualchannel>51</virtualchannel>
   </Channel>
   <Channel>
+    <name>Boomerang</name>
+    <channelID>X07F5</channelID>
+    <virtualchannel>47</virtualchannel>
+  </Channel>
+  <Channel>
     <name>História</name>
     <channelID>X0835</channelID>
     <virtualchannel>91</virtualchannel>
