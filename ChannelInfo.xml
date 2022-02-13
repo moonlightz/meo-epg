@@ -332,6 +332,11 @@
     <virtualchannel>126</virtualchannel>
   </Channel>
   <Channel>
+    <name>MCS TV Ultra HD</name>
+    <channelID>X0EDB</channelID>
+    <virtualchannel>400</virtualchannel>
+  </Channel>
+  <Channel>
     <name>Aljazeera</name>
     <channelID>X0FA1</channelID>
     <virtualchannel>225</virtualchannel>
@@ -592,6 +597,11 @@
     <virtualchannel>237</virtualchannel>
   </Channel>
   <Channel>
+    <name>Veja HD</name>
+    <channelID>X20DE</channelID>
+    <virtualchannel>17</virtualchannel>
+  </Channel>
+  <Channel>
     <name>Lolly Kids HD</name>
     <channelID>X20EE</channelID>
     <virtualchannel>50</virtualchannel>
@@ -610,5 +620,15 @@
     <name>AlmaLusa HD</name>
     <channelID>X2652</channelID>
     <virtualchannel>139</virtualchannel>
+  </Channel>
+  <Channel>
+    <name>MEO Destaques</name>
+    <channelID>X26AD</channelID>
+    <virtualchannel>89</virtualchannel>
+  </Channel>
+  <Channel>
+    <name>MEO Videoclube</name>
+    <channelID>X26B1</channelID>
+    <virtualchannel>69</virtualchannel>
   </Channel>
 </NewDataSet>
