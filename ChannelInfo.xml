@@ -2,6 +2,21 @@
 <!--tv generator-info-name="DVBGuide" generator-info-url="http://www.dvbguide.com/" -->
 <NewDataSet>
   <Channel>
+    <name>RTP1</name>
+    <channelID>X0066</channelID>
+    <virtualchannel>1</virtualchannel>
+  </Channel>
+  <Channel>
+    <name>RTP2</name>
+    <channelID>X006C</channelID>
+    <virtualchannel>2</virtualchannel>
+  </Channel>
+  <Channel>
+    <name>RTP3</name>
+    <channelID>X0070</channelID>
+    <virtualchannel>6</virtualchannel>
+  </Channel>
+  <Channel>
     <name>RTP Memória</name>
     <channelID>X0071</channelID>
     <virtualchannel>100</virtualchannel>
@@ -20,6 +35,16 @@
     <name>RTP África</name>
     <channelID>X007D</channelID>
     <virtualchannel>196</virtualchannel>
+  </Channel>
+  <Channel>
+    <name>SIC</name>
+    <channelID>X00CA</channelID>
+    <virtualchannel>3</virtualchannel>
+  </Channel>
+  <Channel>
+    <name>SIC Notícias</name>
+    <channelID>X00CE</channelID>
+    <virtualchannel>5</virtualchannel>
   </Channel>
   <Channel>
     <name>SIC K</name>
@@ -42,6 +67,11 @@
     <virtualchannel>120</virtualchannel>
   </Channel>
   <Channel>
+    <name>TVI</name>
+    <channelID>X0130</channelID>
+    <virtualchannel>4</virtualchannel>
+  </Channel>
+  <Channel>
     <name>CNN Portugal</name>
     <channelID>X0131</channelID>
     <virtualchannel>7</virtualchannel>
@@ -55,6 +85,11 @@
     <name>SPORT TV +</name>
     <channelID>X01A6</channelID>
     <virtualchannel>14</virtualchannel>
+  </Channel>
+  <Channel>
+    <name>11</name>
+    <channelID>X01CE</channelID>
+    <virtualchannel>11</virtualchannel>
   </Channel>
   <Channel>
     <name>FOX HD</name>
@@ -92,6 +127,11 @@
     <virtualchannel>49</virtualchannel>
   </Channel>
   <Channel>
+    <name>CMTV</name>
+    <channelID>X02BE</channelID>
+    <virtualchannel>8</virtualchannel>
+  </Channel>
+  <Channel>
     <name>A Bola TV</name>
     <channelID>X0321</channelID>
     <virtualchannel>13</virtualchannel>
@@ -105,6 +145,16 @@
     <name>Canal Q</name>
     <channelID>X03E9</channelID>
     <virtualchannel>101</virtualchannel>
+  </Channel>
+  <Channel>
+    <name>Sporting TV HD</name>
+    <channelID>X04B2</channelID>
+    <virtualchannel>37</virtualchannel>
+  </Channel>
+  <Channel>
+    <name>Eurosport 1 HD</name>
+    <channelID>X0516</channelID>
+    <virtualchannel>38</virtualchannel>
   </Channel>
   <Channel>
     <name>Disney Channel</name>
@@ -125,6 +175,11 @@
     <name>Cartoon Network</name>
     <channelID>X0709</channelID>
     <virtualchannel>41</virtualchannel>
+  </Channel>
+  <Channel>
+    <name>Gametoon HD</name>
+    <channelID>X0711</channelID>
+    <virtualchannel>109</virtualchannel>
   </Channel>
   <Channel>
     <name>Cinemundo HD</name>
