@@ -242,12 +242,12 @@
     <virtualchannel>91</virtualchannel>
   </Channel>
   <Channel>
-    <name>Blaze</name>
+    <name>AMC Break</name>
     <channelID>X0839</channelID>
     <virtualchannel>107</virtualchannel>
   </Channel>
   <Channel>
-    <name>Crime+Investigation</name>
+    <name>AMC Crime</name>
     <channelID>X083D</channelID>
     <virtualchannel>114</virtualchannel>
   </Channel>
