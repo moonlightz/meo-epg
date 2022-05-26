@@ -92,12 +92,12 @@
     <virtualchannel>11</virtualchannel>
   </Channel>
   <Channel>
-    <name>FOX HD</name>
+    <name>FOX</name>
     <channelID>X01F6</channelID>
     <virtualchannel>70</virtualchannel>
   </Channel>
   <Channel>
-    <name>FOX Movies HD</name>
+    <name>FOX Movies</name>
     <channelID>X01FA</channelID>
     <virtualchannel>62</virtualchannel>
   </Channel>
@@ -152,7 +152,7 @@
     <virtualchannel>37</virtualchannel>
   </Channel>
   <Channel>
-    <name>Eurosport 1 HD</name>
+    <name>Eurosport 1</name>
     <channelID>X0516</channelID>
     <virtualchannel>38</virtualchannel>
   </Channel>
@@ -182,12 +182,12 @@
     <virtualchannel>109</virtualchannel>
   </Channel>
   <Channel>
-    <name>Cinemundo HD</name>
+    <name>Cinemundo</name>
     <channelID>X076E</channelID>
     <virtualchannel>60</virtualchannel>
   </Channel>
   <Channel>
-    <name>AMC HD</name>
+    <name>AMC</name>
     <channelID>X07D2</channelID>
     <virtualchannel>63</virtualchannel>
   </Channel>
@@ -267,7 +267,7 @@
     <virtualchannel>64</virtualchannel>
   </Channel>
   <Channel>
-    <name>SyFy HD</name>
+    <name>SyFy</name>
     <channelID>X08FE</channelID>
     <virtualchannel>76</virtualchannel>
   </Channel>
@@ -327,7 +327,7 @@
     <virtualchannel>261</virtualchannel>
   </Channel>
   <Channel>
-    <name>Localvisão TV HD</name>
+    <name>Localvisão TV</name>
     <channelID>X0CE6</channelID>
     <virtualchannel>163</virtualchannel>
   </Channel>
@@ -492,7 +492,7 @@
     <virtualchannel>140</virtualchannel>
   </Channel>
   <Channel>
-    <name>Fuel TV HD</name>
+    <name>Fuel TV</name>
     <channelID>X12C2</channelID>
     <virtualchannel>108</virtualchannel>
   </Channel>
@@ -599,15 +599,15 @@
   <Channel>
     <name>BVN</name>
     <channelID>X1DB1</channelID>
-    <virtualchannel>237</virtualchannel>
+    <virtualchannel>270</virtualchannel>
   </Channel>
   <Channel>
-    <name>Veja HD</name>
+    <name>Veja</name>
     <channelID>X20DE</channelID>
     <virtualchannel>17</virtualchannel>
   </Channel>
   <Channel>
-    <name>Lolly Kids HD</name>
+    <name>Lolly Kids</name>
     <channelID>X20EE</channelID>
     <virtualchannel>50</virtualchannel>
   </Channel>
@@ -622,7 +622,7 @@
     <virtualchannel>219</virtualchannel>
   </Channel>
   <Channel>
-    <name>AlmaLusa HD</name>
+    <name>AlmaLusa</name>
     <channelID>X2652</channelID>
     <virtualchannel>139</virtualchannel>
   </Channel>
