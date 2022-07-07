@@ -169,7 +169,7 @@
   <Channel>
     <name>Jim Jam</name>
     <channelID>X0641</channelID>
-    <virtualchannel>48</virtualchannel>
+    <virtualchannel>0</virtualchannel>
   </Channel>
   <Channel>
     <name>Cartoon Network</name>
