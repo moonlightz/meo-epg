@@ -167,11 +167,6 @@
     <virtualchannel>45</virtualchannel>
   </Channel>
   <Channel>
-    <name>Jim Jam</name>
-    <channelID>X0641</channelID>
-    <virtualchannel>0</virtualchannel>
-  </Channel>
-  <Channel>
     <name>Cartoon Network</name>
     <channelID>X0709</channelID>
     <virtualchannel>41</virtualchannel>
@@ -235,6 +230,11 @@
     <name>Nickelodeon Ukraine</name>
     <channelID>X07FA</channelID>
     <virtualchannel>281</virtualchannel>
+  </Channel>
+  <Channel>
+    <name>Casa e Cozinha</name>
+    <channelID>X07FD</channelID>
+    <virtualchannel>122</virtualchannel>
   </Channel>
   <Channel>
     <name>História</name>
