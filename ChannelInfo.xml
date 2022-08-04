@@ -167,6 +167,11 @@
     <virtualchannel>45</virtualchannel>
   </Channel>
   <Channel>
+    <name>Travel XP HD</name>
+    <channelID>X05EA</channelID>
+    <virtualchannel>124</virtualchannel>
+  </Channel>
+  <Channel>
     <name>Cartoon Network</name>
     <channelID>X0709</channelID>
     <virtualchannel>41</virtualchannel>
@@ -339,7 +344,7 @@
   <Channel>
     <name>MCS TV Ultra HD</name>
     <channelID>X0EDB</channelID>
-    <virtualchannel>400</virtualchannel>
+    <virtualchannel>401</virtualchannel>
   </Channel>
   <Channel>
     <name>Aljazeera</name>
