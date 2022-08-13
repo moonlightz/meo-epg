@@ -2,16 +2,6 @@
 <!--tv generator-info-name="DVBGuide" generator-info-url="http://www.dvbguide.com/" -->
 <NewDataSet>
   <Channel>
-    <name>RTP1</name>
-    <channelID>X0066</channelID>
-    <virtualchannel>1</virtualchannel>
-  </Channel>
-  <Channel>
-    <name>RTP2</name>
-    <channelID>X006C</channelID>
-    <virtualchannel>2</virtualchannel>
-  </Channel>
-  <Channel>
     <name>RTP3</name>
     <channelID>X0070</channelID>
     <virtualchannel>6</virtualchannel>
@@ -37,16 +27,6 @@
     <virtualchannel>196</virtualchannel>
   </Channel>
   <Channel>
-    <name>SIC</name>
-    <channelID>X00CA</channelID>
-    <virtualchannel>3</virtualchannel>
-  </Channel>
-  <Channel>
-    <name>SIC Notícias</name>
-    <channelID>X00CE</channelID>
-    <virtualchannel>5</virtualchannel>
-  </Channel>
-  <Channel>
     <name>SIC K</name>
     <channelID>X00D2</channelID>
     <virtualchannel>43</virtualchannel>
@@ -65,11 +45,6 @@
     <name>SIC Caras</name>
     <channelID>X00DE</channelID>
     <virtualchannel>120</virtualchannel>
-  </Channel>
-  <Channel>
-    <name>TVI</name>
-    <channelID>X0130</channelID>
-    <virtualchannel>4</virtualchannel>
   </Channel>
   <Channel>
     <name>CNN Portugal</name>
