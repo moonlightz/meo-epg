@@ -234,7 +234,7 @@
   <Channel>
     <name>Nickelodeon Ukraine</name>
     <channelID>X07FA</channelID>
-    <virtualchannel>281</virtualchannel>
+    <virtualchannel>280</virtualchannel>
   </Channel>
   <Channel>
     <name>Casa e Cozinha</name>
@@ -584,7 +584,7 @@
   <Channel>
     <name>CCTV 4</name>
     <channelID>X183D</channelID>
-    <virtualchannel>279</virtualchannel>
+    <virtualchannel>278</virtualchannel>
   </Channel>
   <Channel>
     <name>Channel 1 Russia</name>
