@@ -82,6 +82,11 @@
     <virtualchannel>12</virtualchannel>
   </Channel>
   <Channel>
+    <name>TVI Reality</name>
+    <channelID>X013D</channelID>
+    <virtualchannel>99</virtualchannel>
+  </Channel>
+  <Channel>
     <name>SPORT TV +</name>
     <channelID>X01A6</channelID>
     <virtualchannel>14</virtualchannel>
