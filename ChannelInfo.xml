@@ -337,6 +337,11 @@
     <virtualchannel>261</virtualchannel>
   </Channel>
   <Channel>
+    <name>W-Sport HD</name>
+    <channelID>X0C3A</channelID>
+    <virtualchannel>29</virtualchannel>
+  </Channel>
+  <Channel>
     <name>Localvisão TV</name>
     <channelID>X0CE6</channelID>
     <virtualchannel>163</virtualchannel>
