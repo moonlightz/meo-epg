@@ -247,6 +247,11 @@
     <virtualchannel>122</virtualchannel>
   </Channel>
   <Channel>
+    <name>Nick Jr</name>
+    <channelID>X0801</channelID>
+    <virtualchannel>53</virtualchannel>
+  </Channel>
+  <Channel>
     <name>História</name>
     <channelID>X0835</channelID>
     <virtualchannel>91</virtualchannel>
