@@ -1,5 +1,10 @@
 puts "Ferramenta de conversão de IDs de canal. 20-Junho-2020"
 
+set fp [open meo.conf w+]
+puts $fp "date=[clock format [clock seconds] -format "%d/%b/%Y %H:%M:%S"]"
+puts $fp "url=https://raw.githubusercontent.com/moonlightz/meo-epg/master/meo-modificado.xml"
+close $fp
+
 set ficheiroxml "meo.xml"
 set ficheiroxmlsaida "meo-modificado.xml"
 
