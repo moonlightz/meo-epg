@@ -12,11 +12,6 @@
     <virtualchannel>2</virtualchannel>
   </Channel>
   <Channel>
-    <name>RTP3</name>
-    <channelID>X0070</channelID>
-    <virtualchannel>6</virtualchannel>
-  </Channel>
-  <Channel>
     <name>RTP Memória</name>
     <channelID>X0071</channelID>
     <virtualchannel>100</virtualchannel>
@@ -92,11 +87,6 @@
     <virtualchannel>14</virtualchannel>
   </Channel>
   <Channel>
-    <name>11</name>
-    <channelID>X01CE</channelID>
-    <virtualchannel>11</virtualchannel>
-  </Channel>
-  <Channel>
     <name>FOX</name>
     <channelID>X01F6</channelID>
     <virtualchannel>70</virtualchannel>
@@ -132,11 +122,6 @@
     <virtualchannel>49</virtualchannel>
   </Channel>
   <Channel>
-    <name>CMTV</name>
-    <channelID>X02BE</channelID>
-    <virtualchannel>8</virtualchannel>
-  </Channel>
-  <Channel>
     <name>A Bola TV</name>
     <channelID>X0321</channelID>
     <virtualchannel>13</virtualchannel>
@@ -150,16 +135,6 @@
     <name>Canal Q</name>
     <channelID>X03E9</channelID>
     <virtualchannel>101</virtualchannel>
-  </Channel>
-  <Channel>
-    <name>Sporting TV HD</name>
-    <channelID>X04B2</channelID>
-    <virtualchannel>37</virtualchannel>
-  </Channel>
-  <Channel>
-    <name>Eurosport 1</name>
-    <channelID>X0516</channelID>
-    <virtualchannel>38</virtualchannel>
   </Channel>
   <Channel>
     <name>Disney Channel</name>
@@ -180,11 +155,6 @@
     <name>Cartoon Network</name>
     <channelID>X0709</channelID>
     <virtualchannel>41</virtualchannel>
-  </Channel>
-  <Channel>
-    <name>Gametoon HD</name>
-    <channelID>X0711</channelID>
-    <virtualchannel>109</virtualchannel>
   </Channel>
   <Channel>
     <name>Cinemundo</name>
