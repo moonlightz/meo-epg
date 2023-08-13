@@ -237,11 +237,6 @@
     <virtualchannel>47</virtualchannel>
   </Channel>
   <Channel>
-    <name>Nickelodeon Ukraine</name>
-    <channelID>X07FA</channelID>
-    <virtualchannel>280</virtualchannel>
-  </Channel>
-  <Channel>
     <name>Casa e Cozinha</name>
     <channelID>X07FD</channelID>
     <virtualchannel>122</virtualchannel>
