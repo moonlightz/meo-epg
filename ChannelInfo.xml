@@ -82,11 +82,6 @@
     <virtualchannel>12</virtualchannel>
   </Channel>
   <Channel>
-    <name>TVI Reality</name>
-    <channelID>X013D</channelID>
-    <virtualchannel>99</virtualchannel>
-  </Channel>
-  <Channel>
     <name>SPORT TV +</name>
     <channelID>X01A6</channelID>
     <virtualchannel>14</virtualchannel>
@@ -242,11 +237,6 @@
     <virtualchannel>122</virtualchannel>
   </Channel>
   <Channel>
-    <name>Nick Jr</name>
-    <channelID>X0801</channelID>
-    <virtualchannel>52</virtualchannel>
-  </Channel>
-  <Channel>
     <name>História</name>
     <channelID>X0835</channelID>
     <virtualchannel>91</virtualchannel>
@@ -337,11 +327,6 @@
     <virtualchannel>261</virtualchannel>
   </Channel>
   <Channel>
-    <name>W-Sport HD</name>
-    <channelID>X0C3A</channelID>
-    <virtualchannel>29</virtualchannel>
-  </Channel>
-  <Channel>
     <name>Localvisão TV</name>
     <channelID>X0CE6</channelID>
     <virtualchannel>163</virtualchannel>
@@ -350,11 +335,6 @@
     <name>FTV</name>
     <channelID>X0D49</channelID>
     <virtualchannel>126</virtualchannel>
-  </Channel>
-  <Channel>
-    <name>MCS TV Ultra HD</name>
-    <channelID>X0EDB</channelID>
-    <virtualchannel>401</virtualchannel>
   </Channel>
   <Channel>
     <name>Aljazeera</name>
@@ -492,11 +472,6 @@
     <virtualchannel>132</virtualchannel>
   </Channel>
   <Channel>
-    <name>Gospel TV</name>
-    <channelID>X1209</channelID>
-    <virtualchannel>187</virtualchannel>
-  </Channel>
-  <Channel>
     <name>MCM Pop</name>
     <channelID>X125D</channelID>
     <virtualchannel>133</virtualchannel>
@@ -622,11 +597,6 @@
     <virtualchannel>270</virtualchannel>
   </Channel>
   <Channel>
-    <name>Veja</name>
-    <channelID>X20DE</channelID>
-    <virtualchannel>17</virtualchannel>
-  </Channel>
-  <Channel>
     <name>Lolly Kids</name>
     <channelID>X20EE</channelID>
     <virtualchannel>50</virtualchannel>
@@ -645,15 +615,5 @@
     <name>AlmaLusa</name>
     <channelID>X2652</channelID>
     <virtualchannel>139</virtualchannel>
-  </Channel>
-  <Channel>
-    <name>MEO Destaques</name>
-    <channelID>X26AD</channelID>
-    <virtualchannel>89</virtualchannel>
-  </Channel>
-  <Channel>
-    <name>MEO Videoclube</name>
-    <channelID>X26B1</channelID>
-    <virtualchannel>69</virtualchannel>
   </Channel>
 </NewDataSet>
