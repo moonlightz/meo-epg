@@ -1,11 +1,11 @@
-#BUILD 19-OUTUBRO-2023
+#BUILD 26-OUTUBRO-2023
 bind time - "* * * * *" rss
 bind dcc - "rss" dccrss
 
 proc dccrss {handle idx text} {
 	set arg1 [lindex $text 0]
 	if {$arg1!=""} {
-		set arg2 [string range $text [string length $arg1]+1 end]
+		set arg2 [string trim [string range $text [string length $arg1]+1 end]]
 	}
 	source rss.cfg
 
@@ -83,6 +83,19 @@ proc dccrss {handle idx text} {
 	"adicionar" {
 
 		}
+	"eliminar" {
+			if {$arg2==""} {
+				putdcc $idx "<id>"
+				return
+			}
+			if {[lsearch [array names rss] $arg2]<0} {
+				putdcc $idx "Esse id não existe."
+				putdcc $idx "Tem de ser um de: [lsort -dictionary [array names rss]]"
+				return
+			}
+			unset rss($arg2)
+			putdcc $idx "\002$arg2\002 eliminado."
+		}
 	default {
 			putdcc $idx "COMANDO NÃO RECONHECIDO: $arg1"
 			return
@@ -132,21 +145,21 @@ proc rss {min hor dia mes ano} {
 			}
 			set feed [exec wget --timeout=2 -q -O - $link]
 			set feed [string map {"<!\[CDATA\[" "" "]]>" ""} $feed]
-			set feed [string map {\[ ( ] )} $feed]
+			#set feed [string map {} $feed]
 			set contagem 0
 
 			set allitems [lreverse [encmatches $feed "<item>" "</item>"]]
 
 			foreach sitem $allitems {
 				set titulo [::htmlparse::mapEscapes [lindex [encmatches $sitem "<title>" "</title>"] 0]]
-				if {[lsearch $bufffeeds $titulo]<0} {
+				if {[lsearch $bufffeeds [string map {\[ \\\[ \] \\\]} $titulo]]<0} {
 					set link [encmatches $sitem "<link>" "</link>"]
 					set data [lindex [encmatches $sitem "<pubDate>" "</pubDate>"] 0]
-putdcc 6 ">$titulo<"
+#putdcc 6 ">$titulo<"
 #putdcc 7 ">$link<"
 #putdcc 7 ">$data<"
 					if {$ecache==0} {
-						putquick "privmsg $canal :[subst $logo] [dehex $titulo] ([convdata $data $fmtdata]) [tinyurl $link]"
+						putquick "privmsg $canal :[subst $logo] [string map {"<em>" "\035" "</em>" "\035"} $titulo] \017([convdata $data $fmtdata]) [tinyurl $link]"
 					}
 					lappend bufffeeds $titulo
 				}
@@ -179,3 +192,8 @@ proc encmatches {string stringA stringB} {
 }
 
 putlog "RSS FEEDS"
+#002 bold
+#003 cor
+#017 texto normal
+#026 reverse
+#037 underline

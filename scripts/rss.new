@@ -9,7 +9,7 @@ set rss(9to5) {
 }
 
 set rss(ipma) {
-	activo	"nao"
+	activo	"sim"
 	canal	"#portugal"
 	fmtdata	"%Y-%m-%d %H:%M:%S"
 	link	"https://www.ipma.pt/resources.www/rss/comunicados.xml"
@@ -118,6 +118,26 @@ set rss(planetubuntu) {
 	vezes	"3"
 }
 
+set rss(portugalcom) {
+	activo	"sim"
+	canal	"#portugal"
+	fmtdata	"%a, %d %b %Y %H:%M:%S %Z"
+	link	"https://www.portugal.com/feed/"
+	logo	"\002Portugal.com\002"
+	quando	"*:22"
+	vezes	"3"
+}
+
+set rss(publico) {
+	activo	"sim"
+	canal	"#feeds"
+	fmtdata	"%a, %d %b %Y %H:%M:%S %Z"
+	link	"http://feeds.feedburner.com/publicoRSS"
+	logo	"\002\0030,4Público\003\002"
+	quando	"*:29"
+	vezes	"3"
+}
+
 set rss(rtp) {
 	activo	"sim"
 	canal	"#RTP"
@@ -139,7 +159,7 @@ set rss(tecmint) {
 }
 
 set rss(visitportugal) {
-	activo	"sim"
+	activo	"nao"
 	canal	"#portugal"
 	fmtdata	"%a, %d %b %Y %H:%M:%S %Z"
 	link	"https://www.visitportugal.com/pt-pt/feedRss"
