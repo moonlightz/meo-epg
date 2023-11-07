@@ -87,11 +87,6 @@
     <virtualchannel>99</virtualchannel>
   </Channel>
   <Channel>
-    <name>SPORT TV +</name>
-    <channelID>X01A6</channelID>
-    <virtualchannel>14</virtualchannel>
-  </Channel>
-  <Channel>
     <name>11</name>
     <channelID>X01CE</channelID>
     <virtualchannel>11</virtualchannel>
@@ -140,11 +135,6 @@
     <name>A Bola TV</name>
     <channelID>X0321</channelID>
     <virtualchannel>13</virtualchannel>
-  </Channel>
-  <Channel>
-    <name>Porto Canal</name>
-    <channelID>X0386</channelID>
-    <virtualchannel>15</virtualchannel>
   </Channel>
   <Channel>
     <name>Canal Q</name>
@@ -237,11 +227,6 @@
     <virtualchannel>47</virtualchannel>
   </Channel>
   <Channel>
-    <name>Casa e Cozinha</name>
-    <channelID>X07FD</channelID>
-    <virtualchannel>122</virtualchannel>
-  </Channel>
-  <Channel>
     <name>Nick Jr</name>
     <channelID>X0801</channelID>
     <virtualchannel>52</virtualchannel>
@@ -255,11 +240,6 @@
     <name>AMC Break</name>
     <channelID>X0839</channelID>
     <virtualchannel>107</virtualchannel>
-  </Channel>
-  <Channel>
-    <name>AMC Crime</name>
-    <channelID>X083D</channelID>
-    <virtualchannel>114</virtualchannel>
   </Channel>
   <Channel>
     <name>AXN HD</name>
@@ -332,11 +312,6 @@
     <virtualchannel>224</virtualchannel>
   </Channel>
   <Channel>
-    <name>Deutsche Welle (A)</name>
-    <channelID>X0C21</channelID>
-    <virtualchannel>261</virtualchannel>
-  </Channel>
-  <Channel>
     <name>W-Sport HD</name>
     <channelID>X0C3A</channelID>
     <virtualchannel>29</virtualchannel>
@@ -352,19 +327,9 @@
     <virtualchannel>126</virtualchannel>
   </Channel>
   <Channel>
-    <name>MCS TV Ultra HD</name>
-    <channelID>X0EDB</channelID>
-    <virtualchannel>401</virtualchannel>
-  </Channel>
-  <Channel>
     <name>Aljazeera</name>
     <channelID>X0FA1</channelID>
     <virtualchannel>225</virtualchannel>
-  </Channel>
-  <Channel>
-    <name>TRT World</name>
-    <channelID>X0FA5</channelID>
-    <virtualchannel>226</virtualchannel>
   </Channel>
   <Channel>
     <name>Dizi Channel</name>
@@ -537,11 +502,6 @@
     <virtualchannel>195</virtualchannel>
   </Channel>
   <Channel>
-    <name>Euronews (A)</name>
-    <channelID>X13F1</channelID>
-    <virtualchannel>262</virtualchannel>
-  </Channel>
-  <Channel>
     <name>CNN</name>
     <channelID>X1451</channelID>
     <virtualchannel>205</virtualchannel>
@@ -592,11 +552,6 @@
     <virtualchannel>236</virtualchannel>
   </Channel>
   <Channel>
-    <name>CGTN</name>
-    <channelID>X1839</channelID>
-    <virtualchannel>220</virtualchannel>
-  </Channel>
-  <Channel>
     <name>CCTV 4</name>
     <channelID>X183D</channelID>
     <virtualchannel>278</virtualchannel>
@@ -622,38 +577,13 @@
     <virtualchannel>270</virtualchannel>
   </Channel>
   <Channel>
-    <name>Veja</name>
-    <channelID>X20DE</channelID>
-    <virtualchannel>17</virtualchannel>
-  </Channel>
-  <Channel>
     <name>Lolly Kids</name>
     <channelID>X20EE</channelID>
     <virtualchannel>50</virtualchannel>
   </Channel>
   <Channel>
-    <name>BFM TV</name>
-    <channelID>X2199</channelID>
-    <virtualchannel>251</virtualchannel>
-  </Channel>
-  <Channel>
-    <name>NHK World Japan</name>
-    <channelID>X2261</channelID>
-    <virtualchannel>219</virtualchannel>
-  </Channel>
-  <Channel>
     <name>AlmaLusa</name>
     <channelID>X2652</channelID>
     <virtualchannel>139</virtualchannel>
-  </Channel>
-  <Channel>
-    <name>MEO Destaques</name>
-    <channelID>X26AD</channelID>
-    <virtualchannel>89</virtualchannel>
-  </Channel>
-  <Channel>
-    <name>MEO Videoclube</name>
-    <channelID>X26B1</channelID>
-    <virtualchannel>69</virtualchannel>
   </Channel>
 </NewDataSet>
