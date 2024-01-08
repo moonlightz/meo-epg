@@ -327,16 +327,6 @@
     <virtualchannel>250</virtualchannel>
   </Channel>
   <Channel>
-    <name>Deutsche Welle</name>
-    <channelID>X0C1D</channelID>
-    <virtualchannel>224</virtualchannel>
-  </Channel>
-  <Channel>
-    <name>Deutsche Welle (A)</name>
-    <channelID>X0C21</channelID>
-    <virtualchannel>261</virtualchannel>
-  </Channel>
-  <Channel>
     <name>W-Sport HD</name>
     <channelID>X0C3A</channelID>
     <virtualchannel>29</virtualchannel>
