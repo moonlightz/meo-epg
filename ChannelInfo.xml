@@ -97,12 +97,12 @@
     <virtualchannel>11</virtualchannel>
   </Channel>
   <Channel>
-    <name>FOX</name>
+    <name>STAR Channel</name>
     <channelID>X01F6</channelID>
     <virtualchannel>70</virtualchannel>
   </Channel>
   <Channel>
-    <name>FOX Movies</name>
+    <name>STAR Movies</name>
     <channelID>X01FA</channelID>
     <virtualchannel>62</virtualchannel>
   </Channel>
@@ -112,12 +112,12 @@
     <virtualchannel>123</virtualchannel>
   </Channel>
   <Channel>
-    <name>FOX Life</name>
+    <name>STAR Life</name>
     <channelID>X01FD</channelID>
     <virtualchannel>71</virtualchannel>
   </Channel>
   <Channel>
-    <name>FOX Crime</name>
+    <name>STAR Crime</name>
     <channelID>X0201</channelID>
     <virtualchannel>72</virtualchannel>
   </Channel>
@@ -362,7 +362,7 @@
     <virtualchannel>77</virtualchannel>
   </Channel>
   <Channel>
-    <name>TPA</name>
+    <name>TPA Notícias</name>
     <channelID>X1005</channelID>
     <virtualchannel>199</virtualchannel>
   </Channel>
@@ -507,14 +507,14 @@
     <virtualchannel>108</virtualchannel>
   </Channel>
   <Channel>
-    <name>TV Record</name>
+    <name>Record Europa</name>
     <channelID>X1389</channelID>
-    <virtualchannel>191</virtualchannel>
+    <virtualchannel>192</virtualchannel>
   </Channel>
   <Channel>
     <name>Record News</name>
     <channelID>X138D</channelID>
-    <virtualchannel>192</virtualchannel>
+    <virtualchannel>193</virtualchannel>
   </Channel>
   <Channel>
     <name>UM Europa</name>
