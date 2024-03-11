@@ -482,11 +482,6 @@
     <virtualchannel>132</virtualchannel>
   </Channel>
   <Channel>
-    <name>Gospel TV</name>
-    <channelID>X1209</channelID>
-    <virtualchannel>187</virtualchannel>
-  </Channel>
-  <Channel>
     <name>MCM Pop</name>
     <channelID>X125D</channelID>
     <virtualchannel>133</virtualchannel>
