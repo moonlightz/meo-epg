@@ -1,23 +1,67 @@
-#BUILD 28-OUTUBRO-2023
-#moonlight @ irc.ptchat.org
+
+
+set rssbuild "18-MARÇO-2024"
+#kashinkoji ptnet a pior rede de irc de portugal
 #bind time - "* * * * *" rss
+
+bind pubm - "* .*" rsstrig
+
+proc rsstrig {nick uhost handle chan text} {
+	set rsspedido [string range [string trim $text] 1 end]
+	if {$rsspedido==""} {return}
+
+    if {![file exist rss.cfg]} {
+        putlog "O ficheiro rss.cfg não existe."
+        return
+    }
+    source rss.cfg
+    foreach itemrss [array names rss] {
+		if {$rsspedido==$itemrss} {
+	        foreach {var valor} $rss($itemrss) {
+    	        set [subst $var] $valor
+        	}
+
+	        if {$activo=="nao"} {
+				return
+	        }
+			if {$chan!=$canal} {
+				return
+			}
+
+            set ffeeds [obtertdl $link $logo $itemrss $fmtdata]
+			set contagem 0
+			set vezes2 [expr $vezes-1]
+            foreach iffeed [lrange $ffeeds end-$vezes2 end] {
+				incr contagem
+				putquick "privmsg $chan :$iffeed"
+				if {$vezes==$contagem} {
+					return
+				}
+            }
+        }
+    }
+ #-----------------
+}
+
 bind dcc - "rss" dccrss
 
 proc dccrss {handle idx text} {
+	global rssbuild
 	set arg1 [lindex $text 0]
 	if {$arg1!=""} {
 		set arg2 [string trim [string range $text [string length $arg1]+1 end]]
 	}
 	source rss.cfg
 
-	switch $arg1 {
-		"" {
-			putdcc $idx "listar \[campos\]	Lista todos os feeds registados"
-			putdcc $idx "adicionar <link>   Adiciona um feed"
-			putdcc $idx "remover <feed>	 Eliminar um feed"
-			putdcc $idx "alterar <feed> <chave> <novo-valor>"
+	switch [string tolower $arg1] {
+		"" - "ajuda" {
+			putdcc $idx "RSS $rssbuild"
+			putdcc $idx "  listar \[campos\]"
+			putdcc $idx "  adicionar <link>"
+			putdcc $idx "  remover <feed>"
+			putdcc $idx "  alterar <feed> <chave> <novo-valor>"
 			return
-			}
+		}
 		"listar" {
 			set nomes "itemrss canal quando link fmtdata"
 			if {$arg2!=""} {
@@ -66,7 +110,7 @@ proc dccrss {handle idx text} {
 									} elseif {$magora==$mminu} {
 										append oquando "\0038$iquando\003,"
 									} else {
-										append oquando "\0039$iquando\003,"
+										append oquando "\00371$iquando\003,"
 										continue
 									}
 								}
@@ -79,7 +123,7 @@ proc dccrss {handle idx text} {
 								} elseif {$mminutos==$rminutos} {
 									append oquando "\0038\034$iquando\003,"
 								} else {
-									append oquando "\0039\034$iquando\003,"
+									append oquando "\00371\034$iquando\003,"
 								}
 							}
 						}
@@ -97,7 +141,7 @@ proc dccrss {handle idx text} {
 			}
 			return
 		}
-	"alterar" {
+		"alterar" {
 			if {$arg2==""} {
 				putdcc $idx "\002<id>\002 <chave> <alteração>"
 				return
@@ -132,7 +176,19 @@ proc dccrss {handle idx text} {
 			putdcc $idx "\002$chave\002 alterado de \002$antes\002 para \002$valor\002."
 
 		}
-	"adicionar" {
+		"opcoes" - "opções" {
+			switch [lindex $arg2 0] {
+				"urldebug" {
+					set urldebug [lindex $arg2 1]
+				}
+				default {
+					putdcc $idx "Não conheço -> [lindex $arg2 0]"
+					break
+				}
+			}
+			putdcc $idx "OK"
+		}
+		"adicionar" {
 			if {$arg2==""} {
 				putdcc $idx "<link> \[id\] \[canal\] \[quando\] \[logo\]"
 				return
@@ -154,7 +210,7 @@ proc dccrss {handle idx text} {
 					regexp {\://\.(.*?)\.} $link -> id
 				}
 			}
-			set allitems [encmatches $feed "<item>" "</item>"]
+			set allitems [encmatches $feed "<item" "</item>"]
 			if {[llength $allitems]>0} {
 				set data [lindex [encmatches [lindex $allitems 0] "<pubDate>" "</pubDate>"] 0]
 				if {$data==""} {
@@ -180,7 +236,7 @@ proc dccrss {handle idx text} {
 			}
 			putdcc $idx "Adicionado com sucesso."
 		}
-	"eliminar" {
+		"eliminar" {
 			if {$arg2==""} {
 				putdcc $idx "<id>"
 				return
@@ -193,13 +249,16 @@ proc dccrss {handle idx text} {
 			unset rss($arg2)
 			putdcc $idx "\002$arg2\002 eliminado."
 		}
-	default {
+		default {
 			putdcc $idx "COMANDO NÃO RECONHECIDO: $arg1"
 			return
 		}
 	}
 	
 	set fp [open rss.cfg w+]
+
+	puts $fp "set urldebug $urldebug\n"
+
 	foreach id [lsort -dictionary [array names rss]] {
 		puts $fp "set rss($id) \{"
 		foreach chave [lsort [dict keys $rss($id)]] {
@@ -238,7 +297,6 @@ proc encmatches {string stringA stringB} {
 
 
 proc rss {min hor dia mes ano} {
-	package require htmlparse
 	global bufffeeds
 	set ecache 0
 	if {![info exist bufffeeds]} {
@@ -264,31 +322,13 @@ proc rss {min hor dia mes ano} {
 			if {![string match $iquando "$hor:$min"] && $ecache==0} {
 				continue
 			}
-			set feed ""
-			for {set tentativa 1} {$tentativa<=5} {incr tentativa} {
-				set feed [exec wget --timeout=2 -q -O - $link]
-				if {[string length $feed]>0} {
-					break
-				}
-			}
-			set feed [string map {"<!\[CDATA\[" "" "]]>" ""} $feed]
-			#set feed [string map {} $feed]
-			set contagem 0
-
-			set allitems [lreverse [encmatches $feed "<item>" "</item>"]]
-
-			foreach sitem $allitems {
-				set titulo [::htmlparse::mapEscapes [lindex [encmatches $sitem "<title>" "</title>"] 0]]
-				if {[lsearch $bufffeeds [string map {\[ \\\[ \] \\\]} $titulo]]<0} {
-					set link [::htmlparse::mapEscapes [lindex [encmatches $sitem "<link>" "</link>"] 0]]
-					set data [lindex [encmatches $sitem "<pubDate>" "</pubDate>"] 0]
-#putdcc 6 ">$titulo<"
-#putdcc 7 ">$link<"
-#putdcc 7 ">$data<"
+			set ffeeds [obtertdl $link $logo $itemrss $fmtdata]
+			foreach iffeed $ffeeds {
+				if {[lsearch $bufffeeds [string map {\[ \\\[ \] \\\]} $iffeed]]<0} {
 					if {$ecache==0} {
-						putquick "privmsg $canal :[subst $logo] [string map {"<em>" "\035" "</em>" "\035"} $titulo] \017[if {$data!=""} {set a "([convdata $data $fmtdata]) "}][tinyurl $link]"
+						putquick "privmsg $canal :$iffeed"
 					}
-					lappend bufffeeds $titulo
+					lappend bufffeeds $iffeed
 				}
 			}
 		}
@@ -299,6 +339,59 @@ proc rss {min hor dia mes ano} {
 if {![info exist bufffeeds]} {
 	utimer 60 {rss 0 0 0 0 0}
 }
+
+proc obtertdl {link logo itemrss fmtdata} {
+	package require htmlparse
+	set feed ""
+	set outfeed ""
+	putlog "ID: $itemrss | Hit $link ..."
+	for {set tentativa 1} {$tentativa<=10} {incr tentativa} {
+		if {[catch {set feed [exec wget --timeout=3 -q -O - $link]} erro]} {
+			#putlog "Ocorreu um erro a aceder a $link: $erro"
+			continue
+		}
+		if {[string length $feed]>0} {
+			break
+		}
+	}
+	if {[string length $feed]==0} {
+		putlog "RSS: Parece que $link não está acessível."
+		break
+	}
+	set feed [string map {"<!\[CDATA\[" "" "]]>" ""} $feed]
+	#set feed [string map {} $feed]
+	set contagem 0
+
+	set allitems [lreverse [encmatches $feed "<item" "</item>"]]
+
+	foreach sitem $allitems {
+		set titulo [::htmlparse::mapEscapes [lindex [encmatches $sitem "<title>" "</title>"] 0]]
+		set link [::htmlparse::mapEscapes [lindex [encmatches $sitem "<link>" "</link>"] 0]]
+		set data [lindex [encmatches $sitem "<pubDate>" "</pubDate>"] 0]
+#putdcc 6 ">$titulo<"
+#putdcc 7 ">$link<"
+#putdcc 7 ">$data<"
+		lappend outfeed "[subst $logo] [string map {"<em>" "\035" "</em>" "\035"} $titulo] \017[if {$data!=""} {set a "([convdata $data $fmtdata]) "}][tinyurl $link]"
+	}
+	putlog "Terminou."
+	set outfeed
+}
+
+bind pub - ".rss" chrss
+
+proc chrss {nick host handle chan text} {
+	source rss.cfg
+	set out ""
+	foreach itemrss [lsort [array names rss]] {
+		if {[dict get $rss($itemrss) activo]!="sim"} {continue}
+		if {[lsearch -nocase [dict get $rss($itemrss) canal] $chan]!=-1} {
+			lappend out $itemrss
+		}		
+	}
+	if {$out==""} {set out "Nada definido."}
+	putquick "privmsg $chan :$out"
+}
+
 
 
 putlog "RSS FEEDS"

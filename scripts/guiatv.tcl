@@ -1,8 +1,14 @@
-set datadoscript "28-Dezembro-2020"
+set datadoscript "22-Março-2024"
+#by Kashinkoji 
+set urldoscript "https://raw.githubusercontent.com/moonlightz/meo-epg/master/scripts/guiatv.tcl"
+bind time - "34 12 * * *" scriptupdate
+
+bind msg - "!prglista" prglista
 
 bind pub - "!antes" tvantes
 bind pub - "!agora" tvagora
 bind pub - "!depois" tvdepois
+bind pub - "!aseguir" tvdepois
 
 bind pub - "!ontem" tvontem
 bind pub - "!hoje" tvhoje
@@ -29,11 +35,10 @@ set tvfichcfg "tvurls.cfg"
 #set epglinkxml "https://ptiptv.tk/guia.xml"
 #https://ptiptv.tk/guia.xml
 set urlselec 0
-set ctext ""
 set fichnicks "tvnicks.txt"
 
 proc tvlistas {nick host handle chan text} {
-	global tvfichcfg urlselec ctext cprogramacao
+	global tvfichcfg urlselec cprogramacao
 #	putquick "privmsg $chan :$text"
 #	"d/a/b|mm hh|link"
 	set text [string trim $text]
@@ -214,12 +219,10 @@ proc tvlistas {nick host handle chan text} {
 		}
     } elseif {$opcao=="actualizar"} {
 		putnow "privmsg $chan :Aguarde alguns momentos enquanto a array é preenchida ..."
-		set ctext $chan
-		putnow "privmsg $chan :[tvengine]"
+		putnow "privmsg $chan :[tvengine $chan]"
 		set cprogramacao $nick
 		lappend cprogramacao [string map {"Mon" "Seg" "Tue" "Ter" "Wed" "Qua" "Thu" "Qui" "Fri" "Sex" "Sat" "Sáb" "Sun" "Dom" "Feb" "Fev" "Apr" "Abr" "May" "Mai" "Aug" "Ago" "Sep" "Set" "Oct" "Out" "Dec" "Dez"} [clock format [clock seconds] -format "%a,%d/%b/%Y %H:%M:%S"]]
 #putlog $cprogramacao
-		set ctext ""
 		return
 	} else {
 	    putnow "privmsg $chan :Opção não conhecida: $opcao"
@@ -332,18 +335,15 @@ proc tvpesq {nick host handle chan text} {
 	
 	####pesquisa por data
 	set ttempo ""
-	set tindex [lsearch -nocase $text "t:*"]
-	set ttempo [string range [lindex $text $tindex] 2 end]
-	if {$ttempo!=""} {
-		set ttempo [string map {"fev" "feb" "abr" "apr" "mai" "may" "ago" "aug" "set" "sep" "out" "oct" "dez" "dec"} [string tolower $ttempo]]
-		#putquick "privmsg $chan :$ttempo ddmeshhmm ->[timevalidate "%d%b%H%M" $ttempo]< >[clock format [clock scan $ttempo -format "%d%b%H%M"] -format "%D %T"]<"
-		if {[timevalidate "%d%b%H%M" $ttempo]==0} {
-			putquick "privmsg $chan :A data inserida não é válida. Use o formato ddmeshhmm. Exs: 31jan1730 28fev0550 08set0000"
+	set tindex [lsearch -nocase $text "d:*"]
+	set tdata [string tolower [string range [lindex $text $tindex] 2 end]]
+	if {$tdata!=""} {
+		set tdata [string map {"fev" "feb" "abr" "apr" "mai" "may" "ago" "aug" "set" "sep" "out" "oct" "dez" "dec"} $tdata]
+		if {[timevalidate "%d%b" $tdata]==0} {
+			putquick "privmsg $chan :A data inserida não é válida. Use o formato ddmes, como 31jan ou 28Fev"
 			return
 		}
-#		putquick "privmsg $chan :Data: [clock format [clock scan $ttempo -format "%d%b%H%M"] -format "%d/%b %H:%M"]"
-		set ttempo [clock format [clock scan $ttempo -format "%d%b%H%M"] -format "%Y%m%d%H%M%S %z"]
-		putlog ">$ttempo<"
+		set tdata [clock format [clock scan $tdata -format "%d%b"] -format "%Y%m%d%H%M%S %z"]
 	}
 
 	set actdesc ""
@@ -353,7 +353,7 @@ proc tvpesq {nick host handle chan text} {
 	set text [string trim [lreplace $text $dindex $dindex]]
     set text [string trim [lreplace $text $cindex $cindex]]
 	set text [string trim [lreplace $text $tindex $tindex]]
-#	putquick "privmsg $chan :>$text< >$cindex< >$tindex<"
+	#putquick "privmsg $chan :>$text< >$cindex< >$tindex<"
 
 	set text [string map {" " "*"} $text]
 
@@ -374,32 +374,21 @@ proc tvpesq {nick host handle chan text} {
 	}
 	foreach canal $clista {
 		set resultados ""
-		if {$ttempo!=""} {
+		if {$tdata!=""} {
 			foreach itemx [lrange $programacao($canal) 1 end] {
-#				set pinicio [clock scan [lindex [split $itemx "|"] 0] -format "%Y%m%d%H%M%S %z"]
-#				set pfim [clock scan [lindex [split $itemx "|"] 1] -format "%Y%m%d%H%M%S %z"]
-#				if {$pinicio<$ttempo && $ttempo<=$pfim} {
-#					lappend resultados $itemx
-#					break
-#				}
-				#set stempos ""
-				#lappend stempos [lindex [split $itemx "|"] 0]
-				#lappend stempos $ttempo
-				#lappend stempos [lindex [split $itemx "|"] 1]
-
-				if {[lsort -indices [list [clock scan [lindex [split $itemx "|"] 0] -format "%Y%m%d%H%M%S %z" -gmt 1] [clock scan $ttempo -format "%Y%m%d%H%M%S %z"] [clock scan [lindex [split $itemx "|"] 1] -format "%Y%m%d%H%M%S %z" -gmt 1]]]=={0 1 2}} {
-					lappend resultados $itemx
-					break
-				}
-#				putlog ">[list [lindex [split $itemx "|"] 0] $ttempo [lindex [split $itemx "|"] 1]]< >[lsort -indices [list [lindex [split $itemx "|"] 0] $ttempo [lindex [split $itemx "|"] 1]]]<"
-				#putlog ">$pinicio< >$ttempo< >$pfim< >$itemx<"
-				
-			}
-#			putlog ">>$resultados"
-			
+                if {[string range [lindex [split $itemx "|"] 0] 0 7]==[string range $tdata 0 7] && [string match -nocase *$text* [lindex [split $itemx "|"] 2]]} {
+	                #putlog "$itemx"
+                    lappend resultados $itemx
+                    #break
+                }
+            }
 		} else {
-			if {$actdesc=="desc"} {set ssquery "*|*|*$text*"} {set ssquery "*|*|*$text*|*"}
-				set resultados [lsearch -all -inline -nocase [lrange $programacao($canal) 1 end] $ssquery]
+			if {$actdesc=="desc"} {
+				set ssquery "*|*|*$text*"
+			} else {
+				set ssquery "*|*|*$text*|*"
+			}
+			set resultados [lsearch -all -inline -nocase [lrange $programacao($canal) 1 end] $ssquery]
 			
         }
 		if {$resultados!=""} {
@@ -449,8 +438,8 @@ proc tvpesq {nick host handle chan text} {
 	}
 }
 
-proc tvengine {} {
-	global programacao tvfichcfg ctext 
+proc tvengine {{ctext ""}} {
+	global programacao tvfichcfg 
 	putlog "GuiaTV: A iniciar a tarefa..."
 	set tarefainiciada [clock milliseconds]
 	if {![file exists $tvfichcfg]} {
@@ -510,7 +499,11 @@ proc tvengine {} {
 		#	http::wait $web
 		#	set xmlc [http::data $web]
 		#	http::cleanup $web
-		catch {set xmlc [exec wget -q -O - $url]}
+		if {[string match "*.gz" $url]} {
+			catch {set xmlc [exec wget -q -O - $url | gunzip -c]}
+		} else {
+			catch {set xmlc [exec wget -q -O - $url]}
+		}
 		if {$xmlc==""} {
 			putlog "GuiaTV: Falhou."
 			lappend lcontador $contador
@@ -658,6 +651,7 @@ proc tvdepois {nick host handle chan text} {
 
 proc tvsched {quando nick chan text} {
 	global fichnicks programacao
+	set nickencontrado "nao"
 	set text [string trim [string tolower $text]]
 	if {$text==""} {
 		if {![file exists $fichnicks]} {
@@ -771,10 +765,10 @@ proc tvsched {quando nick chan text} {
 				}
 				set programasencontradosi "$programasencontradosi [lindex $linha 2] "
 				if {$exflag!="" || [llength $text]==1} {
-					if {$quando=="agora"} {
+					#if {$quando=="agora"} {}
 						if {[string length $desc]>325} {set desc "[string range $desc 0 324]\u2026"}
 						set programasencontradosi "$programasencontradosi \035$desc\035"
-					}
+					#{}
 				}
 				set lpencontradosi [string length $programasencontradosi]
 				set lpencontrados [string length $programasencontrados]
@@ -963,8 +957,8 @@ putlog "TV carregado - $datadoscript"
 if {![array exists programacao]} {
 	set cprogramacao {{bot ao iniciar}}
 	lappend cprogramacao [string map {"Mon" "Seg" "Tue" "Ter" "Wed" "Qua" "Thu" "Qui" "Fri" "Sex" "Sat" "Sáb" "Sun" "Dom" "Feb" "Fev" "Apr" "Abr" "May" "Mai" "Aug" "Ago" "Sep" "Set" "Oct" "Out" "Dec" "Dez"} [clock format [clock seconds] -format "%a,%d/%b/%Y %H:%M:%S"]]
- 
-	tvengine
+ #criar um delay 60 segundos
+	utimer 90 tvengine
 }
 
 
@@ -1110,6 +1104,13 @@ proc tvdefinir {nick host handle chan text} {
 	}
 }
 
+proc scriptupdate {min hora dia mes ano} {
+	global urldoscript datadabuild
+	putlog "GuiaTV: A verificar por actualização do script ..."
+	set gitfile [exec wget -q -O - $urldoscript]
+	putlog [lindex [split $gitfile "\n"] 0]
+}
+
  proc timevalidate {format str} {
      # Start with a simple check: If the string cannot be parsed against
      # the specified format at all it's definitely wrong
@@ -1153,5 +1154,26 @@ proc formatbytes {value} {
     }
 }
 
+proc prglista {nick uhost handle text} {
+	if {![file exist tvprogs.txt]} {
+		set fp [open tvprogs.txt w+]
+		close $fp
+		putlog "GuiaTV: novo ficheiro tvprogs.txt criado."
+	}
+
+	set fp [open tvprogs.txt]
+	set content [read -nonewline $fp]
+	close $fp
+
+	foreach linha [split $content "\n"] {
+		if {$nick==[lindex [split $linha "|"] 0]} {
+			foreach {a b c d e f g h} [lrange [split $linha "|"] 1 end] {
+				putquick "privmsg $nick :[format "%-*s %-*s %-*s %-*s %-*s %-*s %-*s %-*s" 20 $a 20 $b 20 $c 20 $d 20 $e 20 $f 20 $g 20 $h]"
+			}
+			return
+		}
+	}
+	putquick "privmsg $nick :O seu nick não está na lista de nicks."
+}
 
 ########END END END END END END END END END END
