@@ -10,36 +10,36 @@ proc rsstrig {nick uhost handle chan text} {
 	set rsspedido [string range [string trim $text] 1 end]
 	if {$rsspedido==""} {return}
 
-    if {![file exist rss.cfg]} {
-        putlog "O ficheiro rss.cfg não existe."
-        return
-    }
-    source rss.cfg
-    foreach itemrss [array names rss] {
+	if {![file exist rss.cfg]} {
+		putlog "O ficheiro rss.cfg não existe."
+		return
+	}
+	source rss.cfg
+	foreach itemrss [array names rss] {
 		if {$rsspedido==$itemrss} {
-	        foreach {var valor} $rss($itemrss) {
-    	        set [subst $var] $valor
-        	}
+			foreach {var valor} $rss($itemrss) {
+				set [subst $var] $valor
+			}
 
-	        if {$activo=="nao"} {
+			if {$activo=="nao"} {
 				return
-	        }
+			}
 			if {$chan!=$canal} {
 				return
 			}
 
-            set ffeeds [obtertdl $link $logo $itemrss $fmtdata]
+			set ffeeds [obtertdl $link $logo $itemrss $fmtdata $opcoes(urldebug)]
 			set contagem 0
 			set vezes2 [expr $vezes-1]
-            foreach iffeed [lrange $ffeeds end-$vezes2 end] {
+			foreach iffeed [lrange $ffeeds end-$vezes2 end] {
 				incr contagem
 				putquick "privmsg $chan :$iffeed"
 				if {$vezes==$contagem} {
 					return
 				}
-            }
-        }
-    }
+			}
+		}
+	}
  #-----------------
 }
 
@@ -47,6 +47,13 @@ bind dcc - "rss" dccrss
 
 proc dccrss {handle idx text} {
 	global rssbuild
+	
+	#inicializar vars por defeito
+	set opcoes(urldebug) 0
+	set opcoes(listchantrig) 1
+	
+
+	#analisar o input
 	set arg1 [lindex $text 0]
 	if {$arg1!=""} {
 		set arg2 [string trim [string range $text [string length $arg1]+1 end]]
@@ -137,7 +144,7 @@ proc dccrss {handle idx text} {
 				}
 				#putdcc $idx ">$campos<"
 				putdcc $idx [string trimright [format "%-*s [string repeat "%-*s  " [llength $nomes]]" 1 [if {$activo=="sim"} {set a "✓"} {set a "✕"}] {*}$out]]
-#return
+				#return
 			}
 			return
 		}
@@ -177,16 +184,49 @@ proc dccrss {handle idx text} {
 
 		}
 		"opcoes" - "opções" {
-			switch [lindex $arg2 0] {
-				"urldebug" {
-					set urldebug [lindex $arg2 1]
-				}
+			set opcao [lindex $arg2 0]
+			set valopcao [lindex $arg2 1]
+			foreach ioptlista [array names opcoes] {
+   				lappend optlista $ioptlista "-"
+	   		}
+		   	set optlista [lrange $optlista 0 end-1]
+			switch $opcao \
+				{*}$optlista {
+				   	if {$valopcao==""} {
+					   	if {!$opcoes($opcao)} {
+					   		putdcc $idx "\002$opcao\002 está desactivado."
+					   	} else {
+						   	putdcc $idx "\002opcao\002 está activado."
+					   	}
+					   	return
+				   	} else {
+						if {![string is boolean $valopcao]} {
+							putdcc $idx ".rss opções $opcao <0|1>"
+							return
+						} else {
+							set valorantigo $opcoes($opcao)
+							if {$valorantigo==$valopcao} {
+								putdcc $idx "$opcao já é $valorantigo"
+								return
+							}
+							set opcoes($opcao) $valopcao
+							putdcc $idx "$opcao alterada $valorantigo para $opcoes(urldebug)"
+						}
+					}
+				} \
+				"" {
+					foreach opcao [lsort -dictionary [array names opcoes]] {
+						putdcc $idx [format "  %-*s  %-*s %-*s" \
+							 15 $opcao 1 $opcoes($opcao) 11 "([if {!$opcoes($opcao)} {set a "desactivado"} {set a "activado"}])"]
+					}
+					return
+				} \
 				default {
-					putdcc $idx "Não conheço -> [lindex $arg2 0]"
-					break
+				   	putdcc $idx "Não conheço -> $opcao"
+				   	return
 				}
-			}
-			putdcc $idx "OK"
+			
+			#putdcc $idx "OK"
 		}
 		"adicionar" {
 			if {$arg2==""} {
@@ -215,7 +255,7 @@ proc dccrss {handle idx text} {
 				set data [lindex [encmatches [lindex $allitems 0] "<pubDate>" "</pubDate>"] 0]
 				if {$data==""} {
 					putdcc $idx "Parece que não há um único <pubDate>. Vou utilizar o formato pré-definido na mesma."
-					set formato "%a, %d %b %Y %H:%M:%S %Z""
+					set formato "%a, %d %b %Y %H:%M:%S %Z"
 				} else {
 					set encontradoformato 0
 					foreach formato [list "%Y-%m-%d %H:%M:%S" "%a, %d %b %Y %H:%M:%S %Z"] {
@@ -254,11 +294,17 @@ proc dccrss {handle idx text} {
 			return
 		}
 	}
-	
+	file copy -force rss.cfg rss.cfg.old	
 	set fp [open rss.cfg w+]
 
-	puts $fp "set urldebug $urldebug\n"
-
+	puts $fp "#Este ficheiro foi gerado às [string map {
+		January Janeiro February Fevereiro March Março April Abril May Maio June Junho
+		July Julho August Agosto September Setembro October Outubro November Novembro December Dezembro
+		} [strftime "%d/%B/%Y %H:%M:%S"]]\n"
+	foreach opcao [lsort -dictionary [array names opcoes]] {
+		puts $fp "set opcoes($opcao) $opcoes($opcao)"
+	}
+	puts $fp ""
 	foreach id [lsort -dictionary [array names rss]] {
 		puts $fp "set rss($id) \{"
 		foreach chave [lsort [dict keys $rss($id)]] {
@@ -322,7 +368,7 @@ proc rss {min hor dia mes ano} {
 			if {![string match $iquando "$hor:$min"] && $ecache==0} {
 				continue
 			}
-			set ffeeds [obtertdl $link $logo $itemrss $fmtdata]
+			set ffeeds [obtertdl $link $logo $itemrss $fmtdata $opcoes(urldebug)]
 			foreach iffeed $ffeeds {
 				if {[lsearch $bufffeeds [string map {\[ \\\[ \] \\\]} $iffeed]]<0} {
 					if {$ecache==0} {
@@ -340,11 +386,13 @@ if {![info exist bufffeeds]} {
 	utimer 60 {rss 0 0 0 0 0}
 }
 
-proc obtertdl {link logo itemrss fmtdata} {
+proc obtertdl {link logo itemrss fmtdata urldebug} {
 	package require htmlparse
 	set feed ""
 	set outfeed ""
-	putlog "ID: $itemrss | Hit $link ..."
+	if {$urldebug} {
+		putlog "ID: $itemrss | Hit $link ..."
+	}
 	for {set tentativa 1} {$tentativa<=10} {incr tentativa} {
 		if {[catch {set feed [exec wget --timeout=3 -q -O - $link]} erro]} {
 			#putlog "Ocorreu um erro a aceder a $link: $erro"
@@ -373,7 +421,9 @@ proc obtertdl {link logo itemrss fmtdata} {
 #putdcc 7 ">$data<"
 		lappend outfeed "[subst $logo] [string map {"<em>" "\035" "</em>" "\035"} $titulo] \017[if {$data!=""} {set a "([convdata $data $fmtdata]) "}][tinyurl $link]"
 	}
-	putlog "Terminou."
+	if {$urldebug} {
+		putlog "Terminou. [llength $outfeed] elementos."
+	}
 	set outfeed
 }
 
