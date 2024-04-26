@@ -1,0 +1,11 @@
+#code testetempo \001ACTION Agora são $hora de $data!
+#code café \001ACTION serve um café a $alvo
+#guiatv teste áéíóú
+#guiatv teste âã
+#code bar Produtos disponíveis: !café !bagaço
+#code bagaço \001ACTION serve um bagaço a $alvo
+#code teste isto é a linha 1
+#code teste \001ACTION linha 2 ACTION
+#code teste teste de subst >$alvo< $chan
+#code teste \002negrito\002 \0039,12verde sobre azul\003 \026invertido\026 \037sublinhado\037 \035italico\035 normal
+#code teste teste de barra de progresso [pbardraw 20 75 12 14 0 75%]

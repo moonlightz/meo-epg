@@ -1,0 +1,190 @@
+set rss(9to5) {
+	activo	"sim"
+	canal	"#apple"
+	fmtdata	"%a, %d %b %Y %H:%M:%S %Z"
+	link	"https://9to5mac.com/feed/"
+	logo	"\0029T🕘5ℳ𝒶𝒸\002"
+	quando	"*:05"
+	vezes	"3"
+}
+
+set rss(ipma) {
+	activo	"sim"
+	canal	"#portugal"
+	fmtdata	"%Y-%m-%d %H:%M:%S"
+	link	"https://www.ipma.pt/resources.www/rss/comunicados.xml"
+	logo	"\002IPMA\002"
+	quando	"*:50"
+	vezes	"5"
+}
+
+set rss(jnegocio) {
+	activo	"sim"
+	canal	"#feeds"
+	fmtdata	"%a, %d %b %Y %H:%M:%S %Z"
+	link	"https://www.jornaldenegocios.pt/rss"
+	logo	"\002Jornal de Negócios\002"
+	quando	"*:31"
+	vezes	"5"
+}
+
+set rss(linuxcom) {
+	activo	"sim"
+	canal	"#linux"
+	fmtdata	"%a, %d %b %Y %H:%M:%S %Z"
+	link	"https://www.linux.com/feed/"
+	logo	"\0030,4LINUX.COM\003"
+	quando	"12:30"
+	vezes	"5"
+}
+
+set rss(linuxjournal) {
+	activo	"sim"
+	canal	"#linux"
+	fmtdata	"%a, %d %b %Y %H:%M:%S %Z"
+	link	"https://www.linuxjournal.com/node/feed"
+	logo	"\0034\002Linux Journal\002\003"
+	quando	"11:07,19:07,03:07"
+	vezes	"5"
+}
+
+set rss(macrumours) {
+	activo	"sim"
+	canal	"#apple"
+	fmtdata	"%a, %d %b %Y %H:%M:%S %Z"
+	link	"http://feeds.macrumors.com/MacRumors-Front"
+	logo	"\002Mac Rumours\002"
+	quando	"*:03"
+	vezes	"3"
+}
+
+set rss(macworld) {
+	activo	"sim"
+	canal	"#apple"
+	fmtdata	"%a, %d %b %Y %H:%M:%S %Z"
+	link	"https://www.macworld.com/feed"
+	logo	"\002Mac World\002"
+	quando	"*:01"
+	vezes	"3"
+}
+
+set rss(majorgeeks) {
+	activo	"sim"
+	canal	"#majorgeeks"
+	fmtdata	"%a, %d %b %Y %H:%M:%S %Z"
+	link	"https://www.majorgeeks.com/files/rss"
+	logo	"\0039🎖🎖🎖\003"
+	quando	"*:24"
+	vezes	"10"
+}
+
+set rss(mspoweruser) {
+	activo	"sim"
+	canal	"#Windows"
+	fmtdata	"%a, %d %b %Y %H:%M:%S %Z"
+	link	"https://mspoweruser.com/feed/"
+	logo	"\002MSPowerUser\002"
+	quando	"*:50"
+	vezes	"3"
+}
+
+set rss(nixcraft) {
+	activo	"sim"
+	canal	"#linux"
+	fmtdata	"%a, %d %b %Y %H:%M:%S %Z"
+	link	"https://www.cyberciti.com/feed/"
+	logo	"\002nixCraft\002"
+	quando	"12:45"
+	vezes	"5"
+}
+
+set rss(onmsft) {
+	activo	"sim"
+	canal	"#windows"
+	fmtdata	"%a, %d %b %Y %H:%M:%S %Z"
+	link	"https://www.onmsft.com/feed/"
+	logo	"\002OnMSFT\002"
+	quando	"*:48"
+	vezes	"5"
+}
+
+set rss(planetubuntu) {
+	activo	"sim"
+	canal	"#linux"
+	fmtdata	"%a, %d %b %Y %H:%M:%S %Z"
+	link	"https://planet.ubuntu.com/rss20.xml"
+	logo	"\002Planet Ubuntu\002"
+	quando	"*:15"
+	vezes	"3"
+}
+
+set rss(portugalcom) {
+	activo	"sim"
+	canal	"#portugal"
+	fmtdata	"%a, %d %b %Y %H:%M:%S %Z"
+	link	"https://www.portugal.com/feed/"
+	logo	"\002Portugal.com\002"
+	quando	"*:22"
+	vezes	"3"
+}
+
+set rss(publico) {
+	activo	"sim"
+	canal	"#feeds"
+	fmtdata	"%a, %d %b %Y %H:%M:%S %Z"
+	link	"http://feeds.feedburner.com/publicoRSS"
+	logo	"\002\0030,4Público\003\002"
+	quando	"*:29"
+	vezes	"3"
+}
+
+set rss(rtp) {
+	activo	"sim"
+	canal	"#RTP"
+	fmtdata	"%a, %d %b %Y %H:%M:%S %Z"
+	link	"https://www.rtp.pt/noticias/rss"
+	logo	"\002RTP\002"
+	quando	"*:02"
+	vezes	"10"
+}
+
+set rss(tecmint) {
+	activo	"sim"
+	canal	"#linux"
+	fmtdata	"%a, %d %b %Y %H:%M:%S %Z"
+	link	"https://www.tecmint.com/feed/"
+	logo	"\0031,0TecMint\003"
+	quando	"*:10"
+	vezes	"5"
+}
+
+set rss(visitportugal) {
+	activo	"nao"
+	canal	"#portugal"
+	fmtdata	"%a, %d %b %Y %H:%M:%S %Z"
+	link	"https://www.visitportugal.com/pt-pt/feedRss"
+	logo	"\00312Visit\0039Por\0034tugal\003"
+	quando	"12:00,23:00"
+	vezes	"3"
+}
+
+set rss(windowsclub) {
+	activo	"sim"
+	canal	"#windows"
+	fmtdata	"%a, %d %b %Y %H:%M:%S %Z"
+	link	"http://feeds.feedburner.com/TheWindowsClub"
+	logo	"\002Windows Club\002"
+	quando	"*:49"
+	vezes	"5"
+}
+
+set rss(windowslatest) {
+	activo	"sim"
+	canal	"#Windows"
+	fmtdata	"%a, %d %b %Y %H:%M:%S %Z"
+	link	"https://www.windowslatest.com/feed/"
+	logo	"\002Windows Latest\002"
+	quando	"*:52"
+	vezes	"3"
+}
+
