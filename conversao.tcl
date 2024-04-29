@@ -64,7 +64,7 @@ foreach linha [split $xmldata "\n"] {
 	if {$adic==1} {puts $fo $linha}
 	if {[string range $linha 0 13]=="  </programme>"} {set adic 1}
 	if {[string range $linha 0 11]=="  </channel>"} {set adic 1}
-
+	puts -nonewline "."	
 }
 close $fo
 
