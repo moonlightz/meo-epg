@@ -59,12 +59,9 @@ set adic 1
 foreach linha [split $xmldata "\n"] {
 	if {[string range $linha 0 22]=="  <programme channel=\"X"} {set adic 0}
 	if {[string range $linha 0 15]=="  <channel id=\"X"} {set adic 0}
-	
-	
 	if {$adic==1} {puts $fo $linha}
 	if {[string range $linha 0 13]=="  </programme>"} {set adic 1}
 	if {[string range $linha 0 11]=="  </channel>"} {set adic 1}
-	puts -nonewline "."	
 }
 close $fo
 
