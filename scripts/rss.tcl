@@ -1,7 +1,6 @@
 
-set rssbuild "05-Abril-2024"
-#kashinkoji ptnet a pior rede de irc de portugal e quiça do mundo
-#bind time - "* * * * *" rss
+set rssbuild "03-Maio-2024"
+#moonlight
 
 bind pubm - "* .*" rsstrig
 bind dcc - "rss" dccrss
@@ -9,7 +8,17 @@ bind pub - ".rss" chrss
 
 
 proc rsstrig {nick uhost handle chan text} {
-	set rsspedido [string range [string trim $text] 1 end]
+	if {[string index $text 0]!="."} {
+		return
+	}
+	set rsspedido [string range [lindex [split $text] 0] 1 end]
+	set nvezes [lindex [split $text] 1]
+	if {$nvezes==""} {
+		set nvezes 0
+	}
+	if {![string is integer $nvezes]} {
+		set nvezes 0
+	}
 	if {$rsspedido==""} {
 		return
 	}
@@ -28,15 +37,16 @@ proc rsstrig {nick uhost handle chan text} {
 			foreach {var valor} $rss($itemrss) {
 				set [subst $var] $valor
 			}
-
 			if {$activo=="nao"} {
 				return
 			}
 			if {$chan!=$canal} {
 				return
 			}
-
-			set ffeeds [obtertdl $link $logo $itemrss $fmtdata $opcoes(urldebug)]
+			if {$nvezes>0} {
+				set vezes $nvezes
+			}
+			set ffeeds [obtertdl $link $logo $itemrss $fmtdata $opcoes(urldebug) $opcoes(usartinyurl)]
 			set contagem 0
 			set vezes2 [expr $vezes-1]
 			foreach iffeed [lrange $ffeeds end-$vezes2 end] {
@@ -58,6 +68,7 @@ proc dccrss {handle idx text} {
 	set opcoes(urldebug) 0
 	set opcoes(listchantrig) 1
 	set opcoes(activarchantrig) 1
+	set opcoes(usartinyurl) 0
 
 
 	#analisar o input
@@ -247,7 +258,7 @@ proc dccrss {handle idx text} {
 			set quando	[lindex $arg2 3]
 			set logo	[lindex $arg2 4]
 
-			if {[catch {set feed [exec wget -t 2 -q -O - $link]} erro]} {
+			if {[catch {set feed [exec wget -q -O - $link]} erro]} {
 				putdcc $idx "ERRO: $erro"
 				return
 			}
@@ -391,10 +402,11 @@ proc encmatches {string stringA stringB} {
 
 proc rss {min hor dia mes ano} {
 	global bufffeeds
-	set ecache 0
+	set enchercache 0
 	if {![info exist bufffeeds]} {
 		set bufffeeds ""
-		set ecache 1
+		set enchercache 1
+		set ttime [clock milliseconds]
 	}
 
 	if {![file exist rss.cfg]} {
@@ -402,7 +414,10 @@ proc rss {min hor dia mes ano} {
 		return
 	}
 	source rss.cfg
+	set totalrss [llength [array names rss]]
+	set posicaorss 0
 	foreach itemrss [array names rss] {
+		incr posicaorss
 		foreach {var valor} $rss($itemrss) {
 			set [subst $var] $valor
 		}
@@ -412,13 +427,13 @@ proc rss {min hor dia mes ano} {
 		}
 		foreach iquando [split $quando ","] {
 			
-			if {![string match $iquando "$hor:$min"] && $ecache==0} {
+			if {![string match $iquando "$hor:$min"] && !$enchercache} {
 				continue
 			}
-			set ffeeds [obtertdl $link $logo $itemrss $fmtdata $opcoes(urldebug)]
+			set ffeeds [obtertdl $link $logo $itemrss $fmtdata $opcoes(urldebug) $opcoes(usartinyurl) [if {$enchercache} {set a "[format "%4s | " "[expr round((double($posicaorss)/$totalrss)*100)]%"]"}]]
 			foreach iffeed $ffeeds {
 				if {[lsearch $bufffeeds [string map {\[ \\\[ \] \\\]} $iffeed]]<0} {
-					if {$ecache==0} {
+					if {!$enchercache} {
 						putquick "privmsg $canal :$iffeed"
 					}
 					lappend bufffeeds $iffeed
@@ -427,32 +442,35 @@ proc rss {min hor dia mes ano} {
 		}
 	}
 	bind time - "* * * * *" rss
+	if {$enchercache} {
+		putlog "Operação de recriação demorou [expr (double([clock milliseconds])-$ttime)/1000] segundos."
+	}
 }
 
 if {![info exist bufffeeds]} {
 	utimer 60 {rss 0 0 0 0 0}
 }
 
-proc obtertdl {link logo itemrss fmtdata urldebug} {
+proc obtertdl {link logo itemrss fmtdata urldebug usartinyurl {progress ""}} {
+	set ttime [clock milliseconds]
 	package require htmlparse
 
 	set feed ""
 	set outfeed ""
 	if {$urldebug} {
-		putlog "ID: $itemrss | Hit $link ..."
+		putlog "$progress\017ID: $itemrss | Hit $link ..."
 	}
-	if {[catch {set feed [exec wget -t 2 -q -O - $link]} erro]} {
-		putlog "RSS: Ocorreu um erro a aceder a $link: $erro"
+	if {[catch {set feed [exec wget -q -O - $link]} erro]} {
+		putlog "\00307RSS: Ocorreu um erro a aceder a $link: $erro"
 		return
 	}
 	if {[string length $feed]==0} {
-		putlog "RSS: Parece que $link não está acessível."
+		putlog "\00307RSS: Parece que $link náo tem nada."
 		return
 	}
 	set feed [string map {"<!\[CDATA\[" "" "]]>" ""} $feed]
 	regsub -all {<title\s*[^>]*>} $feed "<title>" feed
 	set feed [htmlparse::mapEscapes $feed]
-
 
 	set allitems [lreverse [encmatches $feed "<item" "</item>"]]
 	#atom
@@ -474,10 +492,12 @@ proc obtertdl {link logo itemrss fmtdata urldebug} {
 #putdcc 8 ">$link<"
 #putdcc 8 ">$data<"
 
-		lappend outfeed "[subst $logo] [string map {"<em>" "\035" "</em>" "\035"} $titulo] \017[if {$data!=""} {set a "([convdata $data $fmtdata]) "}][tinyurl $link]"
+		lappend outfeed "[subst $logo] [string map {"<em>" "\035" "</em>" "\035"} $titulo] \017[if {$data!=""} {set a "([convdata $data $fmtdata]) "}][if {$usartinyurl} {set a [tinyurl $link]} {set link}]"
+
 	}
+	putserv "PONG :[lindex [split $::server ":"] 0]"
 	if {$urldebug} {
-		putlog "Terminou. [llength $outfeed] elementos."
+		putlog "Terminou: [llength $outfeed] elemento[if {[llength $outfeed]!=1} {set a "s"}]; [expr (double([clock milliseconds])-$ttime)/1000] segundos "
 	}
 	set outfeed
 }
@@ -520,7 +540,20 @@ proc chrss {nick host handle chan text} {
 			}
 		} \
 		"status" - "estado" {
-			putquick "privmsg $chan :RSS $rssbuild | Tamanho da cache: [llength $bufffeeds] ([string length $bufffeeds] bytes); Nº de feeds: [llength [array names rss]]"
+			putquick "privmsg $chan :RSS $rssbuild | Tamanho da cache: [llength $bufffeeds] ite[if {[llength $bufffeeds]==1} {set a "m"} {set a "ns"}] ([string bytelength $bufffeeds] bytes); Nº de feeds: [llength [array names rss]]"
+		} \
+		"guardar" - "guardarordenado" {
+			set fich "bufffeeds[strftime "%Y%m%d-%H%M%S"].txt"
+			set gbufffeeds bufffeeds
+			if {$arg1=="guardarordenado"} {
+				set gbufffeeds [lsort -dictionary $bufffeeds]
+			}
+			set fp [open $fich w+]
+			foreach ifeed $gbufffeeds {
+				puts $fp $ifeed
+			}
+			close $fp
+			putquick "privmsg $chan :$fich criado."
 		} \
 		"" {
 			if {$out==""} {
@@ -531,7 +564,7 @@ proc chrss {nick host handle chan text} {
 		} \
 		default {
 			putquick "privmsg $chan :Comando não conhecido: $arg1"
-			putquick "privmsg $chan :Comandos disponíveis: status estado"
+			putquick "privmsg $chan :Comandos disponíveis: status estado guardar guardarordenado"
 		}
 	
 }
