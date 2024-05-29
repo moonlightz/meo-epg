@@ -337,11 +337,6 @@
     <virtualchannel>126</virtualchannel>
   </Channel>
   <Channel>
-    <name>MCS TV Ultra HD</name>
-    <channelID>X0EDB</channelID>
-    <virtualchannel>402</virtualchannel>
-  </Channel>
-  <Channel>
     <name>Aljazeera</name>
     <channelID>X0FA1</channelID>
     <virtualchannel>225</virtualchannel>
