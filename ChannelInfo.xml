@@ -17,12 +17,12 @@
     <virtualchannel>6</virtualchannel>
   </Channel>
   <Channel>
-    <name>RTP Memória</name>
+    <name>RTP Memðria</name>
     <channelID>X0071</channelID>
     <virtualchannel>100</virtualchannel>
   </Channel>
   <Channel>
-    <name>RTP Açores</name>
+    <name>RTP AĿores</name>
     <channelID>X0075</channelID>
     <virtualchannel>160</virtualchannel>
   </Channel>
@@ -32,7 +32,7 @@
     <virtualchannel>161</virtualchannel>
   </Channel>
   <Channel>
-    <name>RTP África</name>
+    <name>RTP frica</name>
     <channelID>X007D</channelID>
     <virtualchannel>196</virtualchannel>
   </Channel>
@@ -42,7 +42,7 @@
     <virtualchannel>3</virtualchannel>
   </Channel>
   <Channel>
-    <name>SIC Notícias</name>
+    <name>SIC NotŦcias</name>
     <channelID>X00CE</channelID>
     <virtualchannel>5</virtualchannel>
   </Channel>
@@ -59,7 +59,7 @@
   <Channel>
     <name>SIC Mulher</name>
     <channelID>X00DA</channelID>
-    <virtualchannel>9</virtualchannel>
+    <virtualchannel>14</virtualchannel>
   </Channel>
   <Channel>
     <name>SIC Caras</name>
@@ -77,7 +77,7 @@
     <virtualchannel>7</virtualchannel>
   </Channel>
   <Channel>
-    <name>TVI Ficção</name>
+    <name>TVI FicĿªo</name>
     <channelID>X0135</channelID>
     <virtualchannel>12</virtualchannel>
   </Channel>
@@ -89,7 +89,7 @@
   <Channel>
     <name>SPORT TV +</name>
     <channelID>X01A6</channelID>
-    <virtualchannel>14</virtualchannel>
+    <virtualchannel>20</virtualchannel>
   </Channel>
   <Channel>
     <name>11</name>
@@ -139,12 +139,12 @@
   <Channel>
     <name>A Bola TV</name>
     <channelID>X0321</channelID>
-    <virtualchannel>13</virtualchannel>
+    <virtualchannel>34</virtualchannel>
   </Channel>
   <Channel>
     <name>Porto Canal</name>
     <channelID>X0386</channelID>
-    <virtualchannel>15</virtualchannel>
+    <virtualchannel>35</virtualchannel>
   </Channel>
   <Channel>
     <name>Canal Q</name>
@@ -154,7 +154,7 @@
   <Channel>
     <name>Sporting TV HD</name>
     <channelID>X04B2</channelID>
-    <virtualchannel>37</virtualchannel>
+    <virtualchannel>36</virtualchannel>
   </Channel>
   <Channel>
     <name>Eurosport 1</name>
@@ -167,7 +167,7 @@
     <virtualchannel>40</virtualchannel>
   </Channel>
   <Channel>
-    <name>Disney Júnior</name>
+    <name>Disney Jœnior</name>
     <channelID>X057D</channelID>
     <virtualchannel>45</virtualchannel>
   </Channel>
@@ -184,7 +184,7 @@
   <Channel>
     <name>Gametoon HD</name>
     <channelID>X0711</channelID>
-    <virtualchannel>109</virtualchannel>
+    <virtualchannel>110</virtualchannel>
   </Channel>
   <Channel>
     <name>Cinemundo</name>
@@ -242,7 +242,7 @@
     <virtualchannel>48</virtualchannel>
   </Channel>
   <Channel>
-    <name>História</name>
+    <name>Histðria</name>
     <channelID>X0835</channelID>
     <virtualchannel>91</virtualchannel>
   </Channel>
@@ -324,10 +324,10 @@
   <Channel>
     <name>W-Sport HD</name>
     <channelID>X0C3A</channelID>
-    <virtualchannel>29</virtualchannel>
+    <virtualchannel>37</virtualchannel>
   </Channel>
   <Channel>
-    <name>Localvisão TV</name>
+    <name>Localvisªo TV</name>
     <channelID>X0CE6</channelID>
     <virtualchannel>163</virtualchannel>
   </Channel>
@@ -352,7 +352,7 @@
     <virtualchannel>77</virtualchannel>
   </Channel>
   <Channel>
-    <name>TPA Notícias</name>
+    <name>TPA NotŦcias</name>
     <channelID>X1005</channelID>
     <virtualchannel>199</virtualchannel>
   </Channel>
@@ -372,7 +372,7 @@
     <virtualchannel>512</virtualchannel>
   </Channel>
   <Channel>
-    <name>Antena 2 - Ópera</name>
+    <name>Antena 2 - ©pera</name>
     <channelID>X1079</channelID>
     <virtualchannel>517</virtualchannel>
   </Channel>
@@ -387,12 +387,12 @@
     <virtualchannel>518</virtualchannel>
   </Channel>
   <Channel>
-    <name>Antena 1 - Memória</name>
+    <name>Antena 1 - Memðria</name>
     <channelID>X1085</channelID>
     <virtualchannel>519</virtualchannel>
   </Channel>
   <Channel>
-    <name>Lusitânia</name>
+    <name>LusitÐnia</name>
     <channelID>X1089</channelID>
     <virtualchannel>515</virtualchannel>
   </Channel>
@@ -402,7 +402,7 @@
     <virtualchannel>520</virtualchannel>
   </Channel>
   <Channel>
-    <name>RDP África</name>
+    <name>RDP frica</name>
     <channelID>X1091</channelID>
     <virtualchannel>514</virtualchannel>
   </Channel>
@@ -417,7 +417,7 @@
     <virtualchannel>508</virtualchannel>
   </Channel>
   <Channel>
-    <name>Rádio Comercial</name>
+    <name>RÆdio Comercial</name>
     <channelID>X10D5</channelID>
     <virtualchannel>507</virtualchannel>
   </Channel>
@@ -442,12 +442,12 @@
     <virtualchannel>502</virtualchannel>
   </Channel>
   <Channel>
-    <name>Oceano Pacífico</name>
+    <name>Oceano PacŦfico</name>
     <channelID>X113D</channelID>
     <virtualchannel>506</virtualchannel>
   </Channel>
   <Channel>
-    <name>Renascença</name>
+    <name>RenascenĿa</name>
     <channelID>X1141</channelID>
     <virtualchannel>501</virtualchannel>
   </Channel>
@@ -542,7 +542,7 @@
     <virtualchannel>135</virtualchannel>
   </Channel>
   <Channel>
-    <name>Canção Nova</name>
+    <name>CanĿªo Nova</name>
     <channelID>X16A9</channelID>
     <virtualchannel>182</virtualchannel>
   </Channel>
