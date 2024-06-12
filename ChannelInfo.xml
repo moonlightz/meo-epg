@@ -137,6 +137,11 @@
     <virtualchannel>8</virtualchannel>
   </Channel>
   <Channel>
+    <name>News Now HD</name>
+    <channelID>X02C2</channelID>
+    <virtualchannel>9</virtualchannel>
+  </Channel>
+  <Channel>
     <name>A Bola TV</name>
     <channelID>X0321</channelID>
     <virtualchannel>34</virtualchannel>
