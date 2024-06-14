@@ -19,6 +19,11 @@ fconfigure $f -encoding utf-8
 set xmldata [read $f]
 close $f
 puts "O ficheiro $ficheiroxml tem [string length $xmldata] bytes."
+##### 13/06/2024
+set xmldata [string map {
+	ª ã Ð â Ø é Ŧ í ð ó Ŀ ç
+	} $xmldata]
+
 
 puts "A criar lista de IDs..."
 set canalid [regexp -all -inline -- {<channel id=\"(.*?)\">} $xmldata]
