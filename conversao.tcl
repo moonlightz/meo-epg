@@ -15,12 +15,12 @@ if {![file exists $ficheiroxml]} {
 }
 
 set f [open $ficheiroxml r]
-fconfigure $f -encoding iso8859-1
+fconfigure $f -encoding utf-8
 set xmldata [read $f]
 close $f
 puts "O ficheiro $ficheiroxml tem [string length $xmldata] bytes."
 ##### 13/06/2024
-#set xmldata [string map {ª ã Ð â Ø é Ŧ í ð ó Ŀ ç} $xmldata]
+set xmldata [string map {ª ã Ð â Ø é Ŧ í ð ó Ŀ ç} $xmldata]
 
 
 puts "A criar lista de IDs..."
