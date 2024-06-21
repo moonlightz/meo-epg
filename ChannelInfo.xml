@@ -219,7 +219,7 @@
   <Channel>
     <name>Biggs</name>
     <channelID>X07E1</channelID>
-    <virtualchannel>54</virtualchannel>
+    <virtualchannel>78</virtualchannel>
   </Channel>
   <Channel>
     <name>Nickelodeon</name>
@@ -484,7 +484,7 @@
   <Channel>
     <name>Mezzo</name>
     <channelID>X1269</channelID>
-    <virtualchannel>140</virtualchannel>
+    <virtualchannel>141</virtualchannel>
   </Channel>
   <Channel>
     <name>Fuel TV</name>
