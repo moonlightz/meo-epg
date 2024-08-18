@@ -1,27 +1,22 @@
 
-DVBGuide 0.96 beta
+DVBGuide 0.94 beta
 ------------------
 
-(c) Copyright 2006-2012  Conquest Consultants
+(c) Copyright 2006-2010  Conquest Consultants
 
 
-23rd September 2012
+25th April 2010
 
 
 Introduction
 ~~~~~~~~~~~~
 This beta version is released as a precursor to a new full release of DVBGuide.  The documentation included here refers to the last full release (i.e. 0.90) and therefore does not cover new features present in this beta release.  As usual, entering "DVBGuide -?" on the command will display a usage message that summarises all command line options (i.e. including new options present in this beta).
 
-The main reason for classifying this release as a beta is because the user documentation has not been updated. With the exception of the documentation, this release should be considered as a better and more fully featured release than version 0.90 or any previous beta version.
+The main reason for classifying this release as a beta is because the user documentation has not been updated. With the exception of the documentation, this release should be considered as a better and more fully featured release than version 0.90.
 
-The latest version of DVBGuide can always be found at www.dvbguide.com
-
-
-Changes
-~~~~~~~
 The main changes since version 0.90 are:
 
-(The following introduced in beta releases prior to 0.95)
+(The following introduced in beta releases prior to 0.94)
 
 * Revised signal lock/acquisiation mechanism (yet again!) for better compatibility with a minority of tuners;
 
@@ -32,6 +27,8 @@ The main changes since version 0.90 are:
 * Updated decode tables (based on observed broadcasts to date) for the UK's Freesat EPG;
 
 * Various minor improvements to the meta data accompanying programme descriptions in the generated Guide data.
+
+(Specific changes from version 0.93 to 0.94)
 
 * EIT extended event descriptor information now included in Media Center output data;
 
@@ -54,37 +51,6 @@ The main changes since version 0.90 are:
 * Updated decode tables (based on observed broadcasts to date) for the UK's Freesat EPG;
 
 * Other minor improvements.
-
-* New feature: LNB parameters may now be specified on the command line (Ku band universal LNB assumed if not specified);
-
-* Comment ("cpcm") added to XMLTV output to show FTA content management information where present;
-
-* Channel identifiers in XMLTV file changed to dotted ONID.TSID.SID format (which should make it easier to combine XMLTV files from different runs of DVBGuide);
-
-* Fixed invalid numbers in CSV table output for cases where delivery descriptors are missing;
-
-* Increased timeout during DVB-S tuning phase (fixes a problem with some tuners and Windows 7);
-
-* Bug fix: data items re-ordered in XMLTV file so as to strictly adhere to the schema (fixes problem with <language> node being in the wrong place);
-
-* Updated decode tables (based on observed broadcasts to date) for the UK's Freesat EPG;
-
-
-(Specific changes from version 0.95 to 0.96)
-* Further increase to DVB-S post-tuning delay to fix problems observed on Windows 7
-
-* Updated decode tables (based on observed broadcasts to date) for the UK's Freesat EPG;
-
-* Default DVB-T carrier frequency changed to that of BBC mux A from Crystal Palace, post Digital Switch Over
-
-* Changed output XML versions to 1.1 to allow full range of control codes
-
-* Video information now shows SD, HD or SD upscaled
-
-* CRID default authority information now taken from BAT or NIT if not present in SDT
-
-* Other minor improvements.
-
 
 
 Feedback
