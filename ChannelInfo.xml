@@ -1,634 +1,760 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.1" encoding="UTF-8" standalone="yes"?>
 <!--tv generator-info-name="DVBGuide" generator-info-url="http://www.dvbguide.com/" -->
 <NewDataSet>
   <Channel>
+    <!--locator uri="dvb://531.2775.66" -->
     <name>RTP1</name>
-    <channelID>X0066</channelID>
+    <channelID>531.2775.66</channelID>
     <virtualchannel>1</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2775.6c" -->
     <name>RTP2</name>
-    <channelID>X006C</channelID>
+    <channelID>531.2775.6c</channelID>
     <virtualchannel>2</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.27d9.70" -->
     <name>RTP3</name>
-    <channelID>X0070</channelID>
+    <channelID>531.27d9.70</channelID>
     <virtualchannel>6</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.283d.71" -->
     <name>RTP Memðria</name>
-    <channelID>X0071</channelID>
+    <channelID>531.283d.71</channelID>
     <virtualchannel>100</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a95.75" -->
     <name>RTP AĿores</name>
-    <channelID>X0075</channelID>
+    <channelID>531.2a95.75</channelID>
     <virtualchannel>160</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a95.79" -->
     <name>RTP Madeira</name>
-    <channelID>X0079</channelID>
+    <channelID>531.2a95.79</channelID>
     <virtualchannel>161</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.29cd.7d" -->
     <name>RTP frica</name>
-    <channelID>X007D</channelID>
+    <channelID>531.29cd.7d</channelID>
     <virtualchannel>196</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2775.ca" -->
     <name>SIC</name>
-    <channelID>X00CA</channelID>
+    <channelID>531.2775.ca</channelID>
     <virtualchannel>3</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2775.ce" -->
     <name>SIC NotŦcias</name>
-    <channelID>X00CE</channelID>
+    <channelID>531.2775.ce</channelID>
     <virtualchannel>5</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.28a1.d2" -->
     <name>SIC K</name>
-    <channelID>X00D2</channelID>
+    <channelID>531.28a1.d2</channelID>
     <virtualchannel>43</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a95.d6" -->
     <name>SIC Radical</name>
-    <channelID>X00D6</channelID>
+    <channelID>531.2a95.d6</channelID>
     <virtualchannel>105</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.28a1.da" -->
     <name>SIC Mulher</name>
-    <channelID>X00DA</channelID>
+    <channelID>531.28a1.da</channelID>
     <virtualchannel>14</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2bc1.de" -->
     <name>SIC Caras</name>
-    <channelID>X00DE</channelID>
+    <channelID>531.2bc1.de</channelID>
     <virtualchannel>120</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2775.130" -->
     <name>TVI</name>
-    <channelID>X0130</channelID>
+    <channelID>531.2775.130</channelID>
     <virtualchannel>4</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.283d.131" -->
     <name>CNN Portugal</name>
-    <channelID>X0131</channelID>
+    <channelID>531.283d.131</channelID>
     <virtualchannel>7</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a95.135" -->
     <name>V+ TVI</name>
-    <channelID>X0135</channelID>
+    <channelID>531.2a95.135</channelID>
     <virtualchannel>12</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2c89.13d" -->
     <name>TVI Reality</name>
-    <channelID>X013D</channelID>
+    <channelID>531.2c89.13d</channelID>
     <virtualchannel>99</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2b5d.1a6" -->
     <name>SPORT TV +</name>
-    <channelID>X01A6</channelID>
+    <channelID>531.2b5d.1a6</channelID>
     <virtualchannel>20</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.27d9.1ce" -->
     <name>11</name>
-    <channelID>X01CE</channelID>
+    <channelID>531.27d9.1ce</channelID>
     <virtualchannel>11</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.283d.1f6" -->
     <name>STAR Channel</name>
-    <channelID>X01F6</channelID>
+    <channelID>531.283d.1f6</channelID>
     <virtualchannel>70</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2905.1fa" -->
     <name>STAR Movies</name>
-    <channelID>X01FA</channelID>
+    <channelID>531.2905.1fa</channelID>
     <virtualchannel>62</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2969.1fb" -->
     <name>24 Kitchen</name>
-    <channelID>X01FB</channelID>
+    <channelID>531.2969.1fb</channelID>
     <virtualchannel>123</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2905.1fd" -->
     <name>STAR Life</name>
-    <channelID>X01FD</channelID>
+    <channelID>531.2905.1fd</channelID>
     <virtualchannel>71</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2905.201" -->
     <name>STAR Crime</name>
-    <channelID>X0201</channelID>
+    <channelID>531.2905.201</channelID>
     <virtualchannel>72</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2969.20d" -->
     <name>National Geographic</name>
-    <channelID>X020D</channelID>
+    <channelID>531.2969.20d</channelID>
     <virtualchannel>95</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2af9.219" -->
     <name>Baby TV</name>
-    <channelID>X0219</channelID>
+    <channelID>531.2af9.219</channelID>
     <virtualchannel>49</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.27d9.2be" -->
     <name>CMTV</name>
-    <channelID>X02BE</channelID>
+    <channelID>531.27d9.2be</channelID>
     <virtualchannel>8</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a95.2c2" -->
     <name>News Now HD</name>
-    <channelID>X02C2</channelID>
+    <channelID>531.2a95.2c2</channelID>
     <virtualchannel>9</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.29cd.321" -->
     <name>A Bola TV</name>
-    <channelID>X0321</channelID>
+    <channelID>531.29cd.321</channelID>
     <virtualchannel>34</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2b5d.386" -->
     <name>Porto Canal</name>
-    <channelID>X0386</channelID>
+    <channelID>531.2b5d.386</channelID>
     <virtualchannel>35</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.283d.3e9" -->
     <name>Canal Q</name>
-    <channelID>X03E9</channelID>
+    <channelID>531.283d.3e9</channelID>
     <virtualchannel>101</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.27d9.4b2" -->
     <name>Sporting TV HD</name>
-    <channelID>X04B2</channelID>
+    <channelID>531.27d9.4b2</channelID>
     <virtualchannel>36</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.27d9.516" -->
     <name>Eurosport 1</name>
-    <channelID>X0516</channelID>
+    <channelID>531.27d9.516</channelID>
     <virtualchannel>38</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.28a1.579" -->
     <name>Disney Channel</name>
-    <channelID>X0579</channelID>
+    <channelID>531.28a1.579</channelID>
     <virtualchannel>40</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a95.57d" -->
     <name>Disney Jœnior</name>
-    <channelID>X057D</channelID>
+    <channelID>531.2a95.57d</channelID>
     <virtualchannel>45</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.28a1.5ea" -->
     <name>Travel XP HD</name>
-    <channelID>X05EA</channelID>
+    <channelID>531.28a1.5ea</channelID>
     <virtualchannel>124</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2905.709" -->
     <name>Cartoon Network</name>
-    <channelID>X0709</channelID>
+    <channelID>531.2905.709</channelID>
     <virtualchannel>41</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.27d9.711" -->
     <name>Gametoon HD</name>
-    <channelID>X0711</channelID>
+    <channelID>531.27d9.711</channelID>
     <virtualchannel>110</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2bc1.76e" -->
     <name>Cinemundo</name>
-    <channelID>X076E</channelID>
+    <channelID>531.2bc1.76e</channelID>
     <virtualchannel>60</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2bc1.7d2" -->
     <name>AMC</name>
-    <channelID>X07D2</channelID>
+    <channelID>531.2bc1.7d2</channelID>
     <virtualchannel>63</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2bc1.7d6" -->
     <name>Hollywood HD</name>
-    <channelID>X07D6</channelID>
+    <channelID>531.2bc1.7d6</channelID>
     <virtualchannel>61</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2969.7d9" -->
     <name>Odisseia</name>
-    <channelID>X07D9</channelID>
+    <channelID>531.2969.7d9</channelID>
     <virtualchannel>92</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a95.7dd" -->
     <name>Canal Panda</name>
-    <channelID>X07DD</channelID>
+    <channelID>531.2a95.7dd</channelID>
     <virtualchannel>46</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.28a1.7e1" -->
     <name>Biggs</name>
-    <channelID>X07E1</channelID>
+    <channelID>531.28a1.7e1</channelID>
     <virtualchannel>78</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2905.7e9" -->
     <name>Nickelodeon</name>
-    <channelID>X07E9</channelID>
+    <channelID>531.2905.7e9</channelID>
     <virtualchannel>44</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2af9.7f1" -->
     <name>Panda Kids</name>
-    <channelID>X07F1</channelID>
+    <channelID>531.2af9.7f1</channelID>
     <virtualchannel>42</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a95.7f5" -->
     <name>Cartoonito</name>
-    <channelID>X07F5</channelID>
+    <channelID>531.2a95.7f5</channelID>
     <virtualchannel>47</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2b5d.7fd" -->
     <name>Casa e Cozinha</name>
-    <channelID>X07FD</channelID>
+    <channelID>531.2b5d.7fd</channelID>
     <virtualchannel>122</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2c89.801" -->
     <name>Nick Jr</name>
-    <channelID>X0801</channelID>
+    <channelID>531.2c89.801</channelID>
     <virtualchannel>48</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2969.835" -->
     <name>Histðria</name>
-    <channelID>X0835</channelID>
+    <channelID>531.2969.835</channelID>
     <virtualchannel>91</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2905.839" -->
     <name>AMC Break</name>
-    <channelID>X0839</channelID>
+    <channelID>531.2905.839</channelID>
     <virtualchannel>107</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2b5d.83d" -->
     <name>AMC Crime</name>
-    <channelID>X083D</channelID>
+    <channelID>531.2b5d.83d</channelID>
     <virtualchannel>114</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.283d.89a" -->
     <name>AXN HD</name>
-    <channelID>X089A</channelID>
+    <channelID>531.283d.89a</channelID>
     <virtualchannel>74</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2905.89c" -->
     <name>AXN White</name>
-    <channelID>X089C</channelID>
+    <channelID>531.2905.89c</channelID>
     <virtualchannel>75</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2905.8a0" -->
     <name>AXN Movies</name>
-    <channelID>X08A0</channelID>
+    <channelID>531.2905.8a0</channelID>
     <virtualchannel>64</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.283d.8fe" -->
     <name>SyFy</name>
-    <channelID>X08FE</channelID>
+    <channelID>531.283d.8fe</channelID>
     <virtualchannel>76</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2905.961" -->
     <name>MTV Portugal</name>
-    <channelID>X0961</channelID>
+    <channelID>531.2905.961</channelID>
     <virtualchannel>106</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2969.965" -->
     <name>MTV 00s</name>
-    <channelID>X0965</channelID>
+    <channelID>531.2969.965</channelID>
     <virtualchannel>130</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2969.a29" -->
     <name>Discovery Channel</name>
-    <channelID>X0A29</channelID>
+    <channelID>531.2969.a29</channelID>
     <virtualchannel>90</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2905.a2d" -->
     <name>TLC</name>
-    <channelID>X0A2D</channelID>
+    <channelID>531.2905.a2d</channelID>
     <virtualchannel>118</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2969.a8d" -->
     <name>Afro Music</name>
-    <channelID>X0A8D</channelID>
+    <channelID>531.2969.a8d</channelID>
     <virtualchannel>136</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a95.af1" -->
     <name>TVEi</name>
-    <channelID>X0AF1</channelID>
+    <channelID>531.2a95.af1</channelID>
     <virtualchannel>234</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2af9.af5" -->
     <name>TVE 24h</name>
-    <channelID>X0AF5</channelID>
+    <channelID>531.2af9.af5</channelID>
     <virtualchannel>235</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.29cd.b55" -->
     <name>Bloomberg</name>
-    <channelID>X0B55</channelID>
+    <channelID>531.29cd.b55</channelID>
     <virtualchannel>206</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.29cd.bb9" -->
     <name>TV5 Monde</name>
-    <channelID>X0BB9</channelID>
+    <channelID>531.29cd.bb9</channelID>
     <virtualchannel>250</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2c89.c3a" -->
     <name>W-Sport HD</name>
-    <channelID>X0C3A</channelID>
+    <channelID>531.2c89.c3a</channelID>
     <virtualchannel>37</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.28a1.ce6" -->
     <name>Localvisªo TV</name>
-    <channelID>X0CE6</channelID>
+    <channelID>531.28a1.ce6</channelID>
     <virtualchannel>163</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.29cd.d49" -->
     <name>Fashion TV</name>
-    <channelID>X0D49</channelID>
+    <channelID>531.29cd.d49</channelID>
     <virtualchannel>126</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2969.fa1" -->
     <name>Aljazeera</name>
-    <channelID>X0FA1</channelID>
+    <channelID>531.2969.fa1</channelID>
     <virtualchannel>225</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2b5d.fa5" -->
     <name>TRT World</name>
-    <channelID>X0FA5</channelID>
+    <channelID>531.2b5d.fa5</channelID>
     <virtualchannel>226</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2969.fa9" -->
     <name>Dizi Channel</name>
-    <channelID>X0FA9</channelID>
+    <channelID>531.2969.fa9</channelID>
     <virtualchannel>77</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2af9.1005" -->
     <name>TPA NotŦcias</name>
-    <channelID>X1005</channelID>
+    <channelID>531.2af9.1005</channelID>
     <virtualchannel>199</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.1069" -->
     <name>Antena 1</name>
-    <channelID>X1069</channelID>
+    <channelID>531.2a31.1069</channelID>
     <virtualchannel>511</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.1071" -->
     <name>Antena 1 - Fado</name>
-    <channelID>X1071</channelID>
+    <channelID>531.2a31.1071</channelID>
     <virtualchannel>516</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.1075" -->
     <name>Antena 2</name>
-    <channelID>X1075</channelID>
+    <channelID>531.2a31.1075</channelID>
     <virtualchannel>512</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.1079" -->
     <name>Antena 2 - ©pera</name>
-    <channelID>X1079</channelID>
+    <channelID>531.2a31.1079</channelID>
     <virtualchannel>517</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.107d" -->
     <name>Antena 3</name>
-    <channelID>X107D</channelID>
+    <channelID>531.2a31.107d</channelID>
     <virtualchannel>513</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.1081" -->
     <name>Antena 1 - Vida</name>
-    <channelID>X1081</channelID>
+    <channelID>531.2a31.1081</channelID>
     <virtualchannel>518</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.1085" -->
     <name>Antena 1 - Memðria</name>
-    <channelID>X1085</channelID>
+    <channelID>531.2a31.1085</channelID>
     <virtualchannel>519</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.1089" -->
     <name>LusitÐnia</name>
-    <channelID>X1089</channelID>
+    <channelID>531.2a31.1089</channelID>
     <virtualchannel>515</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.108d" -->
     <name>Zig Zag</name>
-    <channelID>X108D</channelID>
+    <channelID>531.2a31.108d</channelID>
     <virtualchannel>520</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.1091" -->
     <name>RDP frica</name>
-    <channelID>X1091</channelID>
+    <channelID>531.2a31.1091</channelID>
     <virtualchannel>514</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.10cd" -->
     <name>Cidade FM</name>
-    <channelID>X10CD</channelID>
+    <channelID>531.2a31.10cd</channelID>
     <virtualchannel>509</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.10d1" -->
     <name>M80</name>
-    <channelID>X10D1</channelID>
+    <channelID>531.2a31.10d1</channelID>
     <virtualchannel>508</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.10d5" -->
     <name>RÆdio Comercial</name>
-    <channelID>X10D5</channelID>
+    <channelID>531.2a31.10d5</channelID>
     <virtualchannel>507</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.10d9" -->
     <name>Smooth FM</name>
-    <channelID>X10D9</channelID>
+    <channelID>531.2a31.10d9</channelID>
     <virtualchannel>510</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.1131" -->
     <name>80s RFM</name>
-    <channelID>X1131</channelID>
+    <channelID>531.2a31.1131</channelID>
     <virtualchannel>504</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.1135" -->
     <name>RFM Clubbing</name>
-    <channelID>X1135</channelID>
+    <channelID>531.2a31.1135</channelID>
     <virtualchannel>505</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.1139" -->
     <name>Mega Hits</name>
-    <channelID>X1139</channelID>
+    <channelID>531.2a31.1139</channelID>
     <virtualchannel>502</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.113d" -->
     <name>Oceano PacŦfico</name>
-    <channelID>X113D</channelID>
+    <channelID>531.2a31.113d</channelID>
     <virtualchannel>506</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.1141" -->
     <name>RenascenĿa</name>
-    <channelID>X1141</channelID>
+    <channelID>531.2a31.1141</channelID>
     <virtualchannel>501</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.1145" -->
     <name>RFM</name>
-    <channelID>X1145</channelID>
+    <channelID>531.2a31.1145</channelID>
     <virtualchannel>500</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.29cd.1195" -->
     <name>BBC World News</name>
-    <channelID>X1195</channelID>
+    <channelID>531.29cd.1195</channelID>
     <virtualchannel>213</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.11f9" -->
     <name>Trace Urban</name>
-    <channelID>X11F9</channelID>
+    <channelID>531.2a31.11f9</channelID>
     <virtualchannel>132</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2af9.125d" -->
     <name>MCM Pop</name>
-    <channelID>X125D</channelID>
+    <channelID>531.2af9.125d</channelID>
     <virtualchannel>133</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.1261" -->
     <name>MCM Top</name>
-    <channelID>X1261</channelID>
+    <channelID>531.2a31.1261</channelID>
     <virtualchannel>134</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.1269" -->
     <name>Mezzo</name>
-    <channelID>X1269</channelID>
+    <channelID>531.2a31.1269</channelID>
     <virtualchannel>141</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.29cd.12c2" -->
     <name>Fuel TV</name>
-    <channelID>X12C2</channelID>
+    <channelID>531.29cd.12c2</channelID>
     <virtualchannel>108</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.1389" -->
     <name>Record Europa</name>
-    <channelID>X1389</channelID>
+    <channelID>531.2a31.1389</channelID>
     <virtualchannel>192</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2af9.138d" -->
     <name>Record News</name>
-    <channelID>X138D</channelID>
+    <channelID>531.2af9.138d</channelID>
     <virtualchannel>193</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.28a1.1391" -->
     <name>UM Europa</name>
-    <channelID>X1391</channelID>
+    <channelID>531.28a1.1391</channelID>
     <virtualchannel>184</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.13ed" -->
     <name>Euronews</name>
-    <channelID>X13ED</channelID>
+    <channelID>531.2a31.13ed</channelID>
     <virtualchannel>195</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2b5d.13f1" -->
     <name>Euronews (A)</name>
-    <channelID>X13F1</channelID>
+    <channelID>531.2b5d.13f1</channelID>
     <virtualchannel>262</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.1451" -->
     <name>CNN</name>
-    <channelID>X1451</channelID>
+    <channelID>531.2a31.1451</channelID>
     <virtualchannel>205</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.14b5" -->
     <name>Sky News</name>
-    <channelID>X14B5</channelID>
+    <channelID>531.2a31.14b5</channelID>
     <virtualchannel>211</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.1519" -->
     <name>France 24 (I)</name>
-    <channelID>X1519</channelID>
+    <channelID>531.2a31.1519</channelID>
     <virtualchannel>216</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.283d.151d" -->
     <name>France 24 (F)</name>
-    <channelID>X151D</channelID>
+    <channelID>531.283d.151d</channelID>
     <virtualchannel>255</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.157d" -->
     <name>ARTV</name>
-    <channelID>X157D</channelID>
+    <channelID>531.2a31.157d</channelID>
     <virtualchannel>162</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2af9.15e1" -->
     <name>Clubbing TV</name>
-    <channelID>X15E1</channelID>
+    <channelID>531.2af9.15e1</channelID>
     <virtualchannel>135</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2af9.16a9" -->
     <name>CanĿªo Nova</name>
-    <channelID>X16A9</channelID>
+    <channelID>531.2af9.16a9</channelID>
     <virtualchannel>182</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2af9.1771" -->
     <name>i24News (I)</name>
-    <channelID>X1771</channelID>
+    <channelID>531.2af9.1771</channelID>
     <virtualchannel>217</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2969.1775" -->
     <name>i24News (F)</name>
-    <channelID>X1775</channelID>
+    <channelID>531.2969.1775</channelID>
     <virtualchannel>254</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2af9.17d5" -->
     <name>TV Galicia</name>
-    <channelID>X17D5</channelID>
+    <channelID>531.2af9.17d5</channelID>
     <virtualchannel>236</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2b5d.1839" -->
     <name>CGTN</name>
-    <channelID>X1839</channelID>
+    <channelID>531.2b5d.1839</channelID>
     <virtualchannel>220</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2bc1.183d" -->
     <name>CCTV 4</name>
-    <channelID>X183D</channelID>
+    <channelID>531.2bc1.183d</channelID>
     <virtualchannel>278</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2969.1901" -->
     <name>Channel 1 Russia</name>
-    <channelID>X1901</channelID>
+    <channelID>531.2969.1901</channelID>
     <virtualchannel>228</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2bc1.1b62" -->
     <name>Globo</name>
-    <channelID>X1B62</channelID>
+    <channelID>531.2bc1.1b62</channelID>
     <virtualchannel>10</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2969.1c21" -->
     <name>M6</name>
-    <channelID>X1C21</channelID>
+    <channelID>531.2969.1c21</channelID>
     <virtualchannel>249</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2a31.1db1" -->
     <name>BVN</name>
-    <channelID>X1DB1</channelID>
+    <channelID>531.2a31.1db1</channelID>
     <virtualchannel>270</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2c25.20de" -->
     <name>Veja</name>
-    <channelID>X20DE</channelID>
+    <channelID>531.2c25.20de</channelID>
     <virtualchannel>17</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2af9.20ee" -->
     <name>Lolly Kids</name>
-    <channelID>X20EE</channelID>
+    <channelID>531.2af9.20ee</channelID>
     <virtualchannel>50</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2b5d.2199" -->
     <name>BFM TV</name>
-    <channelID>X2199</channelID>
+    <channelID>531.2b5d.2199</channelID>
     <virtualchannel>251</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2b5d.2261" -->
     <name>NHK World Japan</name>
-    <channelID>X2261</channelID>
+    <channelID>531.2b5d.2261</channelID>
     <virtualchannel>219</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.29cd.2652" -->
     <name>AlmaLusa</name>
-    <channelID>X2652</channelID>
+    <channelID>531.29cd.2652</channelID>
     <virtualchannel>139</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2c25.26ad" -->
     <name>MEO Destaques</name>
-    <channelID>X26AD</channelID>
+    <channelID>531.2c25.26ad</channelID>
     <virtualchannel>89</virtualchannel>
   </Channel>
   <Channel>
+    <!--locator uri="dvb://531.2c25.26b1" -->
     <name>MEO Videoclube</name>
-    <channelID>X26B1</channelID>
+    <channelID>531.2c25.26b1</channelID>
     <virtualchannel>69</virtualchannel>
   </Channel>
 </NewDataSet>

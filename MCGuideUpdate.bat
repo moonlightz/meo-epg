@@ -7,7 +7,7 @@ rem      - will normally need to be edited to specify tuning parameters etc.
 rem      - can be set to run as a scheduled task for completely automated guide updating
 rem      - (Vista only) must run as Administrator if using "-t" option to set system time
 rem
-DVBGuide -c506000 -t -fm -o mcguide.xml
+DVBGuide -c505833 -t -fm -o mcguide.xml
 if %ERRORLEVEL% neq 0 goto End
 MCGuideLoad mcguide.xml
 :End
