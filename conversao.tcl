@@ -25,6 +25,7 @@ set xmldata [string map {ª ã Ð â Æ á Ø é Œ ê Ŧ í ð ó Ŀ ç} $xmlda
 
 puts "A criar lista de IDs..."
 set canalid [regexp -all -inline -- {<channel id=\"(.*?)\">} $xmldata]
+puts [llength $canalid]
 set canalnome [regexp -all -inline -- {<display-name>(.*?)</display-name>} $xmldata]
 #if {[array exists ids]} {unset ids}
 #array set ids {}
