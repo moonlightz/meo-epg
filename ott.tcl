@@ -58,8 +58,8 @@ foreach idcanal [lsort -increasing [array names canais]] {
 
 		foreach dprograma $cvalue {
 			set tituloprograma [dict get $dprograma "Title"]
-			set inicio [clock format [clock scan [dict get $dprograma "StartDate"] -format "%Y-%m-%dT%H:%M:%S"] -format "%Y%m%d%H%M%S %z"]
-			set fim [clock format [clock scan [dict get $dprograma "EndDate"] -format "%Y-%m-%dT%H:%M:%S"] -format "%Y%m%d%H%M%S %z"]
+			set inicio [clock format [clock scan [dict get $dprograma "StartDate"] -format "%Y-%m-%dT%H:%M:%S" -gmt [expr [clock format [clock scan [dict get $dprograma "StartDate"] -format "%Y-%m-%dT%H:%M:%S"] -format "%z"]=="+0100"]] -format "%Y%m%d%H%M%S %z"]
+			set fim [clock format [clock scan [dict get $dprograma "EndDate"] -format "%Y-%m-%dT%H:%M:%S" -gmt [expr [clock format [clock scan [dict get $dprograma "StartDate"] -format "%Y-%m-%dT%H:%M:%S"] -format "%z"]=="+0100"]] -format "%Y%m%d%H%M%S %z"]
 			set descricao [dict get $dprograma "Synopsis"]
 			set categoria [dict get $dprograma "Thematics"]
 
@@ -70,12 +70,12 @@ foreach idcanal [lsort -increasing [array names canais]] {
 			puts $fp "    <category lang=\"pt\">$categoria</category>"
 			puts $fp "  </programme>"
 
-			puts -nonewline [format " %1s %-10s  %-25s  %5s\r" [lindex "⌝ ⌟ ⌞ ⌜" $isymb] $identificador $nomecanal [clock format [expr [clock seconds]-$tempoprog] -format "%M:%S"]]
+			puts -nonewline [format " %1s %-10s  %-25s  %5s\r" [lindex "/ / - - \\\\ \\\\ | |" $isymb] $identificador $nomecanal [clock format [expr [clock seconds]-$tempoprog] -format "%M:%S"]]
 
 			flush stdout
 			incr numprogs
 			incr isymb
-			if {$isymb>3} {set isymb 0}
+			if {$isymb>7} {set isymb 0}
 		}
 		if {[catch {set link [dict get $cdict "odata.nextLink"]} erro]} {
 			#Não há aquela chave, sair do loop
