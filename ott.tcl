@@ -42,10 +42,18 @@ while {1} {
  
 }
 puts "$quant canais adicionados."
+set conhecidos ""
 puts "A adicionar os programas de televisão..."
 
 foreach idcanal [lsort -increasing [array names canais]] {
 	set nomecanal [lindex $canais($idcanal) 0]
+	if {[lsearch -nocase $conhecidos $nomecanal]<0} {
+		# SE NÃO EXISTE NA LISTA DE CONHECIDOS, ADICIONAR
+		lappend conhecidos $nomecanal
+	} else {
+		puts "(!) Este canal já está na lista de conhecidos. Acrescentar _2 ao nome."
+		append nomecanal "_2"
+	}
 	set identificador [lindex $canais($idcanal) 1]
 	set link "http://ott.online.meo.pt/Program/v8/Programs/LiveChannelPrograms?UserAgent=W10&\$orderby=StartDate%20asc&\$filter=CallLetter%20eq%20'$identificador'%20and%20StartDate%20ge%20datetime'[clock format [clock scan "1 day ago"] -format "%Y-%m-%d"]T01:00:00'%20and%20StartDate%20lt%20datetime'[clock format [clock scan "7 days"] -format "%Y-%m-%d"]T23:00:00'%20and%20IsEnabled%20eq%20true%20and%20IsAdultContent%20eq%20false%20and%20IsBlackout%20eq%20false"
 	set numprogs 0
