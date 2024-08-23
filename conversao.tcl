@@ -20,7 +20,7 @@ set xmldata [read $f]
 close $f
 puts "O ficheiro $ficheiroxml tem [string length $xmldata] bytes."
 ##### 13/06/2024
-set xmldata [string map {ª ã Ð â Æ á Ø é Œ ê Ŧ í ð ó Ŀ ç} $xmldata]
+#set xmldata [string map {ª ã Ð â Æ á Ø é Œ ê Ŧ í ð ó Ŀ ç} $xmldata]
 
 
 puts "A criar lista de IDs..."
@@ -35,7 +35,7 @@ set listacanais ""
 foreach {- id} $canalid {- nomelongo} $canalnome {
 	set nomecurto [string map {
             " " "" "(" "" ")" "" "á" "a" "ú" "u"
-            "ç" "c" "ã" "a" "ó" "o" "-" "" "í" "i" "â" "a" "&" "e" "+" "p" "!" ""} [string tolower $nomelongo]]
+            "ç" "c" "ã" "a" "ó" "o" "-" "" "í" "i" "â" "a" "&" "e" "+" "p" "!" "" "." ""} [string tolower $nomelongo]]
         if {[lsearch "meovideoclube meodestaques sim rfm renascenca oceanopacifico megahits rfmclubbing 80srfm smoothfm radiocomercial m80 cidadefm rdpafrica zigzag lusitania antena1memoria antena1vida antena3 antena2opera antena2 antena1fado antena1" $nomecurto]<0} {
             #lappend ids($id) $nomecurto
 		
