@@ -1,5 +1,13 @@
 ###### 22-Agosto-2024
 
+proc format_time {milliseconds} {
+    set total_seconds [expr {$milliseconds / 1000}]
+    set minutes [expr {$total_seconds / 60}]
+    set seconds [expr {$total_seconds % 60}]
+    set millis [expr {$milliseconds % 1000}]
+    return [format "%02d:%02d.%03d" $minutes $seconds $millis]
+}
+
 set tempoinicial [clock milliseconds]
 
 puts "A iniciar a recolha pelo servidor da meo..."
@@ -77,14 +85,16 @@ foreach idcanal [lsort -increasing [array names canais]] {
 			incr numprogs
 			incr isymb
 			if {$isymb>7} {set isymb 0}
-			puts -nonewline [format " %1s | %5s | %-10s | %-25s | %9s | %-15s\r" [lindex "/ / - - \\\\ \\\\ | |" $isymb] $idcanal $identificador $nomecanal "[clock format [expr ([clock milliseconds]-$tempoprog)/1000] -format "%M:%S"].[format %03d [string range [expr [clock milliseconds]-$tempoprog] end-2 end]]" "$numprogs programas"]
 
+			
+			puts -nonewline [format " %1s | %5s | %-10s | %-25s | %9s | %-15s\r" [lindex "/ / - - \\\\ \\\\ | |" $isymb] $idcanal $identificador $nomecanal [format_time [expr [clock milliseconds]-$tempoprog]] "$numprogs programas"]
 			flush stdout
 			
 		}
 		if {[catch {set link [dict get $cdict "odata.nextLink"]} erro]} {
 			#Não há aquela chave, sair do loop
-			puts [format " %1s | %5s | %-10s | %-25s | %9s | %-15s - Feito!" "√" $idcanal $identificador $nomecanal "[clock format [expr ([clock milliseconds]-$tempoprog)/1000] -format "%M:%S"].[format %03d [string range [expr [clock milliseconds]-$tempoprog] end-2 end]]" "$numprogs programas"]
+
+			puts [format " %1s | %5s | %-10s | %-25s | %9s | %-15s - Feito!" "√" $idcanal $identificador $nomecanal [format_time [expr [clock milliseconds]-$tempoprog]] "$numprogs programas"]
 
 			break
 		}
@@ -96,4 +106,4 @@ puts $fp "</tv>"
 close $fp
 
 puts "O tamanho do ficheiro meo.xml é [file size meo.xml] bytes."
-puts "A operação demorou [clock format [expr ([clock milliseconds]-$tempoinicial)/1000] -format "%M:%S"].[format %03d [string range [expr [clock milliseconds]-$tempoinicial] end-2 end]] segundos!"
+puts "A operação demorou [format_time [expr [clock milliseconds]-$tempoprog]] segundos!"
