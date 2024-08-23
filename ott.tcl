@@ -32,7 +32,7 @@ while {1} {
 		lappend canais($posicaocanal) $titulocanal
 		lappend canais($posicaocanal) $identificador
 		incr quant
-		puts -nonewline "$quant cana[{if {$quant==1}} {set a "l"} {set a "is"}] ... \r"
+		puts -nonewline "$quant cana[if {$quant==1} {set a "l"} {set a "is"}] ... \r"
 		flush stdout
 	}
 	if {[catch {set link [dict get $cdict "odata.nextLink"]} erro]} {

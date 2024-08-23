@@ -1,6 +1,645 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE tv SYSTEM "xmltv.dtd">
-<tv generator-info-name="MZ" generator-info-url="git" source-info-name="OTT MEO" date="20240823094055 +0100">
+<tv generator-info-name="MZ" generator-info-url="git" source-info-name="OTT MEO" date="20240823094420 +0100">
   <channel id="X0001">
     <display-name>RTP1</display-name>
+  </channel>
+  <channel id="X0002">
+    <display-name>RTP2</display-name>
+  </channel>
+  <channel id="X0003">
+    <display-name>SIC</display-name>
+  </channel>
+  <channel id="X0004">
+    <display-name>TVI</display-name>
+  </channel>
+  <channel id="X0005">
+    <display-name>SIC Notícias</display-name>
+  </channel>
+  <channel id="X0006">
+    <display-name>RTP3</display-name>
+  </channel>
+  <channel id="X0007">
+    <display-name>CNN Portugal</display-name>
+  </channel>
+  <channel id="X0008">
+    <display-name>CMTV</display-name>
+  </channel>
+  <channel id="X0009">
+    <display-name>News Now</display-name>
+  </channel>
+  <channel id="X0010">
+    <display-name>Globo</display-name>
+  </channel>
+  <channel id="X0011">
+    <display-name>11</display-name>
+  </channel>
+  <channel id="X0012">
+    <display-name>V+ TVI</display-name>
+  </channel>
+  <channel id="X0014">
+    <display-name>SIC Mulher</display-name>
+  </channel>
+  <channel id="X0020">
+    <display-name>Sport TV +</display-name>
+  </channel>
+  <channel id="X0021">
+    <display-name>Sport TV1</display-name>
+  </channel>
+  <channel id="X0022">
+    <display-name>Sport TV2</display-name>
+  </channel>
+  <channel id="X0023">
+    <display-name>Sport TV3</display-name>
+  </channel>
+  <channel id="X0024">
+    <display-name>Sport TV4</display-name>
+  </channel>
+  <channel id="X0025">
+    <display-name>Sport TV5</display-name>
+  </channel>
+  <channel id="X0026">
+    <display-name>Sport TV6</display-name>
+  </channel>
+  <channel id="X0027">
+    <display-name>Sport TV7</display-name>
+  </channel>
+  <channel id="X0028">
+    <display-name>BTV</display-name>
+  </channel>
+  <channel id="X0029">
+    <display-name>DAZN 1</display-name>
+  </channel>
+  <channel id="X0030">
+    <display-name>DAZN 2</display-name>
+  </channel>
+  <channel id="X0031">
+    <display-name>DAZN 3</display-name>
+  </channel>
+  <channel id="X0032">
+    <display-name>DAZN 4</display-name>
+  </channel>
+  <channel id="X0033">
+    <display-name>DAZN 5</display-name>
+  </channel>
+  <channel id="X0034">
+    <display-name>A Bola</display-name>
+  </channel>
+  <channel id="X0035">
+    <display-name>Porto Canal</display-name>
+  </channel>
+  <channel id="X0036">
+    <display-name>Sporting TV HD</display-name>
+  </channel>
+  <channel id="X0037">
+    <display-name>W Sport</display-name>
+  </channel>
+  <channel id="X0038">
+    <display-name>Eurosport 1</display-name>
+  </channel>
+  <channel id="X0039">
+    <display-name>Eurosport 2</display-name>
+  </channel>
+  <channel id="X0040">
+    <display-name>Disney Channel</display-name>
+  </channel>
+  <channel id="X0041">
+    <display-name>Cartoon Network</display-name>
+  </channel>
+  <channel id="X0042">
+    <display-name>Panda Kids</display-name>
+  </channel>
+  <channel id="X0043">
+    <display-name>SIC K</display-name>
+  </channel>
+  <channel id="X0044">
+    <display-name>Nickelodeon</display-name>
+  </channel>
+  <channel id="X0045">
+    <display-name>Disney Junior</display-name>
+  </channel>
+  <channel id="X0046">
+    <display-name>Panda</display-name>
+  </channel>
+  <channel id="X0047">
+    <display-name>Cartoonito</display-name>
+  </channel>
+  <channel id="X0048">
+    <display-name>Nick Jr.</display-name>
+  </channel>
+  <channel id="X0049">
+    <display-name>Baby TV</display-name>
+  </channel>
+  <channel id="X0050">
+    <display-name>Lolly Kids</display-name>
+  </channel>
+  <channel id="X0051">
+    <display-name>Kanuca TV</display-name>
+  </channel>
+  <channel id="X0055">
+    <display-name>TVCine Top</display-name>
+  </channel>
+  <channel id="X0056">
+    <display-name>TVCine Edition</display-name>
+  </channel>
+  <channel id="X0057">
+    <display-name>TVCine Emotion</display-name>
+  </channel>
+  <channel id="X0058">
+    <display-name>TVCine Action</display-name>
+  </channel>
+  <channel id="X0060">
+    <display-name>Cinemundo</display-name>
+  </channel>
+  <channel id="X0061">
+    <display-name>Hollywood</display-name>
+  </channel>
+  <channel id="X0062">
+    <display-name>STAR Movies</display-name>
+  </channel>
+  <channel id="X0063">
+    <display-name>AMC</display-name>
+  </channel>
+  <channel id="X0064">
+    <display-name>AXN Movies HD</display-name>
+  </channel>
+  <channel id="X0069">
+    <display-name>MEO VideoClube</display-name>
+  </channel>
+  <channel id="X0070">
+    <display-name>STAR Channel</display-name>
+  </channel>
+  <channel id="X0071">
+    <display-name>STAR Life</display-name>
+  </channel>
+  <channel id="X0072">
+    <display-name>STAR Crime</display-name>
+  </channel>
+  <channel id="X0073">
+    <display-name>STAR Comedy</display-name>
+  </channel>
+  <channel id="X0074">
+    <display-name>AXN HD</display-name>
+  </channel>
+  <channel id="X0075">
+    <display-name>AXN White HD</display-name>
+  </channel>
+  <channel id="X0076">
+    <display-name>SyFy</display-name>
+  </channel>
+  <channel id="X0077">
+    <display-name>Dizi Channel</display-name>
+  </channel>
+  <channel id="X0078">
+    <display-name>Biggs</display-name>
+  </channel>
+  <channel id="X0089">
+    <display-name>MEO Destaques</display-name>
+  </channel>
+  <channel id="X0090">
+    <display-name>Discovery Channel</display-name>
+  </channel>
+  <channel id="X0091">
+    <display-name>História</display-name>
+  </channel>
+  <channel id="X0092">
+    <display-name>Odisseia</display-name>
+  </channel>
+  <channel id="X0095">
+    <display-name>National Geographic</display-name>
+  </channel>
+  <channel id="X0096">
+    <display-name>National Geographic Wild</display-name>
+  </channel>
+  <channel id="X0099">
+    <display-name>TVI Reality</display-name>
+  </channel>
+  <channel id="X0100">
+    <display-name>RTP Memória</display-name>
+  </channel>
+  <channel id="X0101">
+    <display-name>Q</display-name>
+  </channel>
+  <channel id="X0105">
+    <display-name>SIC Radical</display-name>
+  </channel>
+  <channel id="X0106">
+    <display-name>MTV Portugal</display-name>
+  </channel>
+  <channel id="X0107">
+    <display-name>AMC Break</display-name>
+  </channel>
+  <channel id="X0108">
+    <display-name>Fuel TV</display-name>
+  </channel>
+  <channel id="X0109">
+    <display-name>Fight Sports</display-name>
+  </channel>
+  <channel id="X0110">
+    <display-name>NBA TV</display-name>
+  </channel>
+  <channel id="X0111">
+    <display-name>Gametoon</display-name>
+  </channel>
+  <channel id="X0114">
+    <display-name>AMC Crime</display-name>
+  </channel>
+  <channel id="X0115">
+    <display-name>Investigation Discovery</display-name>
+  </channel>
+  <channel id="X0118">
+    <display-name>TLC</display-name>
+  </channel>
+  <channel id="X0119">
+    <display-name>Galeria</display-name>
+  </channel>
+  <channel id="X0120">
+    <display-name>SIC Caras</display-name>
+  </channel>
+  <channel id="X0121">
+    <display-name>E! Entertainment</display-name>
+  </channel>
+  <channel id="X0122">
+    <display-name>Casa e Cozinha</display-name>
+  </channel>
+  <channel id="X0123">
+    <display-name>24Kitchen</display-name>
+  </channel>
+  <channel id="X0124">
+    <display-name>Travelxp HD</display-name>
+  </channel>
+  <channel id="X0126">
+    <display-name>Fashion TV</display-name>
+  </channel>
+  <channel id="X0127">
+    <display-name>Home & Garden TV</display-name>
+  </channel>
+  <channel id="X0129">
+    <display-name>S+</display-name>
+  </channel>
+  <channel id="X0130">
+    <display-name>MTV 00s</display-name>
+  </channel>
+  <channel id="X0131">
+    <display-name>MTV Live</display-name>
+  </channel>
+  <channel id="X0132">
+    <display-name>Trace Urban</display-name>
+  </channel>
+  <channel id="X0133">
+    <display-name>MCM Pop</display-name>
+  </channel>
+  <channel id="X0134">
+    <display-name>MCM Top</display-name>
+  </channel>
+  <channel id="X0135">
+    <display-name>Clubbing TV</display-name>
+  </channel>
+  <channel id="X0136">
+    <display-name>Afro Music</display-name>
+  </channel>
+  <channel id="X0137">
+    <display-name>Trace Toca</display-name>
+  </channel>
+  <channel id="X0138">
+    <display-name>Trace Brasil</display-name>
+  </channel>
+  <channel id="X0139">
+    <display-name>Alma Lusa</display-name>
+  </channel>
+  <channel id="X0140">
+    <display-name>BomSom TV</display-name>
+  </channel>
+  <channel id="X0141">
+    <display-name>Mezzo</display-name>
+  </channel>
+  <channel id="X0142">
+    <display-name>Mezzo Live HD</display-name>
+  </channel>
+  <channel id="X0148">
+    <display-name>Stingray Classica</display-name>
+  </channel>
+  <channel id="X0149">
+    <display-name>Stingray Djazz</display-name>
+  </channel>
+  <channel id="X0151">
+    <display-name>Stingray iConcerts</display-name>
+  </channel>
+  <channel id="X0152">
+    <display-name>Stingray Loud</display-name>
+  </channel>
+  <channel id="X0153">
+    <display-name>Stingray Retro</display-name>
+  </channel>
+  <channel id="X0160">
+    <display-name>RTP Açores</display-name>
+  </channel>
+  <channel id="X0161">
+    <display-name>RTP Madeira</display-name>
+  </channel>
+  <channel id="X0162">
+    <display-name>ARTV</display-name>
+  </channel>
+  <channel id="X0163">
+    <display-name>Localvisão TV</display-name>
+  </channel>
+  <channel id="X0167">
+    <display-name>Azores TV</display-name>
+  </channel>
+  <channel id="X0169">
+    <display-name>DAZN 6</display-name>
+  </channel>
+  <channel id="X0172">
+    <display-name>Caça e Pesca</display-name>
+  </channel>
+  <channel id="X0173">
+    <display-name>Caçavision</display-name>
+  </channel>
+  <channel id="X0174">
+    <display-name>OneToro TV</display-name>
+  </channel>
+  <channel id="X0177">
+    <display-name>Dog TV</display-name>
+  </channel>
+  <channel id="X0180">
+    <display-name>CANAL 180</display-name>
+  </channel>
+  <channel id="X0181">
+    <display-name>Kuriakos TV</display-name>
+  </channel>
+  <channel id="X0182">
+    <display-name>Canção Nova</display-name>
+  </channel>
+  <channel id="X0183">
+    <display-name>TV Verdade</display-name>
+  </channel>
+  <channel id="X0184">
+    <display-name>UM Europa</display-name>
+  </channel>
+  <channel id="X0185">
+    <display-name>Unifé TV</display-name>
+  </channel>
+  <channel id="X0186">
+    <display-name>NOVO TEMPO</display-name>
+  </channel>
+  <channel id="X0189">
+    <display-name>PFC</display-name>
+  </channel>
+  <channel id="X0190">
+    <display-name>Globo News</display-name>
+  </channel>
+  <channel id="X0191">
+    <display-name>New Brasil</display-name>
+  </channel>
+  <channel id="X0192">
+    <display-name>Record Europa</display-name>
+  </channel>
+  <channel id="X0193">
+    <display-name>Record News</display-name>
+  </channel>
+  <channel id="X0195">
+    <display-name>Euronews</display-name>
+  </channel>
+  <channel id="X0196">
+    <display-name>RTP África</display-name>
+  </channel>
+  <channel id="X0197">
+    <display-name>Televisão África</display-name>
+  </channel>
+  <channel id="X0199">
+    <display-name>TPA Notícias</display-name>
+  </channel>
+  <channel id="X0202">
+    <display-name>TCV Internacional</display-name>
+  </channel>
+  <channel id="X0205">
+    <display-name>CNN</display-name>
+  </channel>
+  <channel id="X0206">
+    <display-name>Bloomberg</display-name>
+  </channel>
+  <channel id="X0209">
+    <display-name>CNBC</display-name>
+  </channel>
+  <channel id="X0211">
+    <display-name>Sky News</display-name>
+  </channel>
+  <channel id="X0212">
+    <display-name>English Club TV</display-name>
+  </channel>
+  <channel id="X0213">
+    <display-name>BBC World News</display-name>
+  </channel>
+  <channel id="X0216">
+    <display-name>France 24 (I)</display-name>
+  </channel>
+  <channel id="X0217">
+    <display-name>i24 News (I)</display-name>
+  </channel>
+  <channel id="X0219">
+    <display-name>NHK World Japan</display-name>
+  </channel>
+  <channel id="X0220">
+    <display-name>CGTN</display-name>
+  </channel>
+  <channel id="X0221">
+    <display-name>CGTN Documentary</display-name>
+  </channel>
+  <channel id="X0222">
+    <display-name>Arirang TV</display-name>
+  </channel>
+  <channel id="X0223">
+    <display-name>Euronews (I)</display-name>
+  </channel>
+  <channel id="X0225">
+    <display-name>Aljazeera</display-name>
+  </channel>
+  <channel id="X0226">
+    <display-name>TRT World</display-name>
+  </channel>
+  <channel id="X0227">
+    <display-name>Russia Today</display-name>
+  </channel>
+  <channel id="X0228">
+    <display-name>Channel 1 Russia</display-name>
+  </channel>
+  <channel id="X0234">
+    <display-name>TVEi</display-name>
+  </channel>
+  <channel id="X0235">
+    <display-name>TVE24</display-name>
+  </channel>
+  <channel id="X0236">
+    <display-name>TV Galícia</display-name>
+  </channel>
+  <channel id="X0239">
+    <display-name>Telesur HD</display-name>
+  </channel>
+  <channel id="X0240">
+    <display-name>Cubavision</display-name>
+  </channel>
+  <channel id="X0249">
+    <display-name>M6</display-name>
+  </channel>
+  <channel id="X0250">
+    <display-name>TV5 Monde</display-name>
+  </channel>
+  <channel id="X0251">
+    <display-name>BFM TV</display-name>
+  </channel>
+  <channel id="X0253">
+    <display-name>BFM Business</display-name>
+  </channel>
+  <channel id="X0254">
+    <display-name>i24 News (F)</display-name>
+  </channel>
+  <channel id="X0255">
+    <display-name>France 24 (F)</display-name>
+  </channel>
+  <channel id="X0256">
+    <display-name>France 2</display-name>
+  </channel>
+  <channel id="X0257">
+    <display-name>France 3</display-name>
+  </channel>
+  <channel id="X0258">
+    <display-name>France 5</display-name>
+  </channel>
+  <channel id="X0259">
+    <display-name>Arte</display-name>
+  </channel>
+  <channel id="X0262">
+    <display-name>Euronews (A)</display-name>
+  </channel>
+  <channel id="X0263">
+    <display-name>ARD</display-name>
+  </channel>
+  <channel id="X0264">
+    <display-name>ZDF</display-name>
+  </channel>
+  <channel id="X0265">
+    <display-name>ZDFNEO</display-name>
+  </channel>
+  <channel id="X0266">
+    <display-name>3SAT</display-name>
+  </channel>
+  <channel id="X0267">
+    <display-name>KIKA</display-name>
+  </channel>
+  <channel id="X0268">
+    <display-name>Tagesschau24</display-name>
+  </channel>
+  <channel id="X0270">
+    <display-name>BVN</display-name>
+  </channel>
+  <channel id="X0272">
+    <display-name>PRO TV Internacional</display-name>
+  </channel>
+  <channel id="X0273">
+    <display-name>BNT 4</display-name>
+  </channel>
+  <channel id="X0277">
+    <display-name>KBS World</display-name>
+  </channel>
+  <channel id="X0278">
+    <display-name>CCTV4</display-name>
+  </channel>
+  <channel id="X0279">
+    <display-name>Phoenix CNE</display-name>
+  </channel>
+  <channel id="X0281">
+    <display-name>Freedom</display-name>
+  </channel>
+  <channel id="X0282">
+    <display-name>1+1 International</display-name>
+  </channel>
+  <channel id="X0283">
+    <display-name>1+1 United News</display-name>
+  </channel>
+  <channel id="X0284">
+    <display-name>Kvartal TV International</display-name>
+  </channel>
+  <channel id="X0285">
+    <display-name>Star Cinema</display-name>
+  </channel>
+  <channel id="X0286">
+    <display-name>Star Family</display-name>
+  </channel>
+  <channel id="X0287">
+    <display-name>X Sport</display-name>
+  </channel>
+  <channel id="X0288">
+    <display-name>Duck TV</display-name>
+  </channel>
+  <channel id="X0289">
+    <display-name>RAI Itália</display-name>
+  </channel>
+  <channel id="X0290">
+    <display-name>RAI 1</display-name>
+  </channel>
+  <channel id="X0291">
+    <display-name>RAI 2</display-name>
+  </channel>
+  <channel id="X0292">
+    <display-name>RAI 3</display-name>
+  </channel>
+  <channel id="X0293">
+    <display-name>RAI News</display-name>
+  </channel>
+  <channel id="X0294">
+    <display-name>RAI Scuola</display-name>
+  </channel>
+  <channel id="X0295">
+    <display-name>RAI Storia</display-name>
+  </channel>
+  <channel id="X0296">
+    <display-name>Zee TV</display-name>
+  </channel>
+  <channel id="X0297">
+    <display-name>Zee Cinema</display-name>
+  </channel>
+  <channel id="X0298">
+    <display-name>SET Asia</display-name>
+  </channel>
+  <channel id="X0299">
+    <display-name>SET Max</display-name>
+  </channel>
+  <channel id="X0452">
+    <display-name>Eleven Extra 1</display-name>
+  </channel>
+  <channel id="X0453">
+    <display-name>Eleven Extra 2</display-name>
+  </channel>
+  <channel id="X0454">
+    <display-name>Eleven Extra 3</display-name>
+  </channel>
+  <channel id="X0455">
+    <display-name>Eleven Extra 4</display-name>
+  </channel>
+  <channel id="X0544">
+    <display-name>Nickelodeon</display-name>
+  </channel>
+  <channel id="X0548">
+    <display-name>Nick Jr.</display-name>
+  </channel>
+  <channel id="X0633">
+    <display-name>MCM Pop</display-name>
+  </channel>
+  <channel id="X0661">
+    <display-name>RTP Madeira</display-name>
+  </channel>
+  <channel id="X0705">
+    <display-name>CNN</display-name>
+  </channel>
+  <channel id="X0920">
+    <display-name>BTV CAM1</display-name>
+  </channel>
+  <channel id="X0921">
+    <display-name>BTV CAM2</display-name>
+  </channel>
+  <channel id="X0922">
+    <display-name>BTV CAM3</display-name>
+  </channel>
+  <channel id="X0923">
+    <display-name>BTV CAM4</display-name>
   </channel>
