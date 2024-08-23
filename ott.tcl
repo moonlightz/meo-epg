@@ -37,7 +37,7 @@ while {1} {
 	}
 	if {[catch {set link [dict get $cdict "odata.nextLink"]} erro]} {
 		#Não há aquela chave, sair do loop
-		puts "$quant cana[{if {$quant==1}} {set a "l"} {set a "is"}] ... Feito!"
+		puts "$quant cana[if {$quant==1} {set a "l"} {set a "is"}] ... Feito!"
 		break
 	}
  
