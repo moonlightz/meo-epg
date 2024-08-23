@@ -21,15 +21,16 @@ while {1} {
 	set cvalue   [dict get $cdict "value"]
 
 	foreach dcanal $cvalue {
-		set titulocanal [dict get $dcanal "Title"]
 		set identificador [dict get $dcanal "CallLetter"]
+		set titulocanal "[dict get $dcanal "Title"][if {[string range $identificador end-1 end]=="SD"} {set a " SD"}]"
+		
 		set posicaocanal "X[format %04d [dict get $dcanal "ChannelPosition"]]"
 		puts $fp "  <channel id=\"$posicaocanal\">"
 		puts $fp "    <display-name>$titulocanal</display-name>"
 		puts $fp "  </channel>"
 
 
-		lappend canais($posicaocanal) $titulocanal[if {[string range $identificador end-1 end]=="SD"} {set a " SD"}]
+		lappend canais($posicaocanal) $titulocanal
 		lappend canais($posicaocanal) $identificador
 		incr quant
 		puts -nonewline "$quant cana[if {$quant==1} {set a "l"} {set a "is"}] ... \r"
