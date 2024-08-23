@@ -77,14 +77,14 @@ foreach idcanal [lsort -increasing [array names canais]] {
 			incr numprogs
 			incr isymb
 			if {$isymb>7} {set isymb 0}
-			puts -nonewline [format " %1s | %5s | %-10s | %-25s | %5s | %-15s\r" [lindex "/ / - - \\\\ \\\\ | |" $isymb] $idcanal $identificador $nomecanal [clock format [expr ([clock milliseconds]-$tempoprog)/1000] -format "%M:%S"] "$numprogs programas"]
+			puts -nonewline [format " %1s | %5s | %-10s | %-25s | %9s | %-15s\r" [lindex "/ / - - \\\\ \\\\ | |" $isymb] $idcanal $identificador $nomecanal "[clock format [expr ([clock milliseconds]-$tempoprog)/1000] -format "%M:%S"].[format %03d [string range [expr [clock milliseconds]-$tempoprog] end-2 end]]" "$numprogs programas"]
 
 			flush stdout
 			
 		}
 		if {[catch {set link [dict get $cdict "odata.nextLink"]} erro]} {
 			#Não há aquela chave, sair do loop
-			puts [format " %1s | %5s | %-10s | %-25s | %5s | %-15s - Feito!" "√" $idcanal $identificador $nomecanal [clock format [expr ([clock milliseconds]-$tempoprog)/1000] -format "%M:%S"] "$numprogs programas"]
+			puts [format " %1s | %5s | %-10s | %-25s | %9s | %-15s - Feito!" "√" $idcanal $identificador $nomecanal "[clock format [expr ([clock milliseconds]-$tempoprog)/1000] -format "%M:%S"].[format %03d [string range [expr [clock milliseconds]-$tempoprog] end-2 end]]" "$numprogs programas"]
 
 			break
 		}
@@ -96,4 +96,4 @@ puts $fp "</tv>"
 close $fp
 
 puts "O tamanho do ficheiro meo.xml é [file size meo.xml] bytes."
-puts "A operação demorou [string map {"." ","} [expr ([clock milliseconds]-$tempoinicial)/1000.000]] segundos!"
+puts "A operação demorou [clock format [expr ([clock milliseconds]-$tempoinicial)/1000] -format "%M:%S"].[format %03d [string range [expr [clock milliseconds]-$tempoinicial] end-2 end]] segundos!"
