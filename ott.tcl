@@ -27,38 +27,41 @@ while {1} {
 		puts $fp "  <channel id=\"$posicaocanal\">"
 		puts $fp "    <display-name>$titulocanal</display-name>"
 		puts $fp "  </channel>"
-		flush stdout
+
 
 		lappend canais($posicaocanal) $titulocanal
 		lappend canais($posicaocanal) $identificador
 		incr quant
-		puts -nonewline "."
+		puts -nonewline "$quant cana[{if {$quant==1}} {set a "l"} {set a "is"}] ... \r"
+		flush stdout
 	}
 	if {[catch {set link [dict get $cdict "odata.nextLink"]} erro]} {
 		#Não há aquela chave, sair do loop
-		puts "Feito!"
+		puts "$quant cana[{if {$quant==1}} {set a "l"} {set a "is"}] ... Feito!"
 		break
 	}
  
 }
-puts "$quant canais adicionados."
+
 set conhecidos ""
-puts "A adicionar os programas de televisão..."
+puts "A adicionar os programas de televisão ..."
 
 foreach idcanal [lsort -increasing [array names canais]] {
 	set nomecanal [lindex $canais($idcanal) 0]
+	set identificador [lindex $canais($idcanal) 1]
 	if {[lsearch -nocase $conhecidos $nomecanal]<0} {
 		# SE NÃO EXISTE NA LISTA DE CONHECIDOS, ADICIONAR
 		lappend conhecidos $nomecanal
 	} else {
-		puts "(!) Este canal já está na lista de conhecidos. Acrescentar _2 ao nome."
-		append nomecanal "_2"
+		if {[string range $identificador end-1 end]=="SD"} {set acresc " SD"} {set acresc "_2"}
+		puts "(!) Este canal já está na lista de conhecidos. Acrescentar '$acresc' ao nome do canal."
+		append nomecanal $acresc
 	}
-	set identificador [lindex $canais($idcanal) 1]
+
 	set link "http://ott.online.meo.pt/Program/v8/Programs/LiveChannelPrograms?UserAgent=W10&\$orderby=StartDate%20asc&\$filter=CallLetter%20eq%20'$identificador'%20and%20StartDate%20ge%20datetime'[clock format [clock scan "1 day ago"] -format "%Y-%m-%d"]T01:00:00'%20and%20StartDate%20lt%20datetime'[clock format [clock scan "7 days"] -format "%Y-%m-%d"]T23:00:00'%20and%20IsEnabled%20eq%20true%20and%20IsAdultContent%20eq%20false%20and%20IsBlackout%20eq%20false"
 	set numprogs 0
 	set isymb 0
-	set tempoprog [clock seconds]
+	set tempoprog [clock milliseconds]
 	while {1} {
 		set cjson [exec wget -q -O - $link]
 		set cdict [json::json2dict $cjson]
@@ -78,7 +81,7 @@ foreach idcanal [lsort -increasing [array names canais]] {
 			puts $fp "    <category lang=\"pt\">$categoria</category>"
 			puts $fp "  </programme>"
 
-			puts -nonewline [format " %1s %-10s  %-25s  %5s\r" [lindex "/ / - - \\\\ \\\\ | |" $isymb] $identificador $nomecanal [clock format [expr [clock seconds]-$tempoprog] -format "%M:%S"]]
+			puts -nonewline [format " %1s %-10s  %-25s  %5s\r" [lindex "/ / - - \\\\ \\\\ | |" $isymb] $identificador $nomecanal [clock format [expr ([clock milliseconds]-$tempoprog)/1000] -format "%M:%S"]]
 
 			flush stdout
 			incr numprogs
@@ -87,7 +90,7 @@ foreach idcanal [lsort -increasing [array names canais]] {
 		}
 		if {[catch {set link [dict get $cdict "odata.nextLink"]} erro]} {
 			#Não há aquela chave, sair do loop
-			puts [format " %1s %-10s  %-25s  %5s  %-22s " "√" $identificador $nomecanal [clock format [expr [clock seconds]-$tempoprog] -format "%M:%S"] "Feito! $numprogs programas"]
+			puts [format " %1s %-10s  %-25s  %5s  %-22s " "√" $identificador $nomecanal [clock format [expr ([clock milliseconds]-$tempoprog)/1000] -format "%M:%S"] "Feito! $numprogs programas"]
 
 			break
 		}
