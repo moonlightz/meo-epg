@@ -106,4 +106,4 @@ puts $fp "</tv>"
 close $fp
 
 puts "O tamanho do ficheiro meo.xml é [file size meo.xml] bytes."
-puts "A operação demorou [format_time [expr [clock milliseconds]-$tempoprog]] segundos!"
+puts "A operação demorou [format_time [expr [clock milliseconds]-$tempoinicial]] segundos!"
