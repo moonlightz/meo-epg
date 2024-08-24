@@ -87,7 +87,7 @@ foreach idcanal [lsort -increasing [array names canais]] {
 			if {$isymb>7} {set isymb 0}
 
 			
-			puts -nonewline [format " %1s | %5s | %-10s | %-25s | %9s | %-15s\r" [lindex "/ / - - \\\\ \\\\ | |" $isymb] $idcanal $identificador $nomecanal [format_time [expr [clock milliseconds]-$tempoprog]] "$numprogs programas"]
+			puts -nonewline [format " %1s | %5s | %-10s | %-25s | %9s | %-15s\r" [lindex "/ / ─ ─ \\\\ \\\\ │ │" $isymb] $idcanal $identificador $nomecanal [format_time [expr [clock milliseconds]-$tempoprog]] "$numprogs programas"]
 			flush stdout
 			
 		}
