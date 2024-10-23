@@ -1,5 +1,5 @@
 
-set rssbuild "03-Maio-2024"
+set rssbuild "16-Outubro-2024"
 #moonlight
 
 bind pubm - "* .*" rsstrig
@@ -62,7 +62,6 @@ proc rsstrig {nick uhost handle chan text} {
 }
 
 proc dccrss {handle idx text} {
-	global rssbuild
 	
 	#inicializar vars por defeito
 	set opcoes(urldebug) 0
@@ -80,10 +79,10 @@ proc dccrss {handle idx text} {
 
 	switch [string tolower $arg1] {
 		"" - "ajuda" {
-			putdcc $idx "RSS $rssbuild"
+			putdcc $idx "RSS $::rssbuild"
 			putdcc $idx "  listar \[campos\]"
 			putdcc $idx "  adicionar <link>"
-			putdcc $idx "  remover <feed>"
+			putdcc $idx "  aliminar <feed>"
 			putdcc $idx "  alterar <feed> <chave> <novo-valor>"
 			return
 		}
@@ -256,9 +255,14 @@ proc dccrss {handle idx text} {
 			set id		[lindex $arg2 1]
 			set canal	[lindex $arg2 2]
 			set quando	[lindex $arg2 3]
-			set logo	[lindex $arg2 4]
+			set logo	[lrange $arg2 4 end]
 
-			if {[catch {set feed [exec wget -q -O - $link]} erro]} {
+			if {[string first "*" [lindex [split $quando ":"] 0]]} {
+				putdcc idx "horas não pode ter * ainda."
+				return
+			}
+
+			if {[catch {set feed [exec links -source $link]} erro]} {
 				putdcc $idx "ERRO: $erro"
 				return
 			}
@@ -379,9 +383,21 @@ proc dccrss {handle idx text} {
 
 
 proc convdata {data formato} {
-	return [string map {
-		Sun Dom Mon Seg Tue Ter Wed Qua Thu Qui Fri Sex Sat Sáb Feb Fev Apr Abr May Mai Aug Ago Sep Set Oct Out Dec Dez
-		} [clock format [clock scan $data -format $formato] -format "%a,%d/%b/%Y %H:%M:%S"]]
+#putlog ">$data< >$fomato<"
+	#workaround para o "aberto até de madrugada"
+	#2024-09-06T17:30:00.114+01:00
+	if {[string match "*-*-*T*:*:*.*+*:*" $data]} {
+		set data [string replace $data 26 26]
+		set data [string replace $data 19 22 " "]
+	}
+	#
+	if {[catch {set novadataformatada [string map {Sun Dom Mon Seg Tue Ter Wed Qua Thu Qui Fri Sex Sat Sáb Feb Fev Apr Abr May Mai Aug Ago Sep Set Oct Out Dec Dez} [clock format [clock scan $data -format $formato] -format "%a,%d/%b/%Y %H:%M:%S"]]} erro]} {
+		putlog "Erro! A data fornecida não pode coincide com o formato de data indicado. Tem de fazer alteração manual."
+		putlog "DATA:    >$data<"
+		putlog "FORMATO: >$formato<"
+		set novadataformatada "N/A"
+	}
+	return $novadataformatada
 }
 
 proc encmatches {string stringA stringB} {
@@ -413,6 +429,9 @@ proc rss {min hor dia mes ano} {
 		putlog "O ficheiro rss.cfg não existe."
 		return
 	}
+
+	set canaisaignorar "#windows #code"
+
 	source rss.cfg
 	set totalrss [llength [array names rss]]
 	set posicaorss 0
@@ -440,11 +459,28 @@ proc rss {min hor dia mes ano} {
 				}
 			}
 		}
+
+		if {[lsearch -nocase $canaisaignorar $canal]<0} {
+			if {![info exists topic($canal)]} {
+				set topic($canal) "Bem-vindo ao \002$canal\002 || Triggers disponíveis: "
+			}
+			if {[lsearch $topic($canal) $itemrss]<0} {
+				lappend topic($canal) "\037.$itemrss\037"
+			}
+#putlog "$topic($canal)
+		}
+
 	}
 	bind time - "* * * * *" rss
 	if {$enchercache} {
 		putlog "Operação de recriação demorou [expr (double([clock milliseconds])-$ttime)/1000] segundos."
 	}
+	foreach canal [array names topic] {
+		if {[topic $canal]!=$topic($canal)} {
+			putserv "topic $canal :$topic($canal)"
+		}
+	}
+
 }
 
 if {![info exist bufffeeds]} {
@@ -460,14 +496,21 @@ proc obtertdl {link logo itemrss fmtdata urldebug usartinyurl {progress ""}} {
 	if {$urldebug} {
 		putlog "$progress\017ID: $itemrss | Hit $link ..."
 	}
-	if {[catch {set feed [exec wget -q -O - $link]} erro]} {
+	if {[catch {set feed [exec links -source $link]} erro]} {
 		putlog "\00307RSS: Ocorreu um erro a aceder a $link: $erro"
 		return
 	}
+
 	if {[string length $feed]==0} {
 		putlog "\00307RSS: Parece que $link náo tem nada."
 		return
 	}
+
+	if {[string first "encoding=\"ISO-8859-1\"" $feed]>0} {
+		#Visto que ainda não se conhece maneira de converter iso8859-1 para utf-8 no tcl9, usar iconv
+		set feed [exec links -source $link | iconv -f iso8859-1 -t utf-8]
+	}
+
 	set feed [string map {"<!\[CDATA\[" "" "]]>" ""} $feed]
 	regsub -all {<title\s*[^>]*>} $feed "<title>" feed
 	set feed [htmlparse::mapEscapes $feed]
@@ -483,6 +526,13 @@ proc obtertdl {link logo itemrss fmtdata urldebug usartinyurl {progress ""}} {
 		if {$link==""} {
 			set link [lindex [encmatches $sitem "<id>" "</id>"] 0]
 		}
+
+		#Excepção. Links não começam com tag:
+		if {[string match "tag:*" $link]} {
+			regexp {<link rel='alternate' type='text/html' href='(.*?)' } $sitem -> link
+		}
+		#######################################
+
 		set data [lindex [encmatches $sitem "<pubDate>" "</pubDate>"] 0]
 		if {$data==""} {
 			set data [lindex [encmatches $sitem "<published>" "</published>"] 0]
@@ -497,14 +547,14 @@ proc obtertdl {link logo itemrss fmtdata urldebug usartinyurl {progress ""}} {
 	}
 	putserv "PONG :[lindex [split $::server ":"] 0]"
 	if {$urldebug} {
-		putlog "Terminou: [llength $outfeed] elemento[if {[llength $outfeed]!=1} {set a "s"}]; [expr (double([clock milliseconds])-$ttime)/1000] segundos "
+		putlog "Terminou:[if {[llength $outfeed]==0} {set a "\00314"}] [llength $outfeed] elemento[if {[llength $outfeed]!=1} {set a "s"}]; [expr (double([clock milliseconds])-$ttime)/1000] segundos "
 	}
 	set outfeed
 }
 
 
 proc chrss {nick host handle chan text} {
-	global bufffeeds rssbuild
+	global bufffeeds
 	source rss.cfg
 	set arg1 [lindex $text 0]
 	set arg2 [lindex $text 1]
@@ -540,7 +590,7 @@ proc chrss {nick host handle chan text} {
 			}
 		} \
 		"status" - "estado" {
-			putquick "privmsg $chan :RSS $rssbuild | Tamanho da cache: [llength $bufffeeds] ite[if {[llength $bufffeeds]==1} {set a "m"} {set a "ns"}] ([string bytelength $bufffeeds] bytes); Nº de feeds: [llength [array names rss]]"
+			putquick "privmsg $chan :RSS $::rssbuild | Tamanho da cache: [llength $bufffeeds] ite[if {[llength $bufffeeds]==1} {set a "m"} {set a "ns"}] ([string bytelength $bufffeeds] bytes); Nº de feeds: [llength [array names rss]]"
 		} \
 		"guardar" - "guardarordenado" {
 			set fich "bufffeeds[strftime "%Y%m%d-%H%M%S"].txt"

@@ -146,7 +146,7 @@ proc tvlistas {nick host handle chan text} {
 	} elseif {$opcao=="estado"} {
 		putnow "privmsg $chan :A analisar..."
 		set progstatus [procprogstatus]
-		putnow "privmsg $chan :Canais \002[lindex $progstatus 0]\002  Início: \002[lindex $progstatus 1]\002  Fim: \002[lindex $progstatus 2]\002  Intervalo: \002[lindex $progstatus 3]\002  Entradas: \002[lindex $progstatus 4]\002 Actualizado a \002[lindex $cprogramacao 1]\002 por \002[lindex $cprogramacao 0]\002"
+		putnow "privmsg $chan :Canais \002[lindex $progstatus 0]\002  Início: \002[lindex $progstatus 1]\002  Fim: \002[lindex $progstatus 2]\002  Intervalo: \002[lindex $progstatus 3]\002  Entradas: \002[lindex $progstatus 4]\002  Actualizado a \002[lindex $cprogramacao 1]\002 por \002[lindex $cprogramacao 0]\002"
 	} elseif {$opcao=="hora"} {
 		if {$opcao2==""} {
 			putquick "privmsg $chan :Insira horas válidas entre 00:00 e 23:59, separadas por vírgulas. Ex: 11:00,12:34"
@@ -438,6 +438,24 @@ proc tvpesq {nick host handle chan text} {
 	}
 }
 
+proc ldadic {{list1 ""} {list2 ""}} {
+    #mostra itens adicionados à lista2
+    set adic ""
+    foreach item $list2 {
+        if {$item ni $list1} {lappend adic $item}
+    }
+    return $adic
+}
+
+proc ldremo {{list1 ""} {list2 ""}} {
+    #mostra itens removidos da lista2
+    set remo ""
+    foreach item $list1 {
+        if {$item ni $list2} {lappend remo $item}
+    }
+    return $remo
+}
+
 proc tvengine {{ctext ""}} {
 	global programacao tvfichcfg 
 	putlog "GuiaTV: A iniciar a tarefa..."
@@ -462,6 +480,7 @@ proc tvengine {{ctext ""}} {
 	set turls [split [read $furls] "\n"]
 	close $furls
 
+	set canaisantigos [array names programacao]
 	if {[array exists programacao]} {unset programacao}
 	array set programacao {}
 	set contador 0
@@ -527,6 +546,7 @@ proc tvengine {{ctext ""}} {
 		set numcanais [expr [llength $nomecurtodoscanais]/2]
 		putlog "GuiaTV: O ficheiro $nomedoficheiro contém $numcanais canais."
 		foreach {- nc} $nomecurtodoscanais {- nl} $nomelongodoscanais {
+			incr ii
 			set nc [string tolower [string map {" " ""} $nc]]
 			catch {unset programacao($nc)}
 			lappend programacao($nc) $nl
@@ -557,7 +577,7 @@ proc tvengine {{ctext ""}} {
 				set progsec [regexp -all -inline {<programme start="(.*?)" stop="(.*?)" channel="(.*?)">} $linha]
 				#set inicio [clock format [clock scan [lindex [regexp -inline -- {start=\"(.*?)\"} $linha] 1] -format "%Y%m%d%H%M%S %z"] -format "%Y%m%d%H%M%S %z"]
 				#set fim [clock format [clock scan [lindex [regexp -inline -- {stop=\"(.*?)\"} $linha] 1] -format "%Y%m%d%H%M%S %z"] -format "%Y%m%d%H%M%S %z"]
-				set inicio [lindex [regexp -inline -- {start=\"(.*?)\"} $linha] 1] 
+				set inicio [lindex [regexp -inline -- {start=\"(.*?)\"} $linha] 1]
 				set fim [lindex [regexp -inline -- {stop=\"(.*?)\"} $linha] 1]
 				set canal [string tolower [string map {" " ""} [lindex [regexp -inline -- {channel=\"(.*?)\"} $linha] 1]]]
 				set programa "$inicio|$fim|"
@@ -608,10 +628,15 @@ proc tvengine {{ctext ""}} {
 			}
 		}
 		putlog "GuiaTV: Stage após processamento dos dados do xml"
+#???
+		set sadic ""
+		set sremo ""
 		if {$ctext!=""} {
 			putlog "GUiaTV: Output para >$ctext<\; ainicio=>$ainicio<\; afim=>$afim<"
 			set aagora [clock format [clock seconds] -format "%Y%m%d%H%M%S %z"]
 			set msgdesactualizado ""
+			
+#------
 			if {$afim<$aagora} {
 				set msgdesactualizado "\; Link parece desactualizado"
 			}
@@ -632,7 +657,14 @@ proc tvengine {{ctext ""}} {
 
     set tempodecorrido [expr (double([clock milliseconds])-$tarefainiciada)/1000]
  
-	set estadofinal "Tarefa terminada em $tempodecorrido segundos. Total canais obtidos: $numerototalcanais. Total entradas: $tentradas. $lcontador"
+	if {[ldadic $canaisantigos [array names programacao]]!=""} {
+		set sadic "Adicionados: [ldadic $canaisantigos [array names programacao]]  "
+	}
+	if {[ldremo $canaisantigos [array names programacao]]!=""} {
+		set sremo "Removidos: [ldremo $canaisantigos [array names programacao]]  "
+	}
+############
+	set estadofinal "Tarefa terminada em $tempodecorrido segundos. Total canais obtidos: $numerototalcanais. Total entradas: $tentradas. $sadic$sremo$lcontador"
 	putlog "GuiaTV: $estadofinal"
 	return $estadofinal
 }
