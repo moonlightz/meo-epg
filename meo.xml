@@ -1,3 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE tv SYSTEM "xmltv.dtd">
-<tv generator-info-name="MZ" generator-info-url="git" source-info-name="OTT MEO" date="20250222093630 +0000">
+<tv generator-info-name="MZ" generator-info-url="git" source-info-name="OTT MEO" date="20250222093717 +0000">
+  <channel id="X0001">
+    <display-name>RTP1</display-name>
+  </channel>
+  <channel id="X0002">
+    <display-name>RTP2</display-name>
+  </channel>
+  <channel id="X0003">
+    <display-name>SIC</display-name>
+  </channel>
+  <channel id="X0004">
+    <display-name>TVI</display-name>
+  </channel>
+  <channel id="X0005">
+    <display-name>SIC Notícias</display-name>
+  </channel>
+  <channel id="X0006">
+    <display-name>RTP3</display-name>
+  </channel>
+  <channel id="X0007">
+    <display-name>CNN Portugal</display-name>
+  </channel>
+  <channel id="X0008">
+    <display-name>CMTV</display-name>
+  </channel>
+  <channel id="X0009">
+    <display-name>News Now</display-name>
+  </channel>
+  <channel id="X0010">
+    <display-name>Globo</display-name>
+  </channel>
+  <channel id="X0011">
+    <display-name>11</display-name>
+  </channel>
+  <channel id="X0012">
+    <display-name>V+ TVI</display-name>
+  </channel>
+  <channel id="X0013">
+    <display-name>SIC Mulher</display-name>
+  </channel>
+  <channel id="X0014">
+    <display-name>SIC Novelas</display-name>
+  </channel>
+  <channel id="X0020">
+    <display-name>Sport TV +</display-name>
+  </channel>
+  <channel id="X0021">
+    <display-name>Sport TV1</display-name>
+  </channel>
+  <channel id="X0022">
+    <display-name>Sport TV2</display-name>
+  </channel>
+  <channel id="X0023">
+    <display-name>Sport TV3</display-name>
+  </channel>
+  <channel id="X0024">
+    <display-name>Sport TV4</display-name>
+  </channel>
+  <channel id="X0025">
+    <display-name>Sport TV5</display-name>
+  </channel>
