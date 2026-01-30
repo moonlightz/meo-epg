@@ -1,5 +1,5 @@
 
-set rssbuild "16-Outubro-2024"
+set rssbuild "26-Janeiro-2026"
 #moonlight
 
 bind pubm - "* .*" rsstrig
@@ -37,7 +37,7 @@ proc rsstrig {nick uhost handle chan text} {
 			foreach {var valor} $rss($itemrss) {
 				set [subst $var] $valor
 			}
-			if {$activo=="nao"} {
+			if {!$activo} {
 				return
 			}
 			if {$chan!=$canal} {
@@ -68,7 +68,8 @@ proc dccrss {handle idx text} {
 	set opcoes(listchantrig) 1
 	set opcoes(activarchantrig) 1
 	set opcoes(usartinyurl) 0
-
+	set opcoes(canaisignorartopico) ""
+	set opcoes(canaistinyurlforcado) ""
 
 	#analisar o input
 	set arg1 [lindex $text 0]
@@ -79,14 +80,21 @@ proc dccrss {handle idx text} {
 
 	switch [string tolower $arg1] {
 		"" - "ajuda" {
+			#>ajuda
 			putdcc $idx "RSS $::rssbuild"
-			putdcc $idx "  listar \[campos\]"
-			putdcc $idx "  adicionar <link>"
-			putdcc $idx "  aliminar <feed>"
-			putdcc $idx "  alterar <feed> <chave> <novo-valor>"
+			foreach linha [split [info body dccrss] \n] {
+				if {[string range [string trim $linha] 0 1]=="#>"} {
+					putdcc $idx "\ \ \ \ [string range $linha [string first "#>" $linha]+2 end]"
+				}
+			}
 			return
 		}
 		"listar" {
+			#>listar [campos]
+			if {[array names rss]==""} {
+				putdcc $idx "Não há itens para listar. Adicione um feed usando .rss adicionar"
+				return
+			}
 			set nomes "itemrss canal quando link fmtdata"
 			if {$arg2!=""} {
 				set nomes $arg2
@@ -107,7 +115,7 @@ proc dccrss {handle idx text} {
 			foreach nome $nomes {
 				lappend posicoes [lindex [lsort -dictionary $campos($nome)] end] [string totitle $nome]
 			}
-			putdcc $idx "❏ [format [string repeat "%-*s  " [llength $nomes]] {*}[string map {Itemrss Nome} $posicoes]]"
+			putdcc $idx "\037❏ [format [string repeat "%-*s  " [llength $nomes]] {*}[string map {Itemrss Nome} $posicoes]]"
 
 			foreach itemrss [lsort [array names rss]] {
 				foreach {var valor} $rss($itemrss) {
@@ -115,64 +123,74 @@ proc dccrss {handle idx text} {
 				}
 				set out ""
 				foreach nome $nomes {
-					# vermelho - já passou
-					# amarelo  - está na hora exacta
-					# verde	- para acontecer
-					if {$nome=="quando"} {
-						set oquando ""
-						foreach iquando [split [subst $[subst $nome]] ","] {
-							set hora [lindex [split $iquando ":"] 0]
-							set minu [lindex [split $iquando ":"] 1]
-							if {$hora=="*"} {
-								if {$minu=="*"} {
-									append oquando "\0038$iquando\003,"
-								} else {
-									scan [clock format [clock seconds] -format "%M"] "%d" magora
-									scan $minu "%d" mminu
-									if {$magora>$mminu} {
-										append oquando "\0034$iquando\003,"
-									} elseif {$magora==$mminu} {
-										append oquando "\0038$iquando\003,"
-									} else {
-										append oquando "\00371$iquando\003,"
-										continue
-									}
-								}
-							} else {
-								set mminutos [expr $hora*60+$minu]
-								set rminutos [expr [scan [clock format [clock seconds] -format "%H"] "%d"]*60+[scan [clock format [clock seconds] -format "%M"] "%d"]]
-								#putdcc $idx ">$mminutos< >$rminutos<"
-								if {$mminutos<$rminutos} {
-									append oquando "\0034\034$iquando\003,"
-								} elseif {$mminutos==$rminutos} {
-									append oquando "\0038\034$iquando\003,"
-								} else {
-									append oquando "\00371\034$iquando\003,"
-								}
-							}
-						}
-						set quando [string trimright $oquando ","]
-						set scquando [string length [string map {"\034" ""} [stripcodes c $quando]]]
-						set cquando [lindex [lsort -dictionary $campos($nome)] end]
-						lappend out 17 "[subst $[subst $nome]][string repeat " " [expr $cquando-$scquando]]"
-						continue
-					}
 					lappend out [lindex [lsort -dictionary $campos($nome)] end] [subst $[subst $nome]]
 				}
 				#putdcc $idx ">$campos<"
-				putdcc $idx [string trimright [format "%-*s [string repeat "%-*s  " [llength $nomes]]" 1 [if {$activo=="sim"} {set a "✓"} {set a "✕"}] {*}$out]]
+				putdcc $idx [string trimright [format "%-*s [string repeat "%-*s  " [llength $nomes]]" 1 [if {$activo} {set a "✓"} {set a "✕"}] {*}$out]]
 				#return
 			}
 			return
 		}
+		"agendado" {
+			#>agendado [hora]
+			if {[array names rss]==""} {
+				putdcc $idx "Não há nada para mostrar."
+				return
+			}
+			for {set h 0} {$h<=23} {incr h} {
+				for {set m 0} {$m<=59} {incr m} {
+					set hm([format "%02d:%02d" $h $m]) ""
+				}
+			}
+			foreach ihm [array names hm] {
+				foreach itemrss [lsort [array names rss]] {
+					foreach {var valor} $rss($itemrss) {
+						set [subst $var] $valor
+					}
+					foreach iquando [split $quando ,] {
+						if {[string match $iquando $ihm]} {
+							lappend hm($ihm) $itemrss➤\0038$canal\003
+						}
+					}
+				}
+			}
+			if {$arg2==""} {
+				lappend hmrange [clock format [clock scan "3 minutes ago"] -format %H:%M]
+				lappend hmrange [clock format [clock scan "2 minutes ago"] -format %H:%M]
+				lappend hmrange [clock format [clock scan "1 minutes ago"] -format %H:%M]
+				lappend hmrange [clock format [clock seconds] -format %H:%M]
+				lappend hmrange [clock format [clock scan "1 minutes"] -format %H:%M]
+				lappend hmrange [clock format [clock scan "2 minutes"] -format %H:%M]
+				lappend hmrange [clock format [clock scan "3 minutes"] -format %H:%M]
+				lappend hmrange [clock format [clock scan "4 minutes"] -format %H:%M]
+			} else {
+				scan $arg2 %d arg2
+				if {$arg2<0 || $arg2>23} {
+					putdcc $idx "Tem de ser entre 0 e 23 inclusivé."
+					return
+				}
+				for {set m 0} {$m<=59} {incr m} {
+					lappend hmrange [format "%02d:%02d" $arg2 $m]
+				}
+			}
+			foreach ihmrange $hmrange {
+				putdcc $idx [string trimright [format "%9s %-100s" [if {$ihmrange==[strftime %H:%M]} {set a "<\[$ihmrange\]>"} {set a "  $ihmrange  "}] $hm($ihmrange)]]
+			}
+			return
+		}
 		"alterar" {
+			#>alterar <feed> <chave> <novo-valor>
 			if {$arg2==""} {
 				putdcc $idx "\002<id>\002 <chave> <alteração>"
 				return
 			}
+			if {[array names rss]==""} {
+				putdcc $idx "Não é possível alterar seja o que for porque não há itens para serem alterados. Tem de adicionar um feed primeiro."
+				return
+			}
 			set id [lindex $arg2 0]
 			if {[lsearch [array names rss] $id]<0} {
-				putdcc $idx "Não existe esse id: $id"
+				putdcc $idx "Não existe o id: $id"
 				putdcc $idx "Tem de ser um de: [lsort -dictionary [array names rss]]"
 				return
 			}
@@ -201,6 +219,7 @@ proc dccrss {handle idx text} {
 
 		}
 		"opcoes" - "opções" {
+			#>opcoes [opção] [novo_valor]
 			set opcao [lindex $arg2 0]
 			set valopcao [lindex $arg2 1]
 			foreach ioptlista [array names opcoes] {
@@ -234,7 +253,9 @@ proc dccrss {handle idx text} {
 				"" {
 					foreach opcao [lsort -dictionary [array names opcoes]] {
 						putdcc $idx [format "  %-*s  %-*s %-*s" \
-							 15 $opcao 1 $opcoes($opcao) 11 "([if {!$opcoes($opcao)} {set a "desactivado"} {set a "activado"}])"]
+							[expr max([join [lmap word [split [array names opcoes]] {string length $word}] ","])] $opcao \
+							1 $opcoes($opcao) \
+							11 [if {[string is boolean $opcoes($opcao)]} {set a "([if {!$opcoes($opcao)} {set a "desactivado"} {set a "activado"}])"} {set a ""}]]
 					}
 					return
 				} \
@@ -246,6 +267,7 @@ proc dccrss {handle idx text} {
 			#putdcc $idx "OK"
 		}
 		"adicionar" {
+			#>adicionar <link> <id> <canal> <quando> <logo>
 			if {$arg2==""} {
 				putdcc $idx "<link> \[id\] \[canal\] \[quando\] \[logo\]"
 				return
@@ -257,8 +279,21 @@ proc dccrss {handle idx text} {
 			set quando	[lindex $arg2 3]
 			set logo	[lrange $arg2 4 end]
 
-			if {[string first "*" [lindex [split $quando ":"] 0]]} {
-				putdcc idx "horas não pode ter * ainda."
+			if {[string match https://www.youtube.com/@* $link]} {
+				if {$id=="" || $id=="-"} {
+					regexp {@([^/]+)} $link -> id
+				}
+				set yhtml [exec wget -qO - $link]
+				regexp {channel/([A-Za-z0-9_-]+)">} $yhtml -> UCid
+				set link "https://www.youtube.com/feeds/videos.xml?channel_id=$UCid"
+				putdcc $idx "A alterar link para \002$link\002"
+				regexp {<title>(.*?) - YouTube</title>} $yhtml -> ologo
+				set logo "\002$ologo\002"
+				putdcc $idx "A definir logo para $logo"
+			}
+
+			if {![string match *:* $quando]} {
+				putdcc $idx "'quando' tem de ter o formato hh:mm, como 12:34 *:34 1?:34 12:*4 12:* ou 12:34,23:45"
 				return
 			}
 
@@ -266,6 +301,7 @@ proc dccrss {handle idx text} {
 				putdcc $idx "ERRO: $erro"
 				return
 			}
+
 			if {$id==""} {
 				regexp {www\.(.*?)\.} $link -> id
 				if {$id==""} {
@@ -283,7 +319,8 @@ proc dccrss {handle idx text} {
 						set formato "%a, %d %b %Y %H:%M:%S %Z"
 					} else {
 						set encontradoformato 0
-						foreach formato [list "%Y-%m-%d %H:%M:%S" "%a, %d %b %Y %H:%M:%S %Z"] {
+						foreach formato [list "%Y-%m-%d %H:%M:%S" "%a, %d %b %Y %H:%M:%S %Z" "%Y-%m-%dT%H:%M:%S+00:00"] {
+putdcc $idx ">$data<"
 							if {[catch {clock scan $data -format $formato} erro]} {
 								#putdcc $idx "Este não serve: $formato"
 								continue
@@ -293,11 +330,11 @@ proc dccrss {handle idx text} {
 							break
 						}
 						if {$encontradoformato==0} {
-							putdcc $idx "O formato apropriado não foi encontrado. O formato pré-definido irá ser adicionado e é preciso alterar o formato mais tarde." 
+							putdcc $idx "O formato apropriado não foi encontrado. O formato genérico irá ser adicionado e é preciso alterar o formato mais tarde."
 							set formato "%a, %d %b %Y %H:%M:%S %Z"
 						}
 					}
-					lappend rss($id) "activo" "sim" "canal" [if {$canal==""} {set canal "#code"} {set canal}] "fmtdata" $formato "link" "$link" "logo" [if {$logo==""} {set logo "\002$id\002"} {set logo $logo}] "quando" [if {$quando==""} {set quando "*:00"} {set quando}] "vezes" "3"
+					lappend rss($id) "activo" 1 "canal" [if {$canal==""} {set canal "#code"} {set canal}] "fmtdata" $formato "link" "$link" "logo" [if {$logo==""} {set logo "\002$id\002"} {set logo $logo}] "quando" [if {$quando==""} {set quando "*:00"} {set quando}] "vezes" "3"
 				}
 			}
 			
@@ -311,7 +348,7 @@ proc dccrss {handle idx text} {
 						set formato "%Y-%m-%dT%H:%M:%SZ"
 					} else {
 						set encontradoformato 0
-						foreach formato [list "%Y-%m-%dT%H:%M:%SZ" "%Y-%m-%d %H:%M:%S" "%a, %d %b %Y %H:%M:%S %Z"] {
+						foreach formato [list "%Y-%m-%dT%H:%M:%SZ" "%Y-%m-%d %H:%M:%S" "%a, %d %b %Y %H:%M:%S %Z" "%Y-%m-%dT%H:%M:%S+00:00"] {
 							if {[catch {clock scan $data -format $formato} erro]} {
 								#putdcc $idx "Este não serve: $formato"
 								continue
@@ -325,16 +362,21 @@ proc dccrss {handle idx text} {
 							set formato "%Y-%m-%dT%H:%M:%SZ"
 						}
 					}
-					lappend rss($id) "activo" "sim" "canal" [if {$canal==""} {set canal "#code"} {set canal}] "fmtdata" $formato "link" "$link" "logo" [if {$logo==""} {set logo "\002$id\002"} {set logo $logo}] "quando" [if {$quando==""} {set quando "*:00"} {set quando}] "vezes" "3"
+					lappend rss($id) "activo" 1 "canal" [if {$canal==""} {set canal "#code"} {set canal}] "fmtdata" $formato "link" "$link" "logo" [if {$logo==""} {set logo "\002$id\002"} {set logo $logo}] "quando" [if {$quando==""} {set quando "*:00"} {set quando}] "vezes" "3"
 				}
 			}
 
 
-			putdcc $idx "Adicionado com sucesso."
+			putdcc $idx "\002$id\002 adicionado com sucesso."
 		}
 		"eliminar" {
+			#>eliminar <feed>
 			if {$arg2==""} {
 				putdcc $idx "<id>"
+				return
+			}
+			if {[array names rss]==""} {
+				putdcc $idx "Não é possível eliminar seja o que for porque não há itens para serem eliminados."
 				return
 			}
 			if {[lsearch [array names rss] $arg2]<0} {
@@ -350,26 +392,29 @@ proc dccrss {handle idx text} {
 			return
 		}
 	}
-	file copy -force rss.cfg rss.cfg.old	
+
+	file mkdir rsscfgbackups
+	file copy -force rss.cfg rsscfgbackups/rss.cfg.[strftime "%d-%b-%Y-%H-%M-%S"]
+
 	set fp [open rss.cfg w+]
 
-	set copt 0
-	foreach opcao [array names opcoes] {
-		set compopcao [string length $opcao]
-		if {$compopcao>$copt} {
-			set copt $compopcao
-		}
-	}
-
+	#o cabeçalho do ficheiro a informar quando foi o ficheiro criado
 	puts $fp "#Este ficheiro foi gerado às [string map {
 		January Janeiro February Fevereiro March Março April Abril May Maio June Junho
 		July Julho August Agosto September Setembro October Outubro November Novembro December Dezembro
 		} [strftime "%d/%B/%Y %H:%M:%S"]]\n"
 	
+	#grupo do array opcoes
+	set copt [expr max([join [lmap word [split [array names opcoes]] {string length $word}] ","])]
 	foreach opcao [lsort -dictionary [array names opcoes]] {
-		puts $fp [format "%-*s %-*s" [expr 12+$copt] "set opcoes($opcao)" 1 $opcoes($opcao)]
+		puts $fp [format "%-*s %-*s" \
+			[expr 12+$copt] "set opcoes($opcao)" \
+			[string length $opcoes($opcao)] [if {[string is boolean $opcoes($opcao)]} {set a $opcoes($opcao)} {set a "\"$opcoes($opcao)\""}]]
 	}
+
 	puts $fp ""
+
+	#grupo do array rss
 	foreach id [lsort -dictionary [array names rss]] {
 		puts $fp "set rss($id) \{"
 		foreach chave [lsort [dict keys $rss($id)]] {
@@ -377,6 +422,7 @@ proc dccrss {handle idx text} {
 		}
 		puts $fp "\}\n"
 	}
+
 	close $fp
 	putdcc $idx "Ficheiro guardado."
 }
@@ -392,9 +438,10 @@ proc convdata {data formato} {
 	}
 	#
 	if {[catch {set novadataformatada [string map {Sun Dom Mon Seg Tue Ter Wed Qua Thu Qui Fri Sex Sat Sáb Feb Fev Apr Abr May Mai Aug Ago Sep Set Oct Out Dec Dez} [clock format [clock scan $data -format $formato] -format "%a,%d/%b/%Y %H:%M:%S"]]} erro]} {
-		putlog "Erro! A data fornecida não pode coincide com o formato de data indicado. Tem de fazer alteração manual."
-		putlog "DATA:    >$data<"
-		putlog "FORMATO: >$formato<"
+		putlog "\0038Erro! A data fornecida não pode coincide com o formato de data indicado. Tem de fazer alteração manual."
+		putlog "\0038  DATA:     >$data<"
+		putlog "\0038  FORMATO:  >$formato<"
+		putlog "\0038  SUGERIDO: >[adividata $data]<"
 		set novadataformatada "N/A"
 	}
 	return $novadataformatada
@@ -418,6 +465,7 @@ proc encmatches {string stringA stringB} {
 
 proc rss {min hor dia mes ano} {
 	global bufffeeds
+
 	set enchercache 0
 	if {![info exist bufffeeds]} {
 		set bufffeeds ""
@@ -430,9 +478,8 @@ proc rss {min hor dia mes ano} {
 		return
 	}
 
-	set canaisaignorar "#windows #code"
-
 	source rss.cfg
+
 	set totalrss [llength [array names rss]]
 	set posicaorss 0
 	foreach itemrss [array names rss] {
@@ -441,7 +488,12 @@ proc rss {min hor dia mes ano} {
 			set [subst $var] $valor
 		}
 
-		if {$activo=="nao"} {
+		if {[lsearch -nocase [channels] $canal]==-1} {
+			channel add $canal
+			update
+		}
+
+		if {!$activo} {
 			continue
 		}
 		foreach iquando [split $quando ","] {
@@ -449,25 +501,37 @@ proc rss {min hor dia mes ano} {
 			if {![string match $iquando "$hor:$min"] && !$enchercache} {
 				continue
 			}
+
 			set ffeeds [obtertdl $link $logo $itemrss $fmtdata $opcoes(urldebug) $opcoes(usartinyurl) [if {$enchercache} {set a "[format "%4s | " "[expr round((double($posicaorss)/$totalrss)*100)]%"]"}]]
 			foreach iffeed $ffeeds {
 				if {[lsearch $bufffeeds [string map {\[ \\\[ \] \\\]} $iffeed]]<0} {
 					if {!$enchercache} {
-						putquick "privmsg $canal :$iffeed"
+						foreach ichannel [split $canal ","] {
+							if {[lsearch -nocase $opcoes(canaistinyurlforcado) $ichannel]>=0} {
+								if {[string first "https://tinyurl.com" $iffeed]<0} {
+									putquick "privmsg $ichannel :[string range $iffeed 0 [string last " " $iffeed]][tinyurl [lindex $iffeed end]]"
+								} else {
+									putquick "privmsg $ichannel :$iffeed"
+								}
+							} else {
+								putquick "privmsg $ichannel :$iffeed"
+							}
+						}
 					}
 					lappend bufffeeds $iffeed
 				}
 			}
 		}
 
-		if {[lsearch -nocase $canaisaignorar $canal]<0} {
-			if {![info exists topic($canal)]} {
-				set topic($canal) "Bem-vindo ao \002$canal\002 || Triggers disponíveis: "
+		foreach ichannel [split $canal ","] {
+			if {[lsearch -nocase $opcoes(canaisignorartopico) $ichannel]<0} {
+				if {![info exists topic($ichannel)]} {
+					set topic($ichannel) "Bem-vindo ao \002$ichannel\002 || Triggers disponíveis: "
+				}
+				if {[lsearch $topic($ichannel) $itemrss]<0} {
+					lappend topic($ichannel) "\037.$itemrss\037"
+				}
 			}
-			if {[lsearch $topic($canal) $itemrss]<0} {
-				lappend topic($canal) "\037.$itemrss\037"
-			}
-#putlog "$topic($canal)
 		}
 
 	}
@@ -477,7 +541,14 @@ proc rss {min hor dia mes ano} {
 	}
 	foreach canal [array names topic] {
 		if {[topic $canal]!=$topic($canal)} {
-			putserv "topic $canal :$topic($canal)"
+			if {![isop $::botnick $canal]} {
+				putlog "#!# Não tenho op no canal $canal e não me é possível mudar o tópico."
+				continue
+			}
+			#putlog "comando topic >[topic $canal]<"
+			#putlog "topico gerado >$topic($canal)<"
+			#putlog "comparacao    >[string match [topic $canal] $topic($canal)]<"
+			putserv "TOPIC $canal :$topic($canal)"
 		}
 	}
 
@@ -494,7 +565,7 @@ proc obtertdl {link logo itemrss fmtdata urldebug usartinyurl {progress ""}} {
 	set feed ""
 	set outfeed ""
 	if {$urldebug} {
-		putlog "$progress\017ID: $itemrss | Hit $link ..."
+		putlog "$progress\017ID: $itemrss | Obter $link ..."
 	}
 	if {[catch {set feed [exec links -source $link]} erro]} {
 		putlog "\00307RSS: Ocorreu um erro a aceder a $link: $erro"
@@ -511,9 +582,11 @@ proc obtertdl {link logo itemrss fmtdata urldebug usartinyurl {progress ""}} {
 		set feed [exec links -source $link | iconv -f iso8859-1 -t utf-8]
 	}
 
-	set feed [string map {"<!\[CDATA\[" "" "]]>" ""} $feed]
+	#set feed [string map {"<!\[CDATA\[" "" "]]>" ""} $feed]
 	regsub -all {<title\s*[^>]*>} $feed "<title>" feed
 	set feed [htmlparse::mapEscapes $feed]
+
+	set feed [string map {"<!\[CDATA\[" "" "]]>" ""} $feed]
 
 	set allitems [lreverse [encmatches $feed "<item" "</item>"]]
 	#atom
@@ -521,16 +594,24 @@ proc obtertdl {link logo itemrss fmtdata urldebug usartinyurl {progress ""}} {
 		set allitems [lreverse [encmatches $feed "<entry" "</entry>"]]
 	}
 	foreach sitem $allitems {
-		set titulo [htmlparse::mapEscapes [lindex [encmatches $sitem "<title>" "</title>"] 0]]
+		set titulo [string trim [htmlparse::mapEscapes [lindex [encmatches $sitem "<title>" "</title>"] 0]]]
+		if {[string match "*POKÉMON FULL EPISODE*Season*" $titulo]} {
+			regexp {<media:description>(.*?)\n\n} $sitem -> descep
+			set descep [string map {\n ""} $descep]
+			set titulo "\0038,12\002\002 $titulo \003 $descep"
+		}
 		set link [lindex [encmatches $sitem "<link>" "</link>"] 0]
 		if {$link==""} {
 			set link [lindex [encmatches $sitem "<id>" "</id>"] 0]
 		}
-
+		
 		#Excepção. Links não começam com tag:
 		if {[string match "tag:*" $link]} {
 			regexp {<link rel='alternate' type='text/html' href='(.*?)' } $sitem -> link
 		}
+
+		#Excepção: substituir yt:: pela parte inicial do link deixado pelo <id>
+		set link [string map {yt:video: https://youtu.be/} $link]
 		#######################################
 
 		set data [lindex [encmatches $sitem "<pubDate>" "</pubDate>"] 0]
@@ -538,9 +619,9 @@ proc obtertdl {link logo itemrss fmtdata urldebug usartinyurl {progress ""}} {
 			set data [lindex [encmatches $sitem "<published>" "</published>"] 0]
 		}
 
-#putdcc 8 ">$titulo<"
-#putdcc 8 ">$link<"
-#putdcc 8 ">$data<"
+#putdcc 5 ">$titulo<"
+#putdcc 5 ">$link<"
+#putdcc 5 ">$data<"
 
 		lappend outfeed "[subst $logo] [string map {"<em>" "\035" "</em>" "\035"} $titulo] \017[if {$data!=""} {set a "([convdata $data $fmtdata]) "}][if {$usartinyurl} {set a [tinyurl $link]} {set link}]"
 
@@ -562,7 +643,7 @@ proc chrss {nick host handle chan text} {
 
 	set out ""
 	foreach itemrss [lsort [array names rss]] {
-		if {[dict get $rss($itemrss) activo]=="sim"} {
+		if {[dict get $rss($itemrss) activo]} {
 			if {[lsearch -nocase [dict get $rss($itemrss) canal] $chan]!=-1} {
 				lappend out $itemrss
 			}
@@ -619,8 +700,24 @@ proc chrss {nick host handle chan text} {
 	
 }
 
+proc adividata {datestr} {
+    # Common patterns
+    set patterns {
+		{%a, %d %b %Y %H:%M:%S %z} {^[A-Z][a-z][a-z], \d{1,2} [A-Z][a-z][a-z] \d{4} \d{2}:\d{2}:\d{2} [+-]\d{4}$}
+        {%Y-%m-%d} {^\d{4}-\d{2}-\d{2}$}
+        {%d/%m/%Y} {^\d{1,2}/\d{1,2}/\d{4}$}
+	}
+        #{%H:%M} {^\d{1,2}:\d{2}$}
+        #{%H:%M:%S} {^\d{1,2}:\d{2}:\d{2}$}
 
+    foreach {fmt regex} $patterns {
+        if {[regexp $regex $datestr]} {
+            return $fmt
+        }
+    }
 
+    return "Desconhecido"
+}
 putlog "RSS FEEDS"
 #002 bold
 #003 cor
