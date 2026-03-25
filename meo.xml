@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE tv SYSTEM "xmltv.dtd">
-<tv generator-info-name="MZ" generator-info-url="git" source-info-name="OTT MEO" date="20260324050007 +0000">
+<tv generator-info-name="MZ" generator-info-url="git" source-info-name="OTT MEO" date="20260325050007 +0000">
   <channel id="X0001">
     <display-name>RTP1</display-name>
   </channel>
@@ -646,102 +646,6 @@
   <channel id="X0923">
     <display-name>BTV CAM4</display-name>
   </channel>
-  <programme channel="X0001" start="20260323031500 +0000" stop="20260323033000 +0000">
-    <title lang="pt">Terra Europa T4 - Ep. 25</title>
-    <desc lang="pt">A série acompanha o trabalho dos eurodeputados e das instituições europeias como nunca antes visto, através de quatro novas rúbricas. Descomplicar a Europa com o 'Dicionário Europeu'. Construir a Europa, com a participação de jovens portugueses eleitores. Dar espaço à cultura através do 'Cinema Europa', com a divulgação dos festivais e prêmios europeus. E conhecer os 27 Estados membros, com um segmento de estatísticas europeias.
-A série acompanha o trabalho dos eurodeputados e das instituições europeias como nunca antes visto, através de quatro novas rúbricas. Descomplicar a Europa com o 'Dicionário Europeu'. Construir a Europa, com a participação de jovens portugueses eleitores. Dar espaço à cultura através do 'Cinema Europa', com a divulgação dos festivais e prêmios europeus. E conhecer os 27 Estados membros, com um segmento de estatísticas europeias.</desc>
-    <category lang="pt">Cultura e Sociedade</category>
-  </programme>
-  <programme channel="X0001" start="20260323033000 +0000" stop="20260323043000 +0000">
-    <title lang="pt">Um Planeta Inquieto - Ep. 1</title>
-    <desc lang="pt">Neste episódio conhecemos a transformação da Austrália, de uma terra chuvosa repleta de dinossauros, para um continente árido povoado por alguns dos animais mais singulares do planeta.
-Neste episódio conhecemos a transformação da Austrália, de uma terra chuvosa repleta de dinossauros, para um continente árido povoado por alguns dos animais mais singulares do planeta.</desc>
-    <category lang="pt">Natureza</category>
-  </programme>
-  <programme channel="X0001" start="20260323043000 +0000" stop="20260323060000 +0000">
-    <title lang="pt">Televendas</title>
-    <desc lang="pt">Todos os dias, um espaço dedicado a vendas por televisão, em que são feitas demonstrações dos produtos.
-Todos os dias, um espaço dedicado a vendas por televisão, em que são feitas demonstrações dos produtos.</desc>
-    <category lang="pt">null</category>
-  </programme>
-  <programme channel="X0001" start="20260323060000 +0000" stop="20260323100000 +0000">
-    <title lang="pt">Bom Dia Portugal</title>
-    <desc lang="pt">O Bom Dia Portugal é um programa de informação apresentado por João Tomé de Carvalho e Carla Trafaria, de 2a a 6a feira entre as 06:30h e as 10:00h. Todos os dias, o Bom Dia Portugal dedica espaços específicos às notícias da atualidade nacional e internacional, desporto, meteorologia, trânsito e economia.
-O Bom Dia Portugal é um programa de informação apresentado por João Tomé de Carvalho e Carla Trafaria, de 2a a 6a feira entre as 06:30h e as 10:00h. Todos os dias, o Bom Dia Portugal dedica espaços específicos às notícias da atualidade nacional e internacional, desporto, meteorologia, trânsito e economia.</desc>
-    <category lang="pt">null</category>
-  </programme>
-  <programme channel="X0001" start="20260323100000 +0000" stop="20260323125800 +0000">
-    <title lang="pt">Praça da Alegria</title>
-    <desc lang="pt">Jorge Gabriel e Sónia Araújo dão-lhe as boas vindas à Praça da Alegria! Porque sabemos que gosta da nossa companhia, oferecemos boa disposição até à hora de almoço! De segunda a sexta-feira, a Praça da Alegria leva até si a melhor música, as últimas tendências da moda, conselhos úteis e muitas dicas que facilitam o seu dia-a-dia.
-Jorge Gabriel e Sónia Araújo dão-lhe as boas vindas à Praça da Alegria! Porque sabemos que gosta da nossa companhia, oferecemos boa disposição até à hora de almoço! De segunda a sexta-feira, a Praça da Alegria leva até si a melhor música, as últimas tendências da moda, conselhos úteis e muitas dicas que facilitam o seu dia-a-dia.</desc>
-    <category lang="pt">Variedades</category>
-  </programme>
-  <programme channel="X0001" start="20260323125800 +0000" stop="20260323143000 +0000">
-    <title lang="pt">Jornal da Tarde</title>
-    <desc lang="pt">Todos os dias, às 13 horas, a sua hora de almoço é completada com a atualização das notícias que marcam a atualidade nacional e mundial, desde a política, a economia, a sociedade e sem esquecer o desporto. Reportagens no local, entrevistas em direto e sempre a isenção e o respeito pela verdade que marcam a informação na RTP.
-Todos os dias, às 13 horas, a sua hora de almoço é completada com a atualização das notícias que marcam a atualidade nacional e mundial, desde a política, a economia, a sociedade e sem esquecer o desporto. Reportagens no local, entrevistas em direto e sempre a isenção e o respeito pela verdade que marcam a informação na RTP.</desc>
-    <category lang="pt">null</category>
-  </programme>
-  <programme channel="X0001" start="20260323142700 +0000" stop="20260323152000 +0000">
-    <title lang="pt">Vila Faia - Ep. 54</title>
-    <desc lang="pt">Lino e Gudunha unem-se para descobrir quem matou Zé Balhão. Gaspar leva Ifigénia a passear de avioneta. Gonçalo entrega a morada de Mariana, que Luísa lhe deu, a Beatriz mas diz que não vai com ela para o Brasil. Rui conta a Gudunha que acha que Mariette ainda gosta dele. Gudunha pede para Zé Diniz marcar encontro com Mariette. Pedro e Joana convencem Gonçalo a ir atrás de Mariana, com Beatriz.
-Lino e Gudunha unem-se para descobrir quem matou Zé Balhão. Gaspar leva Ifigénia a passear de avioneta. Gonçalo entrega a morada de Mariana, que Luísa lhe deu, a Beatriz mas diz que não vai com ela para o Brasil. Rui conta a Gudunha que acha que Mariette ainda gosta dele. Gudunha pede para Zé Diniz marcar encontro com Mariette. Pedro e Joana convencem Gonçalo a ir atrás de Mariana, com Beatriz.</desc>
-    <category lang="pt">Telenovela</category>
-  </programme>
-  <programme channel="X0001" start="20260323152000 +0000" stop="20260323173000 +0000">
-    <title lang="pt">A Nossa Tarde</title>
-    <desc lang="pt">Pensado a partir da essência da apresentadora, Tânia Ribas de Oliveira, o programa 'A Nossa Tarde' tem, por isso, um lado mais emocional, com base em histórias com final feliz, e um lado muito divertido, ou não fosse a nossa Tânia uma pessoa que gosta de dar umas belas e sonoras gargalhadas.
-Pensado a partir da essência da apresentadora, Tânia Ribas de Oliveira, o programa 'A Nossa Tarde' tem, por isso, um lado mais emocional, com base em histórias com final feliz, e um lado muito divertido, ou não fosse a nossa Tânia uma pessoa que gosta de dar umas belas e sonoras gargalhadas.</desc>
-    <category lang="pt">Variedades</category>
-  </programme>
-  <programme channel="X0001" start="20260323173000 +0000" stop="20260323190700 +0000">
-    <title lang="pt">Portugal Em Rede</title>
-    <desc lang="pt">Programa de informação centrado no país e nas regiões. Revelar o Portugal que existe para além das grandes cidades, do norte ao sul e às ilhas, numa verdadeira rede de informação. Inclui um segmento dedicado à língua portuguesa e à sua promoção 'Esta língua que nos une'. Os Centros de Informação Regional terão uma participação relevante neste espaço, onde a sociedade, cultura, história e tradições portuguesas vão estar sempre presentes.
-Programa de informação centrado no país e nas regiões. Revelar o Portugal que existe para além das grandes cidades, do norte ao sul e às ilhas, numa verdadeira rede de informação. Inclui um segmento dedicado à língua portuguesa e à sua promoção 'Esta língua que nos une'. Os Centros de Informação Regional terão uma participação relevante neste espaço, onde a sociedade, cultura, história e tradições portuguesas vão estar sempre presentes.</desc>
-    <category lang="pt">null</category>
-  </programme>
-  <programme channel="X0001" start="20260323190700 +0000" stop="20260323195800 +0000">
-    <title lang="pt">O Preço Certo</title>
-    <desc lang="pt">Há mais de duas décadas em emissão contínua na RTP1, 'O Preço Certo', é o gameshow de maior longevidade da televisão mundial. Estreado pela primeira vez em 1956 nos Estados Unidos, já foi transmitido em mais de 30 países. O sucesso por todo o mundo é testemunho da sua contínua popularidade e vitalidade, provando ser um clássico e intemporal formato de programas de entretenimento.
-Há mais de duas décadas em emissão contínua na RTP1, 'O Preço Certo', é o gameshow de maior longevidade da televisão mundial. Estreado pela primeira vez em 1956 nos Estados Unidos, já foi transmitido em mais de 30 países. O sucesso por todo o mundo é testemunho da sua contínua popularidade e vitalidade, provando ser um clássico e intemporal formato de programas de entretenimento.</desc>
-    <category lang="pt">Concurso</category>
-  </programme>
-  <programme channel="X0001" start="20260323195800 +0000" stop="20260323210100 +0000">
-    <title lang="pt">Telejornal</title>
-    <desc lang="pt">A mais rigorosa seleção de notícias, todos os dias às 20h00. De segunda a domingo, João Adelino Faria, José Rodrigues dos Santos e Ana Lourenço mostram-lhe o que de mais relevante se passou o país e no mundo. Se é importante está no Telejornal.
-A mais rigorosa seleção de notícias, todos os dias às 20h00. De segunda a domingo, João Adelino Faria, José Rodrigues dos Santos e Ana Lourenço mostram-lhe o que de mais relevante se passou o país e no mundo. Se é importante está no Telejornal.</desc>
-    <category lang="pt">null</category>
-  </programme>
-  <programme channel="X0001" start="20260323210100 +0000" stop="20260323214300 +0000">
-    <title lang="pt">Portugueses pelo Mundo - Comunidades T3 - Ep. 3</title>
-    <desc lang="pt">Neste episódio regressamos ao sul do Brasil e à cidade capital do estado de Santa Catarina, Florianópolis, para darmos a conhecer mais três histórias de 'Portugueses pelo Mundo': Joana Faya Marinho, 34 anos, natural do Porto e vive em Florianópolis onde trabalha como empresária da restauração.
-Neste episódio regressamos ao sul do Brasil e à cidade capital do estado de Santa Catarina, Florianópolis, para darmos a conhecer mais três histórias de 'Portugueses pelo Mundo': Joana Faya Marinho, 34 anos, natural do Porto e vive em Florianópolis onde trabalha como empresária da restauração.</desc>
-    <category lang="pt">Cultura, Viagens</category>
-  </programme>
-  <programme channel="X0001" start="20260323214300 +0000" stop="20260323224300 +0000">
-    <title lang="pt">Joker T10 - Ep. 102</title>
-    <desc lang="pt">Vasco Palmeirim apresenta o JOKER, o concurso favorito dos portugueses. Um concorrente, com a ajuda de 7 Jokers e do Super Joker, responde a 12 perguntas com um só objetivo em mente: Conquistar os 50 000 euros do prémio máximo!.
-Vasco Palmeirim apresenta o JOKER, o concurso favorito dos portugueses. Um concorrente, com a ajuda de 7 Jokers e do Super Joker, responde a 12 perguntas com um só objetivo em mente: Conquistar os 50 000 euros do prémio máximo!.</desc>
-    <category lang="pt">Concurso</category>
-  </programme>
-  <programme channel="X0001" start="20260323224300 +0000" stop="20260323233500 +0000">
-    <title lang="pt">Homens De Honra - Ep. 6</title>
-    <desc lang="pt">Álvaro chega à casa secreta perturbado, pois perdeu um dos seus cadernos de apontamentos na fuga. É instalado em casa de um casal que tem duas filhas: Isaura e Dorília. Pouco tempo depois, Álvaro envolve-se com Isaura. Um ano depois, nasce Ana Cunhal, mas o pai só consegue conhecê-la seis meses depois. Álvaro está com Isaura, Dorília e Ana quando Serra chega e anuncia que têm de partir, pois a casa não está segura.
-Álvaro chega à casa secreta perturbado, pois perdeu um dos seus cadernos de apontamentos na fuga. É instalado em casa de um casal que tem duas filhas: Isaura e Dorília. Pouco tempo depois, Álvaro envolve-se com Isaura. Um ano depois, nasce Ana Cunhal, mas o pai só consegue conhecê-la seis meses depois. Álvaro está com Isaura, Dorília e Ana quando Serra chega e anuncia que têm de partir, pois a casa não está segura.</desc>
-    <category lang="pt">Biografia, Drama</category>
-  </programme>
-  <programme channel="X0001" start="20260323233500 +0000" stop="20260324003900 +0000">
-    <title lang="pt">Meia Milha Para Baixo</title>
-    <desc lang="pt">Através de imagens raras captadas com tecnologia de ponta desenvolvida pelo grupo de investigação do mar profundo do Instituto Okeanos - este documentário convida os telespectadores a uma viagem imersiva e reveladora.
-Através de imagens raras captadas com tecnologia de ponta desenvolvida pelo grupo de investigação do mar profundo do Instituto Okeanos - este documentário convida os telespectadores a uma viagem imersiva e reveladora.</desc>
-    <category lang="pt">Natureza</category>
-  </programme>
-  <programme channel="X0001" start="20260324003900 +0000" stop="20260324013300 +0000">
-    <title lang="pt">Grandiosa Enciclopédia Do Ludopédio T11 - Ep. 28</title>
-    <desc lang="pt">Era um futebolista que só queria poder jogar depois de finalizado o contrato sem que o novo clube tivesse de pagar uma taxa ao anterior emblema empregador. Uma luta jurídica que Jean-Marc Bosman conseguiu vencer e que abriu uma nova era nas transferências da União Europeia. O Prof. Alexandre Mestre explica os contornos jurídicos deste e do mais recente caso 'Diarra' sobre rescisões sem 'justa causa'.
-Era um futebolista que só queria poder jogar depois de finalizado o contrato sem que o novo clube tivesse de pagar uma taxa ao anterior emblema empregador. Uma luta jurídica que Jean-Marc Bosman conseguiu vencer e que abriu uma nova era nas transferências da União Europeia. O Prof. Alexandre Mestre explica os contornos jurídicos deste e do mais recente caso 'Diarra' sobre rescisões sem 'justa causa'.</desc>
-    <category lang="pt">Desporto</category>
-  </programme>
   <programme channel="X0001" start="20260324013300 +0000" stop="20260324022600 +0000">
     <title lang="pt">Vila Faia - Ep. 54</title>
     <desc lang="pt">Lino e Gudunha unem-se para descobrir quem matou Zé Balhão. Gaspar leva Ifigénia a passear de avioneta. Gonçalo entrega a morada de Mariana, que Luísa lhe deu, a Beatriz mas diz que não vai com ela para o Brasil. Rui conta a Gudunha que acha que Mariette ainda gosta dele. Gudunha pede para Zé Diniz marcar encontro com Mariette. Pedro e Joana convencem Gonçalo a ir atrás de Mariana, com Beatriz.
@@ -868,31 +772,31 @@ O Bom Dia Portugal é um programa de informação apresentado por João Tomé de
 Jorge Gabriel e Sónia Araújo dão-lhe as boas vindas à Praça da Alegria! Porque sabemos que gosta da nossa companhia, oferecemos boa disposição até à hora de almoço! De segunda a sexta-feira, a Praça da Alegria leva até si a melhor música, as últimas tendências da moda, conselhos úteis e muitas dicas que facilitam o seu dia-a-dia.</desc>
     <category lang="pt">Variedades</category>
   </programme>
-  <programme channel="X0001" start="20260325125800 +0000" stop="20260325143000 +0000">
+  <programme channel="X0001" start="20260325125800 +0000" stop="20260325142500 +0000">
     <title lang="pt">Jornal da Tarde</title>
     <desc lang="pt">Todos os dias, às 13 horas, a sua hora de almoço é completada com a atualização das notícias que marcam a atualidade nacional e mundial, desde a política, a economia, a sociedade e sem esquecer o desporto. Reportagens no local, entrevistas em direto e sempre a isenção e o respeito pela verdade que marcam a informação na RTP.
 Todos os dias, às 13 horas, a sua hora de almoço é completada com a atualização das notícias que marcam a atualidade nacional e mundial, desde a política, a economia, a sociedade e sem esquecer o desporto. Reportagens no local, entrevistas em direto e sempre a isenção e o respeito pela verdade que marcam a informação na RTP.</desc>
     <category lang="pt">null</category>
   </programme>
-  <programme channel="X0001" start="20260325143000 +0000" stop="20260325153000 +0000">
+  <programme channel="X0001" start="20260325142500 +0000" stop="20260325151700 +0000">
     <title lang="pt">Vila Faia - Ep. 57</title>
     <desc lang="pt">Serôdio e Filipa vão à MV e pedem para os empregados fazerem uma lista do que desapareceu, enquanto os peritos ficam a investigar o local. Mariette jura, perante Leo, que não vai deixar Serôdio. Ana e Luísa estranham o nervosismo de Nuno ao saber que a polícia está na Marques Vila. Alice vai à clínica, para que Zé Diniz lhe conte a verdade sobre o que anda a fazer, e leva Cristina com ela.
 Serôdio e Filipa vão à MV e pedem para os empregados fazerem uma lista do que desapareceu, enquanto os peritos ficam a investigar o local. Mariette jura, perante Leo, que não vai deixar Serôdio. Ana e Luísa estranham o nervosismo de Nuno ao saber que a polícia está na Marques Vila. Alice vai à clínica, para que Zé Diniz lhe conte a verdade sobre o que anda a fazer, e leva Cristina com ela.</desc>
     <category lang="pt">Telenovela</category>
   </programme>
-  <programme channel="X0001" start="20260325153000 +0000" stop="20260325173000 +0000">
+  <programme channel="X0001" start="20260325151700 +0000" stop="20260325173000 +0000">
     <title lang="pt">A Nossa Tarde</title>
     <desc lang="pt">Pensado a partir da essência da apresentadora, Tânia Ribas de Oliveira, o programa 'A Nossa Tarde' tem, por isso, um lado mais emocional, com base em histórias com final feliz, e um lado muito divertido, ou não fosse a nossa Tânia uma pessoa que gosta de dar umas belas e sonoras gargalhadas.
 Pensado a partir da essência da apresentadora, Tânia Ribas de Oliveira, o programa 'A Nossa Tarde' tem, por isso, um lado mais emocional, com base em histórias com final feliz, e um lado muito divertido, ou não fosse a nossa Tânia uma pessoa que gosta de dar umas belas e sonoras gargalhadas.</desc>
     <category lang="pt">Variedades</category>
   </programme>
-  <programme channel="X0001" start="20260325173000 +0000" stop="20260325191500 +0000">
+  <programme channel="X0001" start="20260325173000 +0000" stop="20260325190700 +0000">
     <title lang="pt">Portugal Em Rede</title>
     <desc lang="pt">Programa de informação centrado no país e nas regiões. Revelar o Portugal que existe para além das grandes cidades, do norte ao sul e às ilhas, numa verdadeira rede de informação. Inclui um segmento dedicado à língua portuguesa e à sua promoção 'Esta língua que nos une'. Os Centros de Informação Regional terão uma participação relevante neste espaço, onde a sociedade, cultura, história e tradições portuguesas vão estar sempre presentes.
 Programa de informação centrado no país e nas regiões. Revelar o Portugal que existe para além das grandes cidades, do norte ao sul e às ilhas, numa verdadeira rede de informação. Inclui um segmento dedicado à língua portuguesa e à sua promoção 'Esta língua que nos une'. Os Centros de Informação Regional terão uma participação relevante neste espaço, onde a sociedade, cultura, história e tradições portuguesas vão estar sempre presentes.</desc>
     <category lang="pt">null</category>
   </programme>
-  <programme channel="X0001" start="20260325191500 +0000" stop="20260325195800 +0000">
+  <programme channel="X0001" start="20260325190700 +0000" stop="20260325195800 +0000">
     <title lang="pt">O Preço Certo</title>
     <desc lang="pt">Há mais de duas décadas em emissão contínua na RTP1, 'O Preço Certo', é o gameshow de maior longevidade da televisão mundial. Estreado pela primeira vez em 1956 nos Estados Unidos, já foi transmitido em mais de 30 países. O sucesso por todo o mundo é testemunho da sua contínua popularidade e vitalidade, provando ser um clássico e intemporal formato de programas de entretenimento.
 Há mais de duas décadas em emissão contínua na RTP1, 'O Preço Certo', é o gameshow de maior longevidade da televisão mundial. Estreado pela primeira vez em 1956 nos Estados Unidos, já foi transmitido em mais de 30 países. O sucesso por todo o mundo é testemunho da sua contínua popularidade e vitalidade, provando ser um clássico e intemporal formato de programas de entretenimento.</desc>
@@ -910,37 +814,37 @@ A mais rigorosa seleção de notícias, todos os dias às 20h00. De segunda a do
 Vasco Palmeirim apresenta o JOKER, o concurso favorito dos portugueses. Um concorrente, com a ajuda de 7 Jokers e do Super Joker, responde a 12 perguntas com um só objetivo em mente: Conquistar os 50 000 euros do prémio máximo!.</desc>
     <category lang="pt">Concurso</category>
   </programme>
-  <programme channel="X0001" start="20260325220000 +0000" stop="20260326000000 +0000">
+  <programme channel="X0001" start="20260325220000 +0000" stop="20260326000200 +0000">
     <title lang="pt">Grande Debate - Ep. 1</title>
     <desc lang="pt">No primeiro Grande Debate vamos até Coimbra para falar sobre O Poder das Regiões. Vamos estar em direto do Convento de São Francisco para uma análise à organização do território e a forma como o país responde a eventos naturais extremos como aconteceu recentemente.
 No primeiro Grande Debate vamos até Coimbra para falar sobre O Poder das Regiões. Vamos estar em direto do Convento de São Francisco para uma análise à organização do território e a forma como o país responde a eventos naturais extremos como aconteceu recentemente.</desc>
     <category lang="pt">null</category>
   </programme>
-  <programme channel="X0001" start="20260326000000 +0000" stop="20260326010000 +0000">
+  <programme channel="X0001" start="20260326000200 +0000" stop="20260326010900 +0000">
     <title lang="pt">Kriol Jazz Festival: Elida Almeida</title>
     <desc lang="pt">Autora e compositora, Elida Almeida tornou-se a voz de uma geração com o seu primeiro álbum 'Ora Doce Ora Margus', cujos temas ressoam na vida de muitos jovens. Elida nasceu em 1993 em Pedra Badejo, na ilha de Santiago, Cabo Verde. Cantou no coro da igreja na ilha do Maio, onde residiu com a mãe. Após ganhar o prémio RFI Découvertes em 2015, iniciou uma carreira que a levou a palcos internacionais.
 Autora e compositora, Elida Almeida tornou-se a voz de uma geração com o seu primeiro álbum 'Ora Doce Ora Margus', cujos temas ressoam na vida de muitos jovens. Elida nasceu em 1993 em Pedra Badejo, na ilha de Santiago, Cabo Verde. Cantou no coro da igreja na ilha do Maio, onde residiu com a mãe. Após ganhar o prémio RFI Découvertes em 2015, iniciou uma carreira que a levou a palcos internacionais.</desc>
     <category lang="pt">Música</category>
   </programme>
-  <programme channel="X0001" start="20260326010000 +0000" stop="20260326014500 +0000">
+  <programme channel="X0001" start="20260326010900 +0000" stop="20260326015300 +0000">
     <title lang="pt">Janela Indiscreta T18 - Ep. 12</title>
     <desc lang="pt">O Janela Indiscreta é o seu programa de cinema! Apresenta, em primeira mão, estreias cinematográficas e entrevistas exclusivas aos protagonistas das produções nacionais e internacionais, dando a conhecer curiosidades e histórias de bastidores.
 O Janela Indiscreta é o seu programa de cinema! Apresenta, em primeira mão, estreias cinematográficas e entrevistas exclusivas aos protagonistas das produções nacionais e internacionais, dando a conhecer curiosidades e histórias de bastidores.</desc>
     <category lang="pt">Cultura</category>
   </programme>
-  <programme channel="X0001" start="20260326014500 +0000" stop="20260326024500 +0000">
+  <programme channel="X0001" start="20260326015300 +0000" stop="20260326024400 +0000">
     <title lang="pt">Vila Faia - Ep. 57</title>
     <desc lang="pt">Serôdio e Filipa vão à MV e pedem para os empregados fazerem uma lista do que desapareceu, enquanto os peritos ficam a investigar o local. Mariette jura, perante Leo, que não vai deixar Serôdio. Ana e Luísa estranham o nervosismo de Nuno ao saber que a polícia está na Marques Vila. Alice vai à clínica, para que Zé Diniz lhe conte a verdade sobre o que anda a fazer, e leva Cristina com ela.
 Serôdio e Filipa vão à MV e pedem para os empregados fazerem uma lista do que desapareceu, enquanto os peritos ficam a investigar o local. Mariette jura, perante Leo, que não vai deixar Serôdio. Ana e Luísa estranham o nervosismo de Nuno ao saber que a polícia está na Marques Vila. Alice vai à clínica, para que Zé Diniz lhe conte a verdade sobre o que anda a fazer, e leva Cristina com ela.</desc>
     <category lang="pt">Telenovela</category>
   </programme>
-  <programme channel="X0001" start="20260326024500 +0000" stop="20260326043000 +0000">
+  <programme channel="X0001" start="20260326024400 +0000" stop="20260326044400 +0000">
     <title lang="pt">A Nossa Tarde</title>
     <desc lang="pt">Pensado a partir da essência da apresentadora, Tânia Ribas de Oliveira, o programa 'A Nossa Tarde' tem, por isso, um lado mais emocional, com base em histórias com final feliz, e um lado muito divertido, ou não fosse a nossa Tânia uma pessoa que gosta de dar umas belas e sonoras gargalhadas.
 Pensado a partir da essência da apresentadora, Tânia Ribas de Oliveira, o programa 'A Nossa Tarde' tem, por isso, um lado mais emocional, com base em histórias com final feliz, e um lado muito divertido, ou não fosse a nossa Tânia uma pessoa que gosta de dar umas belas e sonoras gargalhadas.</desc>
     <category lang="pt">Variedades</category>
   </programme>
-  <programme channel="X0001" start="20260326043000 +0000" stop="20260326060000 +0000">
+  <programme channel="X0001" start="20260326044400 +0000" stop="20260326060000 +0000">
     <title lang="pt">Televendas</title>
     <desc lang="pt">Todos os dias, um espaço dedicado a vendas por televisão, em que são feitas demonstrações dos produtos.
 Todos os dias, um espaço dedicado a vendas por televisão, em que são feitas demonstrações dos produtos.</desc>
@@ -1001,9 +905,9 @@ A mais rigorosa seleção de notícias, todos os dias às 20h00. De segunda a do
     <category lang="pt">null</category>
   </programme>
   <programme channel="X0001" start="20260326210000 +0000" stop="20260326213000 +0000">
-    <title lang="pt">Linha Da Frente</title>
-    <desc lang="pt">O 'Linha da Frente' é um dos espaços mais premiados e mais vistos da televisão portuguesa. Com coordenação da jornalista Mafalda Gameiro, todas as semanas retrata uma realidade diferente, com a ambição de mostrar e contar mais histórias do mundo sem esquecer o seu foco português.
-O 'Linha da Frente' é um dos espaços mais premiados e mais vistos da televisão portuguesa. Com coordenação da jornalista Mafalda Gameiro, todas as semanas retrata uma realidade diferente, com a ambição de mostrar e contar mais histórias do mundo sem esquecer o seu foco português.</desc>
+    <title lang="pt">Linha Da Frente: De Portas Abertas</title>
+    <desc lang="pt">A saída do Reino Unido da União Europeia fez com que o fluxo da emigração qualificada portuguesa apontasse a direção para os Países Baixos. Nos últimos cinco anos verifica-se um claro aumento, com quase cinco mil portugueses a entrarem na Holanda a cada ano. Elogiam os salários, as condições de trabalho, o estilo de vida e os múltiplos apoios que o estado oferece a quem entra.
+A saída do Reino Unido da União Europeia fez com que o fluxo da emigração qualificada portuguesa apontasse a direção para os Países Baixos. Nos últimos cinco anos verifica-se um claro aumento, com quase cinco mil portugueses a entrarem na Holanda a cada ano. Elogiam os salários, as condições de trabalho, o estilo de vida e os múltiplos apoios que o estado oferece a quem entra.</desc>
     <category lang="pt">null</category>
   </programme>
   <programme channel="X0001" start="20260326213000 +0000" stop="20260326223000 +0000">
