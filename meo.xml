@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE tv SYSTEM "xmltv.dtd">
-<tv generator-info-name="MZ" generator-info-url="git" source-info-name="OTT MEO" date="20260325050007 +0000">
+<tv generator-info-name="MZ" generator-info-url="git" source-info-name="OTT MEO" date="20260326050007 +0000">
   <channel id="X0001">
     <display-name>RTP1</display-name>
   </channel>
@@ -646,102 +646,6 @@
   <channel id="X0923">
     <display-name>BTV CAM4</display-name>
   </channel>
-  <programme channel="X0001" start="20260324013300 +0000" stop="20260324022600 +0000">
-    <title lang="pt">Vila Faia - Ep. 54</title>
-    <desc lang="pt">Lino e Gudunha unem-se para descobrir quem matou Zé Balhão. Gaspar leva Ifigénia a passear de avioneta. Gonçalo entrega a morada de Mariana, que Luísa lhe deu, a Beatriz mas diz que não vai com ela para o Brasil. Rui conta a Gudunha que acha que Mariette ainda gosta dele. Gudunha pede para Zé Diniz marcar encontro com Mariette. Pedro e Joana convencem Gonçalo a ir atrás de Mariana, com Beatriz.
-Lino e Gudunha unem-se para descobrir quem matou Zé Balhão. Gaspar leva Ifigénia a passear de avioneta. Gonçalo entrega a morada de Mariana, que Luísa lhe deu, a Beatriz mas diz que não vai com ela para o Brasil. Rui conta a Gudunha que acha que Mariette ainda gosta dele. Gudunha pede para Zé Diniz marcar encontro com Mariette. Pedro e Joana convencem Gonçalo a ir atrás de Mariana, com Beatriz.</desc>
-    <category lang="pt">Telenovela</category>
-  </programme>
-  <programme channel="X0001" start="20260324022600 +0000" stop="20260324042900 +0000">
-    <title lang="pt">A Nossa Tarde</title>
-    <desc lang="pt">Pensado a partir da essência da apresentadora, Tânia Ribas de Oliveira, o programa 'A Nossa Tarde' tem, por isso, um lado mais emocional, com base em histórias com final feliz, e um lado muito divertido, ou não fosse a nossa Tânia uma pessoa que gosta de dar umas belas e sonoras gargalhadas.
-Pensado a partir da essência da apresentadora, Tânia Ribas de Oliveira, o programa 'A Nossa Tarde' tem, por isso, um lado mais emocional, com base em histórias com final feliz, e um lado muito divertido, ou não fosse a nossa Tânia uma pessoa que gosta de dar umas belas e sonoras gargalhadas.</desc>
-    <category lang="pt">Variedades</category>
-  </programme>
-  <programme channel="X0001" start="20260324042900 +0000" stop="20260324060000 +0000">
-    <title lang="pt">Televendas</title>
-    <desc lang="pt">Todos os dias, um espaço dedicado a vendas por televisão, em que são feitas demonstrações dos produtos.
-Todos os dias, um espaço dedicado a vendas por televisão, em que são feitas demonstrações dos produtos.</desc>
-    <category lang="pt">null</category>
-  </programme>
-  <programme channel="X0001" start="20260324060000 +0000" stop="20260324100000 +0000">
-    <title lang="pt">Bom Dia Portugal</title>
-    <desc lang="pt">O Bom Dia Portugal é um programa de informação apresentado por João Tomé de Carvalho e Carla Trafaria, de 2a a 6a feira entre as 06:30h e as 10:00h. Todos os dias, o Bom Dia Portugal dedica espaços específicos às notícias da atualidade nacional e internacional, desporto, meteorologia, trânsito e economia.
-O Bom Dia Portugal é um programa de informação apresentado por João Tomé de Carvalho e Carla Trafaria, de 2a a 6a feira entre as 06:30h e as 10:00h. Todos os dias, o Bom Dia Portugal dedica espaços específicos às notícias da atualidade nacional e internacional, desporto, meteorologia, trânsito e economia.</desc>
-    <category lang="pt">null</category>
-  </programme>
-  <programme channel="X0001" start="20260324100000 +0000" stop="20260324125800 +0000">
-    <title lang="pt">Praça da Alegria</title>
-    <desc lang="pt">Jorge Gabriel e Sónia Araújo dão-lhe as boas vindas à Praça da Alegria! Porque sabemos que gosta da nossa companhia, oferecemos boa disposição até à hora de almoço! De segunda a sexta-feira, a Praça da Alegria leva até si a melhor música, as últimas tendências da moda, conselhos úteis e muitas dicas que facilitam o seu dia-a-dia.
-Jorge Gabriel e Sónia Araújo dão-lhe as boas vindas à Praça da Alegria! Porque sabemos que gosta da nossa companhia, oferecemos boa disposição até à hora de almoço! De segunda a sexta-feira, a Praça da Alegria leva até si a melhor música, as últimas tendências da moda, conselhos úteis e muitas dicas que facilitam o seu dia-a-dia.</desc>
-    <category lang="pt">Variedades</category>
-  </programme>
-  <programme channel="X0001" start="20260324125800 +0000" stop="20260324142000 +0000">
-    <title lang="pt">Jornal da Tarde</title>
-    <desc lang="pt">Todos os dias, às 13 horas, a sua hora de almoço é completada com a atualização das notícias que marcam a atualidade nacional e mundial, desde a política, a economia, a sociedade e sem esquecer o desporto. Reportagens no local, entrevistas em direto e sempre a isenção e o respeito pela verdade que marcam a informação na RTP.
-Todos os dias, às 13 horas, a sua hora de almoço é completada com a atualização das notícias que marcam a atualidade nacional e mundial, desde a política, a economia, a sociedade e sem esquecer o desporto. Reportagens no local, entrevistas em direto e sempre a isenção e o respeito pela verdade que marcam a informação na RTP.</desc>
-    <category lang="pt">null</category>
-  </programme>
-  <programme channel="X0001" start="20260324142000 +0000" stop="20260324143100 +0000">
-    <title lang="pt">Hora Da Sorte - Lotaria Clássica - Ep. 11</title>
-    <desc lang="pt">Às segundas-feiras uma emissão especial que inclui a extração dos números da sorte da Lotaria Clássica.
-Às segundas-feiras uma emissão especial que inclui a extração dos números da sorte da Lotaria Clássica.</desc>
-    <category lang="pt">null</category>
-  </programme>
-  <programme channel="X0001" start="20260324143100 +0000" stop="20260324152300 +0000">
-    <title lang="pt">Vila Faia - Ep. 56</title>
-    <desc lang="pt">Zé Diniz vê Gudunha no clube, desconcentra-se, perde o combate e vai atrás dele para lhe pedir que não conte nada a Alice. Filipa estranha toda a proteção que Serôdio dá a Mariette. Mariete admite que se sente em dívida para com Serôdio. Ercília apanha Lúcia a falar a sós com Gaspar. Zé Diniz convence Alice que anda na escalada. Por intermédio de Lino, Gudunha fica a saber que na PJ ninguém sabe que Mariette e Serôdio são namorados.
-Zé Diniz vê Gudunha no clube, desconcentra-se, perde o combate e vai atrás dele para lhe pedir que não conte nada a Alice. Filipa estranha toda a proteção que Serôdio dá a Mariette. Mariete admite que se sente em dívida para com Serôdio. Ercília apanha Lúcia a falar a sós com Gaspar. Zé Diniz convence Alice que anda na escalada. Por intermédio de Lino, Gudunha fica a saber que na PJ ninguém sabe que Mariette e Serôdio são namorados.</desc>
-    <category lang="pt">Telenovela</category>
-  </programme>
-  <programme channel="X0001" start="20260324152300 +0000" stop="20260324173000 +0000">
-    <title lang="pt">A Nossa Tarde</title>
-    <desc lang="pt">Pensado a partir da essência da apresentadora, Tânia Ribas de Oliveira, o programa 'A Nossa Tarde' tem, por isso, um lado mais emocional, com base em histórias com final feliz, e um lado muito divertido, ou não fosse a nossa Tânia uma pessoa que gosta de dar umas belas e sonoras gargalhadas.
-Pensado a partir da essência da apresentadora, Tânia Ribas de Oliveira, o programa 'A Nossa Tarde' tem, por isso, um lado mais emocional, com base em histórias com final feliz, e um lado muito divertido, ou não fosse a nossa Tânia uma pessoa que gosta de dar umas belas e sonoras gargalhadas.</desc>
-    <category lang="pt">Variedades</category>
-  </programme>
-  <programme channel="X0001" start="20260324173000 +0000" stop="20260324190700 +0000">
-    <title lang="pt">Portugal Em Rede</title>
-    <desc lang="pt">Programa de informação centrado no país e nas regiões. Revelar o Portugal que existe para além das grandes cidades, do norte ao sul e às ilhas, numa verdadeira rede de informação. Inclui um segmento dedicado à língua portuguesa e à sua promoção 'Esta língua que nos une'. Os Centros de Informação Regional terão uma participação relevante neste espaço, onde a sociedade, cultura, história e tradições portuguesas vão estar sempre presentes.
-Programa de informação centrado no país e nas regiões. Revelar o Portugal que existe para além das grandes cidades, do norte ao sul e às ilhas, numa verdadeira rede de informação. Inclui um segmento dedicado à língua portuguesa e à sua promoção 'Esta língua que nos une'. Os Centros de Informação Regional terão uma participação relevante neste espaço, onde a sociedade, cultura, história e tradições portuguesas vão estar sempre presentes.</desc>
-    <category lang="pt">null</category>
-  </programme>
-  <programme channel="X0001" start="20260324190700 +0000" stop="20260324195800 +0000">
-    <title lang="pt">O Preço Certo</title>
-    <desc lang="pt">Há mais de duas décadas em emissão contínua na RTP1, 'O Preço Certo', é o gameshow de maior longevidade da televisão mundial. Estreado pela primeira vez em 1956 nos Estados Unidos, já foi transmitido em mais de 30 países. O sucesso por todo o mundo é testemunho da sua contínua popularidade e vitalidade, provando ser um clássico e intemporal formato de programas de entretenimento.
-Há mais de duas décadas em emissão contínua na RTP1, 'O Preço Certo', é o gameshow de maior longevidade da televisão mundial. Estreado pela primeira vez em 1956 nos Estados Unidos, já foi transmitido em mais de 30 países. O sucesso por todo o mundo é testemunho da sua contínua popularidade e vitalidade, provando ser um clássico e intemporal formato de programas de entretenimento.</desc>
-    <category lang="pt">Concurso</category>
-  </programme>
-  <programme channel="X0001" start="20260324195800 +0000" stop="20260324210100 +0000">
-    <title lang="pt">Telejornal</title>
-    <desc lang="pt">A mais rigorosa seleção de notícias, todos os dias às 20h00. De segunda a domingo, João Adelino Faria, José Rodrigues dos Santos e Ana Lourenço mostram-lhe o que de mais relevante se passou o país e no mundo. Se é importante está no Telejornal.
-A mais rigorosa seleção de notícias, todos os dias às 20h00. De segunda a domingo, João Adelino Faria, José Rodrigues dos Santos e Ana Lourenço mostram-lhe o que de mais relevante se passou o país e no mundo. Se é importante está no Telejornal.</desc>
-    <category lang="pt">null</category>
-  </programme>
-  <programme channel="X0001" start="20260324210100 +0000" stop="20260324215500 +0000">
-    <title lang="pt">Repovoadores - Ep. 7</title>
-    <desc lang="pt">Mudar de vida requer determinação, coragem e resiliência e os protagonistas deste episódio sabem-no melhor que ninguém. Cinfães é a escolha de Joana Gouveia e Anibal San Miguel, uma portuguesa e um argentino que produzem morangos e espargos numa antiga quinta da família, transformada num turismo rural. Na aldeia de Ouguela, Campo Maior, Sérgio Cardoso criou a sua própria marca de gin, nas imediações do castelo.
-Mudar de vida requer determinação, coragem e resiliência e os protagonistas deste episódio sabem-no melhor que ninguém. Cinfães é a escolha de Joana Gouveia e Anibal San Miguel, uma portuguesa e um argentino que produzem morangos e espargos numa antiga quinta da família, transformada num turismo rural. Na aldeia de Ouguela, Campo Maior, Sérgio Cardoso criou a sua própria marca de gin, nas imediações do castelo.</desc>
-    <category lang="pt">Cultura e Sociedade</category>
-  </programme>
-  <programme channel="X0001" start="20260324215500 +0000" stop="20260324225500 +0000">
-    <title lang="pt">Joker T10 - Ep. 103</title>
-    <desc lang="pt">Vasco Palmeirim apresenta o JOKER, o concurso favorito dos portugueses. Um concorrente, com a ajuda de 7 Jokers e do Super Joker, responde a 12 perguntas com um só objetivo em mente: Conquistar os 50 000 euros do prémio máximo!.
-Vasco Palmeirim apresenta o JOKER, o concurso favorito dos portugueses. Um concorrente, com a ajuda de 7 Jokers e do Super Joker, responde a 12 perguntas com um só objetivo em mente: Conquistar os 50 000 euros do prémio máximo!.</desc>
-    <category lang="pt">Concurso</category>
-  </programme>
-  <programme channel="X0001" start="20260324225500 +0000" stop="20260325004200 +0000">
-    <title lang="pt">5 Para a Meia-Noite T22 - Ep. 4</title>
-    <desc lang="pt">Este 5 Para a Meia-Noite é dedicado àqueles que se tornaram rostos bem conhecidos desde tenra idade. E ninguém melhor para estar à conversa com Gilmário Vemba do que Marisa Liz, Luís Ganito e Saúl Ricardo. Como por trás de uma grande estrela está sempre alguém a apoiar contamos com Sofia Espírito Santo para nos falar sobre a direção dos artistas de palmo e meio.
-Este 5 Para a Meia-Noite é dedicado àqueles que se tornaram rostos bem conhecidos desde tenra idade. E ninguém melhor para estar à conversa com Gilmário Vemba do que Marisa Liz, Luís Ganito e Saúl Ricardo. Como por trás de uma grande estrela está sempre alguém a apoiar contamos com Sofia Espírito Santo para nos falar sobre a direção dos artistas de palmo e meio.</desc>
-    <category lang="pt">Humor, Talk Show</category>
-  </programme>
-  <programme channel="X0001" start="20260325004200 +0000" stop="20260325012900 +0000">
-    <title lang="pt">Choque Ideológico T2 - Ep. 10</title>
-    <desc lang="pt">Debate semanal moderado por Carlos Daniel com Hugo Carneiro, António Mendonça Mendes, Pedro Pinto e Isabel Mendes Lopes.
-Debate semanal moderado por Carlos Daniel com Hugo Carneiro, António Mendonça Mendes, Pedro Pinto e Isabel Mendes Lopes.</desc>
-    <category lang="pt">null</category>
-  </programme>
   <programme channel="X0001" start="20260325012900 +0000" stop="20260325022000 +0000">
     <title lang="pt">Vila Faia - Ep. 56</title>
     <desc lang="pt">Zé Diniz vê Gudunha no clube, desconcentra-se, perde o combate e vai atrás dele para lhe pedir que não conte nada a Alice. Filipa estranha toda a proteção que Serôdio dá a Mariette. Mariete admite que se sente em dívida para com Serôdio. Ercília apanha Lúcia a falar a sós com Gaspar. Zé Diniz convence Alice que anda na escalada. Por intermédio de Lino, Gudunha fica a saber que na PJ ninguém sabe que Mariette e Serôdio são namorados.
@@ -862,109 +766,109 @@ O Bom Dia Portugal é um programa de informação apresentado por João Tomé de
 Jorge Gabriel e Sónia Araújo dão-lhe as boas vindas à Praça da Alegria! Porque sabemos que gosta da nossa companhia, oferecemos boa disposição até à hora de almoço! De segunda a sexta-feira, a Praça da Alegria leva até si a melhor música, as últimas tendências da moda, conselhos úteis e muitas dicas que facilitam o seu dia-a-dia.</desc>
     <category lang="pt">Variedades</category>
   </programme>
-  <programme channel="X0001" start="20260326125800 +0000" stop="20260326141500 +0000">
+  <programme channel="X0001" start="20260326125800 +0000" stop="20260326142000 +0000">
     <title lang="pt">Jornal da Tarde</title>
     <desc lang="pt">Todos os dias, às 13 horas, a sua hora de almoço é completada com a atualização das notícias que marcam a atualidade nacional e mundial, desde a política, a economia, a sociedade e sem esquecer o desporto. Reportagens no local, entrevistas em direto e sempre a isenção e o respeito pela verdade que marcam a informação na RTP.
 Todos os dias, às 13 horas, a sua hora de almoço é completada com a atualização das notícias que marcam a atualidade nacional e mundial, desde a política, a economia, a sociedade e sem esquecer o desporto. Reportagens no local, entrevistas em direto e sempre a isenção e o respeito pela verdade que marcam a informação na RTP.</desc>
     <category lang="pt">null</category>
   </programme>
-  <programme channel="X0001" start="20260326141500 +0000" stop="20260326143000 +0000">
+  <programme channel="X0001" start="20260326142000 +0000" stop="20260326142800 +0000">
     <title lang="pt">Hora Da Sorte - Lotaria Popular - Ep. 12</title>
     <desc lang="pt">Às quintas-feiras uma emissão especial que inclui a extração dos números da sorte da Lotaria Popular.
 Às quintas-feiras uma emissão especial que inclui a extração dos números da sorte da Lotaria Popular.</desc>
     <category lang="pt">null</category>
   </programme>
-  <programme channel="X0001" start="20260326143000 +0000" stop="20260326153000 +0000">
+  <programme channel="X0001" start="20260326142800 +0000" stop="20260326152000 +0000">
     <title lang="pt">Vila Faia - Ep. 58</title>
     <desc lang="pt">Gudunha mostra-se desiludido com Pedro por este nunca lhe ter contado que andava metido em lutas clandestinas. Serôdio e Leo ficam muito felizes por Mariette ter decidido viver com eles e com Rui. Cristina e Madalena vão ao Clube de Combate mas não conseguem impedir Pedro de lutar. Camacho consegue levar as obras de arte para o armazém, em segurança. Zé Diniz passa a noite em casa dos Marques Vila.
 Gudunha mostra-se desiludido com Pedro por este nunca lhe ter contado que andava metido em lutas clandestinas. Serôdio e Leo ficam muito felizes por Mariette ter decidido viver com eles e com Rui. Cristina e Madalena vão ao Clube de Combate mas não conseguem impedir Pedro de lutar. Camacho consegue levar as obras de arte para o armazém, em segurança. Zé Diniz passa a noite em casa dos Marques Vila.</desc>
     <category lang="pt">Telenovela</category>
   </programme>
-  <programme channel="X0001" start="20260326153000 +0000" stop="20260326173000 +0000">
+  <programme channel="X0001" start="20260326152000 +0000" stop="20260326173000 +0000">
     <title lang="pt">A Nossa Tarde</title>
     <desc lang="pt">Pensado a partir da essência da apresentadora, Tânia Ribas de Oliveira, o programa 'A Nossa Tarde' tem, por isso, um lado mais emocional, com base em histórias com final feliz, e um lado muito divertido, ou não fosse a nossa Tânia uma pessoa que gosta de dar umas belas e sonoras gargalhadas.
 Pensado a partir da essência da apresentadora, Tânia Ribas de Oliveira, o programa 'A Nossa Tarde' tem, por isso, um lado mais emocional, com base em histórias com final feliz, e um lado muito divertido, ou não fosse a nossa Tânia uma pessoa que gosta de dar umas belas e sonoras gargalhadas.</desc>
     <category lang="pt">Variedades</category>
   </programme>
-  <programme channel="X0001" start="20260326173000 +0000" stop="20260326191500 +0000">
+  <programme channel="X0001" start="20260326173000 +0000" stop="20260326190700 +0000">
     <title lang="pt">Portugal Em Rede</title>
     <desc lang="pt">Programa de informação centrado no país e nas regiões. Revelar o Portugal que existe para além das grandes cidades, do norte ao sul e às ilhas, numa verdadeira rede de informação. Inclui um segmento dedicado à língua portuguesa e à sua promoção 'Esta língua que nos une'. Os Centros de Informação Regional terão uma participação relevante neste espaço, onde a sociedade, cultura, história e tradições portuguesas vão estar sempre presentes.
 Programa de informação centrado no país e nas regiões. Revelar o Portugal que existe para além das grandes cidades, do norte ao sul e às ilhas, numa verdadeira rede de informação. Inclui um segmento dedicado à língua portuguesa e à sua promoção 'Esta língua que nos une'. Os Centros de Informação Regional terão uma participação relevante neste espaço, onde a sociedade, cultura, história e tradições portuguesas vão estar sempre presentes.</desc>
     <category lang="pt">null</category>
   </programme>
-  <programme channel="X0001" start="20260326191500 +0000" stop="20260326195800 +0000">
+  <programme channel="X0001" start="20260326190700 +0000" stop="20260326195800 +0000">
     <title lang="pt">O Preço Certo</title>
     <desc lang="pt">Há mais de duas décadas em emissão contínua na RTP1, 'O Preço Certo', é o gameshow de maior longevidade da televisão mundial. Estreado pela primeira vez em 1956 nos Estados Unidos, já foi transmitido em mais de 30 países. O sucesso por todo o mundo é testemunho da sua contínua popularidade e vitalidade, provando ser um clássico e intemporal formato de programas de entretenimento.
 Há mais de duas décadas em emissão contínua na RTP1, 'O Preço Certo', é o gameshow de maior longevidade da televisão mundial. Estreado pela primeira vez em 1956 nos Estados Unidos, já foi transmitido em mais de 30 países. O sucesso por todo o mundo é testemunho da sua contínua popularidade e vitalidade, provando ser um clássico e intemporal formato de programas de entretenimento.</desc>
     <category lang="pt">Concurso</category>
   </programme>
-  <programme channel="X0001" start="20260326195800 +0000" stop="20260326210000 +0000">
+  <programme channel="X0001" start="20260326195800 +0000" stop="20260326210100 +0000">
     <title lang="pt">Telejornal</title>
     <desc lang="pt">A mais rigorosa seleção de notícias, todos os dias às 20h00. De segunda a domingo, João Adelino Faria, José Rodrigues dos Santos e Ana Lourenço mostram-lhe o que de mais relevante se passou o país e no mundo. Se é importante está no Telejornal.
 A mais rigorosa seleção de notícias, todos os dias às 20h00. De segunda a domingo, João Adelino Faria, José Rodrigues dos Santos e Ana Lourenço mostram-lhe o que de mais relevante se passou o país e no mundo. Se é importante está no Telejornal.</desc>
     <category lang="pt">null</category>
   </programme>
-  <programme channel="X0001" start="20260326210000 +0000" stop="20260326213000 +0000">
+  <programme channel="X0001" start="20260326210100 +0000" stop="20260326213900 +0000">
     <title lang="pt">Linha Da Frente: De Portas Abertas</title>
     <desc lang="pt">A saída do Reino Unido da União Europeia fez com que o fluxo da emigração qualificada portuguesa apontasse a direção para os Países Baixos. Nos últimos cinco anos verifica-se um claro aumento, com quase cinco mil portugueses a entrarem na Holanda a cada ano. Elogiam os salários, as condições de trabalho, o estilo de vida e os múltiplos apoios que o estado oferece a quem entra.
 A saída do Reino Unido da União Europeia fez com que o fluxo da emigração qualificada portuguesa apontasse a direção para os Países Baixos. Nos últimos cinco anos verifica-se um claro aumento, com quase cinco mil portugueses a entrarem na Holanda a cada ano. Elogiam os salários, as condições de trabalho, o estilo de vida e os múltiplos apoios que o estado oferece a quem entra.</desc>
     <category lang="pt">null</category>
   </programme>
-  <programme channel="X0001" start="20260326213000 +0000" stop="20260326223000 +0000">
+  <programme channel="X0001" start="20260326213900 +0000" stop="20260326224100 +0000">
     <title lang="pt">Joker T10 - Ep. 105</title>
     <desc lang="pt">Vasco Palmeirim apresenta o JOKER, o concurso favorito dos portugueses. Um concorrente, com a ajuda de 7 Jokers e do Super Joker, responde a 12 perguntas com um só objetivo em mente: Conquistar os 50 000 euros do prémio máximo!.
 Vasco Palmeirim apresenta o JOKER, o concurso favorito dos portugueses. Um concorrente, com a ajuda de 7 Jokers e do Super Joker, responde a 12 perguntas com um só objetivo em mente: Conquistar os 50 000 euros do prémio máximo!.</desc>
     <category lang="pt">Concurso</category>
   </programme>
-  <programme channel="X0001" start="20260326223000 +0000" stop="20260326233000 +0000">
+  <programme channel="X0001" start="20260326224100 +0000" stop="20260326233400 +0000">
     <title lang="pt">Fernão Lopes: O Renegado - Ep. 1</title>
     <desc lang="pt">Fernão Lopes: O Renegado transporta-nos para o início do século XVI, quando uma nau portuguesa chega à remota ilha de Santa Helena e descobre que não está deserta. O único habitante é Fernão Lopes, um homem envolto em mistério com uma vida marcada pela coragem, amor e sobrevivência. Fernão Lopes partiu de Portugal rumo a Goa, onde serviu sob o comando de Afonso de Albuquerque.
 Fernão Lopes: O Renegado transporta-nos para o início do século XVI, quando uma nau portuguesa chega à remota ilha de Santa Helena e descobre que não está deserta. O único habitante é Fernão Lopes, um homem envolto em mistério com uma vida marcada pela coragem, amor e sobrevivência. Fernão Lopes partiu de Portugal rumo a Goa, onde serviu sob o comando de Afonso de Albuquerque.</desc>
     <category lang="pt">Drama</category>
   </programme>
-  <programme channel="X0001" start="20260326233000 +0000" stop="20260327002000 +0000">
+  <programme channel="X0001" start="20260326233400 +0000" stop="20260326235000 +0000">
     <title lang="pt">Desassossego - Ep. 4</title>
     <desc lang="pt">Laura tenta manter-se de boa aparência mas está a tornar-se cada vez mais difícil controlar a ansiedade. Já Ana, esconde que toma o medicamento para emagrecer e vomita tudo o que come. Enquanto isto, Vasco engole o orgulho como ator e aceita fazer um anúncio.
 Laura tenta manter-se de boa aparência mas está a tornar-se cada vez mais difícil controlar a ansiedade. Já Ana, esconde que toma o medicamento para emagrecer e vomita tudo o que come. Enquanto isto, Vasco engole o orgulho como ator e aceita fazer um anúncio.</desc>
     <category lang="pt">Comédia, Drama</category>
   </programme>
-  <programme channel="X0001" start="20260327002000 +0000" stop="20260327002500 +0000">
+  <programme channel="X0001" start="20260326235000 +0000" stop="20260327001000 +0000">
     <title lang="pt">Desassossego - Ep. 5</title>
     <desc lang="pt">Laura surpreende tudo e todos no lançamento do seu armário cápsula mas acaba o dia no hospital com Vasco com um diagnóstico infeliz. Ana continua a levar o seu corpo ao limite, quando será o fim?.
 Laura surpreende tudo e todos no lançamento do seu armário cápsula mas acaba o dia no hospital com Vasco com um diagnóstico infeliz. Ana continua a levar o seu corpo ao limite, quando será o fim?.</desc>
     <category lang="pt">Comédia, Drama</category>
   </programme>
-  <programme channel="X0001" start="20260327002500 +0000" stop="20260327003000 +0000">
+  <programme channel="X0001" start="20260327001000 +0000" stop="20260327003400 +0000">
     <title lang="pt">Desassossego - Ep. 6</title>
     <desc lang="pt">Depois de ser diagnosticada com uma depressão, Laura procura refúgio em casa dos pais. Para Ana, chegou o dia de ir ao cinema com Luís e consegue caber no vestido que tanto queria, mas a que custo? O seu corpo atinge um limite e Ana vai parar ao hospital.
 Depois de ser diagnosticada com uma depressão, Laura procura refúgio em casa dos pais. Para Ana, chegou o dia de ir ao cinema com Luís e consegue caber no vestido que tanto queria, mas a que custo? O seu corpo atinge um limite e Ana vai parar ao hospital.</desc>
     <category lang="pt">Comédia, Drama</category>
   </programme>
-  <programme channel="X0001" start="20260327003000 +0000" stop="20260327013000 +0000">
-    <title lang="pt">Grande Entrevista</title>
-    <desc lang="pt">Espaço de entrevista com personalidades que importa ouvir, promovendo uma reflexão aprofundada sobre os grandes temas da atualidade nacional e internacional. Entrevista conduzida por Vítor Gonçalves.
-Espaço de entrevista com personalidades que importa ouvir, promovendo uma reflexão aprofundada sobre os grandes temas da atualidade nacional e internacional. Entrevista conduzida por Vítor Gonçalves.</desc>
+  <programme channel="X0001" start="20260327003400 +0000" stop="20260327012100 +0000">
+    <title lang="pt">Grande Entrevista: Rui Paula</title>
+    <desc lang="pt">Numa altura em que a restauração em Portugal enfrenta novos desafios, com preços mais altos e menos clientes nos restaurantes, recebemos o Chef Rui Paula na Grande Entrevista para uma conversa sobre o atual espaço do setor. O que está a mudar no setor e como os empresários se estão a adaptar a este novo cenário são os temas que marcam a entrevista com o Chef Rui Paula.
+Numa altura em que a restauração em Portugal enfrenta novos desafios, com preços mais altos e menos clientes nos restaurantes, recebemos o Chef Rui Paula na Grande Entrevista para uma conversa sobre o atual espaço do setor. O que está a mudar no setor e como os empresários se estão a adaptar a este novo cenário são os temas que marcam a entrevista com o Chef Rui Paula.</desc>
     <category lang="pt">null</category>
   </programme>
-  <programme channel="X0001" start="20260327013000 +0000" stop="20260327020000 +0000">
+  <programme channel="X0001" start="20260327012100 +0000" stop="20260327014900 +0000">
     <title lang="pt">Liga Dos Campeões Feminina (Resumos) - Ep. 9</title>
     <desc lang="pt">Tudo sobre a Liga dos Campeões Feminina na RTP.
 Tudo sobre a Liga dos Campeões Feminina na RTP.</desc>
     <category lang="pt">null</category>
   </programme>
-  <programme channel="X0001" start="20260327020000 +0000" stop="20260327030000 +0000">
+  <programme channel="X0001" start="20260327014900 +0000" stop="20260327024100 +0000">
     <title lang="pt">Vila Faia - Ep. 58</title>
     <desc lang="pt">Gudunha mostra-se desiludido com Pedro por este nunca lhe ter contado que andava metido em lutas clandestinas. Serôdio e Leo ficam muito felizes por Mariette ter decidido viver com eles e com Rui. Cristina e Madalena vão ao Clube de Combate mas não conseguem impedir Pedro de lutar. Camacho consegue levar as obras de arte para o armazém, em segurança. Zé Diniz passa a noite em casa dos Marques Vila.
 Gudunha mostra-se desiludido com Pedro por este nunca lhe ter contado que andava metido em lutas clandestinas. Serôdio e Leo ficam muito felizes por Mariette ter decidido viver com eles e com Rui. Cristina e Madalena vão ao Clube de Combate mas não conseguem impedir Pedro de lutar. Camacho consegue levar as obras de arte para o armazém, em segurança. Zé Diniz passa a noite em casa dos Marques Vila.</desc>
     <category lang="pt">Telenovela</category>
   </programme>
-  <programme channel="X0001" start="20260327030000 +0000" stop="20260327040000 +0000">
+  <programme channel="X0001" start="20260327024100 +0000" stop="20260327032900 +0000">
     <title lang="pt">Letais Por Natureza - Ep. 2</title>
     <desc lang="pt">A força não é a única opção para um caçador experiente. Para os que não tem dentes ou garras, um superpoder secreto permite executar ataques mortais.
 A força não é a única opção para um caçador experiente. Para os que não tem dentes ou garras, um superpoder secreto permite executar ataques mortais.</desc>
     <category lang="pt">Natureza</category>
   </programme>
-  <programme channel="X0001" start="20260327040000 +0000" stop="20260327060000 +0000">
+  <programme channel="X0001" start="20260327032900 +0000" stop="20260327060000 +0000">
     <title lang="pt">Televendas</title>
     <desc lang="pt">Todos os dias, um espaço dedicado a vendas por televisão, em que são feitas demonstrações dos produtos.
 Todos os dias, um espaço dedicado a vendas por televisão, em que são feitas demonstrações dos produtos.</desc>
