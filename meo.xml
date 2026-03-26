@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE tv SYSTEM "xmltv.dtd">
-<tv generator-info-name="MZ" generator-info-url="git" source-info-name="OTT MEO" date="20260326050007 +0000">
+<tv generator-info-name="MZ" generator-info-url="git" source-info-name="OTT MEO" date="20260326224027 +0000">
   <channel id="X0001">
     <display-name>RTP1</display-name>
   </channel>
@@ -886,91 +886,91 @@ O Bom Dia Portugal é um programa de informação apresentado por João Tomé de
 Jorge Gabriel e Sónia Araújo dão-lhe as boas vindas à Praça da Alegria! Porque sabemos que gosta da nossa companhia, oferecemos boa disposição até à hora de almoço! De segunda a sexta-feira, a Praça da Alegria leva até si a melhor música, as últimas tendências da moda, conselhos úteis e muitas dicas que facilitam o seu dia-a-dia.</desc>
     <category lang="pt">Variedades</category>
   </programme>
-  <programme channel="X0001" start="20260327125800 +0000" stop="20260327143000 +0000">
+  <programme channel="X0001" start="20260327125800 +0000" stop="20260327142800 +0000">
     <title lang="pt">Jornal da Tarde</title>
     <desc lang="pt">Todos os dias, às 13 horas, a sua hora de almoço é completada com a atualização das notícias que marcam a atualidade nacional e mundial, desde a política, a economia, a sociedade e sem esquecer o desporto. Reportagens no local, entrevistas em direto e sempre a isenção e o respeito pela verdade que marcam a informação na RTP.
 Todos os dias, às 13 horas, a sua hora de almoço é completada com a atualização das notícias que marcam a atualidade nacional e mundial, desde a política, a economia, a sociedade e sem esquecer o desporto. Reportagens no local, entrevistas em direto e sempre a isenção e o respeito pela verdade que marcam a informação na RTP.</desc>
     <category lang="pt">null</category>
   </programme>
-  <programme channel="X0001" start="20260327143000 +0000" stop="20260327153000 +0000">
+  <programme channel="X0001" start="20260327142800 +0000" stop="20260327152100 +0000">
     <title lang="pt">Vila Faia - Ep. 59</title>
     <desc lang="pt">Cristina não percebe o que leva Pedro a acabar com ela. Henrique aconselha Bruno a aproveitar-se do facto de Inês lhe ter mentido para se aproximar dela. Inês faz as pazes com Sofia e explica-lhe que continua decidida a recorrer ao banco de esperma. Alice sofre ao ver o combate de Zé Diniz e pede para Gudunha a levar do clube.
 Cristina não percebe o que leva Pedro a acabar com ela. Henrique aconselha Bruno a aproveitar-se do facto de Inês lhe ter mentido para se aproximar dela. Inês faz as pazes com Sofia e explica-lhe que continua decidida a recorrer ao banco de esperma. Alice sofre ao ver o combate de Zé Diniz e pede para Gudunha a levar do clube.</desc>
     <category lang="pt">Telenovela</category>
   </programme>
-  <programme channel="X0001" start="20260327153000 +0000" stop="20260327173000 +0000">
+  <programme channel="X0001" start="20260327152100 +0000" stop="20260327173000 +0000">
     <title lang="pt">A Nossa Tarde</title>
     <desc lang="pt">Pensado a partir da essência da apresentadora, Tânia Ribas de Oliveira, o programa 'A Nossa Tarde' tem, por isso, um lado mais emocional, com base em histórias com final feliz, e um lado muito divertido, ou não fosse a nossa Tânia uma pessoa que gosta de dar umas belas e sonoras gargalhadas.
 Pensado a partir da essência da apresentadora, Tânia Ribas de Oliveira, o programa 'A Nossa Tarde' tem, por isso, um lado mais emocional, com base em histórias com final feliz, e um lado muito divertido, ou não fosse a nossa Tânia uma pessoa que gosta de dar umas belas e sonoras gargalhadas.</desc>
     <category lang="pt">Variedades</category>
   </programme>
-  <programme channel="X0001" start="20260327173000 +0000" stop="20260327191500 +0000">
+  <programme channel="X0001" start="20260327173000 +0000" stop="20260327190700 +0000">
     <title lang="pt">Portugal Em Rede</title>
     <desc lang="pt">Programa de informação centrado no país e nas regiões. Revelar o Portugal que existe para além das grandes cidades, do norte ao sul e às ilhas, numa verdadeira rede de informação. Inclui um segmento dedicado à língua portuguesa e à sua promoção 'Esta língua que nos une'. Os Centros de Informação Regional terão uma participação relevante neste espaço, onde a sociedade, cultura, história e tradições portuguesas vão estar sempre presentes.
 Programa de informação centrado no país e nas regiões. Revelar o Portugal que existe para além das grandes cidades, do norte ao sul e às ilhas, numa verdadeira rede de informação. Inclui um segmento dedicado à língua portuguesa e à sua promoção 'Esta língua que nos une'. Os Centros de Informação Regional terão uma participação relevante neste espaço, onde a sociedade, cultura, história e tradições portuguesas vão estar sempre presentes.</desc>
     <category lang="pt">null</category>
   </programme>
-  <programme channel="X0001" start="20260327191500 +0000" stop="20260327195800 +0000">
+  <programme channel="X0001" start="20260327190700 +0000" stop="20260327195800 +0000">
     <title lang="pt">O Preço Certo</title>
     <desc lang="pt">Há mais de duas décadas em emissão contínua na RTP1, 'O Preço Certo', é o gameshow de maior longevidade da televisão mundial. Estreado pela primeira vez em 1956 nos Estados Unidos, já foi transmitido em mais de 30 países. O sucesso por todo o mundo é testemunho da sua contínua popularidade e vitalidade, provando ser um clássico e intemporal formato de programas de entretenimento.
 Há mais de duas décadas em emissão contínua na RTP1, 'O Preço Certo', é o gameshow de maior longevidade da televisão mundial. Estreado pela primeira vez em 1956 nos Estados Unidos, já foi transmitido em mais de 30 países. O sucesso por todo o mundo é testemunho da sua contínua popularidade e vitalidade, provando ser um clássico e intemporal formato de programas de entretenimento.</desc>
     <category lang="pt">Concurso</category>
   </programme>
-  <programme channel="X0001" start="20260327195800 +0000" stop="20260327210000 +0000">
+  <programme channel="X0001" start="20260327195800 +0000" stop="20260327210100 +0000">
     <title lang="pt">Telejornal</title>
     <desc lang="pt">A mais rigorosa seleção de notícias, todos os dias às 20h00. De segunda a domingo, João Adelino Faria, José Rodrigues dos Santos e Ana Lourenço mostram-lhe o que de mais relevante se passou o país e no mundo. Se é importante está no Telejornal.
 A mais rigorosa seleção de notícias, todos os dias às 20h00. De segunda a domingo, João Adelino Faria, José Rodrigues dos Santos e Ana Lourenço mostram-lhe o que de mais relevante se passou o país e no mundo. Se é importante está no Telejornal.</desc>
     <category lang="pt">null</category>
   </programme>
-  <programme channel="X0001" start="20260327210000 +0000" stop="20260327213000 +0000">
+  <programme channel="X0001" start="20260327210100 +0000" stop="20260327213700 +0000">
     <title lang="pt">A Prova Dos Factos T5 - Ep. 10</title>
     <desc lang="pt">Procurar a verdade, obriga a confrontar, investigar, perguntar. Estes são tempos de muitas opiniões e diferentes ângulos sobre os factos. E em cada investigação, só os Factos nos interessam. A verdade só chega quando se faz 'A Prova dos Factos!', um programa com coordenação de Rita Marrafa de Carvalho e apresentação de Mariana Flor.
 Procurar a verdade, obriga a confrontar, investigar, perguntar. Estes são tempos de muitas opiniões e diferentes ângulos sobre os factos. E em cada investigação, só os Factos nos interessam. A verdade só chega quando se faz 'A Prova dos Factos!', um programa com coordenação de Rita Marrafa de Carvalho e apresentação de Mariana Flor.</desc>
     <category lang="pt">null</category>
   </programme>
-  <programme channel="X0001" start="20260327213000 +0000" stop="20260327223000 +0000">
+  <programme channel="X0001" start="20260327213700 +0000" stop="20260327223700 +0000">
     <title lang="pt">Joker T10 - Ep. 106</title>
     <desc lang="pt">Vasco Palmeirim apresenta o JOKER, o concurso favorito dos portugueses. Um concorrente, com a ajuda de 7 Jokers e do Super Joker, responde a 12 perguntas com um só objetivo em mente: Conquistar os 50 000 euros do prémio máximo!.
 Vasco Palmeirim apresenta o JOKER, o concurso favorito dos portugueses. Um concorrente, com a ajuda de 7 Jokers e do Super Joker, responde a 12 perguntas com um só objetivo em mente: Conquistar os 50 000 euros do prémio máximo!.</desc>
     <category lang="pt">Concurso</category>
   </programme>
-  <programme channel="X0001" start="20260327223000 +0000" stop="20260328010000 +0000">
+  <programme channel="X0001" start="20260327223700 +0000" stop="20260328010000 +0000">
     <title lang="pt">Em Casa d'Amália T6 - Ep. 6</title>
     <desc lang="pt">Junto da Igreja Matriz, no Fundão para ouvir o nosso fado, a voz dos poetas e o som das guitarras, ao que se juntam boas histórias e conversas sem fim! Tudo isto com os nossos convidados muitos especiais: FF, Anabela, Fábia Rebordão e Filipa Cardoso acompanhados pelas guitarras de André Dias e Flávio Jr.
 Junto da Igreja Matriz, no Fundão para ouvir o nosso fado, a voz dos poetas e o som das guitarras, ao que se juntam boas histórias e conversas sem fim! Tudo isto com os nossos convidados muitos especiais: FF, Anabela, Fábia Rebordão e Filipa Cardoso acompanhados pelas guitarras de André Dias e Flávio Jr.</desc>
     <category lang="pt">Cultura, Música</category>
   </programme>
-  <programme channel="X0001" start="20260328010000 +0000" stop="20260328020000 +0000">
+  <programme channel="X0001" start="20260328010000 +0000" stop="20260328015100 +0000">
     <title lang="pt">Faro - Ep. 5</title>
     <desc lang="pt">Os promotores imobiliários são chantageados por alguém que tem as gravações de Abel com provas de corrupção. Desesperados, o Dr. Quintino e Seabra decidem acelerar todo o processo do projeto imobiliário. Ana Cristina, influenciada por Malika, decide ficar em Faro e lutar pelo pai e por Ernesto. Enquanto a ASAE fecha o restaurante, pressionando Zé Maria, que resiste em vendê-lo. O Dr.
 Os promotores imobiliários são chantageados por alguém que tem as gravações de Abel com provas de corrupção. Desesperados, o Dr. Quintino e Seabra decidem acelerar todo o processo do projeto imobiliário. Ana Cristina, influenciada por Malika, decide ficar em Faro e lutar pelo pai e por Ernesto. Enquanto a ASAE fecha o restaurante, pressionando Zé Maria, que resiste em vendê-lo. O Dr.</desc>
     <category lang="pt">Drama</category>
   </programme>
-  <programme channel="X0001" start="20260328020000 +0000" stop="20260328024500 +0000">
+  <programme channel="X0001" start="20260328015100 +0000" stop="20260328025000 +0000">
     <title lang="pt">Semanário T2 - Ep. 9</title>
     <desc lang="pt">A análise da semana, factos, imagens e pessoas que marcaram os dias em Portugal, com António José Teixeira. Convidados de várias especialidades, incluindo da Cultura.
 A análise da semana, factos, imagens e pessoas que marcaram os dias em Portugal, com António José Teixeira. Convidados de várias especialidades, incluindo da Cultura.</desc>
     <category lang="pt">null</category>
   </programme>
-  <programme channel="X0001" start="20260328024500 +0000" stop="20260328034500 +0000">
+  <programme channel="X0001" start="20260328025000 +0000" stop="20260328034200 +0000">
     <title lang="pt">Vila Faia - Ep. 59</title>
     <desc lang="pt">Cristina não percebe o que leva Pedro a acabar com ela. Henrique aconselha Bruno a aproveitar-se do facto de Inês lhe ter mentido para se aproximar dela. Inês faz as pazes com Sofia e explica-lhe que continua decidida a recorrer ao banco de esperma. Alice sofre ao ver o combate de Zé Diniz e pede para Gudunha a levar do clube.
 Cristina não percebe o que leva Pedro a acabar com ela. Henrique aconselha Bruno a aproveitar-se do facto de Inês lhe ter mentido para se aproximar dela. Inês faz as pazes com Sofia e explica-lhe que continua decidida a recorrer ao banco de esperma. Alice sofre ao ver o combate de Zé Diniz e pede para Gudunha a levar do clube.</desc>
     <category lang="pt">Telenovela</category>
   </programme>
-  <programme channel="X0001" start="20260328034500 +0000" stop="20260328044500 +0000">
+  <programme channel="X0001" start="20260328034200 +0000" stop="20260328043200 +0000">
     <title lang="pt">Letais Por Natureza - Ep. 3</title>
     <desc lang="pt">Descubra como os animais preparam as emboscadas para as suas presas.
 Descubra como os animais preparam as emboscadas para as suas presas.</desc>
     <category lang="pt">Natureza</category>
   </programme>
-  <programme channel="X0001" start="20260328044500 +0000" stop="20260328053000 +0000">
+  <programme channel="X0001" start="20260328043200 +0000" stop="20260328053300 +0000">
     <title lang="pt">Televendas</title>
     <desc lang="pt">Todos os dias, um espaço dedicado a vendas por televisão, em que são feitas demonstrações dos produtos.
 Todos os dias, um espaço dedicado a vendas por televisão, em que são feitas demonstrações dos produtos.</desc>
     <category lang="pt">null</category>
   </programme>
-  <programme channel="X0001" start="20260328053000 +0000" stop="20260328060000 +0000">
+  <programme channel="X0001" start="20260328053300 +0000" stop="20260328060000 +0000">
     <title lang="pt">Esta Língua Que Nos Une - Compacto T2 - Ep. 2</title>
     <desc lang="pt">A origem das palavras e curiosidade da língua portuguesa.
 A origem das palavras e curiosidade da língua portuguesa.</desc>
