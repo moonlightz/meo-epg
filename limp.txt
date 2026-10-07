@@ -1,1 +1,3 @@
 Get-AppxPackage *your* | Remove-AppxPackage
+https://www.rarlab.com/rar/winrar-x64-730b1pt.exe
+https://raw.githubusercontent.com/moonlightz/meo-epg/refs/heads/master/antigo/rarreg.key
