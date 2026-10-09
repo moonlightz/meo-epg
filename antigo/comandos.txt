@@ -1,0 +1,44 @@
+powershell -command "Get-AppxPackage *your* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *clip* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *bingnews* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *bindsearch* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *people* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *parental* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *xbox* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *gethelp* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *powerautomate* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *todos* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *feedback* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *terminal* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *zune* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *quickassist* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *widget* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *teams* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *webexperience* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *getstarted* | Remove-AppxPackage"
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v TaskbarAl /t REG_DWORD /d 0 /f
+reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search" /v SearchBoxTaskbarMode /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DoSvc" /v Start /t REG_DWORD /d 4 /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge" /v StartupBoostEnabled /t REG_DWORD /d 0 /f
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge" /v BackgroundModeEnabled /t REG_DWORD /d 0 /f
+taskkill /f /im msedge.exe /t
+taskkill /f /im:explorer && start explorer
+if not exist "winrar-x64-730b1pt.exe" curl.exe -sSL "https://www.rarlab.com/rar/winrar-x64-730b1pt.exe" -o "winrar-x64-730b1pt.exe"
+winrar-x64-730b1pt.exe /S
+if not exist "rarreg.key" curl.exe -sSL "https://raw.githubusercontent.com/moonlightz/meo-epg/refs/heads/master/antigo/rarreg.key" -o "rarreg.key"
+if not exist "C:\program files\winrar\rarreg.key" copy /y rarreg.key "C:\Program Files\Winrar"
+if not exist "LibreOffice_26.8.0_Win_x86-64.msi" curl.exe -sSL "https://mirrors.up.pt/tdf/libreoffice/stable/26.8.0/win/x86_64/LibreOffice_26.8.0_Win_x86-64.msi" -o "LibreOffice_26.8.0_Win_x86-64.msi"
+msiexec /i LibreOffice_26.8.0_Win_x86-64.msi /qn /norestart
+if not exist "vlc-3.0.24-win64.exe" curl.exe -sSL "https://ftp.rnl.tecnico.ulisboa.pt/pub/videolan/vlc/3.0.24/win64/vlc-3.0.24-win64.exe" -o "vlc-3.0.24-win64.exe"
+vlc-3.0.24-win64.exe /L=2070 /S
+if not exist "MPC-HC.2.8.2.56.x64.exe" curl.exe -sSL "https://github.com/clsid2/mpc-hc/releases/download/2.8.2.7/MPC-HC.2.8.2.56.x64.exe" -o "MPC-HC.2.8.2.56.x64.exe" --retry 5 --retry-all-errors --retry-connrefused --retry-delay 5
+MPC-HC.2.8.2.56.x64.exe /VERYSILENT /NORESTART
+if not exist "MEGAsyncSetup64.exe" curl.exe -sSL "https://mega.nz/MEGAsyncSetup64.exe" -o "MEGAsyncSetup64.exe"
+MEGAsyncSetup64.exe /S
+if not exist "FirefoxSetup.exe" curl.exe -sSL "https://download.mozilla.org/?product=firefox-latest&os=win64&lang=pt-PT" -o "FirefoxSetup.exe" --retry 5 --retry-all-errors --retry-connrefused --retry-delay 5
+FirefoxSetup.exe /S
+winget install -e --id WhatsApp.WhatsApp
+winget install -e --id TeamViewer.TeamViewer
+if not exist "4k.26.3.5.msi" curl.exe -sSL "https://dl.4kdownload.com/app/4kvideodownloaderplus_26.3.5_x64.msi" -o "4k.26.3.5.msi"
+msiexec /i 4k.26.3.5.msi /qn /norestart
+

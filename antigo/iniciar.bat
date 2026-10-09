@@ -1,5 +1,6 @@
 @echo off
 
+set "CURRENT_DIR=%~dp0"
 :: Check for Administrator privileges
 net session >nul 2>&1
 if %errorlevel% neq 0 (
@@ -12,12 +13,12 @@ if %errorlevel% neq 0 (
 	exit
 )
 :: Set the GitHub raw URL and target filename
-set "URL=https://raw.githubusercontent.com/moonlightz/meo-epg/refs/heads/master/limp.txt"
-set "OUTPUT_NAME=limp.txt"
+set "URL=https://raw.githubusercontent.com/moonlightz/meo-epg/refs/heads/master/antigo/comandos.txt"
+set "OUTPUT_NAME=comandos.txt"
 
 :: %~dp0 automatically resolves to the folder containing this .bat file
 set "DESTINATION=%~dp0%OUTPUT_NAME%"
-
+goto SALTO
 echo Downloading file from GitHub...
 
 :: Execute curl.exe
@@ -25,19 +26,21 @@ curl.exe -sSL "%URL%" -o "%DESTINATION%"
 
 :: Verify download status
 if exist "%DESTINATION%" (
-    echo Successfully downloaded to: %DESTINATION%
+    echo Descarregado para: %DESTINATION%
 ) else (
-    echo Download failed. Please check the URL.
+    echo O download falhou. Não há net.
 	pause
 	exit /b
 
 )
 
-echo Executing lines directly:
+:SALTO
+echo .
 echo --------------------------------------------------------
 
 for /f "usebackq delims=" %%A in ("%DESTINATION%") do (
     set "LINE=%%A"
+	cd "%CURRENT_DIR%"
     if "!LINE:~0,1!" neq "#" if "!LINE:~0,2!" neq "::" (
         echo A executar %%A
         
@@ -49,5 +52,5 @@ for /f "usebackq delims=" %%A in ("%DESTINATION%") do (
     )
 )
 
-echo Done executing all commands.
+echo ======= FIM =========
 pause

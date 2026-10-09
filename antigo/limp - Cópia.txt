@@ -1,7 +1,0 @@
-#powershell -command "Get-AppxPackage *your* | Remove-AppxPackage"
-if not exist "winrar-x64-730b1pt.exe" curl.exe -sSL "https://www.rarlab.com/rar/winrar-x64-730b1pt.exe" -o "winrar-x64-730b1pt.exe"
-winrar-x64-730b1pt.exe /S
-if not exist "rarreg.key" curl.exe -sSL "https://raw.githubusercontent.com/moonlightz/meo-epg/refs/heads/master/antigo/rarreg.key" -o "rarreg.key"
-if not exist "C:\program files\winrar\rarreg.key" copy /y rarreg.key "C:\Program Files\Winrar"
-if not exist "LibreOffice_26.8.0_Win_x86-64.msi" curl.exe -sSL "https://mirrors.up.pt/tdf/libreoffice/stable/26.8.0/win/x86_64/LibreOffice_26.8.0_Win_x86-64.msi" -o "LibreOffice_26.8.0_Win_x86-64.msi"
-msiexec /i LibreOffice_26.8.0_Win_x86-64.msi /qn /norestart
