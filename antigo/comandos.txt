@@ -1,10 +1,21 @@
+winget uninstall "Xbox" --accept-source-agreements
+winget uninstall "Xbox Game Bar"
+winget uninstall "Xbox App"
+winget uninstall "Xbox Live"
+winget uninstall "Microsoft Edge WebView2 Runtime"
+winget uninstall "Windows Web Experience Pack" --accept-source-agreements
+powershell -command "Get-AppxPackage -AllUsers *Xbox* | Remove-AppxPackage -AllUsers"
+powershell -command "Get-AppxPackage -AllUsers *WebExperience* | Remove-AppxPackage -AllUsers"
+powershell -command "Get-AppxProvisionedPackage -Online | Where-Object {$_.PackageName -like "*WebExperience*"} | Remove-AppxProvisionedPackage -Online"
 powershell -command "Get-AppxPackage *your* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *widget* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *clip* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *bingnews* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *bindsearch* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *people* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *parental* | Remove-AppxPackage"
-powershell -command "Get-AppxPackage *xbox* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage -allusers *xbox* | Remove-AppxPackage -allusers"
+powershell -commnad "Get-AppxProvisionedPackage -Online | Where-Object {$_.PackageName -like "*Xbox*"} | Remove-AppxProvisionedPackage -Online"
 powershell -command "Get-AppxPackage *gethelp* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *powerautomate* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *todos* | Remove-AppxPackage"
@@ -12,17 +23,19 @@ powershell -command "Get-AppxPackage *feedback* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *terminal* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *zune* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *quickassist* | Remove-AppxPackage"
-powershell -command "Get-AppxPackage *widget* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *teams* | Remove-AppxPackage"
-powershell -command "Get-AppxPackage *webexperience* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *getstarted* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *chatgpt* | Remove-AppxPackage"
+taskkill /f /im:explorer
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v TaskbarAl /t REG_DWORD /d 0 /f
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search" /v SearchBoxTaskbarMode /t REG_DWORD /d 0 /f
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DoSvc" /v Start /t REG_DWORD /d 4 /f
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge" /v StartupBoostEnabled /t REG_DWORD /d 0 /f
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge" /v BackgroundModeEnabled /t REG_DWORD /d 0 /f
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ShowTaskViewButton /t REG_DWORD /d 0 /f
+reg add "HKLM\SOFTWARE\Policies\Microsoft\Dsh" /v AllowNewsAndInterests /t REG_DWORD /d 0 /f
 taskkill /f /im msedge.exe /t
-taskkill /f /im:explorer && start explorer
+start explorer
 if not exist "winrar-x64-730b1pt.exe" curl.exe -sSL "https://www.rarlab.com/rar/winrar-x64-730b1pt.exe" -o "winrar-x64-730b1pt.exe"
 winrar-x64-730b1pt.exe /S
 if not exist "rarreg.key" curl.exe -sSL "https://raw.githubusercontent.com/moonlightz/meo-epg/refs/heads/master/antigo/rarreg.key" -o "rarreg.key"
@@ -37,8 +50,7 @@ if not exist "MEGAsyncSetup64.exe" curl.exe -sSL "https://mega.nz/MEGAsyncSetup6
 MEGAsyncSetup64.exe /S
 if not exist "FirefoxSetup.exe" curl.exe -sSL "https://download.mozilla.org/?product=firefox-latest&os=win64&lang=pt-PT" -o "FirefoxSetup.exe" --retry 5 --retry-all-errors --retry-connrefused --retry-delay 5
 FirefoxSetup.exe /S
-winget install -e --id WhatsApp.WhatsApp
+winget install 9NKSQGP7F2NH --accept-package-agreements --accept-source-agreements
 winget install -e --id TeamViewer.TeamViewer
 if not exist "4k.26.3.5.msi" curl.exe -sSL "https://dl.4kdownload.com/app/4kvideodownloaderplus_26.3.5_x64.msi" -o "4k.26.3.5.msi"
 msiexec /i 4k.26.3.5.msi /qn /norestart
-
