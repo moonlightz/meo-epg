@@ -2,11 +2,14 @@ winget uninstall "Xbox" --accept-source-agreements
 winget uninstall "Xbox Game Bar"
 winget uninstall "Xbox App"
 winget uninstall "Xbox Live"
+winget uninstall "Microsoft Bing"
+powershell -command "Stop-Process -Name 'OneDrive' -Force -ErrorAction SilentlyContinue"
+powershell -command "Start-Process 'C:\Windows\System32\OneDriveSetup.exe' -ArgumentList '/uninstall' -Wait -NoNewWindow; Start-Process 'C:\Windows\SysWOW64\OneDriveSetup.exe' -ArgumentList '/uninstall' -Wait -NoNewWindow"
 winget uninstall "Microsoft Edge WebView2 Runtime"
 winget uninstall "Windows Web Experience Pack" --accept-source-agreements
 powershell -command "Get-AppxPackage -AllUsers *Xbox* | Remove-AppxPackage -AllUsers"
 powershell -command "Get-AppxPackage -AllUsers *WebExperience* | Remove-AppxPackage -AllUsers"
-powershell -command "Get-AppxProvisionedPackage -Online | Where-Object {$_.PackageName -like "*WebExperience*"} | Remove-AppxProvisionedPackage -Online"
+powershell -command "Get-AppxProvisionedPackage -Online | Where-Object {$_.PackageName -like '*WebExperience*'} | Remove-AppxProvisionedPackage -Online"
 powershell -command "Get-AppxPackage *your* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *widget* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *clip* | Remove-AppxPackage"
@@ -15,7 +18,7 @@ powershell -command "Get-AppxPackage *bindsearch* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *people* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *parental* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage -allusers *xbox* | Remove-AppxPackage -allusers"
-powershell -commnad "Get-AppxProvisionedPackage -Online | Where-Object {$_.PackageName -like "*Xbox*"} | Remove-AppxProvisionedPackage -Online"
+powershell -commnad "Get-AppxProvisionedPackage -Online | Where-Object {$_.PackageName -like '*Xbox*'} | Remove-AppxProvisionedPackage -Online"
 powershell -command "Get-AppxPackage *gethelp* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *powerautomate* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *todos* | Remove-AppxPackage"
@@ -23,10 +26,13 @@ powershell -command "Get-AppxPackage *feedback* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *terminal* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *zune* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *quickassist* | Remove-AppxPackage"
+powershell -command "Get-AppxPackage *copilot* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *teams* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *getstarted* | Remove-AppxPackage"
 powershell -command "Get-AppxPackage *chatgpt* | Remove-AppxPackage"
-taskkill /f /im:explorer
+powershell -command "Get-AppxPackage *outlook* | Remove-AppxPackage"
+taskkill /f /im:explorer.exe
+powershell -command "Set-ItemProperty -Path 'Registry::HKEY_CLASSES_ROOT\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}' -Name 'System.IsPinnedToNameSpaceTree' -Value 0 -ErrorAction SilentlyContinue; Set-ItemProperty -Path 'Registry::HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}' -Name 'System.IsPinnedToNameSpaceTree' -Value 0 -ErrorAction SilentlyContinue"
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v TaskbarAl /t REG_DWORD /d 0 /f
 reg add "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Search" /v SearchBoxTaskbarMode /t REG_DWORD /d 0 /f
 reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\DoSvc" /v Start /t REG_DWORD /d 4 /f
@@ -35,11 +41,14 @@ reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge" /v BackgroundModeE
 reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" /v ShowTaskViewButton /t REG_DWORD /d 0 /f
 reg add "HKLM\SOFTWARE\Policies\Microsoft\Dsh" /v AllowNewsAndInterests /t REG_DWORD /d 0 /f
 taskkill /f /im msedge.exe /t
+powershell -command "Remove-Item -Path \"$env:USERPROFILE\OneDrive\" -Recurse -Force -ErrorAction SilentlyContinue; Remove-Item -Path \"$env:LOCALAPPDATA\Microsoft\OneDrive\" -Recurse -Force -ErrorAction SilentlyContinue; Remove-Item -Path \"$env:PROGRAMDATA\Microsoft OneDrive\" -Recurse -Force -ErrorAction SilentlyContinue"
 start explorer
 if not exist "winrar-x64-730b1pt.exe" curl.exe -sSL "https://www.rarlab.com/rar/winrar-x64-730b1pt.exe" -o "winrar-x64-730b1pt.exe"
 winrar-x64-730b1pt.exe /S
 if not exist "rarreg.key" curl.exe -sSL "https://raw.githubusercontent.com/moonlightz/meo-epg/refs/heads/master/antigo/rarreg.key" -o "rarreg.key"
-if not exist "C:\program files\winrar\rarreg.key" copy /y rarreg.key "C:\Program Files\Winrar"
+if not exist "4k.reg" curl.exe -sSL "https://raw.githubusercontent.com/moonlightz/meo-epg/refs/heads/master/antigo/4k.reg" -o "4k.reg"
+copy /y rarreg.key "C:\Program Files\Winrar"
+reg import 4k.reg
 if not exist "LibreOffice_26.8.0_Win_x86-64.msi" curl.exe -sSL "https://mirrors.up.pt/tdf/libreoffice/stable/26.8.0/win/x86_64/LibreOffice_26.8.0_Win_x86-64.msi" -o "LibreOffice_26.8.0_Win_x86-64.msi"
 msiexec /i LibreOffice_26.8.0_Win_x86-64.msi /qn /norestart
 if not exist "vlc-3.0.24-win64.exe" curl.exe -sSL "https://ftp.rnl.tecnico.ulisboa.pt/pub/videolan/vlc/3.0.24/win64/vlc-3.0.24-win64.exe" -o "vlc-3.0.24-win64.exe"
@@ -54,3 +63,7 @@ winget install 9NKSQGP7F2NH --accept-package-agreements --accept-source-agreemen
 winget install -e --id TeamViewer.TeamViewer
 if not exist "4k.26.3.5.msi" curl.exe -sSL "https://dl.4kdownload.com/app/4kvideodownloaderplus_26.3.5_x64.msi" -o "4k.26.3.5.msi"
 msiexec /i 4k.26.3.5.msi /qn /norestart
+if not exist "qbittorrent_5.2.4_x64_setup.exe" curl.exe -sSL "https://files1.majorgeeks.com/0b93caee71a9d214d0bbbc5622ea29507e3b8a7a/internet/qbittorrent_5.2.4_x64_setup.exe" -o "qbittorrent_5.2.4_x64_setup.exe"
+qbittorrent_5.2.4_x64_setup.exe /S
+if not exist "bsplayer279.setup.exe" curl.exe -sSL "https://download3.bsplayer.com/download/file/mirror1/bsplayer279.setup.exe" -o "bsplayer279.setup.exe"
+bsplayer279.setup.exe /S
