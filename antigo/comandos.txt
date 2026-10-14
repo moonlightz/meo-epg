@@ -47,24 +47,29 @@ if not exist "winrar-x64-730b1pt.exe" curl.exe -sSL "https://www.rarlab.com/rar/
 winrar-x64-730b1pt.exe /S
 if not exist "rarreg.key" curl.exe -sSL "https://raw.githubusercontent.com/moonlightz/meo-epg/refs/heads/master/antigo/rarreg.key" -o "rarreg.key"
 if not exist "4k.reg" curl.exe -sSL "https://raw.githubusercontent.com/moonlightz/meo-epg/refs/heads/master/antigo/4k.reg" -o "4k.reg"
-copy /y rarreg.key "C:\Program Files\Winrar"
+copy /y rarreg.key "C:Program FilesWinrar"
 reg import 4k.reg
-if not exist "LibreOffice_26.8.0_Win_x86-64.msi" curl.exe -sSL "https://mirrors.up.pt/tdf/libreoffice/stable/26.8.0/win/x86_64/LibreOffice_26.8.0_Win_x86-64.msi" -o "LibreOffice_26.8.0_Win_x86-64.msi"
-msiexec /i LibreOffice_26.8.0_Win_x86-64.msi /qn /norestart
-if not exist "vlc-3.0.24-win64.exe" curl.exe -sSL "https://ftp.rnl.tecnico.ulisboa.pt/pub/videolan/vlc/3.0.24/win64/vlc-3.0.24-win64.exe" -o "vlc-3.0.24-win64.exe"
+if not exist "LibreOffice_26.8.1_Win_x86-64.msi" curl.exe -sSL "https://download.documentfoundation.org/libreoffice/stable/26.8.1/win/x86_64/LibreOffice_26.8.1_Win_x86-64.msi" -o "LibreOffice_26.8.1_Win_x86-64.msi"
+msiexec /i LibreOffice_26.8.1_Win_x86-64.msi /qn /norestart
+if not exist "LibreOffice_26.8.1_Win_x86-64_helppack_pt.msi" curl.exe -sSL "https://download.documentfoundation.org/libreoffice/stable/26.8.1/win/x86_64/LibreOffice_26.8.1_Win_x86-64_helppack_pt.msi" -o "LibreOffice_26.8.1_Win_x86-64_helppack_pt.msi"
+msiexec /i LibreOffice_26.8.1_Win_x86-64_helppack_pt.msi /qn /norestart
+if not exist "vlc-3.0.24-win64.exe" curl.exe -sSL "https://mirrors.up.pt/pub/videolan/vlc/last/win64/vlc-3.0.24-win64.exe" -o "vlc-3.0.24-win64.exe"
 vlc-3.0.24-win64.exe /L=2070 /S
 if not exist "MPC-HC.2.8.3.x64.exe" curl.exe -sSL "https://github.com/clsid2/mpc-hc/releases/download/2.8.3/MPC-HC.2.8.3.x64.exe" -o "MPC-HC.2.8.3.x64.exe" --retry 5 --retry-all-errors --retry-connrefused --retry-delay 5
 MPC-HC.2.8.3.x64.exe /VERYSILENT /NORESTART
+%ProgramFiles%MPC-HCmpc-hc64.exe /regvid
+%ProgramFiles%MPC-HCmpc-hc64.exe /regaud
 if not exist "MEGAsyncSetup64.exe" curl.exe -sSL "https://mega.nz/MEGAsyncSetup64.exe" -o "MEGAsyncSetup64.exe"
 MEGAsyncSetup64.exe /S
 if not exist "FirefoxSetup.exe" curl.exe -sSL "https://download.mozilla.org/?product=firefox-latest&os=win64&lang=pt-PT" -o "FirefoxSetup.exe" --retry 5 --retry-all-errors --retry-connrefused --retry-delay 5
 FirefoxSetup.exe /S
+"C:Program FilesMozilla Firefoxirefox.exe" -silent -setDefaultBrowser
 winget install 9NKSQGP7F2NH --accept-package-agreements --accept-source-agreements
 winget install -e --id TeamViewer.TeamViewer
 winget install --id Telegram.TelegramDesktop -e --silent --accept-package-agreements --accept-source-agreements
-if not exist "4k.26.3.5.msi" curl.exe -sSL "https://dl.4kdownload.com/app/4kvideodownloaderplus_26.3.5_x64.msi" -o "4k.26.3.5.msi"
-msiexec /i 4k.26.3.5.msi /qn /norestart
-if not exist "qbittorrent_5.2.4_x64_setup.exe" curl.exe -sSL "https://files1.majorgeeks.com/0b93caee71a9d214d0bbbc5622ea29507e3b8a7a/internet/qbittorrent_5.2.4_x64_setup.exe" -o "qbittorrent_5.2.4_x64_setup.exe"
+if not exist "4kvideodownloaderplus_26.3.5_x64.msi" curl.exe -sSL "https://dl.4kdownload.com/app/4kvideodownloaderplus_26.3.5_x64.msi" -o "4kvideodownloaderplus_26.3.5_x64.msi"
+msiexec /i 4kvideodownloaderplus_26.3.5_x64.msi /qn /norestart
+if not exist "qbittorrent_5.2.4_x64_setup.exe" curl.exe -sSL "https://files3.majorgeeks.com/111c0fbe4fd260a6629482ca0b84c368558d9804/internet/qbittorrent_5.2.4_x64_setup.exe" -o "qbittorrent_5.2.4_x64_setup.exe" --retry 5 --retry-all-errors --retry-connrefused --retry-delay 5
 qbittorrent_5.2.4_x64_setup.exe /S
-if not exist "bsplayer279.setup.exe" curl.exe -sSL "https://download3.bsplayer.com/download/file/mirror1/bsplayer279.setup.exe" -o "bsplayer279.setup.exe"
+if not exist "bsplayer279.setup.exe" curl.exe -sSL "http://www.videohelp.com/download/bsplayer279.setup.exe" -o "bsplayer279.setup.exe"
 bsplayer279.setup.exe /S
