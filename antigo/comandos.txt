@@ -55,8 +55,8 @@ if not exist "LibreOffice_26.8.1_Win_x86-64_helppack_pt.msi" curl.exe -sSL "http
 msiexec /i LibreOffice_26.8.1_Win_x86-64_helppack_pt.msi /qn /norestart
 if not exist "vlc-3.0.24-win64.exe" curl.exe -sSL "https://mirrors.up.pt/pub/videolan/vlc/last/win64/vlc-3.0.24-win64.exe" -o "vlc-3.0.24-win64.exe"
 vlc-3.0.24-win64.exe /L=2070 /S
-if not exist "MPC-HC.2.8.3.x64.exe" curl.exe -sSL "https://github.com/clsid2/mpc-hc/releases/download/2.8.3/MPC-HC.2.8.3.x64.exe" -o "MPC-HC.2.8.3.x64.exe" --retry 5 --retry-all-errors --retry-connrefused --retry-delay 5
-MPC-HC.2.8.3.x64.exe /VERYSILENT /NORESTART
+if not exist "MPC-HC.2.8.4.x64.exe" curl.exe -sSL "https://github.com/clsid2/mpc-hc/releases/download/2.8.4/MPC-HC.2.8.4.x64.exe" -o "MPC-HC.2.8.4.x64.exe" --retry 5 --retry-all-errors --retry-connrefused --retry-delay 5
+MPC-HC.2.8.4.x64.exe /VERYSILENT /NORESTART
 %ProgramFiles%MPC-HCmpc-hc64.exe /regvid
 %ProgramFiles%MPC-HCmpc-hc64.exe /regaud
 if not exist "MEGAsyncSetup64.exe" curl.exe -sSL "https://mega.nz/MEGAsyncSetup64.exe" -o "MEGAsyncSetup64.exe"
@@ -69,7 +69,7 @@ winget install -e --id TeamViewer.TeamViewer
 winget install --id Telegram.TelegramDesktop -e --silent --accept-package-agreements --accept-source-agreements
 if not exist "4kvideodownloaderplus_26.3.5_x64.msi" curl.exe -sSL "https://dl.4kdownload.com/app/4kvideodownloaderplus_26.3.5_x64.msi" -o "4kvideodownloaderplus_26.3.5_x64.msi"
 msiexec /i 4kvideodownloaderplus_26.3.5_x64.msi /qn /norestart
-if not exist "qbittorrent_5.2.4_x64_setup.exe" curl.exe -sSL "https://files3.majorgeeks.com/40bf252ebc68d2921a7e909064c29fd95a1820fb/internet/qbittorrent_5.2.4_x64_setup.exe" -o "qbittorrent_5.2.4_x64_setup.exe" --retry 5 --retry-all-errors --retry-connrefused --retry-delay 5
-qbittorrent_5.2.4_x64_setup.exe /S
+if not exist "qbittorrent_5.3.0_x64_setup.exe" curl.exe -sSL "https://files1.majorgeeks.com/0b93caee71a9d214d0bbbc5622ea29507e3b8a7a/internet/qbittorrent_5.3.0_x64_setup.exe" -o "qbittorrent_5.3.0_x64_setup.exe" --retry 5 --retry-all-errors --retry-connrefused --retry-delay 5
+qbittorrent_5.3.0_x64_setup.exe /S
 if not exist "bsplayer279.setup.exe" curl.exe -sSL "https://download3.bsplayer.com/download/file/mirror1/bsplayer279.setup.exe" -o "bsplayer279.setup.exe"
 bsplayer279.setup.exe /S

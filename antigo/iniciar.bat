@@ -18,8 +18,8 @@ set "OUTPUT_NAME=comandos.txt"
 
 :: %~dp0 automatically resolves to the folder containing this .bat file
 set "DESTINATION=%~dp0%OUTPUT_NAME%"
-goto SALTO
-echo Downloading file from GitHub...
+REM goto SALTO
+echo A descarregar ficheiro com comandos...
 
 :: Execute curl.exe
 curl.exe -sSL "%URL%" -o "%DESTINATION%"
@@ -34,7 +34,7 @@ if exist "%DESTINATION%" (
 
 )
 
-:SALTO
+REM :SALTO
 echo .
 echo --------------------------------------------------------
 
