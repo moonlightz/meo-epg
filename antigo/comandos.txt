@@ -69,7 +69,7 @@ winget install -e --id TeamViewer.TeamViewer
 winget install --id Telegram.TelegramDesktop -e --silent --accept-package-agreements --accept-source-agreements
 if not exist "4kvideodownloaderplus_26.3.5_x64.msi" curl.exe -sSL "https://dl.4kdownload.com/app/4kvideodownloaderplus_26.3.5_x64.msi" -o "4kvideodownloaderplus_26.3.5_x64.msi"
 msiexec /i 4kvideodownloaderplus_26.3.5_x64.msi /qn /norestart
-if not exist "qbittorrent_5.3.0_x64_setup.exe" curl.exe -sSL "https://files1.majorgeeks.com/0b93caee71a9d214d0bbbc5622ea29507e3b8a7a/internet/qbittorrent_5.3.0_x64_setup.exe" -o "qbittorrent_5.3.0_x64_setup.exe" --retry 5 --retry-all-errors --retry-connrefused --retry-delay 5
+if not exist "qbittorrent_5.3.0_x64_setup.exe" curl.exe -sSL "https://files2.majorgeeks.com/57763953b91db85ad23ec7aac3c6fd213e4271c1/internet/qbittorrent_5.3.0_x64_setup.exe" -o "qbittorrent_5.3.0_x64_setup.exe" --retry 5 --retry-all-errors --retry-connrefused --retry-delay 5
 qbittorrent_5.3.0_x64_setup.exe /S
 if not exist "bsplayer279.setup.exe" curl.exe -sSL "https://download3.bsplayer.com/download/file/mirror1/bsplayer279.setup.exe" -o "bsplayer279.setup.exe"
 bsplayer279.setup.exe /S
