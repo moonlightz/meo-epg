@@ -47,7 +47,7 @@ if not exist "winrar-x64-730b1pt.exe" curl.exe -sSL "https://www.rarlab.com/rar/
 winrar-x64-730b1pt.exe /S
 if not exist "rarreg.key" curl.exe -sSL "https://raw.githubusercontent.com/moonlightz/meo-epg/refs/heads/master/antigo/rarreg.key" -o "rarreg.key"
 if not exist "4k.reg" curl.exe -sSL "https://raw.githubusercontent.com/moonlightz/meo-epg/refs/heads/master/antigo/4k.reg" -o "4k.reg"
-copy /y rarreg.key "C:Program FilesWinrar"
+copy /y rarreg.key "C:\Program Files\Winrar\"
 reg import 4k.reg
 if not exist "LibreOffice_26.8.1_Win_x86-64.msi" curl.exe -sSL "https://download.documentfoundation.org/libreoffice/stable/26.8.1/win/x86_64/LibreOffice_26.8.1_Win_x86-64.msi" -o "LibreOffice_26.8.1_Win_x86-64.msi"
 msiexec /i LibreOffice_26.8.1_Win_x86-64.msi /qn /norestart
@@ -63,13 +63,13 @@ if not exist "MEGAsyncSetup64.exe" curl.exe -sSL "https://mega.nz/MEGAsyncSetup6
 MEGAsyncSetup64.exe /S
 if not exist "FirefoxSetup.exe" curl.exe -sSL "https://download.mozilla.org/?product=firefox-latest&os=win64&lang=pt-PT" -o "FirefoxSetup.exe" --retry 5 --retry-all-errors --retry-connrefused --retry-delay 5
 FirefoxSetup.exe /S
-"C:Program FilesMozilla Firefoxirefox.exe" -silent -setDefaultBrowser
+"C:\Program Files\Mozilla Firefox\firefox.exe" -silent -setDefaultBrowser
 winget install 9NKSQGP7F2NH --accept-package-agreements --accept-source-agreements
 winget install -e --id TeamViewer.TeamViewer
 winget install --id Telegram.TelegramDesktop -e --silent --accept-package-agreements --accept-source-agreements
 if not exist "4kvideodownloaderplus_26.3.5_x64.msi" curl.exe -sSL "https://dl.4kdownload.com/app/4kvideodownloaderplus_26.3.5_x64.msi" -o "4kvideodownloaderplus_26.3.5_x64.msi"
 msiexec /i 4kvideodownloaderplus_26.3.5_x64.msi /qn /norestart
-if not exist "qbittorrent_5.3.0_x64_setup.exe" curl.exe -sSL "https://files2.majorgeeks.com/57763953b91db85ad23ec7aac3c6fd213e4271c1/internet/qbittorrent_5.3.0_x64_setup.exe" -o "qbittorrent_5.3.0_x64_setup.exe" --retry 5 --retry-all-errors --retry-connrefused --retry-delay 5
+if not exist "qbittorrent_5.3.0_x64_setup.exe" curl.exe -sSL "https://altushost-net.dl.sourceforge.net/project/qbittorrent/qbittorrent-win32/qbittorrent-5.3.0/qbittorrent_5.3.0_x64_setup.exe" -o "qbittorrent_5.3.0_x64_setup.exe" --retry 5 --retry-all-errors --retry-connrefused --retry-delay 5
 qbittorrent_5.3.0_x64_setup.exe /S
 if not exist "bsplayer279.setup.exe" curl.exe -sSL "https://download3.bsplayer.com/download/file/mirror1/bsplayer279.setup.exe" -o "bsplayer279.setup.exe"
 bsplayer279.setup.exe /S
