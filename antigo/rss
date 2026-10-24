@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:files="https://sourceforge.net/api/files.rdf#" xmlns:media="http://video.search.yahoo.com/mrss/" xmlns:doap="http://usefulinc.com/ns/doap#" xmlns:sf="https://sourceforge.net/api/sfelements.rdf#" version="2.0">
+  <channel xmlns:files="https://sourceforge.net/api/files.rdf#" xmlns:media="http://video.search.yahoo.com/mrss/" xmlns:doap="http://usefulinc.com/ns/doap#" xmlns:sf="https://sourceforge.net/api/sfelements.rdf#">
+    <title>qBittorrent</title>
+    <link>https://sourceforge.net</link>
+    <description><![CDATA[Files from qBittorrent An advanced and multi-platform BitTorrent client with a nice Qt user interface as well as a Web UI for remote control and an integrated search engine. qBittorrent aims to meet the needs of most users while using as little CPU and memory as possible.]]></description>
+    <pubDate>Fri, 23 Oct 2026 19:10:12 UT</pubDate>
+    <managingEditor>noreply@sourceforge.net (SourceForge.net)</managingEditor>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.3.0/qbittorrent_5.3.0_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0/qbittorrent_5.3.0_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0/qbittorrent_5.3.0_x64_setup.exe/download</guid>
+      <pubDate>Tue, 20 Oct 2026 12:52:43 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.3.0/qbittorrent_5.3.0_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">67899793</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0/qbittorrent_5.3.0_x64_setup.exe/download" filesize="50030660"><media:hash algo="md5">2ffbf1fbc7c92f7053ed422be5728613</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.3.0/qbittorrent_5.3.0_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0/qbittorrent_5.3.0_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0/qbittorrent_5.3.0_x64_setup.exe.asc/download</guid>
+      <pubDate>Tue, 20 Oct 2026 12:51:54 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.3.0/qbittorrent_5.3.0_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">67899770</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0/qbittorrent_5.3.0_x64_setup.exe.asc/download" filesize="887"><media:hash algo="md5">dbe4edc5ab41bef6e9e2c0bbfa1d6cb5</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.3.0/qbittorrent_5.3.0_lt12_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0/qbittorrent_5.3.0_lt12_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0/qbittorrent_5.3.0_lt12_x64_setup.exe/download</guid>
+      <pubDate>Tue, 20 Oct 2026 12:51:54 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.3.0/qbittorrent_5.3.0_lt12_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">67899769</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0/qbittorrent_5.3.0_lt12_x64_setup.exe/download" filesize="43366812"><media:hash algo="md5">a9e4fd2fb2592c93378e690a8a7b4f6e</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.3.0/qbittorrent_5.3.0_lt12_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0/qbittorrent_5.3.0_lt12_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0/qbittorrent_5.3.0_lt12_x64_setup.exe.asc/download</guid>
+      <pubDate>Tue, 20 Oct 2026 12:51:18 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.3.0/qbittorrent_5.3.0_lt12_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">67899739</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0/qbittorrent_5.3.0_lt12_x64_setup.exe.asc/download" filesize="887"><media:hash algo="md5">c820cad930170c7891ba4909312bd29c</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.3.0/README]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0/README/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0/README/download</guid>
+      <pubDate>Tue, 20 Oct 2026 12:51:17 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.3.0/README]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">67899737</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">text</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="text/plain; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0/README/download" filesize="9855"><media:hash algo="md5">28e73988367962c498ab385ee7938426</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.3.0rc1/qbittorrent_5.3.0rc1_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0rc1/qbittorrent_5.3.0rc1_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0rc1/qbittorrent_5.3.0rc1_x64_setup.exe/download</guid>
+      <pubDate>Mon, 28 Sep 2026 18:55:56 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.3.0rc1/qbittorrent_5.3.0rc1_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">67164340</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0rc1/qbittorrent_5.3.0rc1_x64_setup.exe/download" filesize="45542014"><media:hash algo="md5">3a9af02e3b9b6641e92b88f3aa76b221</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.3.0rc1/qbittorrent_5.3.0rc1_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0rc1/qbittorrent_5.3.0rc1_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0rc1/qbittorrent_5.3.0rc1_x64_setup.exe.asc/download</guid>
+      <pubDate>Mon, 28 Sep 2026 18:54:55 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.3.0rc1/qbittorrent_5.3.0rc1_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">67164255</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0rc1/qbittorrent_5.3.0rc1_x64_setup.exe.asc/download" filesize="887"><media:hash algo="md5">8fbd27328a51cd73342c2db5157674b0</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.3.0rc1/qbittorrent_5.3.0rc1_lt12_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0rc1/qbittorrent_5.3.0rc1_lt12_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0rc1/qbittorrent_5.3.0rc1_lt12_x64_setup.exe/download</guid>
+      <pubDate>Mon, 28 Sep 2026 18:54:55 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.3.0rc1/qbittorrent_5.3.0rc1_lt12_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">67164254</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0rc1/qbittorrent_5.3.0rc1_lt12_x64_setup.exe/download" filesize="43037564"><media:hash algo="md5">1278a0aeb8771d707fd55038101d5182</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.3.0rc1/qbittorrent_5.3.0rc1_lt12_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0rc1/qbittorrent_5.3.0rc1_lt12_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0rc1/qbittorrent_5.3.0rc1_lt12_x64_setup.exe.asc/download</guid>
+      <pubDate>Mon, 28 Sep 2026 18:54:20 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.3.0rc1/qbittorrent_5.3.0rc1_lt12_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">67164253</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0rc1/qbittorrent_5.3.0rc1_lt12_x64_setup.exe.asc/download" filesize="887"><media:hash algo="md5">ec182284ac0769b5d50771bff4b53e41</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.4/qbittorrent_5.2.4_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.4/qbittorrent_5.2.4_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.4/qbittorrent_5.2.4_x64_setup.exe/download</guid>
+      <pubDate>Mon, 28 Sep 2026 18:50:08 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.4/qbittorrent_5.2.4_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">67164021</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.4/qbittorrent_5.2.4_x64_setup.exe/download" filesize="41407004"><media:hash algo="md5">93260542d67a7f9b622df40236b0813c</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.4/qbittorrent_5.2.4_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.4/qbittorrent_5.2.4_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.4/qbittorrent_5.2.4_x64_setup.exe.asc/download</guid>
+      <pubDate>Mon, 28 Sep 2026 18:49:34 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.4/qbittorrent_5.2.4_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">67164007</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.4/qbittorrent_5.2.4_x64_setup.exe.asc/download" filesize="887"><media:hash algo="md5">9014d388814acfcf690722dd812971b0</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.4/qbittorrent_5.2.4_lt20_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.4/qbittorrent_5.2.4_lt20_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.4/qbittorrent_5.2.4_lt20_x64_setup.exe/download</guid>
+      <pubDate>Mon, 28 Sep 2026 18:49:34 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.4/qbittorrent_5.2.4_lt20_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">67164005</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.4/qbittorrent_5.2.4_lt20_x64_setup.exe/download" filesize="43797703"><media:hash algo="md5">392c4ae1ca0454bbf7809560e02307b9</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.4/qbittorrent_5.2.4_lt20_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.4/qbittorrent_5.2.4_lt20_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.4/qbittorrent_5.2.4_lt20_x64_setup.exe.asc/download</guid>
+      <pubDate>Mon, 28 Sep 2026 18:48:58 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.4/qbittorrent_5.2.4_lt20_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">67163961</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.4/qbittorrent_5.2.4_lt20_x64_setup.exe.asc/download" filesize="887"><media:hash algo="md5">b1287cef73b450f22b3c9c2ca2f47e67</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.4/README]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.4/README/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.4/README/download</guid>
+      <pubDate>Mon, 28 Sep 2026 18:48:58 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.4/README]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">67163959</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">text</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="text/plain; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.4/README/download" filesize="2093"><media:hash algo="md5">c6aac90e0b9033c3d8f6ca53ba4c268d</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.3.0beta1/qbittorrent_5.3.0beta1_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0beta1/qbittorrent_5.3.0beta1_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0beta1/qbittorrent_5.3.0beta1_x64_setup.exe/download</guid>
+      <pubDate>Sat, 05 Sep 2026 23:01:47 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.3.0beta1/qbittorrent_5.3.0beta1_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">66516124</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0beta1/qbittorrent_5.3.0beta1_x64_setup.exe/download" filesize="45846344"><media:hash algo="md5">31134e4a7a92ddc6cbc3fc4caa53dffb</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.3.0beta1/qbittorrent_5.3.0beta1_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0beta1/qbittorrent_5.3.0beta1_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0beta1/qbittorrent_5.3.0beta1_x64_setup.exe.asc/download</guid>
+      <pubDate>Sat, 05 Sep 2026 23:01:10 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.3.0beta1/qbittorrent_5.3.0beta1_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">66516108</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0beta1/qbittorrent_5.3.0beta1_x64_setup.exe.asc/download" filesize="887"><media:hash algo="md5">20616e771523b2e35ba22c80497f04d9</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.3.0beta1/qbittorrent_5.3.0beta1_lt12_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0beta1/qbittorrent_5.3.0beta1_lt12_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0beta1/qbittorrent_5.3.0beta1_lt12_x64_setup.exe/download</guid>
+      <pubDate>Sat, 05 Sep 2026 23:01:09 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.3.0beta1/qbittorrent_5.3.0beta1_lt12_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">66516107</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0beta1/qbittorrent_5.3.0beta1_lt12_x64_setup.exe/download" filesize="43403664"><media:hash algo="md5">48cee1585f7a22c2e5ab8e0de4f1d2c3</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.3.0beta1/qbittorrent_5.3.0beta1_lt12_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0beta1/qbittorrent_5.3.0beta1_lt12_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0beta1/qbittorrent_5.3.0beta1_lt12_x64_setup.exe.asc/download</guid>
+      <pubDate>Sat, 05 Sep 2026 23:00:33 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.3.0beta1/qbittorrent_5.3.0beta1_lt12_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">66516091</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.3.0beta1/qbittorrent_5.3.0beta1_lt12_x64_setup.exe.asc/download" filesize="887"><media:hash algo="md5">6f999b73dddc9455373a32af25f20036</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.3/qbittorrent_5.2.3_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.3/qbittorrent_5.2.3_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.3/qbittorrent_5.2.3_x64_setup.exe/download</guid>
+      <pubDate>Tue, 07 Jul 2026 22:00:50 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.3/qbittorrent_5.2.3_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">64917119</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.3/qbittorrent_5.2.3_x64_setup.exe/download" filesize="43100219"><media:hash algo="md5">c4c58fa22842733f566c4ef47306bfd3</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.3/qbittorrent_5.2.3_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.3/qbittorrent_5.2.3_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.3/qbittorrent_5.2.3_x64_setup.exe.asc/download</guid>
+      <pubDate>Tue, 07 Jul 2026 22:00:02 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.3/qbittorrent_5.2.3_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">64917099</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.3/qbittorrent_5.2.3_x64_setup.exe.asc/download" filesize="887"><media:hash algo="md5">f8702cfe7e5fc42e378f2977aacd9bd5</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.3/qbittorrent_5.2.3_lt20_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.3/qbittorrent_5.2.3_lt20_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.3/qbittorrent_5.2.3_lt20_x64_setup.exe/download</guid>
+      <pubDate>Tue, 07 Jul 2026 22:00:01 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.3/qbittorrent_5.2.3_lt20_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">64917098</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.3/qbittorrent_5.2.3_lt20_x64_setup.exe/download" filesize="45733762"><media:hash algo="md5">1b9e1ca80bec348456d106d7749e2d4b</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.3/qbittorrent_5.2.3_lt20_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.3/qbittorrent_5.2.3_lt20_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.3/qbittorrent_5.2.3_lt20_x64_setup.exe.asc/download</guid>
+      <pubDate>Tue, 07 Jul 2026 21:59:17 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.3/qbittorrent_5.2.3_lt20_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">64917086</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.3/qbittorrent_5.2.3_lt20_x64_setup.exe.asc/download" filesize="887"><media:hash algo="md5">30d09a2ce78108f4ed54c83b1b30681e</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.3/README]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.3/README/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.3/README/download</guid>
+      <pubDate>Tue, 07 Jul 2026 21:59:16 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.3/README]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">64917085</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">text</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="text/plain; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.3/README/download" filesize="951"><media:hash algo="md5">6f1a6b22dec2292fa72ad1af536fa9a4</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.2/qbittorrent_5.2.2_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.2/qbittorrent_5.2.2_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.2/qbittorrent_5.2.2_x64_setup.exe/download</guid>
+      <pubDate>Tue, 16 Jun 2026 11:56:45 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.2/qbittorrent_5.2.2_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">64389116</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.2/qbittorrent_5.2.2_x64_setup.exe/download" filesize="43105617"><media:hash algo="md5">9fd19725b93cb8eb91e7c136339ef556</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.2/qbittorrent_5.2.2_lt20_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.2/qbittorrent_5.2.2_lt20_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.2/qbittorrent_5.2.2_lt20_x64_setup.exe/download</guid>
+      <pubDate>Tue, 16 Jun 2026 11:55:46 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.2/qbittorrent_5.2.2_lt20_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">64389099</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.2/qbittorrent_5.2.2_lt20_x64_setup.exe/download" filesize="45738803"><media:hash algo="md5">76dff8ed0e6b9e3893481a3d98533e0a</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.2/qbittorrent_5.2.2_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.2/qbittorrent_5.2.2_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.2/qbittorrent_5.2.2_x64_setup.exe.asc/download</guid>
+      <pubDate>Tue, 16 Jun 2026 11:55:46 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.2/qbittorrent_5.2.2_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">64389100</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.2/qbittorrent_5.2.2_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">5b46b323a4fd1dc8a723fcd9d0011b9c</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.2/qbittorrent_5.2.2_lt20_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.2/qbittorrent_5.2.2_lt20_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.2/qbittorrent_5.2.2_lt20_x64_setup.exe.asc/download</guid>
+      <pubDate>Tue, 16 Jun 2026 11:55:08 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.2/qbittorrent_5.2.2_lt20_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">64389088</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.2/qbittorrent_5.2.2_lt20_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">0e078161c0874fd1f4024b82c21ae04f</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.2/README]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.2/README/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.2/README/download</guid>
+      <pubDate>Tue, 16 Jun 2026 11:55:07 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.2/README]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">64389087</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">text</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="text/plain; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.2/README/download" filesize="1442"><media:hash algo="md5">aadf888cea2e57bec04fa9e8bc457ed8</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.1/qbittorrent_5.2.1_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.1/qbittorrent_5.2.1_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.1/qbittorrent_5.2.1_x64_setup.exe/download</guid>
+      <pubDate>Mon, 25 May 2026 23:36:22 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.1/qbittorrent_5.2.1_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">63858020</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.1/qbittorrent_5.2.1_x64_setup.exe/download" filesize="43078183"><media:hash algo="md5">bcd7a0712f31138d0600f7f462cc13c6</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.1/qbittorrent_5.2.1_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.1/qbittorrent_5.2.1_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.1/qbittorrent_5.2.1_x64_setup.exe.asc/download</guid>
+      <pubDate>Mon, 25 May 2026 23:35:47 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.1/qbittorrent_5.2.1_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">63857984</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.1/qbittorrent_5.2.1_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">6392d128e7d66a25455342cecab2a3b4</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.1/qbittorrent_5.2.1_lt20_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.1/qbittorrent_5.2.1_lt20_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.1/qbittorrent_5.2.1_lt20_x64_setup.exe/download</guid>
+      <pubDate>Mon, 25 May 2026 23:35:46 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.1/qbittorrent_5.2.1_lt20_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">63857983</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.1/qbittorrent_5.2.1_lt20_x64_setup.exe/download" filesize="45377708"><media:hash algo="md5">58abf5c87702ccee6cf4edf35209c363</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.1/qbittorrent_5.2.1_lt20_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.1/qbittorrent_5.2.1_lt20_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.1/qbittorrent_5.2.1_lt20_x64_setup.exe.asc/download</guid>
+      <pubDate>Mon, 25 May 2026 23:35:10 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.1/qbittorrent_5.2.1_lt20_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">63857972</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.1/qbittorrent_5.2.1_lt20_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">aeb2ab9dd8e665df2d024e873b99b4d0</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.1/README]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.1/README/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.1/README/download</guid>
+      <pubDate>Mon, 25 May 2026 23:35:09 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.1/README]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">63857971</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">text</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="text/plain; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.1/README/download" filesize="786"><media:hash algo="md5">ef73d7cbfd22f0a997c74a1fa4b5caf5</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.0/qbittorrent_5.2.0_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0/qbittorrent_5.2.0_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0/qbittorrent_5.2.0_x64_setup.exe/download</guid>
+      <pubDate>Sun, 03 May 2026 19:10:36 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.0/qbittorrent_5.2.0_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">63298513</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0/qbittorrent_5.2.0_x64_setup.exe/download" filesize="43219694"><media:hash algo="md5">4c44d1c7c9d8b8f462f5d4d12f69edd2</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.0/qbittorrent_5.2.0_lt20_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0/qbittorrent_5.2.0_lt20_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0/qbittorrent_5.2.0_lt20_x64_setup.exe/download</guid>
+      <pubDate>Sun, 03 May 2026 19:10:01 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.0/qbittorrent_5.2.0_lt20_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">63298511</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0/qbittorrent_5.2.0_lt20_x64_setup.exe/download" filesize="45633863"><media:hash algo="md5">54309d5c3dcdb38375f54d70bc71708e</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.0/qbittorrent_5.2.0_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0/qbittorrent_5.2.0_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0/qbittorrent_5.2.0_x64_setup.exe.asc/download</guid>
+      <pubDate>Sun, 03 May 2026 19:10:01 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.0/qbittorrent_5.2.0_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">63298512</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0/qbittorrent_5.2.0_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">40925ac8335c02db809389636d0a866b</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.0/README]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0/README/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0/README/download</guid>
+      <pubDate>Sun, 03 May 2026 19:09:23 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.0/README]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">63298498</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">text</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="text/plain; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0/README/download" filesize="9296"><media:hash algo="md5">992353674bd830e3da492b20d1b30b8f</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.0/qbittorrent_5.2.0_lt20_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0/qbittorrent_5.2.0_lt20_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0/qbittorrent_5.2.0_lt20_x64_setup.exe.asc/download</guid>
+      <pubDate>Sun, 03 May 2026 19:09:23 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.0/qbittorrent_5.2.0_lt20_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">63298500</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0/qbittorrent_5.2.0_lt20_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">7f1834419e5c0c0368a74150ef257211</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.0rc1/qbittorrent_5.2.0rc1_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0rc1/qbittorrent_5.2.0rc1_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0rc1/qbittorrent_5.2.0rc1_x64_setup.exe/download</guid>
+      <pubDate>Mon, 23 Mar 2026 23:08:50 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.0rc1/qbittorrent_5.2.0rc1_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">62261206</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0rc1/qbittorrent_5.2.0rc1_x64_setup.exe/download" filesize="42569107"><media:hash algo="md5">3890dffc2e97bd6bc7de7554ecc6cdb4</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.0rc1/qbittorrent_5.2.0rc1_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0rc1/qbittorrent_5.2.0rc1_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0rc1/qbittorrent_5.2.0rc1_x64_setup.exe.asc/download</guid>
+      <pubDate>Mon, 23 Mar 2026 23:08:15 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.0rc1/qbittorrent_5.2.0rc1_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">62261165</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0rc1/qbittorrent_5.2.0rc1_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">382c89e7640c76e6c2d04e7eaede68db</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.0rc1/qbittorrent_5.2.0rc1_qt6_lt20_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0rc1/qbittorrent_5.2.0rc1_qt6_lt20_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0rc1/qbittorrent_5.2.0rc1_qt6_lt20_x64_setup.exe/download</guid>
+      <pubDate>Mon, 23 Mar 2026 23:08:14 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.0rc1/qbittorrent_5.2.0rc1_qt6_lt20_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">62261164</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0rc1/qbittorrent_5.2.0rc1_qt6_lt20_x64_setup.exe/download" filesize="44889839"><media:hash algo="md5">98d1b9ebe4751e65d3471268db034df7</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.0rc1/qbittorrent_5.2.0rc1_qt6_lt20_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0rc1/qbittorrent_5.2.0rc1_qt6_lt20_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0rc1/qbittorrent_5.2.0rc1_qt6_lt20_x64_setup.exe.asc/download</guid>
+      <pubDate>Mon, 23 Mar 2026 23:07:37 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.0rc1/qbittorrent_5.2.0rc1_qt6_lt20_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">62261138</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0rc1/qbittorrent_5.2.0rc1_qt6_lt20_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">39062a80d5dfd012c4b3fc8debc72970</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.0beta1/qbittorrent_5.2.0beta1_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0beta1/qbittorrent_5.2.0beta1_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0beta1/qbittorrent_5.2.0beta1_x64_setup.exe/download</guid>
+      <pubDate>Wed, 31 Dec 2025 21:39:46 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.0beta1/qbittorrent_5.2.0beta1_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">60385224</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0beta1/qbittorrent_5.2.0beta1_x64_setup.exe/download" filesize="42439700"><media:hash algo="md5">16c417db8f5c49204747966e015d834e</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.0beta1/qbittorrent_5.2.0beta1_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0beta1/qbittorrent_5.2.0beta1_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0beta1/qbittorrent_5.2.0beta1_x64_setup.exe.asc/download</guid>
+      <pubDate>Wed, 31 Dec 2025 21:39:08 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.0beta1/qbittorrent_5.2.0beta1_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">60385223</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0beta1/qbittorrent_5.2.0beta1_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">1888f040d5bbbe467b116cccbb28078b</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.0beta1/qbittorrent_5.2.0beta1_qt6_lt20_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0beta1/qbittorrent_5.2.0beta1_qt6_lt20_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0beta1/qbittorrent_5.2.0beta1_qt6_lt20_x64_setup.exe/download</guid>
+      <pubDate>Wed, 31 Dec 2025 21:39:07 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.0beta1/qbittorrent_5.2.0beta1_qt6_lt20_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">60385222</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0beta1/qbittorrent_5.2.0beta1_qt6_lt20_x64_setup.exe/download" filesize="44807595"><media:hash algo="md5">51c67ab81a3c8046508464e597be28c2</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.2.0beta1/qbittorrent_5.2.0beta1_qt6_lt20_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0beta1/qbittorrent_5.2.0beta1_qt6_lt20_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0beta1/qbittorrent_5.2.0beta1_qt6_lt20_x64_setup.exe.asc/download</guid>
+      <pubDate>Wed, 31 Dec 2025 21:38:29 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.2.0beta1/qbittorrent_5.2.0beta1_qt6_lt20_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">60385221</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.2.0beta1/qbittorrent_5.2.0beta1_qt6_lt20_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">2edb4ed5130f424d7b87a0b3d982c7cf</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.4/qbittorrent_5.1.4_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.4/qbittorrent_5.1.4_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.4/qbittorrent_5.1.4_x64_setup.exe/download</guid>
+      <pubDate>Wed, 19 Nov 2025 23:06:11 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.4/qbittorrent_5.1.4_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">59556740</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.4/qbittorrent_5.1.4_x64_setup.exe/download" filesize="41776212"><media:hash algo="md5">1103b0d08e505b9a017173b846174aae</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.4/qbittorrent_5.1.4_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.4/qbittorrent_5.1.4_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.4/qbittorrent_5.1.4_x64_setup.exe.asc/download</guid>
+      <pubDate>Wed, 19 Nov 2025 23:05:23 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.4/qbittorrent_5.1.4_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">59556728</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.4/qbittorrent_5.1.4_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">10d9ff9d44ba017c4f0b45a1392ea72f</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.4/qbittorrent_5.1.4_qt6_lt20_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.4/qbittorrent_5.1.4_qt6_lt20_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.4/qbittorrent_5.1.4_qt6_lt20_x64_setup.exe/download</guid>
+      <pubDate>Wed, 19 Nov 2025 23:05:23 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.4/qbittorrent_5.1.4_qt6_lt20_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">59556727</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.4/qbittorrent_5.1.4_qt6_lt20_x64_setup.exe/download" filesize="44159922"><media:hash algo="md5">0a25feb28f08a5cbb0f09948de7faa29</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.4/qbittorrent_5.1.4_qt6_lt20_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.4/qbittorrent_5.1.4_qt6_lt20_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.4/qbittorrent_5.1.4_qt6_lt20_x64_setup.exe.asc/download</guid>
+      <pubDate>Wed, 19 Nov 2025 23:04:46 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.4/qbittorrent_5.1.4_qt6_lt20_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">59556697</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.4/qbittorrent_5.1.4_qt6_lt20_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">6eaf07d909dfea9d5fa157b9741777ca</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.4/README]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.4/README/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.4/README/download</guid>
+      <pubDate>Wed, 19 Nov 2025 23:04:45 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.4/README]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">59556695</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">text</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="text/plain; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.4/README/download" filesize="132"><media:hash algo="md5">044249626ee37a203065324187d71e3b</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.3/qbittorrent_5.1.3_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.3/qbittorrent_5.1.3_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.3/qbittorrent_5.1.3_x64_setup.exe/download</guid>
+      <pubDate>Tue, 11 Nov 2025 01:44:50 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.3/qbittorrent_5.1.3_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">59364830</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.3/qbittorrent_5.1.3_x64_setup.exe/download" filesize="41804903"><media:hash algo="md5">1bfdfdb6df6052d9e07cbc253fb9d3cc</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.3/qbittorrent_5.1.3_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.3/qbittorrent_5.1.3_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.3/qbittorrent_5.1.3_x64_setup.exe.asc/download</guid>
+      <pubDate>Tue, 11 Nov 2025 01:44:16 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.3/qbittorrent_5.1.3_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">59364822</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.3/qbittorrent_5.1.3_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">31d6b79fe8fc0dad98a9d2a02d8145fb</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.3/qbittorrent_5.1.3_qt6_lt20_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.3/qbittorrent_5.1.3_qt6_lt20_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.3/qbittorrent_5.1.3_qt6_lt20_x64_setup.exe/download</guid>
+      <pubDate>Tue, 11 Nov 2025 01:44:16 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.3/qbittorrent_5.1.3_qt6_lt20_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">59364821</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.3/qbittorrent_5.1.3_qt6_lt20_x64_setup.exe/download" filesize="44147057"><media:hash algo="md5">2481a72114ba65439cfd0f1bba859ebb</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.3/qbittorrent_5.1.3_qt6_lt20_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.3/qbittorrent_5.1.3_qt6_lt20_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.3/qbittorrent_5.1.3_qt6_lt20_x64_setup.exe.asc/download</guid>
+      <pubDate>Tue, 11 Nov 2025 01:43:40 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.3/qbittorrent_5.1.3_qt6_lt20_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">59364816</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.3/qbittorrent_5.1.3_qt6_lt20_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">f3bf6d6395720a4356488d50c3ab0d10</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.3/README]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.3/README/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.3/README/download</guid>
+      <pubDate>Tue, 11 Nov 2025 01:43:39 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.3/README]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">59364815</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">Unicode text, UTF-8 text</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="text/plain; charset=utf-8" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.3/README/download" filesize="1251"><media:hash algo="md5">fa228f5d198a4a367192b49400084989</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.2/qbittorrent_5.1.2_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.2/qbittorrent_5.1.2_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.2/qbittorrent_5.1.2_x64_setup.exe/download</guid>
+      <pubDate>Wed, 02 Jul 2025 07:10:30 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.2/qbittorrent_5.1.2_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">57250318</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.2/qbittorrent_5.1.2_x64_setup.exe/download" filesize="41475671"><media:hash algo="md5">fad8b641b13837c591dcf83857573c67</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.2/qbittorrent_5.1.2_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.2/qbittorrent_5.1.2_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.2/qbittorrent_5.1.2_x64_setup.exe.asc/download</guid>
+      <pubDate>Wed, 02 Jul 2025 07:09:57 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.2/qbittorrent_5.1.2_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">57250317</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.2/qbittorrent_5.1.2_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">329af2448eb6673eb1a991dbbd0acb3b</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.2/qbittorrent_5.1.2_qt6_lt20_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.2/qbittorrent_5.1.2_qt6_lt20_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.2/qbittorrent_5.1.2_qt6_lt20_x64_setup.exe/download</guid>
+      <pubDate>Wed, 02 Jul 2025 07:09:56 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.2/qbittorrent_5.1.2_qt6_lt20_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">57250316</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.2/qbittorrent_5.1.2_qt6_lt20_x64_setup.exe/download" filesize="43807988"><media:hash algo="md5">a6c41069d05b2f70f0cf3abd20868641</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.2/qbittorrent_5.1.2_qt6_lt20_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.2/qbittorrent_5.1.2_qt6_lt20_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.2/qbittorrent_5.1.2_qt6_lt20_x64_setup.exe.asc/download</guid>
+      <pubDate>Wed, 02 Jul 2025 07:09:20 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.2/qbittorrent_5.1.2_qt6_lt20_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">57250315</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.2/qbittorrent_5.1.2_qt6_lt20_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">00e7b7b7c2c0b3d428cea5faa6ee1a87</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.2/README]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.2/README/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.2/README/download</guid>
+      <pubDate>Wed, 02 Jul 2025 07:09:19 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.2/README]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">57250314</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">text</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="text/plain; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.2/README/download" filesize="543"><media:hash algo="md5">c3d6242c774dafc6b0bc9bb6cda2ae16</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.1/qbittorrent_5.1.1_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.1/qbittorrent_5.1.1_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.1/qbittorrent_5.1.1_x64_setup.exe/download</guid>
+      <pubDate>Sun, 22 Jun 2025 23:41:44 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.1/qbittorrent_5.1.1_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">57140254</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.1/qbittorrent_5.1.1_x64_setup.exe/download" filesize="41467007"><media:hash algo="md5">d892074897ef1f4dd391f7b86579e0cd</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.1/qbittorrent_5.1.1_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.1/qbittorrent_5.1.1_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.1/qbittorrent_5.1.1_x64_setup.exe.asc/download</guid>
+      <pubDate>Sun, 22 Jun 2025 23:41:08 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.1/qbittorrent_5.1.1_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">57140253</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.1/qbittorrent_5.1.1_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">b9fb8a58d56da0b1573cf3d7e71f1cc0</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.1/qbittorrent_5.1.1_qt6_lt20_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.1/qbittorrent_5.1.1_qt6_lt20_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.1/qbittorrent_5.1.1_qt6_lt20_x64_setup.exe/download</guid>
+      <pubDate>Sun, 22 Jun 2025 23:41:07 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.1/qbittorrent_5.1.1_qt6_lt20_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">57140252</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.1/qbittorrent_5.1.1_qt6_lt20_x64_setup.exe/download" filesize="43788047"><media:hash algo="md5">011a69b1c3cf083e1a0f82a9a3683623</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.1/qbittorrent_5.1.1_qt6_lt20_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.1/qbittorrent_5.1.1_qt6_lt20_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.1/qbittorrent_5.1.1_qt6_lt20_x64_setup.exe.asc/download</guid>
+      <pubDate>Sun, 22 Jun 2025 23:40:24 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.1/qbittorrent_5.1.1_qt6_lt20_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">57140251</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.1/qbittorrent_5.1.1_qt6_lt20_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">830cbcbd9ecc4f062c62deaf39db026d</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.1/README]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.1/README/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.1/README/download</guid>
+      <pubDate>Sun, 22 Jun 2025 23:40:23 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.1/README]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">57140250</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">text</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="text/plain; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.1/README/download" filesize="1140"><media:hash algo="md5">90ce5f0bf7c9ee6d4085ae11c982d362</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.0/qbittorrent_5.1.0_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0/qbittorrent_5.1.0_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0/qbittorrent_5.1.0_x64_setup.exe/download</guid>
+      <pubDate>Sun, 27 Apr 2025 21:18:56 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.0/qbittorrent_5.1.0_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">56393439</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0/qbittorrent_5.1.0_x64_setup.exe/download" filesize="41318799"><media:hash algo="md5">3f183db98df3143fb79a2273865d6ff8</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.0/qbittorrent_5.1.0_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0/qbittorrent_5.1.0_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0/qbittorrent_5.1.0_x64_setup.exe.asc/download</guid>
+      <pubDate>Sun, 27 Apr 2025 21:18:21 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.0/qbittorrent_5.1.0_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">56393438</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0/qbittorrent_5.1.0_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">818e2e470bfdd00ae0c8114cce669944</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.0/qbittorrent_5.1.0_qt6_lt20_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0/qbittorrent_5.1.0_qt6_lt20_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0/qbittorrent_5.1.0_qt6_lt20_x64_setup.exe/download</guid>
+      <pubDate>Sun, 27 Apr 2025 21:18:20 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.0/qbittorrent_5.1.0_qt6_lt20_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">56393437</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0/qbittorrent_5.1.0_qt6_lt20_x64_setup.exe/download" filesize="43724001"><media:hash algo="md5">e8d5e4caac62cd4a4bd40babd7966b8d</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.0/qbittorrent_5.1.0_qt6_lt20_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0/qbittorrent_5.1.0_qt6_lt20_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0/qbittorrent_5.1.0_qt6_lt20_x64_setup.exe.asc/download</guid>
+      <pubDate>Sun, 27 Apr 2025 21:17:44 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.0/qbittorrent_5.1.0_qt6_lt20_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">56393430</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0/qbittorrent_5.1.0_qt6_lt20_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">5d150cae30d314eb807941e69eb42c4f</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.0/README]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0/README/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0/README/download</guid>
+      <pubDate>Sun, 27 Apr 2025 21:17:43 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.0/README]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">56393429</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">Unicode text, UTF-8 text</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="text/plain; charset=utf-8" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0/README/download" filesize="6607"><media:hash algo="md5">b200212c8e5ce9476de2ed1d671691fc</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.0.5/qbittorrent_5.0.5_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.5/qbittorrent_5.0.5_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.5/qbittorrent_5.0.5_x64_setup.exe/download</guid>
+      <pubDate>Sun, 13 Apr 2025 20:54:33 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.0.5/qbittorrent_5.0.5_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">56201007</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.5/qbittorrent_5.0.5_x64_setup.exe/download" filesize="39935874"><media:hash algo="md5">0ecf83f09c19df0f3c2806c4cc2b22a6</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.0.5/qbittorrent_5.0.5_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.5/qbittorrent_5.0.5_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.5/qbittorrent_5.0.5_x64_setup.exe.asc/download</guid>
+      <pubDate>Sun, 13 Apr 2025 20:54:00 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.0.5/qbittorrent_5.0.5_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">56201006</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.5/qbittorrent_5.0.5_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">ea58dd102e97059cd687323f51d54422</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.0.5/qbittorrent_5.0.5_qt6_lt20_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.5/qbittorrent_5.0.5_qt6_lt20_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.5/qbittorrent_5.0.5_qt6_lt20_x64_setup.exe/download</guid>
+      <pubDate>Sun, 13 Apr 2025 20:54:00 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.0.5/qbittorrent_5.0.5_qt6_lt20_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">56201005</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.5/qbittorrent_5.0.5_qt6_lt20_x64_setup.exe/download" filesize="42468820"><media:hash algo="md5">3e1b17f8f1b6ca77452907b649dd2c00</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.0.5/qbittorrent_5.0.5_qt6_lt20_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.5/qbittorrent_5.0.5_qt6_lt20_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.5/qbittorrent_5.0.5_qt6_lt20_x64_setup.exe.asc/download</guid>
+      <pubDate>Sun, 13 Apr 2025 20:53:17 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.0.5/qbittorrent_5.0.5_qt6_lt20_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">56201004</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.5/qbittorrent_5.0.5_qt6_lt20_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">4795d4f45c483261526920afeee972f5</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.0.5/README]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.5/README/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.5/README/download</guid>
+      <pubDate>Sun, 13 Apr 2025 20:53:16 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.0.5/README]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">56201003</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">text</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="text/plain; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.5/README/download" filesize="376"><media:hash algo="md5">68401499ba3966067dcc456e0956dbe3</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.0.4/qbittorrent_5.0.4_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.4/qbittorrent_5.0.4_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.4/qbittorrent_5.0.4_x64_setup.exe/download</guid>
+      <pubDate>Tue, 18 Feb 2025 23:00:56 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.0.4/qbittorrent_5.0.4_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">55598383</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.4/qbittorrent_5.0.4_x64_setup.exe/download" filesize="39310585"><media:hash algo="md5">7d6dfa4058a2785fe782caf83f08e8e5</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.0.4/qbittorrent_5.0.4_qt6_lt20_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.4/qbittorrent_5.0.4_qt6_lt20_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.4/qbittorrent_5.0.4_qt6_lt20_x64_setup.exe/download</guid>
+      <pubDate>Tue, 18 Feb 2025 23:00:23 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.0.4/qbittorrent_5.0.4_qt6_lt20_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">55598363</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.4/qbittorrent_5.0.4_qt6_lt20_x64_setup.exe/download" filesize="41620241"><media:hash algo="md5">775ba9f0043917ffcdfc0a36c6fc9db0</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.0.4/qbittorrent_5.0.4_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.4/qbittorrent_5.0.4_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.4/qbittorrent_5.0.4_x64_setup.exe.asc/download</guid>
+      <pubDate>Tue, 18 Feb 2025 23:00:24 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.0.4/qbittorrent_5.0.4_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">55598368</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.4/qbittorrent_5.0.4_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">48d82368dc444192b34daa699c484bb0</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.0.4/qbittorrent_5.0.4_qt6_lt20_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.4/qbittorrent_5.0.4_qt6_lt20_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.4/qbittorrent_5.0.4_qt6_lt20_x64_setup.exe.asc/download</guid>
+      <pubDate>Tue, 18 Feb 2025 22:59:50 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.0.4/qbittorrent_5.0.4_qt6_lt20_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">55598085</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.4/qbittorrent_5.0.4_qt6_lt20_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">ec5e06f975466933f1cfd565e89977a5</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.0.4/README]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.4/README/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.4/README/download</guid>
+      <pubDate>Tue, 18 Feb 2025 22:59:49 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.0.4/README]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">55598078</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">text</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="text/plain; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.4/README/download" filesize="690"><media:hash algo="md5">4ac18c784e53bb1e627c0951bdcd4b94</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.0rc1/qbittorrent_5.1.0rc1_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0rc1/qbittorrent_5.1.0rc1_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0rc1/qbittorrent_5.1.0rc1_x64_setup.exe/download</guid>
+      <pubDate>Mon, 17 Feb 2025 23:27:08 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.0rc1/qbittorrent_5.1.0rc1_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">55592394</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0rc1/qbittorrent_5.1.0rc1_x64_setup.exe/download" filesize="39833941"><media:hash algo="md5">c74f78c4d3d35a7c580c7af407e0a442</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.0rc1/qbittorrent_5.1.0rc1_qt6_lt20_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0rc1/qbittorrent_5.1.0rc1_qt6_lt20_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0rc1/qbittorrent_5.1.0rc1_qt6_lt20_x64_setup.exe/download</guid>
+      <pubDate>Mon, 17 Feb 2025 23:26:35 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.0rc1/qbittorrent_5.1.0rc1_qt6_lt20_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">55592391</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/vnd.microsoft.portable-executable; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0rc1/qbittorrent_5.1.0rc1_qt6_lt20_x64_setup.exe/download" filesize="41807373"><media:hash algo="md5">7699f664a5c03c76c6dd8de847a7a2fe</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.0rc1/qbittorrent_5.1.0rc1_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0rc1/qbittorrent_5.1.0rc1_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0rc1/qbittorrent_5.1.0rc1_x64_setup.exe.asc/download</guid>
+      <pubDate>Mon, 17 Feb 2025 23:26:36 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.0rc1/qbittorrent_5.1.0rc1_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">55592392</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0rc1/qbittorrent_5.1.0rc1_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">0194a69976329c4046428ca96d02ae70</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.0rc1/qbittorrent_5.1.0rc1_qt6_lt20_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0rc1/qbittorrent_5.1.0rc1_qt6_lt20_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0rc1/qbittorrent_5.1.0rc1_qt6_lt20_x64_setup.exe.asc/download</guid>
+      <pubDate>Mon, 17 Feb 2025 23:26:01 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.0rc1/qbittorrent_5.1.0rc1_qt6_lt20_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">55592390</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0rc1/qbittorrent_5.1.0rc1_qt6_lt20_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">e17c24c2135b95f9b3ccadd913e98cfb</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.0.3/qbittorrent_5.0.3_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.3/qbittorrent_5.0.3_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.3/qbittorrent_5.0.3_x64_setup.exe/download</guid>
+      <pubDate>Tue, 17 Dec 2024 23:36:24 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.0.3/qbittorrent_5.0.3_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">54811666</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/x-dosexec; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.3/qbittorrent_5.0.3_x64_setup.exe/download" filesize="39317784"><media:hash algo="md5">83505c82e83bd2e61bd67dfcf30724cf</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.0.3/qbittorrent_5.0.3_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.3/qbittorrent_5.0.3_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.3/qbittorrent_5.0.3_x64_setup.exe.asc/download</guid>
+      <pubDate>Tue, 17 Dec 2024 23:35:52 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.0.3/qbittorrent_5.0.3_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">54811665</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.3/qbittorrent_5.0.3_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">c7e00c15a9f274d7902ac1f23028fda6</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.0.3/qbittorrent_5.0.3_qt6_lt20_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.3/qbittorrent_5.0.3_qt6_lt20_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.3/qbittorrent_5.0.3_qt6_lt20_x64_setup.exe/download</guid>
+      <pubDate>Tue, 17 Dec 2024 23:35:51 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.0.3/qbittorrent_5.0.3_qt6_lt20_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">54811664</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/x-dosexec; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.3/qbittorrent_5.0.3_qt6_lt20_x64_setup.exe/download" filesize="41856779"><media:hash algo="md5">b7f17972055b54233622d04c689df8f6</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.0.3/qbittorrent_5.0.3_qt6_lt20_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.3/qbittorrent_5.0.3_qt6_lt20_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.3/qbittorrent_5.0.3_qt6_lt20_x64_setup.exe.asc/download</guid>
+      <pubDate>Tue, 17 Dec 2024 23:35:14 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.0.3/qbittorrent_5.0.3_qt6_lt20_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">54811663</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.3/qbittorrent_5.0.3_qt6_lt20_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">c59725404ec95fcf530e6b0d8c59912c</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.0.3/README]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.3/README/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.3/README/download</guid>
+      <pubDate>Tue, 17 Dec 2024 23:35:13 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.0.3/README]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">54811662</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">text</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="text/plain; charset=utf-8" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.3/README/download" filesize="799"><media:hash algo="md5">696eaad46d45dc622826c03b6a2563de</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.0beta1/qbittorrent_5.1.0beta1_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0beta1/qbittorrent_5.1.0beta1_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0beta1/qbittorrent_5.1.0beta1_x64_setup.exe/download</guid>
+      <pubDate>Tue, 17 Dec 2024 23:32:07 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.0beta1/qbittorrent_5.1.0beta1_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">54811612</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/x-dosexec; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0beta1/qbittorrent_5.1.0beta1_x64_setup.exe/download" filesize="39389266"><media:hash algo="md5">44e1f8551773512f9a04640bee5b1dad</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.0beta1/qbittorrent_5.1.0beta1_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0beta1/qbittorrent_5.1.0beta1_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0beta1/qbittorrent_5.1.0beta1_x64_setup.exe.asc/download</guid>
+      <pubDate>Tue, 17 Dec 2024 23:31:32 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.0beta1/qbittorrent_5.1.0beta1_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">54811607</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0beta1/qbittorrent_5.1.0beta1_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">5a51cbf4c856bff8de0b5ea3242d3119</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.0beta1/qbittorrent_5.1.0beta1_qt6_lt20_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0beta1/qbittorrent_5.1.0beta1_qt6_lt20_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0beta1/qbittorrent_5.1.0beta1_qt6_lt20_x64_setup.exe/download</guid>
+      <pubDate>Tue, 17 Dec 2024 23:31:31 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.0beta1/qbittorrent_5.1.0beta1_qt6_lt20_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">54811606</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/x-dosexec; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0beta1/qbittorrent_5.1.0beta1_qt6_lt20_x64_setup.exe/download" filesize="41659367"><media:hash algo="md5">170750c74206c9f7e8cb8fedead441a0</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.1.0beta1/qbittorrent_5.1.0beta1_qt6_lt20_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0beta1/qbittorrent_5.1.0beta1_qt6_lt20_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0beta1/qbittorrent_5.1.0beta1_qt6_lt20_x64_setup.exe.asc/download</guid>
+      <pubDate>Tue, 17 Dec 2024 23:30:57 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.1.0beta1/qbittorrent_5.1.0beta1_qt6_lt20_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">54811605</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.1.0beta1/qbittorrent_5.1.0beta1_qt6_lt20_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">a672b544c2850b67f50891ac6b0f17ed</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.0.2/qbittorrent_5.0.2_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.2/qbittorrent_5.0.2_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.2/qbittorrent_5.0.2_x64_setup.exe/download</guid>
+      <pubDate>Mon, 18 Nov 2024 00:23:30 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.0.2/qbittorrent_5.0.2_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">54485258</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/x-dosexec; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.2/qbittorrent_5.0.2_x64_setup.exe/download" filesize="39291928"><media:hash algo="md5">abba6eda9de0b55b6f4fa8048ed9591e</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.0.2/qbittorrent_5.0.2_qt6_lt20_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.2/qbittorrent_5.0.2_qt6_lt20_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.2/qbittorrent_5.0.2_qt6_lt20_x64_setup.exe/download</guid>
+      <pubDate>Mon, 18 Nov 2024 00:22:57 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.0.2/qbittorrent_5.0.2_qt6_lt20_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">54485044</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/x-dosexec; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.2/qbittorrent_5.0.2_qt6_lt20_x64_setup.exe/download" filesize="41857876"><media:hash algo="md5">0317a28b431251bc6bfb4b57e88f17c0</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.0.2/qbittorrent_5.0.2_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.2/qbittorrent_5.0.2_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.2/qbittorrent_5.0.2_x64_setup.exe.asc/download</guid>
+      <pubDate>Mon, 18 Nov 2024 00:22:58 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.0.2/qbittorrent_5.0.2_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">54485045</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.2/qbittorrent_5.0.2_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">86dfab6e0841b74bd325033ecafaf84b</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.0.2/qbittorrent_5.0.2_qt6_lt20_x64_setup.exe.asc]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.2/qbittorrent_5.0.2_qt6_lt20_x64_setup.exe.asc/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.2/qbittorrent_5.0.2_qt6_lt20_x64_setup.exe.asc/download</guid>
+      <pubDate>Mon, 18 Nov 2024 00:22:15 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.0.2/qbittorrent_5.0.2_qt6_lt20_x64_setup.exe.asc]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">54485043</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PGP signature</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/pgp-signature; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.2/qbittorrent_5.0.2_qt6_lt20_x64_setup.exe.asc/download" filesize="849"><media:hash algo="md5">653e4f640b62eaf3f941ab876b5e2df2</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.0.2/README]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.2/README/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.2/README/download</guid>
+      <pubDate>Mon, 18 Nov 2024 00:22:14 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.0.2/README]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">54485042</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">text</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="text/plain; charset=us-ascii" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.2/README/download" filesize="1028"><media:hash algo="md5">ba153341a1b8c40b7e4676e75f707514</media:hash></media:content>
+    </item>
+    <item>
+      <title><![CDATA[/qbittorrent-win32/qbittorrent-5.0.1/qbittorrent_5.0.1_x64_setup.exe]]></title>
+      <link>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.1/qbittorrent_5.0.1_x64_setup.exe/download</link>
+      <guid>https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.1/qbittorrent_5.0.1_x64_setup.exe/download</guid>
+      <pubDate>Mon, 28 Oct 2024 21:50:58 UT</pubDate>
+      <description><![CDATA[/qbittorrent-win32/qbittorrent-5.0.1/qbittorrent_5.0.1_x64_setup.exe]]></description>
+      <files:sf-file-id xmlns:files="https://sourceforge.net/api/files.rdf#">54277118</files:sf-file-id>
+      <files:extra-info xmlns:files="https://sourceforge.net/api/files.rdf#">PE32 executable</files:extra-info>
+      <media:content xmlns:media="http://video.search.yahoo.com/mrss/" type="application/x-dosexec; charset=binary" url="https://sourceforge.net/projects/qbittorrent/files/qbittorrent-win32/qbittorrent-5.0.1/qbittorrent_5.0.1_x64_setup.exe/download" filesize="39240632"><media:hash algo="md5">fd6ea4e1d7b3adb820908ec26b729ea7</media:hash></media:content>
+    </item>
+  </channel>
+</rss>
