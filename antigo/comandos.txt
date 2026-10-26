@@ -59,7 +59,7 @@ curl.exe -sSL "https://raw.githubusercontent.com/moonlightz/meo-epg/refs/heads/m
 tar -xf 835.zip
 aida64extreme835.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-
 del aida64extreme835.exe
-copy /y pkey.txt "c:\program files\finalware\aida64 extreme\"
+copy /y pkey.txt "c:\Program Files\FinalWire\AIDA64 Extreme\"
 if not exist "LibreOffice_26.8.1_Win_x86-64.msi" curl.exe -sSL "https://download.documentfoundation.org/libreoffice/stable/26.8.1/win/x86_64/LibreOffice_26.8.1_Win_x86-64.msi" -o "LibreOffice_26.8.1_Win_x86-64.msi"
 msiexec /i LibreOffice_26.8.1_Win_x86-64.msi /qn /norestart
 if not exist "LibreOffice_26.8.1_Win_x86-64_helppack_pt.msi" curl.exe -sSL "https://download.documentfoundation.org/libreoffice/stable/26.8.1/win/x86_64/LibreOffice_26.8.1_Win_x86-64_helppack_pt.msi" -o "LibreOffice_26.8.1_Win_x86-64_helppack_pt.msi"
