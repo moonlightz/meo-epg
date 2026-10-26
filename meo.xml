@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE tv SYSTEM "xmltv.dtd">
-<tv generator-info-name="MZ" generator-info-url="git" source-info-name="OTT MEO" date="20261026190148 +0000">
+<tv generator-info-name="MZ" generator-info-url="git" source-info-name="OTT MEO" date="20261026195450 +0000">
   <channel id="X0001">
     <display-name>RTP1</display-name>
   </channel>
@@ -584,7 +584,7 @@
     <display-name>SET Max</display-name>
   </channel>
   <channel id="X0445">
-    <display-name>Rali Madeira Legend</display-name>
+    <display-name>EVENTO6</display-name>
   </channel>
   <channel id="X0544">
     <display-name>Nickelodeon SD</display-name>
