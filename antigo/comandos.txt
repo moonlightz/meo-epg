@@ -45,10 +45,18 @@ powershell -command "Remove-Item -Path \"$env:USERPROFILE\OneDrive\" -Recurse -F
 start explorer
 if not exist "winrar-x64-730b1pt.exe" curl.exe -sSL "https://www.rarlab.com/rar/winrar-x64-730b1pt.exe" -o "winrar-x64-730b1pt.exe"
 winrar-x64-730b1pt.exe /S
-if not exist "rarreg.key" curl.exe -sSL "https://raw.githubusercontent.com/moonlightz/meo-epg/refs/heads/master/antigo/rarreg.key" -o "rarreg.key"
-if not exist "4k.reg" curl.exe -sSL "https://raw.githubusercontent.com/moonlightz/meo-epg/refs/heads/master/antigo/4k.reg" -o "4k.reg"
+curl.exe -sSL "https://raw.githubusercontent.com/moonlightz/meo-epg/refs/heads/master/antigo/rarreg.key" -o "rarreg.key"
+curl.exe -sSL "https://raw.githubusercontent.com/moonlightz/meo-epg/refs/heads/master/antigo/4k.reg" -o "4k.reg"
 copy /y rarreg.key "C:\Program Files\Winrar\"
 reg import 4k.reg
+findstr /X /C:"127.0.0.1 services.aida64.com" "c:\windows\system32\drivers\etc\hosts" >nul || echo 127.0.0.1 services.aida64.com>>"c:\windows\system32\drivers\etc\hosts"
+findstr /X /C:"127.0.0.1 update.aida64.com" "c:\windows\system32\drivers\etc\hosts" >nul || echo 127.0.0.1 update.aida64.com>>"c:\windows\system32\drivers\etc\hosts"
+findstr /X /C:"127.0.0.1 www.aida64.com" "c:\windows\system32\drivers\etc\hosts" >nul || echo 127.0.0.1 www.aida64.com>>"c:\windows\system32\drivers\etc\hosts"
+findstr /X /C:"127.0.0.1 www.myaida64.com" "c:\windows\system32\drivers\etc\hosts" >nul || echo 127.0.0.1 www.myaida64.com>>"c:\windows\system32\drivers\etc\hosts"
+curl.exe -sSL "https://raw.githubusercontent.com/moonlightz/meo-epg/refs/heads/master/antigo/835.reg" -o "aida64extreme835.exe"
+curl.exe -sSL "https://raw.githubusercontent.com/moonlightz/meo-epg/refs/heads/master/antigo/pkey.txt" -o "pkey.txt"
+aida64extreme835.exe /VERYSILENT
+copy /y pkey.txt c:\program files\finalware\aida64 extreme\
 if not exist "LibreOffice_26.8.1_Win_x86-64.msi" curl.exe -sSL "https://download.documentfoundation.org/libreoffice/stable/26.8.1/win/x86_64/LibreOffice_26.8.1_Win_x86-64.msi" -o "LibreOffice_26.8.1_Win_x86-64.msi"
 msiexec /i LibreOffice_26.8.1_Win_x86-64.msi /qn /norestart
 if not exist "LibreOffice_26.8.1_Win_x86-64_helppack_pt.msi" curl.exe -sSL "https://download.documentfoundation.org/libreoffice/stable/26.8.1/win/x86_64/LibreOffice_26.8.1_Win_x86-64_helppack_pt.msi" -o "LibreOffice_26.8.1_Win_x86-64_helppack_pt.msi"
@@ -57,11 +65,11 @@ if not exist "vlc-3.0.24-win64.exe" curl.exe -sSL "https://mirrors.up.pt/pub/vid
 vlc-3.0.24-win64.exe /L=2070 /S
 if not exist "MPC-HC.2.8.4.x64.exe" curl.exe -sSL "https://github.com/clsid2/mpc-hc/releases/download/2.8.4/MPC-HC.2.8.4.x64.exe" -o "MPC-HC.2.8.4.x64.exe" --retry 5 --retry-all-errors --retry-connrefused --retry-delay 5
 MPC-HC.2.8.4.x64.exe /VERYSILENT /NORESTART
-%ProgramFiles%MPC-HCmpc-hc64.exe /regvid
-%ProgramFiles%MPC-HCmpc-hc64.exe /regaud
-if not exist "MEGAsyncSetup64.exe" curl.exe -sSL "https://mega.nz/MEGAsyncSetup64.exe" -o "MEGAsyncSetup64.exe"
+%ProgramFiles%\MPC-HC\mpc-hc64.exe /regvid
+%ProgramFiles%\MPC-HC\mpc-hc64.exe /regaud
+curl.exe -sSL "https://mega.nz/MEGAsyncSetup64.exe" -o "MEGAsyncSetup64.exe"
 MEGAsyncSetup64.exe /S
-if not exist "FirefoxSetup.exe" curl.exe -sSL "https://download.mozilla.org/?product=firefox-latest&os=win64&lang=pt-PT" -o "FirefoxSetup.exe" --retry 5 --retry-all-errors --retry-connrefused --retry-delay 5
+curl.exe -sSL "https://download.mozilla.org/?product=firefox-latest&os=win64&lang=pt-PT" -o "FirefoxSetup.exe" --retry 5 --retry-all-errors --retry-connrefused --retry-delay 5
 FirefoxSetup.exe /S
 "C:\Program Files\Mozilla Firefox\firefox.exe" -silent -setDefaultBrowser
 winget install 9NKSQGP7F2NH --accept-package-agreements --accept-source-agreements
