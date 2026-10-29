@@ -64,14 +64,6 @@ if not exist "LibreOffice_26.8.1_Win_x86-64.msi" curl.exe -sSL "https://download
 msiexec /i LibreOffice_26.8.1_Win_x86-64.msi /qn /norestart
 if not exist "LibreOffice_26.8.1_Win_x86-64_helppack_pt.msi" curl.exe -sSL "https://download.documentfoundation.org/libreoffice/stable/26.8.1/win/x86_64/LibreOffice_26.8.1_Win_x86-64_helppack_pt.msi" -o "LibreOffice_26.8.1_Win_x86-64_helppack_pt.msi"
 msiexec /i LibreOffice_26.8.1_Win_x86-64_helppack_pt.msi /qn /norestart
-curl -sSL "https://bits.avcdn.net/productfamily_CCLEANER7/insttype_FREE/platform_WIN/installertype_ONLINE/build_RELEASE" -o "ccleaner_online_setup.exe"
-curl.exe -sSL "https://raw.githubusercontent.com/moonlightz/meo-epg/refs/heads/master/antigo/ccleaner.ini" -o "ccleaner.ini"
-ccleaner_online_setup.exe /S
-copy /y ccleaner.ini "C:\Program Files\Piriform\CCleaner 7\ccleaner.ini"
-schtasks /Change /TN "CCleanerUpdate" /Disable >nul 2>&1
-schtasks /Change /TN "CCleaner Skip UAC" /Disable >nul 2>&1
-reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Run" /v "CCleaner Monitoring" /f >nul 2>&1
-reg delete "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v "CCleaner Monitoring" /f >nul 2>&1
 if not exist "vlc-3.0.24-win64.exe" curl.exe -sSL "https://mirrors.up.pt/pub/videolan/vlc/last/win64/vlc-3.0.24-win64.exe" -o "vlc-3.0.24-win64.exe"
 vlc-3.0.24-win64.exe /L=2070 /S
 if not exist "MPC-HC.2.8.4.x64.exe" curl.exe -sSL "https://github.com/clsid2/mpc-hc/releases/download/2.8.4/MPC-HC.2.8.4.x64.exe" -o "MPC-HC.2.8.4.x64.exe" --retry 5 --retry-all-errors --retry-connrefused --retry-delay 5
