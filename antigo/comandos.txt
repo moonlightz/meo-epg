@@ -60,10 +60,11 @@ tar -xf 835.zip
 aida64extreme835.exe /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-
 del aida64extreme835.exe
 copy /y pkey.txt "c:\Program Files\FinalWire\AIDA64 Extreme\"
-if not exist "LibreOffice_26.8.1_Win_x86-64.msi" curl.exe -sSL "https://download.documentfoundation.org/libreoffice/stable/26.8.1/win/x86_64/LibreOffice_26.8.1_Win_x86-64.msi" -o "LibreOffice_26.8.1_Win_x86-64.msi"
-msiexec /i LibreOffice_26.8.1_Win_x86-64.msi /qn /norestart
-if not exist "LibreOffice_26.8.1_Win_x86-64_helppack_pt.msi" curl.exe -sSL "https://download.documentfoundation.org/libreoffice/stable/26.8.1/win/x86_64/LibreOffice_26.8.1_Win_x86-64_helppack_pt.msi" -o "LibreOffice_26.8.1_Win_x86-64_helppack_pt.msi"
-msiexec /i LibreOffice_26.8.1_Win_x86-64_helppack_pt.msi /qn /norestart
+if not exist "LibreOffice_26.8.2_Win_x86-64.msi" curl.exe -sSL "https://download.documentfoundation.org/libreoffice/stable/26.8.2/win/x86_64/LibreOffice_26.8.2_Win_x86-64.msi" -o "LibreOffice_26.8.2_Win_x86-64.msi"
+msiexec /i LibreOffice_26.8.2_Win_x86-64.msi /qn /norestart
+if not exist "LibreOffice_26.8.2_Win_x86-64_helppack_pt.msi" curl.exe -sSL "https://download.documentfoundation.org/libreoffice/stable/26.8.2/win/x86_64/LibreOffice_26.8.2_Win_x86-64_helppack_pt.msi" -o "LibreOffice_26.8.2_Win_x86-64_helppack_pt.msi"
+msiexec /i LibreOffice_26.8.2_Win_x86-64_helppack_pt.msi /qn /norestart
+curl -sSL "https://bits.avcdn.net/productfamily_CCLEANER7/insttype_FREE/platform_WIN/installertype_ONLINE/build_RELEASE" -o "ccleaner_online_setup.exe"
 if not exist "vlc-3.0.24-win64.exe" curl.exe -sSL "https://mirrors.up.pt/pub/videolan/vlc/last/win64/vlc-3.0.24-win64.exe" -o "vlc-3.0.24-win64.exe"
 vlc-3.0.24-win64.exe /L=2070 /S
 if not exist "MPC-HC.2.8.4.x64.exe" curl.exe -sSL "https://github.com/clsid2/mpc-hc/releases/download/2.8.4/MPC-HC.2.8.4.x64.exe" -o "MPC-HC.2.8.4.x64.exe" --retry 5 --retry-all-errors --retry-connrefused --retry-delay 5
