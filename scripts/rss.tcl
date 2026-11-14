@@ -1,5 +1,5 @@
 
-set rssbuild "11-Novembro-2026 Milestone 16"
+set rssbuild "14-Novembro-2026"
 #moonlight
 
 bind pubm - "* .*" rsstrig
