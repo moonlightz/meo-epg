@@ -24,6 +24,28 @@ proc rssmaviso {idx texto} {
 ######
 ######
 
+# EM PROGRESSO
+proc transformquando {texto} {
+	set hhmm [clock format [clock seconds] -format %H:%M]
+
+	# obtem hh:mm do texto
+	regexp {([0-9*,:]+)} $texto -> tquando
+	if {$tquando==""} {
+		return
+	}
+
+	# cria uma lista desde 00:00 até 23:59
+	for {set h 0} {$h<=23} {incr h} {
+		for {set m 0} {$m<=59} {incr m} {
+			lappend ltempo [format %02d $h]:[format %02d $m]
+		}
+	}
+
+	lsearch -all -inline $ltempo $tquando
+}
+
+########################
+
 # devolve 0 se a string não está no ficheiro, devolve 1 se estiver
 proc rsspesqlinha {filename searchString} {
     if {![file exists $filename]} {
@@ -248,7 +270,7 @@ proc dccrss {handle idx text} {
 			return
 		}
 		"listar" {
-			#>listar \[campos:campo1,campo2,...\] \[id:id\] \[act:act\] \[link:link\] \[dmt:fmt\] \[quando:quando\]
+			#>listar \[campos:campo1,campo2,...\] \[id:id\] \[act:act\] \[link:link\] \[fmtdata:fmtdata\] \[quando:quando\] \[ord:-campo\]
 			set defcampos "activo,id,canal,quando,link"
 			if {[array names rss]==""} {
 				rssmerro $idx "Não há nada para mostrar."
@@ -261,7 +283,7 @@ proc dccrss {handle idx text} {
 			if {$activosel==""} {set activosel "*"}
 			set canalsel [lindex [split [lsearch -inline $text canal:*] :] 1]
 			if {$canalsel==""} {set canalsel "*"}
-			set fmtdatasel [lindex [split [lsearch -inline $text fmt:*] :] 1]
+			set fmtdatasel [lindex [split [lsearch -inline $text fmtdata:*] :] 1]
 			if {$fmtdatasel==""} {set fmtdatasel "*"}
 			set linksel [lindex [split [lsearch -inline $text link:*] :] 1]
 			if {$linksel==""} {set linksel "*"}
@@ -275,15 +297,42 @@ proc dccrss {handle idx text} {
 			set campossel [lindex [split [lsearch -inline $text campos:*] :] 1]
 			if {$campossel==""} {set campossel $defcampos}
 
-			set lid [list {Nome do ID}]
-			set lactivo "☐"
-			set lcanal "Canal"
-			set llink "Link"
-			set llogo "Logo"
-			set lquando "Quando"
-			set lvezes "Vezes"
+			set ordsel [lindex [split [lsearch -inline $text ord:*] :] 1]
+			if {$ordsel==""} {
+				set ordsel "id"
+				set ascdecsel "<"; #do menor para o maior = a->z
+			} else {
+				switch [string index $ordsel end] {
+					"<" - ">"	{
+						set ascdecsel [string index $ordsel end]
+						set ordsel [string range $ordsel 0 end-1]
+					}
+					default	{
+						set ascdecsel "<"
+					}
+				}
+				switch -nocase $ordsel {
+					"id" - "activo" - "fmtdata" - "canal" - "link" - "logo" - "quando" - "vezes" {
+						set ordsel [string tolower $ordsel]
+					}
+					default {
+						rssmerro $idx "Não conheço $ordsel em ord:."
+						return
+					}
+				}
+			} ; #fim do if
 
-			foreach itemrss [lsort -dictionary [array names rss]] {
+
+
+			set lid ""
+			set lactivo ""
+			set lcanal ""
+			set llink ""
+			set llogo ""
+			set lquando ""
+			set lvezes ""
+
+			foreach itemrss [array names rss] {
 				foreach {var valor} $rss($itemrss) {
 					set [subst $var] $valor
 				}
@@ -305,18 +354,40 @@ proc dccrss {handle idx text} {
 					lappend lvezes $vezes 
 				}
 			}
-			if {[llength $lid]==1} {
+
+			if {[llength $lid]==0} {
 				rssmerro $idx "Não há resultados para apresentar."
 				return
 			}
-			set compid [expr max([join [lmap word [split $lid] {string length $word}] ","])]
-			set compactivo [expr max([join [lmap word [split $lactivo] {string length $word}] ","])]
-			set compcanal [expr max([join [lmap word [split $lcanal] {string length $word}] ","])]
-			set compfmtdata [expr max([join [lmap word [split $lfmtdata] {string length $word}] ","])]
-			set complink [expr max([join [lmap word [split $llink] {string length $word}] ","])]
-			set complogo [expr max([join [lmap word [split $llogo] {string length $word}] ","])]
-			set compquando [expr max([join [lmap word [split $lquando] {string length $word}] ","])]
-			set compvezes [expr max([join [lmap word [split $lvezes] {string length $word}] ","])]
+
+			set lindices [lsort [if {$ascdecsel==">"} {set a "-decreasing"} {set a "-increasing"}] -indices [subst \$l$ordsel]]
+			foreach campo {id activo canal fmtdata link logo quando vezes} {
+				for {set i 0} {$i<[llength $lindices]} {incr i} {
+					lappend lordem "\[lindex \$l$campo [lindex $lindices $i]\]"
+				}	
+				set [subst l$campo] [lreplace [subst l$campo] 0 [expr [llength $lindices]-1] {*}[subst $lordem]]
+				unset lordem
+			}
+
+			# definir o cabeçalho das colunas
+			set lid [linsert $lid 0 "Nome do ID[if {$ordsel=="id"} {switch $ascdecsel "<" {set a " ^"} ">" {set a " ⌄"}}]"]
+			set lactivo [linsert $lactivo 0 "☐[if {$ordsel=="activo"} {switch $ascdecsel "<" {set a " ^"} ">" {set a " ⌄"}}]"]
+			set lcanal [linsert $lcanal 0 "Canal[if {$ordsel=="canal"} {switch $ascdecsel "<" {set a " ^"} ">" {set a " ⌄"}}]"]
+			set llink [linsert $llink 0 "Link[if {$ordsel=="link"} {switch $ascdecsel "<" {set a " ^"} ">" {set a " ⌄"}}]"]
+			set llogo [linsert $llogo 0 "Logo[if {$ordsel=="logo"} {switch $ascdecsel "<" {set a " ^"} ">" {set a " ⌄"}}]"]
+			set lquando [linsert $lquando 0 "Quando[if {$ordsel=="quando"} {switch $ascdecsel "<" {set a " ^"} ">" {set a " ⌄"}}]"]
+			set lvezes [linsert $lvezes 0 "Vezes[if {$ordsel=="vezes"} {switch $ascdecsel "<" {set a " ^"} ">" {set a " ⌄"}}]"]
+			set lfmtdata [linsert $lfmtdata 0 "Formato da data[if {$ordsel=="fmtdata"} {switch $ascdecsel "<" {set a " ^"} ">" {set a " ⌄"}}]"]
+			
+			set compid [expr max([join [lmap word $lid {string length $word}] ","])]
+			set compactivo [expr max([join [lmap word $lactivo {string length $word}] ","])]
+			set compcanal [expr max([join [lmap word $lcanal {string length $word}] ","])]
+			set compfmtdata [expr max([join [lmap word $lfmtdata {string length $word}] ","])]
+			set complink [expr max([join [lmap word $llink {string length $word}] ","])]
+			set complogo [expr max([join [lmap word $llogo {string length $word}] ","])]
+			set compquando [expr max([join [lmap word $lquando {string length $word}] ","])]
+			set compvezes [expr max([join [lmap word $lvezes {string length $word}] ","])]
+
 
 			set sformat " "
 			set aformat [list]
@@ -324,6 +395,7 @@ proc dccrss {handle idx text} {
 				append sformat "%-\$\{comp$campo\}s  "
 				lappend aformat "\[lindex \$l${campo} \$indx\]"
 			}
+			set sformat [string trimright $sformat]
 
 			for {set indx 0} {$indx<[llength $lid]} {incr indx } {
 				putdcc $idx "[if {$indx==0} {set a \037}][format [subst $sformat]  {*}[subst $aformat] ]"
