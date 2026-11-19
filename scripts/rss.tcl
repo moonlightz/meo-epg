@@ -24,26 +24,117 @@ proc rssmaviso {idx texto} {
 ######
 ######
 
-# EM PROGRESSO
-proc transformquando {texto} {
-	set hhmm [clock format [clock seconds] -format %H:%M]
-
-	# obtem hh:mm do texto
-	regexp {([0-9*,:]+)} $texto -> tquando
-	if {$tquando==""} {
-		return
-	}
-
-	# cria uma lista desde 00:00 até 23:59
-	for {set h 0} {$h<=23} {incr h} {
-		for {set m 0} {$m<=59} {incr m} {
-			lappend ltempo [format %02d $h]:[format %02d $m]
-		}
-	}
-
-	lsearch -all -inline $ltempo $tquando
+proc isValid {tok} {
+    if {![regexp {^[0-9*]{1,2}:[0-9*]{1,2}$} $tok]} {
+        return 0
+    }
+    lassign [split $tok :] hp mp
+    if {[regexp {^[0-9]+$} $hp] && [scan $hp %d] > 23} {
+        return 0
+    }
+    if {[regexp {^[0-9]+$} $mp] && [scan $mp %d] > 59} {
+        return 0
+    }
+    return 1
 }
 
+proc padPat {p} {
+    if {[regexp {^[0-9]$} $p]} {
+        return 0$p
+    }
+    return $p
+}
+
+proc matchAt {hp mp mm} {
+    set hh [format %02d [expr {$mm / 60}]]
+    set mi [format %02d [expr {$mm % 60}]]
+    return [expr {[string match $hp $hh] && [string match $mp $mi]}]
+}
+
+proc nearestTime {input} {
+    set t [clock seconds]
+    scan [clock format $t -format %H] %d h
+    scan [clock format $t -format %M] %d m
+    set nowMin [expr {$h * 60 + $m}]
+
+    set entries {}
+    set anyValid 0
+    foreach tok [split $input ,] {
+        set tok [string trim $tok]
+        set delta ""
+        if {[isValid $tok]} {
+            lassign [split $tok :] hp mp
+            set hp [padPat $hp]
+            set mp [padPat $mp]
+            for {set d 0} {$d < 1440} {incr d} {
+                if {[matchAt $hp $mp [expr {($nowMin + $d) % 1440}]]} {
+                    set delta $d
+                    break
+                }
+            }
+            if {$delta ne ""} {
+                set anyValid 1
+            }
+        }
+        lappend entries [list $tok $delta]
+    }
+
+    if {!$anyValid} {
+        return "$input (inválidO)"
+    }
+
+    set anyNow 0
+    foreach e $entries {
+        if {[lindex $e 1] eq "0"} {
+            set anyNow 1
+        }
+    }
+
+    set parts {}
+    if {$anyNow} {
+        foreach e $entries {
+            lassign $e tok delta
+            if {$delta eq "0"} {
+                lappend parts "\[$tok\]"
+            } else {
+                lappend parts $tok
+            }
+        }
+        return "[join $parts ,] (agora)"
+    }
+
+    set bestIdx -1
+    set bestDelta ""
+    set i 0
+    foreach e $entries {
+        set delta [lindex $e 1]
+        if {$delta ne "" && ($bestDelta eq "" || $delta < $bestDelta)} {
+            set bestDelta $delta
+            set bestIdx $i
+        }
+        incr i
+    }
+
+    set i 0
+    foreach e $entries {
+        set tok [lindex $e 0]
+        if {$i == $bestIdx} {
+            lappend parts "\[$tok\]"
+        } else {
+            lappend parts $tok
+        }
+        incr i
+    }
+
+    set remaining [format "%d:%02d" [expr {$bestDelta / 60}] [expr {$bestDelta % 60}]]
+    return "[join $parts ,] (<$remaining)"
+}
+
+
+
+
+
+########################
 ########################
 
 # devolve 0 se a string não está no ficheiro, devolve 1 se estiver
@@ -288,8 +379,11 @@ proc dccrss {handle idx text} {
 			set linksel [lindex [split [lsearch -inline $text link:*] :] 1]
 			if {$linksel==""} {set linksel "*"}
 			set logosel [lindex [split [lsearch -inline $text logo:*] :] 1]
+
+
+
 			if {$logosel==""} {set logosel "*"}
-			set quandosel [lindex [split [lsearch -inline $text quando:*] :] 1]
+			set quandosel [string range [lsearch -inline $text quando:*] 7 end]
 			if {$quandosel==""} {set quandosel "*"}
 			set vezessel [lindex [split [lsearch -inline $text vezes:*] :] 1]
 			if {$vezessel==""} {set vezessel "*"}
@@ -350,7 +444,7 @@ proc dccrss {handle idx text} {
 					lappend lfmtdata $fmtdata
 					lappend llink $link
 					lappend llogo $logo
-					lappend lquando $quando
+					lappend lquando [if {$activo} {nearestTime $quando} {set a $quando}]
 					lappend lvezes $vezes 
 				}
 			}
@@ -378,7 +472,8 @@ proc dccrss {handle idx text} {
 			set lquando [linsert $lquando 0 "Quando[if {$ordsel=="quando"} {switch $ascdecsel "<" {set a " ^"} ">" {set a " ⌄"}}]"]
 			set lvezes [linsert $lvezes 0 "Vezes[if {$ordsel=="vezes"} {switch $ascdecsel "<" {set a " ^"} ">" {set a " ⌄"}}]"]
 			set lfmtdata [linsert $lfmtdata 0 "Formato da data[if {$ordsel=="fmtdata"} {switch $ascdecsel "<" {set a " ^"} ">" {set a " ⌄"}}]"]
-			
+
+			# isto processa a largura da coluna
 			set compid [expr max([join [lmap word $lid {string length $word}] ","])]
 			set compactivo [expr max([join [lmap word $lactivo {string length $word}] ","])]
 			set compcanal [expr max([join [lmap word $lcanal {string length $word}] ","])]
@@ -388,7 +483,14 @@ proc dccrss {handle idx text} {
 			set compquando [expr max([join [lmap word $lquando {string length $word}] ","])]
 			set compvezes [expr max([join [lmap word $lvezes {string length $word}] ","])]
 
-
+set lquando2 ""
+foreach tquando $lquando {
+	if {[string match *(*)* $tquando]} {
+		set tquando [string replace $tquando [string first " (" $tquando] [string first " (" $tquando] [string repeat " " [expr 1+$compquando-[string length $tquando]]]]
+	}
+	lappend lquando2  $tquando
+}
+set lquando $lquando2
 			set sformat " "
 			set aformat [list]
 			foreach campo [split $campossel ,] {
